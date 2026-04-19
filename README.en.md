@@ -72,13 +72,47 @@
 
 ## Getting Started
 
-After launching the app for the first time, **you must sign in with your licensed account before any feature becomes usable**:
+### Step 1 — Sign in and download the model (one-time setup)
 
 1. **Open Settings** — click the ⚙️ gear icon in the left sidebar.
-2. **Sign in** — on the *License* tab, click **"Sign in with Google"**. Your browser will open so you can pick the Google account tied to your license.
-3. **Wait for activation** — the app verifies with the server and displays your plan and expiry.
-4. **Download the AI model** — on first launch the app downloads the model (~a few GB). Wait for it to finish.
-5. **Start creating** — close Settings, then pick a tab: *Voice Cloning* / *Voice Design (TTS)* / *Speech-to-Text* depending on your task.
+2. **Sign in** — on the *License* tab, click **"Sign in with Google"**. Your browser opens so you can pick your Google account.
+3. **Download the AI model** — switch to the *Environment* tab (or let the app prompt you), then click **"Download model"**. First-time download is a few GB; wait for it to finish.
+4. Close Settings.
+
+### Step 2 — Voice Cloning 🔊
+
+Clone a voice from a sample recording.
+
+1. Open the **Voice Cloning** tab.
+2. In the *Reference audio* field, click **"Browse..."** and select a sample clip (5–10 seconds, clear voice, minimal background noise).
+3. (Optional) Enter the *Reference text* — what the sample clip says. Leave it empty for the AI to transcribe automatically.
+4. Paste or type the text to be spoken into the *Input text* box. You can click **"📂 Import text file"** to load directly from `.txt` or `.srt`.
+5. Click **"📋 Add to table"** — the app splits your text into individual sentences and fills the table below.
+6. (Optional) Open *Advanced settings* to tune diffusion steps, guidance scale, speech speed, and sentence gap.
+7. Click **"▶ Start"** — the app generates audio for each row of the table.
+8. When done, click **"💾 Export audio"** to merge everything into a single file, or click individual rows to preview/export them separately.
+
+### Step 3 — Voice Design (TTS) 🎛️
+
+Create a new voice from attribute descriptions — no sample needed.
+
+1. Open the **Voice Design** tab.
+2. Pick voice attributes: *Gender*, *Age*, *Pitch*, *Style*, *Accent*.
+3. Paste the target text into *Input text*, or use **"📂 Import text file"** to load from `.txt` / `.srt`.
+4. Click **"📋 Add to table"** to split into sentences.
+5. (Optional) Adjust *Advanced settings*.
+6. Click **"▶ Start"**.
+7. Click **"💾 Export audio"** to save the result.
+
+### Step 4 — Speech-to-Text 📝
+
+Transcribe speech from existing audio/video files.
+
+1. Open the **Speech-to-Text** tab.
+2. Click **"Choose file..."** and pick an audio/video file (MP3, WAV, M4A, FLAC, MP4, MOV…).
+3. Click **"▶ Start"** — the app analyses and chunks the speech, then transcribes each segment.
+4. Results appear in a table with per-sentence timestamps. You can edit them directly.
+5. Click **"💾 Export"** to save as `.txt` (plain text) or `.srt` (with timestamps, suitable for subtitles).
 
 ---
 

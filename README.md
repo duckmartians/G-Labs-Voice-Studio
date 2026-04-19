@@ -80,8 +80,6 @@ Sau khi mở ứng dụng lần đầu, **bắt buộc phải đăng nhập tài
 4. **Tải mô hình AI** — lần đầu ứng dụng sẽ tải mô hình (~vài GB). Chờ tải xong là dùng được.
 5. **Bắt đầu tạo** — đóng Cài đặt, chọn một trong các tab *Sao chép giọng nói* / *Văn bản sang giọng nói* / *Giọng nói sang văn bản* tuỳ nhu cầu.
 
-> Chưa có tài khoản bản quyền? Liên hệ qua [Discord](https://discord.gg/munMZEBMw5) hoặc [trang chủ](https://duckmartians.info) để được hướng dẫn mua.
-
 ---
 
 ## Yêu cầu hệ thống

@@ -80,8 +80,6 @@ After launching the app for the first time, **you must sign in with your license
 4. **Download the AI model** — on first launch the app downloads the model (~a few GB). Wait for it to finish.
 5. **Start creating** — close Settings, then pick a tab: *Voice Cloning* / *Voice Design (TTS)* / *Speech-to-Text* depending on your task.
 
-> Don't have a license yet? Reach out on [Discord](https://discord.gg/munMZEBMw5) or the [website](https://duckmartians.info) to get one.
-
 ---
 
 ## System Requirements

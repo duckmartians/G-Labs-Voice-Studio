@@ -36,9 +36,10 @@
 - **🔊 Voice Cloning** — provide a 5–10 second reference audio clip; the app generates a matching voice for any text.
 - **🎛️ Voice Design / TTS** — describe a voice by attributes (gender, age, pitch, style, accent) with no reference audio needed.
 - **📝 Speech-to-Text (ASR)** — transcribe audio/video files. Supports MP3, WAV, M4A, FLAC, MP4, MOV, and more.
+- **600+ languages supported** — recognize and synthesize over 600 languages (including Vietnamese, English, Chinese, Japanese, Korean, French, German, Spanish, and many minority languages).
 - **Batch processing** — import `.txt` or `.srt` scripts, run batches, and export audio files preserving timestamps.
 - **Fine-grained controls** — diffusion steps, guidance scale, playback speed, sentence gap.
-- **Multilingual** — Vietnamese / English UI; models support multiple languages for both TTS and ASR.
+- **Bilingual UI** — Vietnamese and English.
 
 ---
 

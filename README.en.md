@@ -54,8 +54,6 @@
 1. Download `GLabsVoiceStudio-v1.0.0-win.zip`.
 2. Extract to any folder (pick a drive with at least 10 GB free).
 3. Open the extracted folder and run `GLabsVoiceStudio.exe` directly.
-4. Sign in with your Google account to activate your license.
-5. The app downloads the AI model on first run (~a few GB).
 
 > Want a desktop shortcut? Right-click `GLabsVoiceStudio.exe` → *Send to* → *Desktop (create shortcut)*.
 
@@ -66,10 +64,22 @@
 1. Download `GLabsVoiceStudio-v1.0.0-arm64.dmg`.
 2. Open the DMG and drag the app icon into the `Applications` folder.
 3. Launch the app from Launchpad or Applications. On first launch you may need to allow it in *System Settings → Privacy & Security* (the app is not Apple-notarized yet).
-4. Sign in with your Google account to activate your license.
-5. The app downloads the AI model on first run (~a few GB).
 
 > **⏳ The first launch may take 30–60 seconds (the splash screen will pause around ~90%) — please wait, don't close it.** macOS performs a full security check on the app during first launch. From the second launch onward, it opens quickly.
+
+---
+
+## Getting Started
+
+After launching the app for the first time, **you must sign in with your licensed account before any feature becomes usable**:
+
+1. **Open Settings** — click the ⚙️ gear icon in the left sidebar.
+2. **Sign in** — on the *License* tab, click **"Sign in with Google"**. Your browser will open so you can pick the Google account tied to your license.
+3. **Wait for activation** — the app verifies with the server and displays your plan and expiry.
+4. **Download the AI model** — on first launch the app downloads the model (~a few GB). Wait for it to finish.
+5. **Start creating** — close Settings, then pick a tab: *Voice Cloning* / *Voice Design (TTS)* / *Speech-to-Text* depending on your task.
+
+> Don't have a license yet? Reach out on [Discord](https://discord.gg/munMZEBMw5) or the [website](https://duckmartians.info) to get one.
 
 ---
 
@@ -83,7 +93,7 @@
 
 ### macOS
 - macOS 12 (Monterey) or newer
-- **Apple Silicon** (M1/M2/M3/M4) — uses Metal Performance Shaders (MPS)
+- **Apple Silicon** (M1/M2/M3/M4/...) — uses Metal Performance Shaders (MPS)
 - 8 GB RAM
 - 10 GB free disk space
 

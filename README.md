@@ -72,13 +72,47 @@
 
 ## Cách sử dụng
 
-Sau khi mở ứng dụng lần đầu, **bắt buộc phải đăng nhập tài khoản bản quyền thì mới dùng được** các tính năng:
+### Bước 1 — Đăng nhập và tải mô hình (làm một lần)
 
-1. **Mở Cài đặt** — bấm vào biểu tượng bánh răng ⚙️ ở thanh bên trái.
-2. **Đăng nhập** — trong tab *Bản quyền*, bấm nút **"Đăng nhập bằng Google"**. Trình duyệt sẽ tự mở để bạn chọn tài khoản Google đã mua bản quyền.
-3. **Chờ kích hoạt** — ứng dụng xác thực với máy chủ và hiển thị trạng thái tài khoản (gói, hạn sử dụng).
-4. **Tải mô hình AI** — lần đầu ứng dụng sẽ tải mô hình (~vài GB). Chờ tải xong là dùng được.
-5. **Bắt đầu tạo** — đóng Cài đặt, chọn một trong các tab *Sao chép giọng nói* / *Văn bản sang giọng nói* / *Giọng nói sang văn bản* tuỳ nhu cầu.
+1. **Mở Cài đặt** — bấm biểu tượng bánh răng ⚙️ ở thanh bên trái.
+2. **Đăng nhập** — trong tab *Bản quyền*, bấm **"Đăng nhập bằng Google"**. Trình duyệt sẽ tự mở để bạn chọn tài khoản Google.
+3. **Tải mô hình AI** — chuyển sang tab *Cài đặt môi trường* (hoặc ứng dụng tự nhắc), bấm **"Tải mô hình"**. Lần đầu sẽ tải về khoảng vài GB, chờ hoàn tất là xong phần chuẩn bị.
+4. Đóng Cài đặt.
+
+### Bước 2 — Sao chép giọng nói 🔊
+
+Nhân bản một giọng nói từ mẫu âm thanh.
+
+1. Mở tab **Sao chép giọng nói**.
+2. Ở ô *Tệp âm thanh mẫu*, bấm **"Chọn..."** → chọn tệp âm thanh mẫu (khuyến nghị 5–10 giây, giọng rõ ràng, ít tạp âm).
+3. (Tuỳ chọn) Nhập *Văn bản mẫu* — nội dung đoạn âm thanh vừa chọn. Bỏ trống thì AI tự nhận dạng.
+4. Dán hoặc gõ văn bản cần đọc vào ô *Nội dung văn bản*. Có thể bấm **"📂 Nhập tệp văn bản"** để nạp trực tiếp từ tệp `.txt` hoặc `.srt`.
+5. Bấm **"📋 Nhập vào bảng"** — ứng dụng tự tách thành từng câu và đưa vào bảng phía dưới.
+6. (Tuỳ chọn) Mở *Cài đặt nâng cao* để chỉnh độ chi tiết, mức độ bám sát, tốc độ đọc, khoảng nghỉ giữa câu.
+7. Bấm **"▶ Bắt đầu tạo"** — ứng dụng lần lượt tạo âm thanh cho từng dòng trong bảng.
+8. Khi xong, bấm **"💾 Xuất âm thanh"** để ghép tất cả thành một tệp duy nhất, hoặc bấm vào từng dòng để nghe/xuất riêng.
+
+### Bước 3 — Văn bản sang giọng nói 🎛️
+
+Tạo giọng đọc mới theo mô tả, không cần tệp mẫu.
+
+1. Mở tab **Văn bản sang giọng nói**.
+2. Chọn thuộc tính giọng: *Giới tính*, *Độ tuổi*, *Cao độ*, *Phong cách*, *Khẩu âm*.
+3. Dán văn bản cần đọc vào ô *Nội dung văn bản*, hoặc **"📂 Nhập tệp văn bản"** từ `.txt` / `.srt`.
+4. Bấm **"📋 Nhập vào bảng"** để tách câu.
+5. (Tuỳ chọn) Chỉnh *Cài đặt nâng cao*.
+6. Bấm **"▶ Bắt đầu tạo"**.
+7. Bấm **"💾 Xuất âm thanh"** để lấy kết quả.
+
+### Bước 4 — Giọng nói sang văn bản 📝
+
+Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
+
+1. Mở tab **Giọng nói sang văn bản**.
+2. Bấm **"Chọn tệp..."** → chọn tệp âm thanh/video (MP3, WAV, M4A, FLAC, MP4, MOV…).
+3. Bấm **"▶ Bắt đầu tạo"** — ứng dụng phân tích, tự tách đoạn theo giọng nói, rồi nhận dạng từng đoạn.
+4. Kết quả hiển thị dạng bảng (có dấu thời gian từng câu). Có thể chỉnh sửa trực tiếp.
+5. Bấm **"💾 Xuất"** để lưu ra `.txt` (văn bản thuần) hoặc `.srt` (có dấu thời gian, dùng làm phụ đề).
 
 ---
 

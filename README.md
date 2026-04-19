@@ -54,8 +54,6 @@
 1. Tải file `GLabsVoiceStudio-v1.0.0-win.zip`.
 2. Giải nén ra thư mục bất kỳ (khuyến nghị ổ có ít nhất 10 GB trống).
 3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
-4. Đăng nhập bằng tài khoản Google để kích hoạt license.
-5. App sẽ tải model AI lần đầu (~vài GB).
 
 > Muốn tạo shortcut? Chuột phải `GLabsVoiceStudio.exe` → *Send to* → *Desktop (create shortcut)*.
 
@@ -66,10 +64,22 @@
 1. Tải file `GLabsVoiceStudio-v1.0.0-arm64.dmg`.
 2. Mở file DMG, kéo biểu tượng app vào thư mục `Applications`.
 3. Mở app từ Launchpad hoặc Applications. Lần đầu mở có thể cần vào *System Settings → Privacy & Security* để cho phép (app chưa được Apple notarize).
-4. Đăng nhập bằng tài khoản Google để kích hoạt license.
-5. App sẽ tải model AI lần đầu (~vài GB).
 
 > **⏳ Lần đầu mở app có thể mất 30–60 giây (splash dừng lâu ở ~90%) — bạn cứ chờ, đừng tắt đi.** macOS cần kiểm tra bảo mật toàn bộ app lần đầu. Từ lần thứ 2 trở đi, app mở nhanh bình thường.
+
+---
+
+## Cách sử dụng
+
+Sau khi mở app lần đầu, **bắt buộc phải đăng nhập tài khoản bản quyền rồi mới dùng được** các tính năng:
+
+1. **Mở Cài đặt** — bấm vào biểu tượng bánh răng ⚙️ ở thanh bên trái.
+2. **Đăng nhập** — trong tab *Bản quyền / License*, bấm **"Đăng nhập bằng Google"**. Trình duyệt sẽ mở để bạn chọn tài khoản Google đã mua license.
+3. **Chờ kích hoạt** — app xác thực với server và hiển thị trạng thái tài khoản (plan, hạn dùng).
+4. **Tải model AI** — lần đầu app sẽ tải model (~vài GB). Chờ tải xong là dùng được.
+5. **Bắt đầu tạo** — đóng Cài đặt, chọn tab *Sao chép giọng nói* / *Văn bản sang giọng nói* / *Giọng nói sang văn bản* tuỳ nhu cầu.
+
+> Chưa có tài khoản bản quyền? Liên hệ qua [Discord](https://discord.gg/munMZEBMw5) hoặc [website](https://duckmartians.info) để được hướng dẫn mua.
 
 ---
 
@@ -83,7 +93,7 @@
 
 ### macOS
 - macOS 12 (Monterey) trở lên
-- **Apple Silicon** (M1/M2/M3/M4) — dùng Metal Performance Shaders (MPS)
+- **Apple Silicon** (M1/M2/M3/M4/...) — dùng Metal Performance Shaders (MPS)
 - 8 GB RAM
 - 10 GB dung lượng ổ cứng
 

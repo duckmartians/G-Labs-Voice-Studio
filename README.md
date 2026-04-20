@@ -47,12 +47,12 @@
 
 | Hệ điều hành | Tệp tải về | Dung lượng |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.0-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.0-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.1-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.1-arm64.dmg` | ~2 GB |
 
 ### Windows (chạy trực tiếp, không cần cài đặt)
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.0-win.zip`.
+1. Tải tệp `GLabsVoiceStudio-v1.0.1-win.zip`.
 2. Giải nén ra thư mục bất kỳ (ổ cứng cần còn trống ít nhất 10 GB).
 3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
 
@@ -60,13 +60,45 @@
 
 > **⏳ Lần đầu mở ứng dụng có thể mất 30–60 giây (màn hình chờ dừng lâu ở khoảng 90%) — bạn cứ chờ, đừng tắt đi.** Windows cần quét ứng dụng và các tệp card đồ hoạ (đây là bước bảo mật tự động, lần đầu rất chậm). Từ lần thứ 2 trở đi, ứng dụng sẽ mở nhanh như bình thường.
 
-### macOS Apple Silicon
+### 🍎 macOS Apple Silicon
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.0-arm64.dmg`.
-2. Mở tệp DMG, kéo biểu tượng ứng dụng vào thư mục `Applications`.
-3. Mở ứng dụng từ Launchpad hoặc Applications. Lần đầu mở có thể cần vào *System Settings → Privacy & Security* để cho phép chạy (ứng dụng chưa được Apple chứng thực).
+1. Tải tệp **`GLabsVoiceStudio-v1.0.1-arm64.dmg`** từ nguồn phân phối chính thức.
+2. Nhấp đúp vào file `.dmg` để mở.
+3. Kéo biểu tượng **G-Labs Voice Studio** vào thư mục **Applications**.
+4. Mở **Applications**, **nhấp chuột phải** vào **G-Labs Voice Studio** → chọn **Open**.
+
+> ⚠️ **Lần mở đầu tiên:** macOS có thể hiện cảnh báo *"Ứng dụng từ nhà phát triển không xác định"*. Nhấp chuột phải vào ứng dụng → **Open** → nhấn **Open** trong hộp thoại. Chỉ cần làm một lần duy nhất.
+
+> 📁 **File đầu ra** (âm thanh, kịch bản) được lưu tại `~/Documents/G-Labs Voice Studio/output/` theo mặc định.
 
 > **⏳ Lần đầu mở ứng dụng có thể mất 30–60 giây (màn hình chờ dừng lâu ở khoảng 90%) — bạn cứ chờ, đừng tắt đi.** macOS cần kiểm tra bảo mật toàn bộ ứng dụng lần đầu. Từ lần thứ 2 trở đi, ứng dụng mở nhanh bình thường.
+
+#### 🍎 Xử lý lỗi *"Ứng dụng bị hỏng"* trên macOS
+
+Khi tải file `.dmg` từ internet, macOS tự động gắn **cờ cách ly (quarantine)** vào file. Nếu ứng dụng chưa được chứng thực bởi Apple, macOS Gatekeeper sẽ chặn không cho chạy và có thể báo *"Ứng dụng bị hỏng, không thể mở"*.
+
+**Cách 1: Nhấp chuột phải → Open** *(khuyến nghị)*
+
+1. Mở **Applications**.
+2. **Nhấp chuột phải** vào *G-Labs Voice Studio* → **Open**.
+3. Nhấn **Open** lần nữa trong hộp thoại cảnh báo.
+
+**Cách 2: Dùng Terminal** (nếu cách 1 vẫn báo lỗi)
+
+Mở **Terminal** (Launchpad → Other → Terminal) rồi dán lệnh sau và nhấn Enter:
+
+```bash
+xattr -cr "/Applications/G-Labs Voice Studio.app"
+```
+
+Lệnh này gỡ bỏ tất cả thuộc tính mở rộng (bao gồm cờ cách ly) khỏi bundle ứng dụng. Sau khi chạy xong, mở lại ứng dụng bình thường. Chỉ cần làm **một lần duy nhất** cho mỗi phiên bản tải về.
+
+**Cách 3: System Settings → Privacy & Security**
+
+1. Thử mở ứng dụng bình thường (sẽ bị chặn).
+2. Mở **System Settings** → **Privacy & Security**.
+3. Kéo xuống cuối, tìm dòng *"G-Labs Voice Studio bị chặn…"* → bấm **Open Anyway**.
+4. Xác nhận bằng Touch ID hoặc mật khẩu admin.
 
 ---
 

@@ -47,12 +47,12 @@
 
 | Platform | File | Size |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.0-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.0-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.1-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.1-arm64.dmg` | ~2 GB |
 
 ### Windows (portable, no install needed)
 
-1. Download `GLabsVoiceStudio-v1.0.0-win.zip`.
+1. Download `GLabsVoiceStudio-v1.0.1-win.zip`.
 2. Extract to any folder (pick a drive with at least 10 GB free).
 3. Open the extracted folder and run `GLabsVoiceStudio.exe` directly.
 
@@ -60,13 +60,45 @@
 
 > **⏳ The first launch may take 30–60 seconds (the splash screen will pause around ~90%) — please wait, don't close it.** Windows needs to scan the app and GPU files (an automatic security step that is slow on first run). From the second launch onward, the app opens quickly.
 
-### macOS Apple Silicon
+### 🍎 macOS Apple Silicon
 
-1. Download `GLabsVoiceStudio-v1.0.0-arm64.dmg`.
-2. Open the DMG and drag the app icon into the `Applications` folder.
-3. Launch the app from Launchpad or Applications. On first launch you may need to allow it in *System Settings → Privacy & Security* (the app is not Apple-notarized yet).
+1. Download **`GLabsVoiceStudio-v1.0.1-arm64.dmg`** from the official distribution.
+2. Double-click the `.dmg` file to open it.
+3. Drag the **G-Labs Voice Studio** icon into the **Applications** folder.
+4. Open **Applications**, **right-click** on **G-Labs Voice Studio** → select **Open**.
+
+> ⚠️ **First launch:** macOS may show *"App from an unidentified developer"*. Right-click the app → **Open** → click **Open** in the dialog. Only needs to be done once.
+
+> 📁 **Output files** (audio, scripts) are saved to `~/Documents/G-Labs Voice Studio/output/` by default.
 
 > **⏳ The first launch may take 30–60 seconds (the splash screen will pause around ~90%) — please wait, don't close it.** macOS performs a full security check on the app during first launch. From the second launch onward, it opens quickly.
+
+#### 🍎 Fixing *"App is damaged"* on macOS
+
+When you download a `.dmg` from the internet, macOS automatically attaches a **quarantine flag** to the file. If the app isn't Apple-notarized, Gatekeeper will block it and may report *"The app is damaged and can't be opened"*.
+
+**Method 1: Right-click → Open** *(recommended)*
+
+1. Open **Applications**.
+2. **Right-click** on *G-Labs Voice Studio* → **Open**.
+3. Click **Open** again in the warning dialog.
+
+**Method 2: Use Terminal** (if method 1 still shows the error)
+
+Open **Terminal** (Launchpad → Other → Terminal), paste the following command and press Enter:
+
+```bash
+xattr -cr "/Applications/G-Labs Voice Studio.app"
+```
+
+This command clears all extended attributes (including the quarantine flag) from the app bundle. After running it, open the app normally. You only need to do this **once** per downloaded version.
+
+**Method 3: System Settings → Privacy & Security**
+
+1. Try to open the app normally (it will be blocked).
+2. Open **System Settings** → **Privacy & Security**.
+3. Scroll to the bottom, find *"G-Labs Voice Studio was blocked…"* → click **Open Anyway**.
+4. Confirm with Touch ID or admin password.
 
 ---
 

@@ -117,7 +117,7 @@ Nhân bản một giọng nói từ mẫu âm thanh.
 
 1. Mở tab **Sao chép giọng nói**.
 2. Ở ô *Tệp âm thanh mẫu*, bấm **"Chọn..."** → chọn tệp âm thanh mẫu (khuyến nghị 5–10 giây, giọng rõ ràng, ít tạp âm).
-3. (Tuỳ chọn) Nhập *Văn bản mẫu* — nội dung đoạn âm thanh vừa chọn. Bỏ trống thì AI tự nhận dạng.
+3. Nhập *Văn bản mẫu* — nội dung đoạn âm thanh vừa chọn. Bỏ trống thì AI tự nhận dạng (tốt nhất thì nên tự gõ vào sẽ giúp AI hiểu đúng hơn).
 4. Dán hoặc gõ văn bản cần đọc vào ô *Nội dung văn bản*. Có thể bấm **"📂 Nhập tệp văn bản"** để nạp trực tiếp từ tệp `.txt` hoặc `.srt`.
 5. Bấm **"📋 Nhập vào bảng"** — ứng dụng tự tách thành từng câu và đưa vào bảng phía dưới.
 6. (Tuỳ chọn) Mở *Cài đặt nâng cao* để chỉnh độ chi tiết, mức độ bám sát, tốc độ đọc, khoảng nghỉ giữa câu.

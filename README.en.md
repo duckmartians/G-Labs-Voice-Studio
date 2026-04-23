@@ -117,7 +117,7 @@ Clone a voice from a sample recording.
 
 1. Open the **Voice Cloning** tab.
 2. In the *Reference audio* field, click **"Browse..."** and select a sample clip (5–10 seconds, clear voice, minimal background noise).
-3. (Optional) Enter the *Reference text* — what the sample clip says. Leave it empty for the AI to transcribe automatically.
+3. Enter the *Reference text* — what the sample clip says. Leave it empty for the AI to transcribe automatically (Ideally, you should type it in yourself, as this will help the AI ​​understand it better.).
 4. Paste or type the text to be spoken into the *Input text* box. You can click **"📂 Import text file"** to load directly from `.txt` or `.srt`.
 5. Click **"📋 Add to table"** — the app splits your text into individual sentences and fills the table below.
 6. (Optional) Open *Advanced settings* to tune diffusion steps, guidance scale, speech speed, and sentence gap.

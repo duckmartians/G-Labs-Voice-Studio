@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://duckmartians.info">
+  <a href="https://duckmartians.info/voice">
     <img alt="Homepage" src="https://img.shields.io/badge/Homepage-Visit-0A66C2?style=flat-square&logo=google-chrome&logoColor=white">
   </a>
   <a href="https://discord.gg/munMZEBMw5">
@@ -24,7 +24,7 @@
 **G-Labs Voice Studio** is a desktop app for multilingual voice synthesis featuring voice cloning, attribute-based voice design, and speech-to-text. Dark-themed UI, models run locally on your machine — no audio or text is sent to the cloud once the model is downloaded.
 
 <p align="center">
-  <a href="https://duckmartians.info/g-labs">
+  <a href="https://duckmartians.info/voice">
     <img alt="G-Labs Voice Studio UI" width="900" src="https://github.com/user-attachments/assets/0fe19f01-4e8e-46c9-bb8b-80bd9e347130" />
   </a>
 </p>

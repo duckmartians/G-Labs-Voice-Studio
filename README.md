@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://duckmartians.info">
+  <a href="https://duckmartians.info/voice">
     <img alt="Trang chủ" src="https://img.shields.io/badge/Trang%20ch%E1%BB%A7-Truy%20c%E1%BA%ADp-0A66C2?style=flat-square&logo=google-chrome&logoColor=white">
   </a>
   <a href="https://discord.gg/munMZEBMw5">
@@ -24,7 +24,7 @@
 **G-Labs Voice Studio** là ứng dụng máy tính tổng hợp giọng nói đa ngôn ngữ, có khả năng sao chép giọng, thiết kế giọng theo thuộc tính, và nhận dạng giọng nói thành văn bản. Giao diện nền tối, mô hình chạy trực tiếp trên máy của bạn — sau khi tải mô hình về, không có dữ liệu âm thanh hay văn bản nào được gửi lên máy chủ.
 
 <p align="center">
-  <a href="https://duckmartians.info/g-labs">
+  <a href="https://duckmartians.info/voice">
     <img alt="Giao diện G-Labs Voice Studio" width="900" src="https://github.com/user-attachments/assets/0fe19f01-4e8e-46c9-bb8b-80bd9e347130" />
   </a>
 </p>

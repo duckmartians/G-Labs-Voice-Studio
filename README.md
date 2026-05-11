@@ -21,7 +21,7 @@
   </a>
 </p>
 
-**G-Labs Voice Studio** là ứng dụng máy tính tổng hợp giọng nói đa ngôn ngữ, có khả năng sao chép giọng, thiết kế giọng theo thuộc tính, và nhận dạng giọng nói thành văn bản. Giao diện nền tối, mô hình chạy trực tiếp trên máy của bạn — sau khi tải mô hình về, không có dữ liệu âm thanh hay văn bản nào được gửi lên máy chủ.
+**G-Labs Voice Studio** là ứng dụng máy tính tổng hợp giọng nói đa ngôn ngữ: sao chép giọng từ mẫu âm thanh, thiết kế giọng mới theo thuộc tính, tạo hội thoại nhiều nhân vật, và nhận dạng giọng nói thành văn bản. Giao diện nền tối, mô hình chạy trực tiếp trên máy của bạn — sau khi tải mô hình về, không có dữ liệu âm thanh hay văn bản nào được gửi lên máy chủ.
 
 <p align="center">
   <a href="https://duckmartians.info/voice">
@@ -35,26 +35,32 @@
 
 - **🔊 Sao chép giọng nói** — cung cấp một đoạn âm thanh mẫu 5–10 giây, ứng dụng sẽ đọc bất kỳ văn bản nào bằng đúng giọng đó.
 - **🎛️ Văn bản sang giọng nói** — mô tả giọng theo thuộc tính (giới tính, độ tuổi, cao độ, phong cách, khẩu âm) mà không cần âm thanh mẫu.
+- **💬 Hội thoại nhiều giọng** — viết kịch bản nhiều nhân vật theo cú pháp `<Tên>: lời thoại`, gán mỗi nhân vật một giọng riêng từ kho.
 - **📝 Giọng nói sang văn bản** — nhận dạng lời nói từ tệp âm thanh/video. Hỗ trợ MP3, WAV, M4A, FLAC, MP4, MOV…
-- **🗂 Kho giọng** — lưu lại giọng vừa tạo với tên và mô tả, tái sử dụng cho cả tab Sao chép giọng nói và Văn bản sang giọng nói. Hỗ trợ **sao lưu & phục hồi** ra file `.vcp` để chia sẻ giữa các máy.
-- **✨ AI gợi ý văn bản mẫu** — tự động nhận dạng nội dung đoạn âm thanh mẫu, giúp bạn không phải gõ từ đầu (vẫn cần dò lại chính tả trước khi tạo).
+- **🗂 Kho giọng + 30 giọng mẫu sẵn** — ứng dụng đi kèm 30 giọng mẫu sẵn (nam/nữ, nhiều chất giọng), bạn cũng có thể lưu giọng tự tạo. Đánh dấu ⭐ yêu thích để pin lên đầu danh sách, **sao lưu & phục hồi** ra file `.vcp` để chia sẻ.
+- **🎚 Thanh tốc độ + xuất theo tốc độ** — chỉnh tốc độ phát thử trên thanh sóng, file xuất ra sẽ đúng tốc độ đó (không bị méo cao độ).
+- **📄 Xuất kèm phụ đề SRT** — chế độ xuất gộp 1 file mặc định kèm `.srt` để tiện làm video, không phải transcribe lại.
+- **🔤 Từ điển phát âm cá nhân** — gặp ký tự đặc biệt như `100%`, `25°C`, `m²`? Gõ phiên âm một lần, ứng dụng tự nhớ và dùng lại cho lần sau.
+- **✨ AI gợi ý văn bản mẫu** — tự động nhận dạng nội dung đoạn âm thanh mẫu, giúp bạn không phải gõ từ đầu (vẫn cần dò lại chính tả).
 - **⬇ Tải riêng từng dòng** — mỗi câu trong bảng có nút tải riêng, không phải chờ xuất cả batch.
-- **Hỗ trợ hơn 600 ngôn ngữ** — nhận dạng và đọc được hơn 600 ngôn ngữ khác nhau (bao gồm tiếng Việt, Anh, Hoa, Nhật, Hàn, Pháp, Đức, Tây Ban Nha và nhiều ngôn ngữ thiểu số).
+- **Hỗ trợ hơn 600 ngôn ngữ đầu ra** — đọc được hơn 600 ngôn ngữ khác nhau (Việt, Anh, Hoa, Nhật, Hàn, Pháp, Đức, Tây Ban Nha và nhiều ngôn ngữ thiểu số).
 - **Xử lý hàng loạt** — nhập kịch bản dạng `.txt` hoặc `.srt`, chạy hàng loạt và xuất âm thanh giữ nguyên dấu thời gian.
-- **Tuỳ chỉnh giọng chi tiết** — số bước xử lý, mức độ bám sát văn bản, tốc độ đọc, khoảng nghỉ giữa các câu.
-- **Tự động nhận diện GPU tương thích** — nếu card đồ hoạ không chạy được (cũ hoặc thiếu driver), ứng dụng **tự chuyển sang CPU đa nhân** và báo rõ cho bạn biết, thay vì crash với lỗi kỹ thuật.
-- **Giao diện đa ngôn ngữ** — tiếng Việt và tiếng Anh.
+- **Tự động nhận diện GPU tương thích** — nếu card đồ hoạ không chạy được, ứng dụng **tự chuyển sang CPU đa nhân** và báo rõ cho bạn biết, thay vì crash với lỗi kỹ thuật.
+- **Giao diện 9 ngôn ngữ** — Tiếng Việt, English, Português, Türkçe, 简体中文, हिन्दी, বাংলা, اردو, Русский.
 
 ---
 
-## 🆕 Có gì mới ở v1.0.2
+## 🆕 Có gì mới ở v1.0.4
 
-- **Kho giọng (Voice Library)** — lưu, phục hồi và chia sẻ giọng đã tạo.
-- **AI gợi ý văn bản mẫu** — Whisper tự ghi lại lời nói trong đoạn âm thanh mẫu.
-- **Cảnh báo kiểm tra văn bản mẫu** — trước khi tạo, ứng dụng hỏi xác nhận để tránh lỗi "AI đọc chèn quảng cáo/subscribe" do văn bản mẫu sai lệch so với âm thanh.
-- **Tải riêng từng dòng** — nút ⬇ ngay trên từng hàng bảng.
-- **Phát hiện GPU chính xác hơn** — không còn hiện "Hỗ trợ tốt" giả cho GPU quá cũ; tự chuyển CPU khi không chạy được.
-- **Tối ưu CPU đa nhân** — khi chạy bằng CPU, tự cấu hình số luồng PyTorch/BLAS theo số nhân thật của máy để nhanh hơn đáng kể so với mặc định.
+- **💬 Tab Hội thoại nhiều giọng (mới)** — viết kịch bản nhiều nhân vật, mỗi người một giọng. Có nút **📋 Mẫu hội thoại chuẩn** để xem ví dụ.
+- **🗂 30 giọng mẫu sẵn** — đi kèm app, dùng được ngay không cần tự thu mẫu.
+- **⭐ Ngôi sao yêu thích** — bấm vào ⭐ cạnh tên giọng trong kho để pin lên đầu danh sách.
+- **🎚 Thanh tốc độ trong player** — chỉnh tốc độ phát thử (0.5x → 2x), xuất file giữ đúng tốc độ đó.
+- **📄 Tự xuất phụ đề SRT** — khi xuất gộp 1 file, app kèm luôn file `.srt` cùng tên (có thể tắt nếu không cần).
+- **🔤 Từ điển phát âm ký tự đặc biệt** — không bao giờ phải sửa "100%" thành "100 phần trăm" thủ công nữa: gõ phiên âm một lần, app nhớ mãi.
+- **🌐 9 ngôn ngữ giao diện** — thêm Português, Türkçe, 简体中文, हिन्दी, বাংলা, اردو, Русский (ngoài Việt/Anh).
+- **⏳ Hiển thị thời gian từng dòng** — biết ngay câu nào đang tạo và đã chạy bao lâu.
+- **🌍 Bắt buộc chọn ngôn ngữ đầu ra** — không còn "Auto" để tránh đọc sai phát âm.
 
 ---
 
@@ -62,12 +68,12 @@
 
 | Hệ điều hành | Tệp tải về | Dung lượng |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.2-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.2-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.4-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.4-arm64.dmg` | ~2 GB |
 
 ### Windows (chạy trực tiếp, không cần cài đặt)
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.2-win.zip`.
+1. Tải tệp `GLabsVoiceStudio-v1.0.4-win.zip`.
 2. Giải nén ra thư mục bất kỳ (ổ cứng cần còn trống ít nhất 10 GB).
 3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
 
@@ -77,7 +83,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Tải tệp **`GLabsVoiceStudio-v1.0.2-arm64.dmg`** từ nguồn phân phối chính thức.
+1. Tải tệp **`GLabsVoiceStudio-v1.0.4-arm64.dmg`** từ nguồn phân phối chính thức.
 2. Nhấp đúp vào file `.dmg` để mở.
 3. Kéo biểu tượng **G-Labs Voice Studio** vào thư mục **Applications**.
 4. Mở **Applications**, **nhấp chuột phải** vào **G-Labs Voice Studio** → chọn **Open**.
@@ -119,62 +125,96 @@ Lệnh này gỡ bỏ tất cả thuộc tính mở rộng (bao gồm cờ cách
 
 ## Cách sử dụng
 
-### Bước 1 — Đăng nhập và tải mô hình (làm một lần)
+### Bước 1 — Lần đầu mở app (làm một lần)
 
-1. **Mở Cài đặt** — bấm biểu tượng bánh răng ⚙️ ở thanh bên trái.
-2. **Đăng nhập** — trong tab *Bản quyền*, bấm **"Đăng nhập bằng Google"**. Trình duyệt sẽ tự mở để bạn chọn tài khoản Google.
-3. **Tải mô hình AI** — chuyển sang tab *Cài đặt môi trường* (hoặc ứng dụng tự nhắc), bấm **"Tải mô hình"**. Lần đầu sẽ tải về khoảng vài GB, chờ hoàn tất là xong phần chuẩn bị.
+1. Mở app — màn hình chào hiện 9 lựa chọn ngôn ngữ giao diện. Chọn ngôn ngữ bạn muốn dùng.
+2. **Đăng nhập** — bấm biểu tượng bánh răng ⚙️ ở thanh bên trái → tab *Bản quyền* → **"Đăng nhập bằng Google"**.
+3. **Tải mô hình AI** — chuyển sang tab *Cài đặt môi trường* (hoặc app tự nhắc) → bấm **"Tải mô hình"**. Khoảng vài GB, chờ hoàn tất là xong phần chuẩn bị.
 4. Đóng Cài đặt.
+
+> 💡 Đổi ngôn ngữ giao diện sau này: vào Cài đặt → Ngôn ngữ.
 
 ### Bước 2 — Sao chép giọng nói 🔊
 
 Nhân bản một giọng nói từ mẫu âm thanh.
 
 1. Mở tab **Sao chép giọng nói**.
-2. Ở ô *Tệp âm thanh mẫu*, bấm **"Chọn..."** → chọn tệp âm thanh mẫu (khuyến nghị 5–10 giây, giọng rõ ràng, ít tạp âm).
-3. **Bắt buộc:** nhập *Văn bản mẫu* — gõ chính xác lời nói trong đoạn âm thanh mẫu (đủ dấu câu, đúng chính tả). Văn bản khớp với âm thanh là điều kiện then chốt để giọng được sao chép chuẩn.
-    > 💡 Bấm **"✨ AI gợi ý"** cạnh ô văn bản mẫu để Whisper tự nhận dạng giúp bạn — vẫn cần dò lại trước khi tạo, vì AI có thể nghe nhầm vài chữ.
-4. Dán hoặc gõ văn bản cần đọc vào ô *Nội dung văn bản*. Có thể bấm **"📂 Nhập tệp văn bản"** để nạp trực tiếp từ tệp `.txt` hoặc `.srt`.
-5. Bấm **"📋 Nhập vào bảng"** — ứng dụng tự tách thành từng câu và đưa vào bảng phía dưới.
-6. (Tuỳ chọn) Mở *Cài đặt nâng cao* để chỉnh độ chi tiết, mức độ bám sát, tốc độ đọc, khoảng nghỉ giữa câu.
-7. Bấm **"▶ Bắt đầu tạo"** — ứng dụng hiện popup xác nhận văn bản mẫu; kiểm tra lần cuối rồi đồng ý để chạy.
-8. Khi xong, bấm **"💾 Xuất âm thanh"** để ghép tất cả thành một tệp duy nhất, hoặc dùng nút **⬇** ở từng dòng để tải riêng câu đó.
-
-### Bước 2b — Dùng Kho giọng 🗂 *(tuỳ chọn, có thể dùng chung ở cả tab Văn bản sang giọng nói)*
-
-Giọng đẹp mà bạn vừa tạo xong có thể lưu lại để lần sau dùng lại trong vài giây — không cần chọn file âm thanh, không cần mã hoá lại.
-
-1. Sau khi tạo ra âm thanh ưng ý, mở khung **Kho giọng** ở panel trái.
-2. Phần **"Lưu giọng vừa tạo vào kho"**: bấm **"💾 Lưu"**, nhập tên (VD: "MC Nam trầm") và mô tả ngắn (VD: "Giọng trung niên, phù hợp voice-over tin tức") → **Lưu**.
-3. Lần sau, chọn giọng từ dropdown **"Chọn giọng từ kho"** → không cần chọn tệp mẫu và văn bản mẫu nữa, chạy ngay được.
-4. Nút **⋯** bên cạnh mở menu **Sao lưu / Phục hồi**:
-    - **Sao lưu giọng đang chọn / toàn bộ kho** — xuất ra file `.vcp` để backup hoặc chia sẻ.
-    - **Nạp backup từ file `.vcp`** — nhập nhiều file cùng lúc, không ghi đè file cũ.
-5. Giọng lưu ở tab **Văn bản sang giọng nói** cũng dùng được ngay bên **Sao chép giọng nói** (và ngược lại) — không cần khởi động lại app.
+2. Chọn **ngôn ngữ đầu ra** ở đầu tab (vd: Vietnamese, English...).
+3. Ở ô *Tệp âm thanh mẫu*, bấm **"Chọn..."** → chọn tệp âm thanh mẫu (khuyến nghị 5–10 giây, giọng rõ ràng, ít tạp âm).
+4. **Bắt buộc:** nhập *Văn bản mẫu* — gõ chính xác lời nói trong đoạn âm thanh mẫu (đủ dấu câu, đúng chính tả).
+    > 💡 Bấm **"✨ AI gợi ý"** để Whisper tự nhận dạng giúp bạn — vẫn cần dò lại trước khi tạo.
+5. Dán văn bản cần đọc vào ô *Nội dung văn bản* (hoặc **"📂 Nhập tệp"** từ `.txt` / `.srt`).
+6. Bấm **"📋 Nhập vào bảng"** — app tự tách thành từng câu.
+7. (Tuỳ chọn) Mở **🔤 Phát âm** để xem từ điển phát âm — nếu trong văn bản có ký tự đặc biệt (vd `100%`), app sẽ hỏi cách đọc.
+8. Bấm **"▶ Bắt đầu tạo"** → app hỏi xác nhận văn bản mẫu → đồng ý để chạy.
+9. Khi xong, bấm **"💾 Xuất âm thanh"** (gộp 1 file kèm `.srt`) hoặc **⬇** ở từng dòng để tải riêng.
 
 ### Bước 3 — Văn bản sang giọng nói 🎛️
 
 Tạo giọng đọc mới theo mô tả, không cần tệp mẫu.
 
 1. Mở tab **Văn bản sang giọng nói**.
-2. Chọn thuộc tính giọng: *Giới tính*, *Độ tuổi*, *Cao độ*, *Phong cách*, *Khẩu âm*.
-    > 💡 Muốn dùng lại một giọng đã lưu trong **Kho giọng**? Chọn thẳng trong dropdown "Chọn giọng từ kho" — ứng dụng bỏ qua bước sinh giọng mẫu từ câu đầu, chạy batch ngay từ câu 1 → **nhanh hơn đáng kể**.
-3. Dán văn bản cần đọc vào ô *Nội dung văn bản*, hoặc **"📂 Nhập tệp văn bản"** từ `.txt` / `.srt`.
-4. Bấm **"📋 Nhập vào bảng"** để tách câu.
-5. (Tuỳ chọn) Chỉnh *Cài đặt nâng cao*.
-6. Bấm **"▶ Bắt đầu tạo"**.
-7. Bấm **"💾 Xuất âm thanh"** để lấy kết quả, hoặc **⬇** ở từng dòng để tải riêng.
-8. Nếu thấy giọng hay, bấm **"💾 Lưu"** trong khung *Kho giọng* để dùng lại sau.
+2. Chọn **ngôn ngữ đầu ra**.
+3. Mở khung **Thiết kế giọng** và chọn các thuộc tính: *Giới tính*, *Độ tuổi*, *Cao độ*, *Phong cách*, *Khẩu âm*.
+    > 💡 Muốn dùng lại một giọng đã lưu trong **Kho giọng**? Chọn thẳng trong dropdown — app bỏ qua bước sinh giọng mẫu, chạy ngay từ câu 1.
+4. Dán văn bản, bấm **"📋 Nhập vào bảng"**.
+5. Bấm **"▶ Bắt đầu tạo"**.
+6. Sau khi tạo xong: click vào dòng bạn muốn lưu trong bảng → bấm **"💾 Lưu"** trong khung *Kho giọng* để dùng lại sau.
+7. Bấm **"💾 Xuất âm thanh"** để lấy kết quả.
 
-### Bước 4 — Giọng nói sang văn bản 📝
+### Bước 4 — Hội thoại nhiều giọng 💬 *(mới)*
+
+Tạo audio hội thoại nhiều nhân vật, mỗi người một giọng riêng — phù hợp làm podcast, audio drama, video kịch bản phỏng vấn.
+
+1. Mở tab **Hội thoại nhiều giọng**.
+2. Chọn **ngôn ngữ đầu ra**.
+3. Bấm nút **📋 Mẫu hội thoại chuẩn** (góc phải khung văn bản) để xem ví dụ — app sẽ paste mẫu và mở khung chỉnh sửa chi tiết.
+4. Viết kịch bản theo cú pháp:
+    ```
+    <MC>: Xin chào quý vị và các bạn.
+    <Mai>: Em chào anh chị, em rất vui khi được tham gia chương trình.
+    <Minh>: Em cũng vậy, hôm nay chúng ta sẽ nói về gì ạ?
+    ```
+    > 💡 Tên nhân vật đặt trong dấu `< >`, theo sau là `:` rồi đến lời thoại. Có thể bỏ `:` cũng được. Tên không phân biệt hoa thường.
+5. Bấm **"🎭 Phân tích hội thoại"** — app tách thành từng dòng, hiện cột "Nhân vật".
+6. Khung **Phân vai giọng đọc** tự mở ra — chọn một giọng từ kho cho mỗi nhân vật.
+7. Bấm **"▶ Bắt đầu tạo"** — mỗi câu được đọc bằng giọng của nhân vật tương ứng.
+8. **"💾 Xuất âm thanh"** để lấy file (có kèm `.srt`).
+
+### Bước 5 — Giọng nói sang văn bản 📝
 
 Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
 
 1. Mở tab **Giọng nói sang văn bản**.
 2. Bấm **"Chọn tệp..."** → chọn tệp âm thanh/video (MP3, WAV, M4A, FLAC, MP4, MOV…).
-3. Bấm **"▶ Bắt đầu tạo"** — ứng dụng phân tích, tự tách đoạn theo giọng nói, rồi nhận dạng từng đoạn.
+3. Bấm **"▶ Bắt đầu tạo"** — app phân tích, tự tách đoạn theo giọng nói, rồi nhận dạng từng đoạn.
 4. Kết quả hiển thị dạng bảng (có dấu thời gian từng câu). Có thể chỉnh sửa trực tiếp.
 5. Bấm **"💾 Xuất"** để lưu ra `.txt` (văn bản thuần) hoặc `.srt` (có dấu thời gian, dùng làm phụ đề).
+
+---
+
+## 💡 Mẹo dùng nâng cao
+
+### Kho giọng & ngôi sao yêu thích
+- Mỗi giọng trong kho có ngôi sao ☆ ở đầu. Bấm vào → biến thành ★ → giọng đó nhảy lên đầu danh sách (cho lần mở sau).
+- Bấm ★ lần nữa để bỏ yêu thích.
+- 30 giọng mẫu sẵn (Achernar, Aoede, Mai, MC…) đều có thể đánh dấu yêu thích.
+
+### Từ điển phát âm
+- Khi trong văn bản có `%`, `$`, `°C`, `m²`, tên thương hiệu... bấm **🔤 Phát âm** trước khi tạo.
+- Lần đầu gặp, app hỏi cách đọc cho từng ký tự/từ → bạn gõ phiên âm (vd `%` → ` phần trăm`).
+- Mỗi từ chỉ cần gõ **một lần** — app nhớ theo ngôn ngữ đầu ra. Lần sau gặp lại, tự áp dụng.
+- Cùng từ ở ngôn ngữ khác (vi vs en) sẽ có phiên âm riêng.
+
+### Tốc độ phát + xuất
+- Sau khi tạo audio, dưới thanh sóng có **dropdown tốc độ** (0.5x → 2x).
+- Đổi tốc độ → preview ngay trên player.
+- File xuất ra sẽ giữ đúng tốc độ đó, **không bị méo cao độ** (dùng kỹ thuật time-stretch giữ pitch).
+
+### Xuất file kèm SRT
+- Trong khung *Cài đặt xuất file*, mặc định tích **"Xuất kèm phụ đề (.srt)"**.
+- Khi xuất gộp 1 file, app tự tạo `tên.srt` cùng thư mục với `tên.wav`.
+- Mốc thời gian trong SRT phản ánh độ dài thực tế của từng câu (đã bao gồm hiệu chỉnh tốc độ).
 
 ---
 
@@ -182,7 +222,7 @@ Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
 
 ### Windows x64
 - Windows 10 / 11 (64-bit)
-- **Card đồ hoạ NVIDIA** đời **RTX 20-series trở lên** (compute capability ≥ 7.0 — RTX 20/30/40/50, Titan V, Tesla V100…). Các card cũ hơn như GTX 10-series (GTX 1060/1070/1080) **không chạy được phần tăng tốc** vì thiếu hỗ trợ kernel; ứng dụng sẽ tự phát hiện và chuyển sang CPU.
+- **Card đồ hoạ NVIDIA** đời **RTX 20-series trở lên** (compute capability ≥ 7.0 — RTX 20/30/40/50, Titan V, Tesla V100…). Các card cũ hơn như GTX 10-series (GTX 1060/1070/1080) **không chạy được phần tăng tốc**; ứng dụng sẽ tự phát hiện và chuyển sang CPU.
 - Driver NVIDIA mới hỗ trợ CUDA 12.8.
 - 8 GB RAM (khuyến nghị 16 GB khi xử lý hàng loạt hoặc chạy bằng CPU).
 - 10 GB dung lượng ổ cứng (bao gồm mô hình AI).

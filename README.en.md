@@ -25,7 +25,7 @@
 
 <p align="center">
   <a href="https://duckmartians.info/voice">
-    <img alt="G-Labs Voice Studio UI" width="900" src="https://github.com/user-attachments/assets/0fe19f01-4e8e-46c9-bb8b-80bd9e347130" />
+    <img alt="G-Labs Voice Studio UI" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
   </a>
 </p>
 

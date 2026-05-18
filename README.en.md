@@ -220,20 +220,26 @@ Transcribe speech from an existing audio/video file.
 
 ## System Requirements
 
-### Windows x64
-- Windows 10 / 11 (64-bit)
-- **NVIDIA GPU, RTX 20-series or newer** (compute capability ≥ 7.0 — RTX 20/30/40/50, Titan V, Tesla V100…). Older cards like the GTX 10-series (GTX 1060/1070/1080) **can't run the accelerated kernels**; the app detects this and auto-falls-back to CPU.
+|   | Minimum | Recommended |
+|---|---|---|
+| **OS** | Windows 10 (64-bit), macOS 12 Monterey | Windows 11, macOS 13 or newer |
+| **RAM** | 8 GB | 16 GB or more |
+| **VRAM (GPU)** | 4 GB (auto-offloads TTS to CPU) | 8 GB+ (NVIDIA RTX 3060 or better) |
+| **Disk** | 10 GB free (models + cache) | 20 GB+ SSD |
+| **GPU** | Optional — CPU works | NVIDIA CUDA · Apple Silicon (Metal) |
+
+> 💡 **Tip:** On GPUs with ≤ 8 GB VRAM, the app automatically offloads TTS to CPU during transcription — no config needed. A dedicated GPU is not required; the entire pipeline runs on CPU (just slower).
+
+### Platform notes
+
+**Windows x64**
+- **NVIDIA GPU, RTX 20-series or newer** (compute capability ≥ 7.0 — RTX 20/30/40/50, Titan V, Tesla V100…). Older cards like the GTX 10-series (GTX 1060/1070/1080) **can't run the accelerated kernels**; the app detects this and auto-falls back to CPU.
 - NVIDIA driver with CUDA 12.8 support.
-- 8 GB RAM (16 GB recommended for batch workloads or CPU mode).
-- 10 GB free disk space (including the AI model).
 
-### macOS
-- macOS 12 (Monterey) or newer
-- **Apple Silicon** (M1/M2/M3/M4/…) — uses Apple's Metal acceleration
-- 8 GB RAM
-- 10 GB free disk space
+**macOS**
+- Only **Apple Silicon** (M1/M2/M3/M4…) is supported — uses Apple's Metal acceleration. Intel Macs are not supported.
 
-> Machines without a compatible GPU **automatically run on multi-core CPU** (the app tunes PyTorch / BLAS thread counts to your physical core count). Roughly 5-10× slower than GPU but still usable for short voice-over jobs.
+> Machines without a compatible GPU **automatically run on multi-core CPU** (the app tunes PyTorch / BLAS thread counts to your physical core count). Roughly 5–10× slower than GPU but still usable for short voice-over jobs.
 
 ---
 

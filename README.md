@@ -1,4 +1,14 @@
-<p align="right">🇻🇳 Tiếng Việt · <a href="./README.en.md">🇬🇧 English</a></p>
+<p align="right">
+🇻🇳 Tiếng Việt ·
+<a href="./README.en.md">🇬🇧 English</a> ·
+<a href="./README.pt-BR.md">🇧🇷 Português</a> ·
+<a href="./README.tr.md">🇹🇷 Türkçe</a> ·
+<a href="./README.zh-CN.md">🇨🇳 简体中文</a> ·
+<a href="./README.hi.md">🇮🇳 हिन्दी</a> ·
+<a href="./README.bn.md">🇧🇩 বাংলা</a> ·
+<a href="./README.ur.md">🇵🇰 اردو</a> ·
+<a href="./README.ru.md">🇷🇺 Русский</a>
+</p>
 
 <h1 align="center">G-Labs Voice Studio</h1>
 <p align="center">Ứng dụng giọng nói AI cho người sáng tạo nội dung</p>
@@ -57,7 +67,7 @@
 - **🧠 Tự động giải phóng bộ nhớ khi nhàn rỗi** — nếu để máy không dùng 5 phút (mặc định), app tự thả mô hình AI ra cho máy nhẹ bớt. Vào tab Cài đặt có thể đổi thời gian hoặc tắt hẳn.
 - **⚙ Ổn định hơn khi vừa tạo giọng vừa nhận dạng** — máy yếu trước đây có thể bị lỗi giữa chừng, giờ app tự sắp xếp để không xung đột.
 
-> ⚠️ **Đổi nhẹ ở file giọng đọc:** Mặc định bật chế độ Broadcast và cân âm lượng, nên file ở phiên bản này nghe **rõ và đầy hơn** so với phiên bản cũ. Muốn giữ y như cũ: vào 1 trong 3 tab tạo giọng → mở mục **Tinh chỉnh âm thanh** → chọn **🔇 Raw** và bỏ tích ô **Chuẩn hoá đỉnh**.
+> ⚠️ **Đổi nhẹ ở file giọng đọc:** Mặc định bật chế độ **📻 Phát thanh** và **Cân đều âm lượng các câu**, nên file ở phiên bản này nghe **rõ và đầy hơn** so với phiên bản cũ. Muốn giữ y như cũ: vào 1 trong 3 tab tạo giọng → mở mục **Tinh chỉnh âm thanh** → chọn **🔇 Nguyên bản** và bỏ tích ô **Cân đều âm lượng các câu**.
 
 ---
 
@@ -189,8 +199,9 @@ Tạo audio hội thoại nhiều nhân vật, mỗi người một giọng riê
     > 💡 Tên nhân vật đặt trong dấu `< >`, theo sau là `:` rồi đến lời thoại. Có thể bỏ `:` cũng được. Tên không phân biệt hoa thường.
 5. Bấm **"🎭 Phân tích hội thoại"** — app tách thành từng dòng, hiện cột "Nhân vật".
 6. Khung **Phân vai giọng đọc** tự mở ra — chọn một giọng từ kho cho mỗi nhân vật.
-7. Bấm **"▶ Bắt đầu tạo"** — mỗi câu được đọc bằng giọng của nhân vật tương ứng.
-8. **"💾 Xuất âm thanh"** để lấy file (có kèm `.srt`).
+7. (Tuỳ chọn — *mới*) Với mỗi nhân vật trong khung **Phân vai giọng đọc**, có thanh **Tốc độ** riêng (0.5x → 2x). Mỗi nhân vật nói với tốc độ độc lập trong cùng 1 lần tạo — phù hợp để MC nói chậm, khách mời nói nhanh hơn.
+8. Bấm **"▶ Bắt đầu tạo"** — mỗi câu được đọc bằng giọng của nhân vật tương ứng.
+9. **"💾 Xuất âm thanh"** để lấy file (có kèm `.srt`).
 
 ### Bước 5 — Giọng nói sang văn bản 📝
 
@@ -205,6 +216,22 @@ Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
 ---
 
 ## 💡 Mẹo dùng nâng cao
+
+### Tinh chỉnh âm thanh chuyên nghiệp *(mới)*
+- Trong 3 tab tạo giọng (Sao chép giọng / Văn bản sang giọng / Hội thoại) có mục **Tinh chỉnh âm thanh** thu gọn ở giữa khung.
+- 6 chế độ sẵn:
+  - 📻 **Phát thanh** *(mặc định)* — chuẩn radio/podcast, ấm và nén gọn.
+  - 🎬 **Điện ảnh** — vang rộng, nén nhẹ, chất lượng phim.
+  - 🎙️ **Podcast** — mic gần, nén mạnh, không vang.
+  - 🔇 **Nguyên bản** — giữ nguyên đầu ra của mô hình, không xử lý.
+  - ☀️ **Ấm** — trầm dày, cảm giác ấm áp.
+  - ✨ **Sáng** — cao sắc nét, thoáng đãng.
+- Đổi chế độ ở 1 tab → 2 tab còn lại tự đồng bộ. Nếu muốn file giống hệt phiên bản cũ (v1.0.4): chọn **🔇 Nguyên bản** + bỏ tích **Cân đều âm lượng các câu**.
+
+### Tự động giải phóng bộ nhớ *(mới)*
+- Mặc định: nếu để app không dùng **5 phút**, mô hình AI sẽ tự được dỡ ra khỏi VRAM/RAM để máy nhẹ bớt.
+- Lần thao tác kế tiếp app sẽ nạp lại mô hình (~30-60s).
+- Vào tab **Cài đặt môi trường** → mục **Tự động giải phóng VRAM** để chỉnh thời gian (0 = tắt hẳn, 1-120 phút).
 
 ### Kho giọng & ngôi sao yêu thích
 - Mỗi giọng trong kho có ngôi sao ☆ ở đầu. Bấm vào → biến thành ★ → giọng đó nhảy lên đầu danh sách (cho lần mở sau).

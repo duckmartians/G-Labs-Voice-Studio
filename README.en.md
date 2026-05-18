@@ -1,4 +1,14 @@
-<p align="right"><a href="./README.md">🇻🇳 Tiếng Việt</a> · 🇬🇧 English</p>
+<p align="right">
+<a href="./README.md">🇻🇳 Tiếng Việt</a> ·
+🇬🇧 English ·
+<a href="./README.pt-BR.md">🇧🇷 Português</a> ·
+<a href="./README.tr.md">🇹🇷 Türkçe</a> ·
+<a href="./README.zh-CN.md">🇨🇳 简体中文</a> ·
+<a href="./README.hi.md">🇮🇳 हिन्दी</a> ·
+<a href="./README.bn.md">🇧🇩 বাংলা</a> ·
+<a href="./README.ur.md">🇵🇰 اردو</a> ·
+<a href="./README.ru.md">🇷🇺 Русский</a>
+</p>
 
 <h1 align="center">G-Labs Voice Studio</h1>
 <p align="center">AI voice studio for creators</p>
@@ -57,7 +67,7 @@
 - **🧠 Auto-free memory when idle** — if the app sits unused for 5 minutes (default), it automatically unloads the AI model to free up your machine. Adjust the timeout or disable it from the Settings tab.
 - **⚙ More stable when generating and transcribing together** — on low-memory machines this used to crash mid-run; the app now handles it automatically.
 
-> ⚠️ **Small change to exported audio:** The default Broadcast preset + peak normalize make voice files in v1.0.5 sound **louder and fuller** than v1.0.4. To keep the old behavior, open any generation tab → expand **Audio mastering** → pick **🔇 Raw** and untick **Normalize peak**.
+> ⚠️ **Small change to exported audio:** The default **📻 Broadcast** preset + **Even out volume between rows** make voice files in v1.0.5 sound **louder and fuller** than v1.0.4. To keep the old behavior, open any generation tab → expand **Audio mastering** → pick **🔇 Raw** and untick **Even out volume between rows**.
 
 ---
 
@@ -189,8 +199,9 @@ Generate multi-character dialogue audio, one voice per speaker — perfect for p
     > 💡 Speaker name goes inside `< >`, followed by `:` then the line. The colon is optional — `<Anna> Hi there` also works. Names are case-insensitive.
 5. Click **"🎭 Parse dialogue"** — the app splits the script into rows and shows a "Speaker" column.
 6. The **Voice Assignment** panel opens automatically — pick a library voice for each speaker.
-7. Click **"▶ Start"** — each line is read in the voice of its assigned speaker.
-8. Click **"💾 Export audio"** to save the result (a matching `.srt` is included).
+7. (Optional — *new*) Each speaker row has its own **Speed** slider (0.5x → 2x) right below the voice picker. Speakers can run at independent tempos in the same batch — e.g. host speaks slowly, guest faster.
+8. Click **"▶ Start"** — each line is read in the voice of its assigned speaker.
+9. Click **"💾 Export audio"** to save the result (a matching `.srt` is included).
 
 ### Step 5 — Speech-to-Text 📝
 
@@ -205,6 +216,22 @@ Transcribe speech from an existing audio/video file.
 ---
 
 ## 💡 Power-user tips
+
+### Audio mastering *(new)*
+- The three generation tabs (Voice Cloning / Voice Design / Multi-Voice Dialogue) all have an **Audio mastering** collapsible in the middle of the form.
+- 6 built-in presets:
+  - 📻 **Broadcast** *(default)* — radio/podcast standard, warm and compressed.
+  - 🎬 **Cinematic** — spacious reverb, gentle compression, film-quality.
+  - 🎙️ **Podcast** — close-mic, heavy compression, no reverb.
+  - 🔇 **Raw** — model output as-is, no processing.
+  - ☀️ **Warm** — boosted low-mids, cozy feel.
+  - ✨ **Bright** — crisp high-end, airy feel.
+- Change the preset in one tab → the other two auto-sync. To get the exact same output as the previous version (v1.0.4): pick **🔇 Raw** and untick **Even out volume between rows**.
+
+### Auto-free memory when idle *(new)*
+- Default: if the app sits unused for **5 minutes**, the AI model is automatically unloaded from VRAM/RAM to free system resources.
+- Next time you generate, the model reloads (~30-60s).
+- Go to the **Environment** tab → **Auto-unload VRAM** to adjust the timeout (0 = disabled, 1-120 minutes).
 
 ### Voice Library & favorite star
 - Every voice in the library has a ☆ at the start of its row. Click it → it turns ★ → that voice jumps to the top of the list (and stays there next time).

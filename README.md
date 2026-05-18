@@ -220,20 +220,26 @@ Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
 
 ## Yêu cầu hệ thống
 
-### Windows x64
-- Windows 10 / 11 (64-bit)
+|   | Tối thiểu | Khuyến nghị |
+|---|---|---|
+| **Hệ điều hành** | Windows 10 (64-bit), macOS 12 Monterey | Windows 11, macOS 13 trở lên |
+| **RAM** | 8 GB | 16 GB trở lên |
+| **VRAM (GPU)** | 4 GB (tự chuyển TTS sang CPU khi thiếu) | 8 GB trở lên (NVIDIA RTX 3060+) |
+| **Ổ cứng** | 10 GB trống (mô hình + cache) | 20 GB trở lên, SSD |
+| **GPU** | Không bắt buộc — CPU vẫn chạy được | NVIDIA CUDA · Apple Silicon (Metal) |
+
+> 💡 **Mẹo:** Với card đồ hoạ ≤ 8 GB VRAM, ứng dụng tự động chuyển phần tổng hợp giọng nói (TTS) sang CPU trong lúc nhận dạng — không cần chỉnh cấu hình. Máy không có GPU rời vẫn chạy được toàn bộ pipeline trên CPU (chỉ chậm hơn).
+
+### Lưu ý theo nền tảng
+
+**Windows x64**
 - **Card đồ hoạ NVIDIA** đời **RTX 20-series trở lên** (compute capability ≥ 7.0 — RTX 20/30/40/50, Titan V, Tesla V100…). Các card cũ hơn như GTX 10-series (GTX 1060/1070/1080) **không chạy được phần tăng tốc**; ứng dụng sẽ tự phát hiện và chuyển sang CPU.
 - Driver NVIDIA mới hỗ trợ CUDA 12.8.
-- 8 GB RAM (khuyến nghị 16 GB khi xử lý hàng loạt hoặc chạy bằng CPU).
-- 10 GB dung lượng ổ cứng (bao gồm mô hình AI).
 
-### macOS
-- macOS 12 (Monterey) trở lên
-- **Apple Silicon** (M1/M2/M3/M4/...) — dùng công nghệ tăng tốc Metal của Apple
-- 8 GB RAM
-- 10 GB dung lượng ổ cứng
+**macOS**
+- Chỉ hỗ trợ **Apple Silicon** (M1/M2/M3/M4…) — dùng công nghệ tăng tốc Metal của Apple. Bản Intel Mac không được hỗ trợ.
 
-> Máy không có GPU tương thích sẽ **tự động chạy bằng CPU** đa nhân (ứng dụng đã tối ưu số luồng theo số nhân thật). Chậm hơn GPU khoảng 5-10 lần nhưng vẫn dùng được cho voice-over ngắn.
+> Máy không có GPU tương thích sẽ **tự động chạy bằng CPU** đa nhân (ứng dụng đã tối ưu số luồng theo số nhân thật). Chậm hơn GPU khoảng 5–10 lần nhưng vẫn dùng được cho voice-over ngắn.
 
 ---
 

@@ -50,6 +50,17 @@
 
 ---
 
+## 🆕 What's new in v1.0.5
+
+- **🎚 Professional audio mastering (new)** — pick one of 6 processing modes (Broadcast / Cinematic / Podcast / Warm / Bright / Raw) to make your voice tracks sound studio-grade. Available in all 3 generation tabs (Voice Clone / Voice Design / Multi-Voice Dialogue) — change it in one tab and the others stay in sync.
+- **🌐 Better sentence splitting for Chinese / Hindi / Arabic / Urdu** — these languages used to get squashed into one row; now sentences are split correctly based on each script's punctuation.
+- **🧠 Auto-free memory when idle** — if the app sits unused for 5 minutes (default), it automatically unloads the AI model to free up your machine. Adjust the timeout or disable it from the Settings tab.
+- **⚙ More stable when generating and transcribing together** — on low-memory machines this used to crash mid-run; the app now handles it automatically.
+
+> ⚠️ **Small change to exported audio:** The default Broadcast preset + peak normalize make voice files in v1.0.5 sound **louder and fuller** than v1.0.4. To keep the old behavior, open any generation tab → expand **Audio mastering** → pick **🔇 Raw** and untick **Normalize peak**.
+
+---
+
 ## 🆕 What's new in v1.0.4
 
 - **💬 Multi-Voice Dialogue tab (new)** — write multi-character scripts, one voice per speaker. Click **📋 Sample dialogue** for a working example.
@@ -68,12 +79,12 @@
 
 | Platform | File | Size |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.4-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.4-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.5-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.5-arm64.dmg` | ~2 GB |
 
 ### Windows (portable, no install needed)
 
-1. Download `GLabsVoiceStudio-v1.0.4-win.zip`.
+1. Download `GLabsVoiceStudio-v1.0.5-win.zip`.
 2. Extract to any folder (the drive needs at least 10 GB free).
 3. Open the extracted folder and double-click `GLabsVoiceStudio.exe`.
 
@@ -83,7 +94,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Download **`GLabsVoiceStudio-v1.0.4-arm64.dmg`** from the official distribution.
+1. Download **`GLabsVoiceStudio-v1.0.5-arm64.dmg`** from the official distribution.
 2. Double-click the `.dmg` file to open it.
 3. Drag the **G-Labs Voice Studio** icon into the **Applications** folder.
 4. Open **Applications**, **right-click** on **G-Labs Voice Studio** → choose **Open**.

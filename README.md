@@ -50,6 +50,17 @@
 
 ---
 
+## 🆕 Có gì mới ở v1.0.5
+
+- **🎚 Chế độ âm thanh chuyên nghiệp (mới)** — chọn 1 trong 6 chế độ xử lý (Phát thanh / Điện ảnh / Podcast / Ấm / Sáng / Nguyên bản) để file giọng đọc nghe "chuẩn studio" hơn. Có sẵn trong cả 3 tab Sao chép giọng / Văn bản sang giọng / Hội thoại — đổi ở 1 tab thì 2 tab còn lại tự cập nhật theo.
+- **🌐 Tách câu tốt hơn cho tiếng Trung / Hindi / Ả Rập / Urdu** — trước đây các ngôn ngữ này hay bị dồn cả đoạn thành 1 dòng, giờ tách câu chính xác theo dấu câu của từng ngôn ngữ.
+- **🧠 Tự động giải phóng bộ nhớ khi nhàn rỗi** — nếu để máy không dùng 5 phút (mặc định), app tự thả mô hình AI ra cho máy nhẹ bớt. Vào tab Cài đặt có thể đổi thời gian hoặc tắt hẳn.
+- **⚙ Ổn định hơn khi vừa tạo giọng vừa nhận dạng** — máy yếu trước đây có thể bị lỗi giữa chừng, giờ app tự sắp xếp để không xung đột.
+
+> ⚠️ **Đổi nhẹ ở file giọng đọc:** Mặc định bật chế độ Broadcast và cân âm lượng, nên file ở phiên bản này nghe **rõ và đầy hơn** so với phiên bản cũ. Muốn giữ y như cũ: vào 1 trong 3 tab tạo giọng → mở mục **Tinh chỉnh âm thanh** → chọn **🔇 Raw** và bỏ tích ô **Chuẩn hoá đỉnh**.
+
+---
+
 ## 🆕 Có gì mới ở v1.0.4
 
 - **💬 Tab Hội thoại nhiều giọng (mới)** — viết kịch bản nhiều nhân vật, mỗi người một giọng. Có nút **📋 Mẫu hội thoại chuẩn** để xem ví dụ.
@@ -68,12 +79,12 @@
 
 | Hệ điều hành | Tệp tải về | Dung lượng |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.4-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.4-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.5-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.5-arm64.dmg` | ~2 GB |
 
 ### Windows (chạy trực tiếp, không cần cài đặt)
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.4-win.zip`.
+1. Tải tệp `GLabsVoiceStudio-v1.0.5-win.zip`.
 2. Giải nén ra thư mục bất kỳ (ổ cứng cần còn trống ít nhất 10 GB).
 3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
 
@@ -83,7 +94,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Tải tệp **`GLabsVoiceStudio-v1.0.4-arm64.dmg`** từ nguồn phân phối chính thức.
+1. Tải tệp **`GLabsVoiceStudio-v1.0.5-arm64.dmg`** từ nguồn phân phối chính thức.
 2. Nhấp đúp vào file `.dmg` để mở.
 3. Kéo biểu tượng **G-Labs Voice Studio** vào thư mục **Applications**.
 4. Mở **Applications**, **nhấp chuột phải** vào **G-Labs Voice Studio** → chọn **Open**.

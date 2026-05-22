@@ -254,6 +254,68 @@ Mevcut bir ses/video dosyasından konuşmayı yazıya dökün.
 - Tek birleştirilmiş bir dosya olarak dışa aktardığınızda, uygulama `name.wav`'ın yanına `name.srt` oluşturur.
 - SRT'deki zaman damgaları, hız ayarından sonra gerçek satır başına süreyi yansıtır.
 
+# Emotion Tag Rehberi
+
+Bu etiketler, TTS modelinin duygu ve konuşma tarzını kontrol etmek için doğrudan metne eklenebilir.
+
+## Temel Kullanım
+
+Etiketi cümlenin başına yerleştirin:
+
+```text
+[laughter] Bu gerçekten çok komikti.
+```
+
+Birden fazla duygusal satırı da birleştirebilirsiniz:
+
+```text
+[sigh] Bugün gerçekten çok yorgunum.
+[question-oh] Oh? Çoktan bitirdin mi?
+[surprise-wa] Wa! Burası harika görünüyor.
+```
+
+---
+
+# Desteklenen Etiketler
+
+| Etiket | Anlamı | Örnek |
+|---|---|---|
+| `[laughter]` | Kahkaha / neşeli ton | `[laughter] Bu çok komikti.` |
+| `[sigh]` | İç çekme, yorgunluk, hayal kırıklığı veya rahatlama | `[sigh] Biraz dinlenmem lazım.` |
+| `[confirmation-en]` | Yumuşak onay / kabul | `[confirmation-en] Evet, anladım.` |
+| `[question-en]` | Normal soru tonu | `[question-en] Ciddi misin?` |
+| `[question-ah]` | Meraklı veya şaşkın soru | `[question-ah] Ah? Ne oldu?` |
+| `[question-oh]` | Şaşkın veya ilgili soru | `[question-oh] Oh? Gerçekten mi?` |
+| `[question-ei]` | Günlük şaşkın soru | `[question-ei] Ei? Neden ben?` |
+| `[question-yi]` | Daha güçlü soru tepkisi | `[question-yi] Yi? Bu da neydi?` |
+| `[surprise-ah]` | Ani şaşkınlık | `[surprise-ah] Ah! Beni korkuttun.` |
+| `[surprise-oh]` | Hafif şaşkınlık | `[surprise-oh] Oh! Bunu bilmiyordum.` |
+| `[surprise-wa]` | Heyecanlı şaşkınlık | `[surprise-wa] Wa! Çok güzel.` |
+| `[surprise-yo]` | Enerjik şaşkınlık | `[surprise-yo] Yo! Bu harikaydı.` |
+| `[dissatisfaction-hnn]` | Memnuniyetsizlik / rahatsızlık | `[dissatisfaction-hnn] Hnn... Bundan hoşlanmadım.` |
+
+---
+
+# İpuçları
+
+- Etiketler genellikle cümlenin başında daha iyi çalışır
+- Etiketleri küçük harflerle kullanın
+- Köşeli parantezleri tam olarak gösterildiği gibi yazın
+- Kısa ve basit cümleler daha güçlü duygusal sonuçlar verir
+- Bazı etiketler gerçek ses efekti yerine sadece tonlamayı değiştirir
+
+---
+
+# Önerilen Format
+
+```text
+[surprise-wa] Wa! Bu yemek inanılmaz.
+
+[laughter] Az kalsın beni korkutuyordun.
+
+[sigh] Bugün gerçekten çok yorucuydu.
+```
+
 ---
 
 ## Sistem Gereksinimleri

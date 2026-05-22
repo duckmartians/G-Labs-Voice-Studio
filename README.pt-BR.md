@@ -254,6 +254,68 @@ Transcreva a fala de um arquivo de áudio/vídeo existente.
 - Ao exportar como um único arquivo mesclado, o app cria `nome.srt` ao lado de `nome.wav`.
 - Os tempos no SRT refletem a duração real de cada linha (após o ajuste de velocidade).
 
+# Guia de Emotion Tags
+
+Essas tags podem ser inseridas diretamente no texto para controlar emoções e o estilo de fala do modelo TTS.
+
+## Uso Básico
+
+Coloque a tag antes da frase:
+
+```text
+[laughter] Isso foi realmente engraçado.
+```
+
+Você também pode combinar várias linhas emocionais:
+
+```text
+[sigh] Estou realmente cansado hoje.
+[question-oh] Oh? Você já terminou?
+[surprise-wa] Wa! Este lugar é incrível.
+```
+
+---
+
+# Tags Suportadas
+
+| Tag | Significado | Exemplo |
+|---|---|---|
+| `[laughter]` | Risada / tom alegre | `[laughter] Isso foi engraçado.` |
+| `[sigh]` | Suspiro, cansaço, frustração ou alívio | `[sigh] Eu preciso descansar um pouco.` |
+| `[confirmation-en]` | Confirmação / concordância suave | `[confirmation-en] Sim, eu entendi.` |
+| `[question-en]` | Tom neutro de pergunta | `[question-en] Você está falando sério?` |
+| `[question-ah]` | Pergunta curiosa ou surpresa | `[question-ah] Ah? O que aconteceu?` |
+| `[question-oh]` | Pergunta com surpresa ou dúvida | `[question-oh] Oh? Sério mesmo?` |
+| `[question-ei]` | Pergunta casual e surpresa | `[question-ei] Ei? Por que eu?` |
+| `[question-yi]` | Reação de pergunta mais forte | `[question-yi] Yi? O que foi isso?` |
+| `[surprise-ah]` | Surpresa repentina | `[surprise-ah] Ah! Isso me assustou.` |
+| `[surprise-oh]` | Surpresa leve | `[surprise-oh] Oh! Eu não sabia.` |
+| `[surprise-wa]` | Surpresa animada | `[surprise-wa] Wa! Que lindo.` |
+| `[surprise-yo]` | Surpresa energética | `[surprise-yo] Yo! Isso foi incrível.` |
+| `[dissatisfaction-hnn]` | Insatisfação / irritação | `[dissatisfaction-hnn] Hnn... Eu não gostei disso.` |
+
+---
+
+# Dicas
+
+- As tags geralmente funcionam melhor no começo da frase
+- Mantenha as tags em letras minúsculas
+- Use os colchetes exatamente como mostrado
+- Frases curtas e simples costumam gerar emoções mais fortes
+- Algumas tags apenas alteram levemente a entonação em vez de criar efeitos sonoros reais
+
+---
+
+# Formato Recomendado
+
+```text
+[surprise-wa] Wa! Esta comida está incrível.
+
+[laughter] Você quase me assustou agora.
+
+[sigh] Hoje foi realmente cansativo.
+```
+
 ---
 
 ## Requisitos de Sistema

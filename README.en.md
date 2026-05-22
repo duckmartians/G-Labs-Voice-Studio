@@ -254,6 +254,68 @@ Transcribe speech from an existing audio/video file.
 - When you export as a single merged file, the app creates `name.srt` next to `name.wav`.
 - Timestamps in the SRT reflect the actual per-line duration (after the speed adjustment).
 
+# Emotion Tags Guide
+
+These tags can be inserted directly into text to control emotional expression and speaking style in the TTS model.
+
+## Basic Usage
+
+Place a tag before a sentence:
+
+```text
+[laughter] That was actually pretty funny.
+```
+
+You can also combine multiple emotional lines:
+
+```text
+[sigh] I’m really tired today.
+[question-oh] Oh? You already finished?
+[surprise-wa] Wa! This looks amazing.
+```
+
+---
+
+# Supported Tags
+
+| Tag | Meaning | Example |
+|---|---|---|
+| `[laughter]` | Laughing / cheerful tone | `[laughter] That was funny.` |
+| `[sigh]` | Tired, disappointed, relieved | `[sigh] I need a break.` |
+| `[confirmation-en]` | Soft confirmation / agreement | `[confirmation-en] Yeah, I understand.` |
+| `[question-en]` | Neutral questioning tone | `[question-en] Are you serious?` |
+| `[question-ah]` | Curious / surprised question | `[question-ah] Ah? What happened?` |
+| `[question-oh]` | Confused or interested question | `[question-oh] Oh? Really?` |
+| `[question-ei]` | Casual surprised question | `[question-ei] Ei? Why me?` |
+| `[question-yi]` | Sharp questioning reaction | `[question-yi] Yi? What was that?` |
+| `[surprise-ah]` | Sudden surprise | `[surprise-ah] Ah! That scared me.` |
+| `[surprise-oh]` | Mild surprise | `[surprise-oh] Oh! I didn’t know.` |
+| `[surprise-wa]` | Excited surprise | `[surprise-wa] Wa! So beautiful.` |
+| `[surprise-yo]` | Energetic surprise | `[surprise-yo] Yo! That’s awesome.` |
+| `[dissatisfaction-hnn]` | Annoyance / dissatisfaction | `[dissatisfaction-hnn] Hnn... I don’t like this.` |
+
+---
+
+# Tips
+
+- Tags usually work best at the start of a sentence
+- Keep tags in lowercase
+- Use square brackets exactly as written
+- Short and simple sentences often produce stronger emotional effects
+- Some tags may affect tone subtly rather than adding real sound effects
+
+---
+
+# Recommended Format
+
+```text
+[surprise-wa] Wa! This food is incredible.
+
+[laughter] You almost scared me there.
+
+[sigh] Today was exhausting.
+```
+
 ---
 
 ## System Requirements

@@ -254,6 +254,68 @@ xattr -cr "/Applications/G-Labs Voice Studio.app"
 - 当以合并为单文件的方式导出时，应用会在 `name.wav` 旁创建 `name.srt`。
 - SRT 中的时间戳反映的是速度调整后每句的实际时长。
 
+# Emotion Tags 使用指南
+
+这些标签可以直接插入到文本中，用于控制 TTS 模型的情绪和说话风格。
+
+## 基本用法
+
+将标签放在句子前面：
+
+```text
+[laughter] 这真的太好笑了。
+```
+
+你也可以组合多种情绪表达：
+
+```text
+[sigh] 我今天真的很累。
+[question-oh] 哦？你已经完成了吗？
+[surprise-wa] 哇！这里太漂亮了。
+```
+
+---
+
+# 支持的标签
+
+| 标签 | 含义 | 示例 |
+|---|---|---|
+| `[laughter]` | 笑声 / 开心语气 | `[laughter] 这太搞笑了。` |
+| `[sigh]` | 叹气、疲惫、失望或放松 | `[sigh] 我需要休息一下。` |
+| `[confirmation-en]` | 轻柔确认 / 同意 | `[confirmation-en] 嗯，我明白了。` |
+| `[question-en]` | 普通疑问语气 | `[question-en] 你是认真的吗？` |
+| `[question-ah]` | 好奇或惊讶的提问 | `[question-ah] 啊？发生什么了？` |
+| `[question-oh]` | 带有惊讶或疑惑的提问 | `[question-oh] 哦？真的吗？` |
+| `[question-ei]` | 随意惊讶的提问 | `[question-ei] 欸？为什么是我？` |
+| `[question-yi]` | 更强烈的疑问反应 | `[question-yi] 咦？那是什么？` |
+| `[surprise-ah]` | 突然惊讶 | `[surprise-ah] 啊！吓我一跳。` |
+| `[surprise-oh]` | 轻微惊讶 | `[surprise-oh] 哦！我不知道。` |
+| `[surprise-wa]` | 兴奋惊讶 | `[surprise-wa] 哇！太漂亮了。` |
+| `[surprise-yo]` | 充满活力的惊讶 | `[surprise-yo] 哟！太酷了。` |
+| `[dissatisfaction-hnn]` | 不满 / 不高兴 | `[dissatisfaction-hnn] 哼……我不喜欢这个。` |
+
+---
+
+# 使用技巧
+
+- 标签通常放在句子开头效果最好
+- 建议保持小写格式
+- 请严格按照示例使用方括号
+- 简短、直接的句子通常会产生更明显的情绪效果
+- 某些标签可能只会轻微改变语调，而不会生成真实音效
+
+---
+
+# 推荐格式
+
+```text
+[surprise-wa] 哇！这食物太好吃了。
+
+[laughter] 你刚刚差点吓到我了。
+
+[sigh] 今天真的太累了。
+```
+
 ---
 
 ## 系统要求

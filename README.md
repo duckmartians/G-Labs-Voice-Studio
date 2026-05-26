@@ -60,6 +60,16 @@
 
 ---
 
+## 🆕 Có gì mới ở v1.0.6
+
+- **🔗 Webhook API (mới)** — server REST cục bộ cho phép n8n, Zapier, Python/cURL hoặc bất kỳ HTTP client nào gọi sinh giọng tự động. Tích hợp panel tìm kiếm giọng + ngôn ngữ ngay trong app, nháy đúp để copy. Có khóa API che dạng `xxxx***xxxx`, autostart, log request realtime.
+- **🚀 Xuất file nhanh hơn nhiều + thanh tiến độ thật** — ghép nhạc + chỉnh tốc độ chạy song song nhiều core, dự án 50 phút xuất xong trong vài chục giây thay vì vài phút. Thanh tiến độ inline đi mượt 0→100% với nút **Dừng** cắt được giữa chừng.
+- **🧹 Tab Sao chép giọng + Giọng nói sang văn bản (ASR) gọn hơn** — Clone bỏ các nút trùng với tab Văn bản → Giọng. ASR tự ghép fragment ngắn thành câu hoàn chỉnh, giữ nguyên timeline gốc.
+- **💾 Đồng bộ cài đặt giữa các tab** — *Số câu đồng thời* (batch size) giờ dùng chung cho cả 3 tab + webhook concurrency limit, đổi ở đâu các nơi còn lại tự update. Tab Sao chép giọng / Văn bản → Giọng nhớ giọng đã chọn trong kho qua các lần restart.
+- **🐛 Sửa nhiều lỗi tồn đọng** — crash khi xuất file sau khi hết phiên (`AttributeError: NoneType`), trạng thái "model đã tải" sai khi mạng đứt giữa chừng làm safetensors thiếu, nút "Lưu giọng" sáng sớm trước khi clone xong.
+
+---
+
 ## 🆕 Có gì mới ở v1.0.5
 
 - **🎚 Chế độ âm thanh chuyên nghiệp (mới)** — chọn 1 trong 6 chế độ xử lý (Phát thanh / Điện ảnh / Podcast / Ấm / Sáng / Nguyên bản) để file giọng đọc nghe "chuẩn studio" hơn. Có sẵn trong cả 3 tab Sao chép giọng / Văn bản sang giọng / Hội thoại — đổi ở 1 tab thì 2 tab còn lại tự cập nhật theo.
@@ -89,12 +99,12 @@
 
 | Hệ điều hành | Tệp tải về | Dung lượng |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.5-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.5-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | ~2 GB |
 
 ### Windows (chạy trực tiếp, không cần cài đặt)
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.5-win.zip`.
+1. Tải tệp `GLabsVoiceStudio-v1.0.6-win.zip`.
 2. Giải nén ra thư mục bất kỳ (ổ cứng cần còn trống ít nhất 10 GB).
 3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
 
@@ -104,7 +114,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Tải tệp **`GLabsVoiceStudio-v1.0.5-arm64.dmg`** từ nguồn phân phối chính thức.
+1. Tải tệp **`GLabsVoiceStudio-v1.0.6-arm64.dmg`** từ nguồn phân phối chính thức.
 2. Nhấp đúp vào file `.dmg` để mở.
 3. Kéo biểu tượng **G-Labs Voice Studio** vào thư mục **Applications**.
 4. Mở **Applications**, **nhấp chuột phải** vào **G-Labs Voice Studio** → chọn **Open**.
@@ -253,68 +263,6 @@ Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
 - Trong khung *Cài đặt xuất file*, mặc định tích **"Xuất kèm phụ đề (.srt)"**.
 - Khi xuất gộp 1 file, app tự tạo `tên.srt` cùng thư mục với `tên.wav`.
 - Mốc thời gian trong SRT phản ánh độ dài thực tế của từng câu (đã bao gồm hiệu chỉnh tốc độ).
-
-# Hướng Dẫn Emotion Tags
-
-Các tag này có thể được chèn trực tiếp vào văn bản để điều khiển cảm xúc và cách biểu đạt giọng nói của mô hình TTS.
-
-## Cách Sử Dụng Cơ Bản
-
-Đặt tag ở trước câu nói:
-
-```text
-[laughter] Cái đó thật sự rất buồn cười.
-```
-
-Bạn cũng có thể kết hợp nhiều dòng cảm xúc:
-
-```text
-[sigh] Hôm nay tôi thật sự rất mệt.
-[question-oh] Oh? Bạn làm xong rồi à?
-[surprise-wa] Wa! Chỗ này đẹp quá.
-```
-
----
-
-# Danh Sách Tags Hỗ Trợ
-
-| Tag | Ý nghĩa | Ví dụ |
-|---|---|---|
-| `[laughter]` | Cười / vui vẻ | `[laughter] Cái này hài thật.` |
-| `[sigh]` | Thở dài, mệt mỏi, thất vọng hoặc nhẹ nhõm | `[sigh] Tôi cần nghỉ một chút.` |
-| `[confirmation-en]` | Xác nhận / đồng ý nhẹ nhàng | `[confirmation-en] Ừ, tôi hiểu rồi.` |
-| `[question-en]` | Giọng hỏi bình thường | `[question-en] Bạn nghiêm túc chứ?` |
-| `[question-ah]` | Hỏi với cảm giác tò mò hoặc bất ngờ | `[question-ah] Ah? Chuyện gì vậy?` |
-| `[question-oh]` | Hỏi với cảm giác ngạc nhiên hoặc thắc mắc | `[question-oh] Oh? Thật sao?` |
-| `[question-ei]` | Hỏi kiểu bất ngờ, tự nhiên | `[question-ei] Ei? Sao lại là tôi?` |
-| `[question-yi]` | Phản ứng hỏi mạnh hơn | `[question-yi] Yi? Cái gì vậy?` |
-| `[surprise-ah]` | Bất ngờ đột ngột | `[surprise-ah] Ah! Làm tôi giật mình đấy.` |
-| `[surprise-oh]` | Ngạc nhiên nhẹ | `[surprise-oh] Oh! Tôi không biết luôn.` |
-| `[surprise-wa]` | Ngạc nhiên thích thú | `[surprise-wa] Wa! Đẹp quá.` |
-| `[surprise-yo]` | Ngạc nhiên đầy năng lượng | `[surprise-yo] Yo! Hay thật đấy.` |
-| `[dissatisfaction-hnn]` | Khó chịu / không hài lòng | `[dissatisfaction-hnn] Hnn... Tôi không thích cái này.` |
-
----
-
-# Mẹo Sử Dụng
-
-- Tags thường hoạt động tốt nhất khi đặt ở đầu câu
-- Nên giữ nguyên chữ thường
-- Dùng đúng dấu ngoặc vuông như mẫu
-- Câu ngắn và đơn giản thường cho hiệu ứng cảm xúc rõ hơn
-- Một số tag chỉ thay đổi nhẹ ngữ điệu thay vì tạo hiệu ứng âm thanh thật
-
----
-
-# Định Dạng Được Khuyến Nghị
-
-```text
-[surprise-wa] Wa! Món ăn này ngon thật.
-
-[laughter] Cậu vừa làm tôi giật mình đấy.
-
-[sigh] Hôm nay đúng là mệt thật.
-```
 
 ---
 

@@ -60,6 +60,16 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 ---
 
+## 🆕 Novidades na v1.0.6
+
+- **🔗 Webhook API (novo)** — servidor REST local permite que n8n, Zapier, Python/cURL ou qualquer cliente HTTP dispare geração de voz programaticamente. Painéis de seleção de voz + idioma integrados (clique duplo para copiar), chave de API mascarada `xxxx***xxxx`, autostart, log de requisições em tempo real.
+- **🚀 Exportações muito mais rápidas + barra de progresso real** — concatenação e ajuste de velocidade rodam em paralelo nos núcleos da CPU, um projeto de 50 minutos exporta em dezenas de segundos em vez de minutos. Barra de progresso inline avança suavemente 0→100% com botão **Parar** real que cancela no meio do processo.
+- **🧹 Abas Clonagem de voz + Fala-para-texto mais enxutas** — Clone removeu botões duplicados da aba Texto-para-fala. ASR junta automaticamente fragmentos curtos em frases completas, preservando a linha do tempo original.
+- **💾 Sincronização de configurações entre abas** — *Frases simultâneas* (batch size) agora é compartilhado entre as três abas de geração + limite de concorrência do Webhook; mude em qualquer lugar e tudo mais é atualizado. Abas Clonagem / Texto-para-fala lembram a última predefinição selecionada após reinicialização.
+- **🐛 Várias correções** — crash de exportação após timeout de sessão (`AttributeError: NoneType`), estado "modelo baixado" incorreto quando a rede cai durante download deixando safetensors incompletos, botão "Salvar voz" acendendo antes da clonagem terminar de fato.
+
+---
+
 ## 🆕 Novidades da v1.0.5
 
 - **🎚 Masterização de áudio profissional (novo)** — escolha um dos 6 modos de processamento (Radiodifusão / Cinema / Podcast / Quente / Brilhante / Bruto) para deixar suas faixas de voz com qualidade de estúdio. Disponível nas 3 abas de geração (Clone de Voz / Texto para Voz / Diálogo de Várias Vozes) — mude em uma aba e as outras ficam sincronizadas.
@@ -89,12 +99,12 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 | Plataforma | Arquivo | Tamanho |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.5-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.5-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | ~2 GB |
 
 ### Windows (portátil, não precisa instalar)
 
-1. Baixe `GLabsVoiceStudio-v1.0.5-win.zip`.
+1. Baixe `GLabsVoiceStudio-v1.0.6-win.zip`.
 2. Extraia para qualquer pasta (o disco precisa ter pelo menos 10 GB livres).
 3. Abra a pasta extraída e dê dois cliques em `GLabsVoiceStudio.exe`.
 
@@ -104,7 +114,7 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 ### 🍎 macOS Apple Silicon
 
-1. Baixe o **`GLabsVoiceStudio-v1.0.5-arm64.dmg`** na distribuição oficial.
+1. Baixe o **`GLabsVoiceStudio-v1.0.6-arm64.dmg`** na distribuição oficial.
 2. Dê dois cliques no arquivo `.dmg` para abrir.
 3. Arraste o ícone do **G-Labs Voice Studio** para a pasta **Aplicativos**.
 4. Abra **Aplicativos**, **clique com o botão direito** em **G-Labs Voice Studio** → escolha **Abrir**.
@@ -253,68 +263,6 @@ Transcreva a fala de um arquivo de áudio/vídeo existente.
 - No painel *Configurações de exportação*, **"Exportar legendas também (.srt)"** vem ligado por padrão.
 - Ao exportar como um único arquivo mesclado, o app cria `nome.srt` ao lado de `nome.wav`.
 - Os tempos no SRT refletem a duração real de cada linha (após o ajuste de velocidade).
-
-# Guia de Emotion Tags
-
-Essas tags podem ser inseridas diretamente no texto para controlar emoções e o estilo de fala do modelo TTS.
-
-## Uso Básico
-
-Coloque a tag antes da frase:
-
-```text
-[laughter] Isso foi realmente engraçado.
-```
-
-Você também pode combinar várias linhas emocionais:
-
-```text
-[sigh] Estou realmente cansado hoje.
-[question-oh] Oh? Você já terminou?
-[surprise-wa] Wa! Este lugar é incrível.
-```
-
----
-
-# Tags Suportadas
-
-| Tag | Significado | Exemplo |
-|---|---|---|
-| `[laughter]` | Risada / tom alegre | `[laughter] Isso foi engraçado.` |
-| `[sigh]` | Suspiro, cansaço, frustração ou alívio | `[sigh] Eu preciso descansar um pouco.` |
-| `[confirmation-en]` | Confirmação / concordância suave | `[confirmation-en] Sim, eu entendi.` |
-| `[question-en]` | Tom neutro de pergunta | `[question-en] Você está falando sério?` |
-| `[question-ah]` | Pergunta curiosa ou surpresa | `[question-ah] Ah? O que aconteceu?` |
-| `[question-oh]` | Pergunta com surpresa ou dúvida | `[question-oh] Oh? Sério mesmo?` |
-| `[question-ei]` | Pergunta casual e surpresa | `[question-ei] Ei? Por que eu?` |
-| `[question-yi]` | Reação de pergunta mais forte | `[question-yi] Yi? O que foi isso?` |
-| `[surprise-ah]` | Surpresa repentina | `[surprise-ah] Ah! Isso me assustou.` |
-| `[surprise-oh]` | Surpresa leve | `[surprise-oh] Oh! Eu não sabia.` |
-| `[surprise-wa]` | Surpresa animada | `[surprise-wa] Wa! Que lindo.` |
-| `[surprise-yo]` | Surpresa energética | `[surprise-yo] Yo! Isso foi incrível.` |
-| `[dissatisfaction-hnn]` | Insatisfação / irritação | `[dissatisfaction-hnn] Hnn... Eu não gostei disso.` |
-
----
-
-# Dicas
-
-- As tags geralmente funcionam melhor no começo da frase
-- Mantenha as tags em letras minúsculas
-- Use os colchetes exatamente como mostrado
-- Frases curtas e simples costumam gerar emoções mais fortes
-- Algumas tags apenas alteram levemente a entonação em vez de criar efeitos sonoros reais
-
----
-
-# Formato Recomendado
-
-```text
-[surprise-wa] Wa! Esta comida está incrível.
-
-[laughter] Você quase me assustou agora.
-
-[sigh] Hoje foi realmente cansativo.
-```
 
 ---
 

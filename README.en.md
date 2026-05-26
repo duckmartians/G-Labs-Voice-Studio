@@ -60,6 +60,16 @@
 
 ---
 
+## 🆕 What's new in v1.0.6
+
+- **🔗 Webhook API (new)** — local REST server lets n8n, Zapier, Python/cURL or any HTTP client trigger voice generation programmatically. Built-in voice + language picker panels (double-click to copy), masked `xxxx***xxxx` API key, autostart, realtime request log.
+- **🚀 Much faster exports + real progress bar** — concatenation and time-stretch run in parallel across CPU cores; a 50-minute project exports in tens of seconds instead of minutes. Inline progress bar moves smoothly 0→100% with a real **Stop** button that actually cancels mid-flight.
+- **🧹 Cleaner Voice Clone + Speech-to-text tabs** — Clone drops buttons that duplicated the Text-to-Speech tab. ASR auto-merges short fragments into full sentences while preserving the original timeline.
+- **💾 Cross-tab settings sync** — *Concurrent sentences* (batch size) is now shared across all three generation tabs + the webhook concurrency limit, change it anywhere and everything else updates. Voice Clone / Text-to-Speech tabs remember the last selected preset across restarts.
+- **🐛 Many bug fixes** — export crash after session timeout (`AttributeError: NoneType`), incorrect "model downloaded" state when network drops mid-download leaving safetensors incomplete, "Save voice" button lighting up before clone actually finishes.
+
+---
+
 ## 🆕 What's new in v1.0.5
 
 - **🎚 Professional audio mastering (new)** — pick one of 6 processing modes (Broadcast / Cinematic / Podcast / Warm / Bright / Raw) to make your voice tracks sound studio-grade. Available in all 3 generation tabs (Voice Clone / Voice Design / Multi-Voice Dialogue) — change it in one tab and the others stay in sync.
@@ -89,12 +99,12 @@
 
 | Platform | File | Size |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.5-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.5-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | ~2 GB |
 
 ### Windows (portable, no install needed)
 
-1. Download `GLabsVoiceStudio-v1.0.5-win.zip`.
+1. Download `GLabsVoiceStudio-v1.0.6-win.zip`.
 2. Extract to any folder (the drive needs at least 10 GB free).
 3. Open the extracted folder and double-click `GLabsVoiceStudio.exe`.
 
@@ -104,7 +114,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Download **`GLabsVoiceStudio-v1.0.5-arm64.dmg`** from the official distribution.
+1. Download **`GLabsVoiceStudio-v1.0.6-arm64.dmg`** from the official distribution.
 2. Double-click the `.dmg` file to open it.
 3. Drag the **G-Labs Voice Studio** icon into the **Applications** folder.
 4. Open **Applications**, **right-click** on **G-Labs Voice Studio** → choose **Open**.
@@ -253,68 +263,6 @@ Transcribe speech from an existing audio/video file.
 - In the *Export settings* panel, **"Export subtitles (.srt)"** is on by default.
 - When you export as a single merged file, the app creates `name.srt` next to `name.wav`.
 - Timestamps in the SRT reflect the actual per-line duration (after the speed adjustment).
-
-# Emotion Tags Guide
-
-These tags can be inserted directly into text to control emotional expression and speaking style in the TTS model.
-
-## Basic Usage
-
-Place a tag before a sentence:
-
-```text
-[laughter] That was actually pretty funny.
-```
-
-You can also combine multiple emotional lines:
-
-```text
-[sigh] I’m really tired today.
-[question-oh] Oh? You already finished?
-[surprise-wa] Wa! This looks amazing.
-```
-
----
-
-# Supported Tags
-
-| Tag | Meaning | Example |
-|---|---|---|
-| `[laughter]` | Laughing / cheerful tone | `[laughter] That was funny.` |
-| `[sigh]` | Tired, disappointed, relieved | `[sigh] I need a break.` |
-| `[confirmation-en]` | Soft confirmation / agreement | `[confirmation-en] Yeah, I understand.` |
-| `[question-en]` | Neutral questioning tone | `[question-en] Are you serious?` |
-| `[question-ah]` | Curious / surprised question | `[question-ah] Ah? What happened?` |
-| `[question-oh]` | Confused or interested question | `[question-oh] Oh? Really?` |
-| `[question-ei]` | Casual surprised question | `[question-ei] Ei? Why me?` |
-| `[question-yi]` | Sharp questioning reaction | `[question-yi] Yi? What was that?` |
-| `[surprise-ah]` | Sudden surprise | `[surprise-ah] Ah! That scared me.` |
-| `[surprise-oh]` | Mild surprise | `[surprise-oh] Oh! I didn’t know.` |
-| `[surprise-wa]` | Excited surprise | `[surprise-wa] Wa! So beautiful.` |
-| `[surprise-yo]` | Energetic surprise | `[surprise-yo] Yo! That’s awesome.` |
-| `[dissatisfaction-hnn]` | Annoyance / dissatisfaction | `[dissatisfaction-hnn] Hnn... I don’t like this.` |
-
----
-
-# Tips
-
-- Tags usually work best at the start of a sentence
-- Keep tags in lowercase
-- Use square brackets exactly as written
-- Short and simple sentences often produce stronger emotional effects
-- Some tags may affect tone subtly rather than adding real sound effects
-
----
-
-# Recommended Format
-
-```text
-[surprise-wa] Wa! This food is incredible.
-
-[laughter] You almost scared me there.
-
-[sigh] Today was exhausting.
-```
 
 ---
 

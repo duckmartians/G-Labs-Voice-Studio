@@ -60,6 +60,16 @@
 
 ---
 
+## 🆕 v1.0.6 新功能
+
+- **🔗 Webhook API(新)** — 本地 REST 服务器允许 n8n、Zapier、Python/cURL 或任意 HTTP 客户端自动调用语音生成。内置声音 + 语言选择面板(双击复制),掩码 `xxxx***xxxx` 形式的 API 密钥,自启动,实时请求日志。
+- **🚀 导出大幅加速 + 真正动起来的进度条** — 拼接 + 变速在多核 CPU 上并行执行,50 分钟项目从几分钟缩短到几十秒。内嵌进度条平滑从 0→100%,**停止** 按钮真的可以中途取消。
+- **🧹 声音克隆 + 语音转文字 标签页更精简** — 克隆去掉与 文字转语音 重复的按钮。ASR 自动把短片段合并成完整句子,保留原始时间轴。
+- **💾 跨标签页设置同步** — *并发句数*(batch size)现在在所有三个生成标签页 + Webhook 并发限制之间共享,在任意位置修改其余地方自动更新。声音克隆 / 文字转语音 标签页跨重启记住上次选择的预设。
+- **🐛 修复多个已知问题** — 会话超时后导出崩溃(`AttributeError: NoneType`)、网络中断导致 safetensors 不完整时错误显示"模型已下载"、克隆完成前 "保存声音" 按钮提前亮起。
+
+---
+
 ## 🆕 v1.0.5 新功能
 
 - **🎚 专业音频母带处理（新）** —— 从 6 种处理模式（广播 / 电影 / 播客 / 温暖 / 明亮 / 原始）中选择一种，让您的语音作品达到录音棚级别的音质。三个生成标签页（🔊 语音克隆 / 🎛️ 文本转语音 / 💬 多角色对话）均可使用——在任一标签页中修改，其余两个会自动同步。
@@ -89,12 +99,12 @@
 
 | 平台 | 文件 | 大小 |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.5-win.zip` | 约 3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.5-arm64.dmg` | 约 2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | 约 3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | 约 2 GB |
 
 ### Windows（便携版，无需安装）
 
-1. 下载 `GLabsVoiceStudio-v1.0.5-win.zip`。
+1. 下载 `GLabsVoiceStudio-v1.0.6-win.zip`。
 2. 解压到任意文件夹（所在磁盘至少需有 10 GB 可用空间）。
 3. 打开解压后的文件夹，双击 `GLabsVoiceStudio.exe`。
 
@@ -104,7 +114,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. 从官方发布渠道下载 **`GLabsVoiceStudio-v1.0.5-arm64.dmg`**。
+1. 从官方发布渠道下载 **`GLabsVoiceStudio-v1.0.6-arm64.dmg`**。
 2. 双击 `.dmg` 文件打开。
 3. 将 **G-Labs Voice Studio** 图标拖入 **应用程序** 文件夹。
 4. 打开 **应用程序**，**右键点击** **G-Labs Voice Studio** → 选择 **打开**。
@@ -253,68 +263,6 @@ xattr -cr "/Applications/G-Labs Voice Studio.app"
 - 在 *导出设置* 面板中，**"同时导出字幕 (.srt)"** 默认开启。
 - 当以合并为单文件的方式导出时，应用会在 `name.wav` 旁创建 `name.srt`。
 - SRT 中的时间戳反映的是速度调整后每句的实际时长。
-
-# Emotion Tags 使用指南
-
-这些标签可以直接插入到文本中，用于控制 TTS 模型的情绪和说话风格。
-
-## 基本用法
-
-将标签放在句子前面：
-
-```text
-[laughter] 这真的太好笑了。
-```
-
-你也可以组合多种情绪表达：
-
-```text
-[sigh] 我今天真的很累。
-[question-oh] 哦？你已经完成了吗？
-[surprise-wa] 哇！这里太漂亮了。
-```
-
----
-
-# 支持的标签
-
-| 标签 | 含义 | 示例 |
-|---|---|---|
-| `[laughter]` | 笑声 / 开心语气 | `[laughter] 这太搞笑了。` |
-| `[sigh]` | 叹气、疲惫、失望或放松 | `[sigh] 我需要休息一下。` |
-| `[confirmation-en]` | 轻柔确认 / 同意 | `[confirmation-en] 嗯，我明白了。` |
-| `[question-en]` | 普通疑问语气 | `[question-en] 你是认真的吗？` |
-| `[question-ah]` | 好奇或惊讶的提问 | `[question-ah] 啊？发生什么了？` |
-| `[question-oh]` | 带有惊讶或疑惑的提问 | `[question-oh] 哦？真的吗？` |
-| `[question-ei]` | 随意惊讶的提问 | `[question-ei] 欸？为什么是我？` |
-| `[question-yi]` | 更强烈的疑问反应 | `[question-yi] 咦？那是什么？` |
-| `[surprise-ah]` | 突然惊讶 | `[surprise-ah] 啊！吓我一跳。` |
-| `[surprise-oh]` | 轻微惊讶 | `[surprise-oh] 哦！我不知道。` |
-| `[surprise-wa]` | 兴奋惊讶 | `[surprise-wa] 哇！太漂亮了。` |
-| `[surprise-yo]` | 充满活力的惊讶 | `[surprise-yo] 哟！太酷了。` |
-| `[dissatisfaction-hnn]` | 不满 / 不高兴 | `[dissatisfaction-hnn] 哼……我不喜欢这个。` |
-
----
-
-# 使用技巧
-
-- 标签通常放在句子开头效果最好
-- 建议保持小写格式
-- 请严格按照示例使用方括号
-- 简短、直接的句子通常会产生更明显的情绪效果
-- 某些标签可能只会轻微改变语调，而不会生成真实音效
-
----
-
-# 推荐格式
-
-```text
-[surprise-wa] 哇！这食物太好吃了。
-
-[laughter] 你刚刚差点吓到我了。
-
-[sigh] 今天真的太累了。
-```
 
 ---
 

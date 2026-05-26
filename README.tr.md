@@ -60,6 +60,16 @@
 
 ---
 
+## 🆕 v1.0.6'da yenilikler
+
+- **🔗 Webhook API (yeni)** — yerel REST sunucusu n8n, Zapier, Python/cURL veya herhangi bir HTTP istemcisinin programatik olarak ses üretimini tetiklemesine olanak tanır. Uygulama içinde ses + dil seçici panelleri (çift tıklayarak kopyala), `xxxx***xxxx` maskelenmiş API anahtarı, otomatik başlatma, gerçek zamanlı istek günlüğü.
+- **🚀 Çok daha hızlı dışa aktarma + gerçek ilerleme çubuğu** — birleştirme ve zaman germe CPU çekirdeklerinde paralel çalışır; 50 dakikalık bir proje dakikalar yerine onlarca saniyede dışa aktarılır. Satır içi ilerleme çubuğu 0→100% pürüzsüz ilerler, gerçek **Durdur** düğmesi ortadan iptal edebilir.
+- **🧹 Daha sade Ses Klonlama + Konuşma-metin sekmeleri** — Klonlama, Metin-konuşma sekmesi ile çakışan düğmeleri kaldırdı. ASR otomatik olarak kısa parçaları tam cümlelere birleştirir, orijinal zaman çizelgesini korur.
+- **💾 Sekmeler arası ayar senkronizasyonu** — *Eşzamanlı cümleler* (batch size) artık üç üretim sekmesi + Webhook eşzamanlılık limiti arasında paylaşılır; herhangi bir yerde değiştirin, geri kalanı otomatik güncellenir. Klonlama / Metin-konuşma sekmeleri yeniden başlatmalarda son seçilen ön ayarı hatırlar.
+- **🐛 Birçok hata düzeltmesi** — oturum zaman aşımı sonrası dışa aktarma çökmesi (`AttributeError: NoneType`), ağ kesintisi nedeniyle safetensors eksik kaldığında yanlış "model indirildi" durumu, klonlama gerçekten bitmeden "Sesi kaydet" düğmesinin etkinleşmesi.
+
+---
+
 ## 🆕 v1.0.5'te yenilikler
 
 - **🎚 Profesyonel ses ustalama (yeni)** — ses parçalarınızın stüdyo kalitesinde duyulması için 6 işleme modundan birini seçin (Yayın / Sinema / Podcast / Sıcak / Parlak / Ham). 3 üretim sekmesinin (Ses Klonlama / Metinden Sese / Çok Sesli Diyalog) hepsinde kullanılabilir — bir sekmede değiştirin, diğerleri senkron kalır.
@@ -89,12 +99,12 @@
 
 | Platform | Dosya | Boyut |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.5-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.5-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | ~2 GB |
 
 ### Windows (taşınabilir, kuruluma gerek yok)
 
-1. `GLabsVoiceStudio-v1.0.5-win.zip` dosyasını indirin.
+1. `GLabsVoiceStudio-v1.0.6-win.zip` dosyasını indirin.
 2. Herhangi bir klasöre çıkarın (sürücüde en az 10 GB boş alan olmalı).
 3. Çıkarılan klasörü açın ve `GLabsVoiceStudio.exe` dosyasına çift tıklayın.
 
@@ -104,7 +114,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.5-arm64.dmg`** dosyasını indirin.
+1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.6-arm64.dmg`** dosyasını indirin.
 2. Açmak için `.dmg` dosyasına çift tıklayın.
 3. **G-Labs Voice Studio** simgesini **Applications** klasörüne sürükleyin.
 4. **Applications**'ı açın, **G-Labs Voice Studio** üzerine **sağ tıklayın** → **Aç**'ı seçin.
@@ -253,68 +263,6 @@ Mevcut bir ses/video dosyasından konuşmayı yazıya dökün.
 - *Dışa aktarma ayarları* panelinde **"Altyazıyı da dışa aktar (.srt)"** varsayılan olarak açıktır.
 - Tek birleştirilmiş bir dosya olarak dışa aktardığınızda, uygulama `name.wav`'ın yanına `name.srt` oluşturur.
 - SRT'deki zaman damgaları, hız ayarından sonra gerçek satır başına süreyi yansıtır.
-
-# Emotion Tag Rehberi
-
-Bu etiketler, TTS modelinin duygu ve konuşma tarzını kontrol etmek için doğrudan metne eklenebilir.
-
-## Temel Kullanım
-
-Etiketi cümlenin başına yerleştirin:
-
-```text
-[laughter] Bu gerçekten çok komikti.
-```
-
-Birden fazla duygusal satırı da birleştirebilirsiniz:
-
-```text
-[sigh] Bugün gerçekten çok yorgunum.
-[question-oh] Oh? Çoktan bitirdin mi?
-[surprise-wa] Wa! Burası harika görünüyor.
-```
-
----
-
-# Desteklenen Etiketler
-
-| Etiket | Anlamı | Örnek |
-|---|---|---|
-| `[laughter]` | Kahkaha / neşeli ton | `[laughter] Bu çok komikti.` |
-| `[sigh]` | İç çekme, yorgunluk, hayal kırıklığı veya rahatlama | `[sigh] Biraz dinlenmem lazım.` |
-| `[confirmation-en]` | Yumuşak onay / kabul | `[confirmation-en] Evet, anladım.` |
-| `[question-en]` | Normal soru tonu | `[question-en] Ciddi misin?` |
-| `[question-ah]` | Meraklı veya şaşkın soru | `[question-ah] Ah? Ne oldu?` |
-| `[question-oh]` | Şaşkın veya ilgili soru | `[question-oh] Oh? Gerçekten mi?` |
-| `[question-ei]` | Günlük şaşkın soru | `[question-ei] Ei? Neden ben?` |
-| `[question-yi]` | Daha güçlü soru tepkisi | `[question-yi] Yi? Bu da neydi?` |
-| `[surprise-ah]` | Ani şaşkınlık | `[surprise-ah] Ah! Beni korkuttun.` |
-| `[surprise-oh]` | Hafif şaşkınlık | `[surprise-oh] Oh! Bunu bilmiyordum.` |
-| `[surprise-wa]` | Heyecanlı şaşkınlık | `[surprise-wa] Wa! Çok güzel.` |
-| `[surprise-yo]` | Enerjik şaşkınlık | `[surprise-yo] Yo! Bu harikaydı.` |
-| `[dissatisfaction-hnn]` | Memnuniyetsizlik / rahatsızlık | `[dissatisfaction-hnn] Hnn... Bundan hoşlanmadım.` |
-
----
-
-# İpuçları
-
-- Etiketler genellikle cümlenin başında daha iyi çalışır
-- Etiketleri küçük harflerle kullanın
-- Köşeli parantezleri tam olarak gösterildiği gibi yazın
-- Kısa ve basit cümleler daha güçlü duygusal sonuçlar verir
-- Bazı etiketler gerçek ses efekti yerine sadece tonlamayı değiştirir
-
----
-
-# Önerilen Format
-
-```text
-[surprise-wa] Wa! Bu yemek inanılmaz.
-
-[laughter] Az kalsın beni korkutuyordun.
-
-[sigh] Bugün gerçekten çok yorucuydu.
-```
 
 ---
 

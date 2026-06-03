@@ -60,6 +60,19 @@
 
 ---
 
+## 🆕 What's new in v1.0.7
+
+- **🔊 The Voice Clone tab, rebuilt to be simpler** — the library is split into two clear columns (**Built-in voices** / **Your voices**) and the text box is trimmed to a single line. After cloning, the app prompts you to listen, then asks if you'd like to save the voice — saving is one tap. Sample audio longer than 30 seconds is **auto-trimmed** at a silence gap for a cleaner clone.
+- **🎛 A tidier Text → Speech tab** — "Voice library" and "Voice design" are merged into **one frame**; flip between **Use a saved voice** ↔ **Random voice**, no more clutter.
+- **▶ Preview built-in voices** — click the ▶ next to any built-in voice in the library to hear it before using it.
+- **⭐ Favorites synced everywhere** — star a voice in one tab and the other tabs see it too.
+- **🐛 Fixed the speed control causing distorted audio / failed exports** — removed the speed control in the preview bar (it caused the pitch distortion and the export error). To read faster/slower, use the **Reading speed** slider under *Advanced settings* — natural voice, no errors.
+- **✨ Small touches** — the default gap between sentences is shorter now (100ms) for smoother flow; delete buttons render consistently; a tidier UI in several places.
+- **🎙 Speech-to-Text tab: pick your recognition model** — choose from small to large (Tiny → Turbo) to match your machine: weaker PCs pick a small model for speed, stronger ones a large model for accuracy (each shows the **VRAM it needs**). The default model is ready right after install; others download in one tap and are **saved on your machine**, so next time works offline.
+- **🌍 Choose the spoken language** — telling it which language is being spoken (~100 supported) improves accuracy and stops mid-clip language mix-ups; plus tweaks that reduce errors/repeated words on tricky parts.
+
+---
+
 ## 🆕 What's new in v1.0.6
 
 - **🔗 Webhook API (new)** — local REST server lets n8n, Zapier, Python/cURL or any HTTP client trigger voice generation programmatically. Built-in voice + language picker panels (double-click to copy), masked `xxxx***xxxx` API key, autostart, realtime request log.
@@ -99,12 +112,12 @@
 
 | Platform | File | Size |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.7-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.7-arm64.dmg` | ~2 GB |
 
 ### Windows (portable, no install needed)
 
-1. Download `GLabsVoiceStudio-v1.0.6-win.zip`.
+1. Download `GLabsVoiceStudio-v1.0.7-win.zip`.
 2. Extract to any folder (the drive needs at least 10 GB free).
 3. Open the extracted folder and double-click `GLabsVoiceStudio.exe`.
 
@@ -114,7 +127,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Download **`GLabsVoiceStudio-v1.0.6-arm64.dmg`** from the official distribution.
+1. Download **`GLabsVoiceStudio-v1.0.7-arm64.dmg`** from the official distribution.
 2. Double-click the `.dmg` file to open it.
 3. Drag the **G-Labs Voice Studio** icon into the **Applications** folder.
 4. Open **Applications**, **right-click** on **G-Labs Voice Studio** → choose **Open**.

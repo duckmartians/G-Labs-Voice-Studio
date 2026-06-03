@@ -60,6 +60,19 @@
 
 ---
 
+## 🆕 v1.0.7'de yenilikler
+
+- **🔊 Ses Klonlama sekmesi, daha basit olacak şekilde yenilendi** — kütüphane iki net sütuna ayrıldı (**Hazır sesler** / **Sesleriniz**) ve metin kutusu tek satıra indirildi. Klonlamadan sonra uygulama dinlemenizi önerir, ardından sesi kaydetmek isteyip istemediğinizi sorar — kaydetmek tek dokunuş. 30 saniyeden uzun örnek ses, daha temiz bir klonlama için bir sessizlik noktasında **otomatik kırpılır**.
+- **🎛 Daha derli toplu bir Metinden Sese sekmesi** — "Ses kütüphanesi" ve "Ses tasarımı" **tek bir çerçevede** birleştirildi; **Kayıtlı ses kullan** ↔ **Rastgele ses** arasında geçiş yapın, karmaşa yok.
+- **▶ Hazır sesleri önizleyin** — kütüphanedeki herhangi bir hazır sesin yanındaki ▶ düğmesine tıklayarak kullanmadan önce dinleyin.
+- **⭐ Favoriler her yerde eşitlenir** — bir sekmede bir sese yıldız verin, diğer sekmeler de görür.
+- **🐛 Hız denetiminin sesi bozması / dışa aktarmanın başarısız olması düzeltildi** — önizleme çubuğundaki hız denetimi kaldırıldı (bozulmaya ve dışa aktarma hatasına neden oluyordu). Daha hızlı/yavaş okumak için *Gelişmiş ayarlar* altındaki **Okuma hızı** kaydırıcısını kullanın — doğal ses, hatasız.
+- **✨ Küçük dokunuşlar** — cümleler arası varsayılan boşluk artık daha kısa (100ms), daha akıcı; silme düğmeleri tutarlı görünüyor; birçok yerde daha derli toplu arayüz.
+- **🎙 Konuşma → Metin sekmesi: tanıma modelini seçin** — makinenize göre küçükten büyüğe (Tiny → Turbo) seçin: zayıf bilgisayarlar hız için küçük modeli, güçlüler doğruluk için büyük modeli seçer (her biri **gereken VRAM'i** gösterir). Varsayılan model kurulumdan hemen sonra hazır; diğerleri tek dokunuşla iner ve **bilgisayarınıza kaydedilir**, sonraki sefer çevrimdışı çalışır.
+- **🌍 Konuşulan dili seçin** — hangi dilin konuşulduğunu belirtmek (~100 dil destekli) doğruluğu artırır ve ortada dil karışmasını önler; ayrıca zor kısımlarda hata/tekrarı azaltan iyileştirmeler.
+
+---
+
 ## 🆕 v1.0.6'da yenilikler
 
 - **🔗 Webhook API (yeni)** — yerel REST sunucusu n8n, Zapier, Python/cURL veya herhangi bir HTTP istemcisinin programatik olarak ses üretimini tetiklemesine olanak tanır. Uygulama içinde ses + dil seçici panelleri (çift tıklayarak kopyala), `xxxx***xxxx` maskelenmiş API anahtarı, otomatik başlatma, gerçek zamanlı istek günlüğü.
@@ -99,12 +112,12 @@
 
 | Platform | Dosya | Boyut |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.7-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.7-arm64.dmg` | ~2 GB |
 
 ### Windows (taşınabilir, kuruluma gerek yok)
 
-1. `GLabsVoiceStudio-v1.0.6-win.zip` dosyasını indirin.
+1. `GLabsVoiceStudio-v1.0.7-win.zip` dosyasını indirin.
 2. Herhangi bir klasöre çıkarın (sürücüde en az 10 GB boş alan olmalı).
 3. Çıkarılan klasörü açın ve `GLabsVoiceStudio.exe` dosyasına çift tıklayın.
 
@@ -114,7 +127,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.6-arm64.dmg`** dosyasını indirin.
+1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.7-arm64.dmg`** dosyasını indirin.
 2. Açmak için `.dmg` dosyasına çift tıklayın.
 3. **G-Labs Voice Studio** simgesini **Applications** klasörüne sürükleyin.
 4. **Applications**'ı açın, **G-Labs Voice Studio** üzerine **sağ tıklayın** → **Aç**'ı seçin.

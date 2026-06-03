@@ -60,6 +60,19 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 ---
 
+## 🆕 Novidades na v1.0.7
+
+- **🔊 A aba Clonar Voz, refeita para ser mais simples** — a biblioteca foi dividida em duas colunas claras (**Vozes integradas** / **Suas vozes**) e a caixa de texto foi reduzida a uma linha. Após clonar, o app sugere ouvir e pergunta se você quer salvar a voz — salvar é um toque. Áudio de amostra com mais de 30 segundos é **cortado automaticamente** em uma pausa para uma clonagem mais limpa.
+- **🎛 Uma aba Texto → Fala mais organizada** — "Biblioteca de vozes" e "Design de voz" foram unidas em **um único quadro**; alterne entre **Usar uma voz salva** ↔ **Voz aleatória**, sem bagunça.
+- **▶ Ouça as vozes integradas** — clique no ▶ ao lado de qualquer voz integrada na biblioteca para ouvi-la antes de usar.
+- **⭐ Favoritos sincronizados em todo lugar** — marque uma voz com estrela em uma aba e as outras abas também a veem.
+- **🐛 Corrigido: o controle de velocidade causava áudio distorcido / falha na exportação** — removemos o controle de velocidade na barra de pré-visualização (ele causava a distorção e o erro de exportação). Para ler mais rápido/devagar, use o controle **Velocidade de leitura** em *Configurações avançadas* — voz natural, sem erros.
+- **✨ Pequenos ajustes** — a pausa padrão entre frases agora é mais curta (100ms) para um fluxo mais suave; os botões de excluir aparecem de forma consistente; interface mais limpa em vários lugares.
+- **🎙 Aba Fala → Texto: escolha o modelo de reconhecimento** — do pequeno ao grande (Tiny → Turbo) conforme sua máquina: PCs mais fracos escolhem um modelo pequeno para velocidade, os mais fortes um grande para precisão (cada um mostra a **VRAM necessária**). O modelo padrão fica pronto logo após instalar; os outros baixam com um toque e ficam **salvos no seu computador** — da próxima vez funciona offline.
+- **🌍 Escolha o idioma falado** — indicar o idioma (≈100 suportados) melhora a precisão e evita trocas de idioma no meio; além de ajustes que reduzem erros/palavras repetidas em trechos difíceis.
+
+---
+
 ## 🆕 Novidades na v1.0.6
 
 - **🔗 Webhook API (novo)** — servidor REST local permite que n8n, Zapier, Python/cURL ou qualquer cliente HTTP dispare geração de voz programaticamente. Painéis de seleção de voz + idioma integrados (clique duplo para copiar), chave de API mascarada `xxxx***xxxx`, autostart, log de requisições em tempo real.
@@ -99,12 +112,12 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 | Plataforma | Arquivo | Tamanho |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.7-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.7-arm64.dmg` | ~2 GB |
 
 ### Windows (portátil, não precisa instalar)
 
-1. Baixe `GLabsVoiceStudio-v1.0.6-win.zip`.
+1. Baixe `GLabsVoiceStudio-v1.0.7-win.zip`.
 2. Extraia para qualquer pasta (o disco precisa ter pelo menos 10 GB livres).
 3. Abra a pasta extraída e dê dois cliques em `GLabsVoiceStudio.exe`.
 
@@ -114,7 +127,7 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 ### 🍎 macOS Apple Silicon
 
-1. Baixe o **`GLabsVoiceStudio-v1.0.6-arm64.dmg`** na distribuição oficial.
+1. Baixe o **`GLabsVoiceStudio-v1.0.7-arm64.dmg`** na distribuição oficial.
 2. Dê dois cliques no arquivo `.dmg` para abrir.
 3. Arraste o ícone do **G-Labs Voice Studio** para a pasta **Aplicativos**.
 4. Abra **Aplicativos**, **clique com o botão direito** em **G-Labs Voice Studio** → escolha **Abrir**.

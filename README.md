@@ -60,6 +60,19 @@
 
 ---
 
+## 🆕 Có gì mới ở v1.0.7
+
+- **🔊 Tab Sao chép giọng làm lại cho dễ dùng** — kho giọng chia 2 cột rõ ràng (**Giọng có sẵn** / **Giọng của bạn**), ô nhập gọn lại còn 1 câu. Sao chép xong app tự nhắc nghe thử rồi hỏi có muốn lưu vào kho không — lưu chỉ 1 chạm. Đoạn âm thanh mẫu dài hơn 30 giây sẽ **tự cắt gọn** ở chỗ im lặng cho giọng chuẩn hơn.
+- **🎛 Tab Văn bản → Giọng gọn lại** — gộp "Kho giọng" và "Thiết kế giọng" vào **chung 1 khung**, gạt qua lại giữa **Dùng giọng có sẵn** ↔ **Giọng ngẫu nhiên**, không còn rối.
+- **▶ Nghe thử giọng có sẵn** — bấm nút ▶ cạnh mỗi giọng mẫu trong kho để nghe ngay trước khi dùng.
+- **⭐ Yêu thích đồng bộ mọi nơi** — đánh dấu ⭐ một giọng ở tab nào thì các tab khác cũng thấy.
+- **🐛 Sửa lỗi đổi tốc độ làm méo tiếng / không xuất được file** — đã bỏ ô chỉnh tốc độ ở khung nghe thử (chính nó gây méo tiếng và lỗi khi xuất). Muốn đọc nhanh/chậm thì dùng thanh **Tốc độ đọc** trong *Cài đặt nâng cao* — giữ giọng tự nhiên, không lỗi.
+- **✨ Vài tinh chỉnh nhỏ** — khoảng nghỉ giữa câu mặc định ngắn lại (100ms) cho liền mạch hơn; nút xóa hiển thị đồng nhất; giao diện gọn gàng hơn ở nhiều chỗ.
+- **🎙 Tab Giọng nói → văn bản: chọn được model nhận dạng** — chọn từ bản nhỏ đến lớn (Tiny → Turbo) tùy sức máy: máy yếu chọn bản nhỏ cho nhẹ & nhanh, máy mạnh chọn bản lớn cho chính xác hơn (mỗi bản ghi rõ **VRAM cần dùng** để dễ chọn). Bản mặc định có sẵn ngay sau khi cài; bản khác tải thêm 1 chạm và **lưu về máy**, lần sau dùng lại không cần mạng.
+- **🌍 Chọn ngôn ngữ khi nhận dạng** — chỉ rõ ngôn ngữ đang nói (~100 thứ tiếng) để nhận dạng đúng hơn, không bị nhầm ngôn ngữ giữa chừng; kèm vài cải tiến giúp ít sai/lặp chữ ở những đoạn khó.
+
+---
+
 ## 🆕 Có gì mới ở v1.0.6
 
 - **🔗 Webhook API (mới)** — server REST cục bộ cho phép n8n, Zapier, Python/cURL hoặc bất kỳ HTTP client nào gọi sinh giọng tự động. Tích hợp panel tìm kiếm giọng + ngôn ngữ ngay trong app, nháy đúp để copy. Có khóa API che dạng `xxxx***xxxx`, autostart, log request realtime.
@@ -99,12 +112,12 @@
 
 | Hệ điều hành | Tệp tải về | Dung lượng |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.6-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.6-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.7-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.7-arm64.dmg` | ~2 GB |
 
 ### Windows (chạy trực tiếp, không cần cài đặt)
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.6-win.zip`.
+1. Tải tệp `GLabsVoiceStudio-v1.0.7-win.zip`.
 2. Giải nén ra thư mục bất kỳ (ổ cứng cần còn trống ít nhất 10 GB).
 3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
 
@@ -114,7 +127,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Tải tệp **`GLabsVoiceStudio-v1.0.6-arm64.dmg`** từ nguồn phân phối chính thức.
+1. Tải tệp **`GLabsVoiceStudio-v1.0.7-arm64.dmg`** từ nguồn phân phối chính thức.
 2. Nhấp đúp vào file `.dmg` để mở.
 3. Kéo biểu tượng **G-Labs Voice Studio** vào thư mục **Applications**.
 4. Mở **Applications**, **nhấp chuột phải** vào **G-Labs Voice Studio** → chọn **Open**.

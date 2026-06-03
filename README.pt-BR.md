@@ -60,7 +60,8 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 ---
 
-## 🆕 Novidades na v1.0.7
+<details open>
+<summary><b>🆕 Novidades na v1.0.7</b></summary>
 
 - **🔊 A aba Clonar Voz, refeita para ser mais simples** — a biblioteca foi dividida em duas colunas claras (**Vozes integradas** / **Suas vozes**) e a caixa de texto foi reduzida a uma linha. Após clonar, o app sugere ouvir e pergunta se você quer salvar a voz — salvar é um toque. Áudio de amostra com mais de 30 segundos é **cortado automaticamente** em uma pausa para uma clonagem mais limpa.
 - **🎛 Uma aba Texto → Fala mais organizada** — "Biblioteca de vozes" e "Design de voz" foram unidas em **um único quadro**; alterne entre **Usar uma voz salva** ↔ **Voz aleatória**, sem bagunça.
@@ -71,9 +72,12 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 - **🎙 Aba Fala → Texto: escolha o modelo de reconhecimento** — do pequeno ao grande (Tiny → Turbo) conforme sua máquina: PCs mais fracos escolhem um modelo pequeno para velocidade, os mais fortes um grande para precisão (cada um mostra a **VRAM necessária**). O modelo padrão fica pronto logo após instalar; os outros baixam com um toque e ficam **salvos no seu computador** — da próxima vez funciona offline.
 - **🌍 Escolha o idioma falado** — indicar o idioma (≈100 suportados) melhora a precisão e evita trocas de idioma no meio; além de ajustes que reduzem erros/palavras repetidas em trechos difíceis.
 
+</details>
+
 ---
 
-## 🆕 Novidades na v1.0.6
+<details>
+<summary><b>🆕 Novidades na v1.0.6</b></summary>
 
 - **🔗 Webhook API (novo)** — servidor REST local permite que n8n, Zapier, Python/cURL ou qualquer cliente HTTP dispare geração de voz programaticamente. Painéis de seleção de voz + idioma integrados (clique duplo para copiar), chave de API mascarada `xxxx***xxxx`, autostart, log de requisições em tempo real.
 - **🚀 Exportações muito mais rápidas + barra de progresso real** — concatenação e ajuste de velocidade rodam em paralelo nos núcleos da CPU, um projeto de 50 minutos exporta em dezenas de segundos em vez de minutos. Barra de progresso inline avança suavemente 0→100% com botão **Parar** real que cancela no meio do processo.
@@ -81,9 +85,12 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 - **💾 Sincronização de configurações entre abas** — *Frases simultâneas* (batch size) agora é compartilhado entre as três abas de geração + limite de concorrência do Webhook; mude em qualquer lugar e tudo mais é atualizado. Abas Clonagem / Texto-para-fala lembram a última predefinição selecionada após reinicialização.
 - **🐛 Várias correções** — crash de exportação após timeout de sessão (`AttributeError: NoneType`), estado "modelo baixado" incorreto quando a rede cai durante download deixando safetensors incompletos, botão "Salvar voz" acendendo antes da clonagem terminar de fato.
 
+</details>
+
 ---
 
-## 🆕 Novidades da v1.0.5
+<details>
+<summary><b>🆕 Novidades da v1.0.5</b></summary>
 
 - **🎚 Masterização de áudio profissional (novo)** — escolha um dos 6 modos de processamento (Radiodifusão / Cinema / Podcast / Quente / Brilhante / Bruto) para deixar suas faixas de voz com qualidade de estúdio. Disponível nas 3 abas de geração (Clone de Voz / Texto para Voz / Diálogo de Várias Vozes) — mude em uma aba e as outras ficam sincronizadas.
 - **🌐 Divisão de frases melhor para chinês / hindi / árabe / urdu** — antes esses idiomas viravam uma linha só; agora as frases são divididas corretamente com base na pontuação de cada escrita.
@@ -92,9 +99,12 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 > ⚠️ **Pequena mudança no áudio exportado:** A predefinição padrão **📻 Radiodifusão** + **Equalizar volume entre as falas** fazem os arquivos de voz da v1.0.5 soarem **mais altos e cheios** do que na v1.0.4. Para manter o comportamento antigo, abra qualquer aba de geração → expanda **Masterização de áudio** → escolha **🔇 Bruto** e desmarque **Equalizar volume entre as falas**.
 
+</details>
+
 ---
 
-## 🆕 Novidades da v1.0.4
+<details>
+<summary><b>🆕 Novidades da v1.0.4</b></summary>
 
 - **💬 Aba Diálogo de Várias Vozes (nova)** — escreva roteiros com vários personagens, uma voz por personagem. Clique em **📋 Diálogo de exemplo** para ver um exemplo funcional.
 - **🗂 30 vozes de fábrica inclusas** — prontas para usar, sem precisar gravar uma amostra primeiro.
@@ -105,6 +115,8 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 - **🌐 9 idiomas de interface** — adicionados Português, Türkçe, 简体中文, हिन्दी, বাংলা, اردو, Русский (além de vietnamita e inglês).
 - **⏳ Tempo decorrido por linha** — veja num relance qual fala está sendo gerada e há quanto tempo está rodando.
 - **🌍 O idioma de saída precisa ser selecionado explicitamente** — a opção "Automático" foi removida para evitar pronúncias erradas.
+
+</details>
 
 ---
 
@@ -169,7 +181,7 @@ Isso limpa todos os atributos estendidos (incluindo a flag de quarentena) do pac
 
 ## Começando
 
-### Passo 1 — Primeira inicialização (configuração única)
+### Parte 1 — Primeira inicialização (configuração única)
 
 1. Abra o app — uma tela de boas-vindas oferece 9 idiomas de interface. Escolha o que quiser.
 2. **Faça login** — clique no ícone de engrenagem ⚙️ na barra lateral esquerda → aba *Licença* → **"Entrar com Google"**.
@@ -178,7 +190,7 @@ Isso limpa todos os atributos estendidos (incluindo a flag de quarentena) do pac
 
 > 💡 Para mudar o idioma da interface depois: Configurações → Idioma.
 
-### Passo 2 — Clone de Voz 🔊
+### Parte 2 — Clone de Voz 🔊
 
 Clone uma voz a partir de uma gravação de amostra.
 
@@ -193,7 +205,7 @@ Clone uma voz a partir de uma gravação de amostra.
 8. Clique em **"▶ Iniciar processamento"** → uma caixa de confirmação aparece para verificar a transcrição da amostra → confirme para rodar.
 9. Quando terminar, clique em **"💾 Exportar áudio"** (arquivo único mesclado com `.srt` companheiro), ou use o **⬇** numa linha para baixar só aquela fala.
 
-### Passo 3 — Texto para Voz (TTS) 🎛️
+### Parte 3 — Texto para Voz (TTS) 🎛️
 
 Crie uma nova voz a partir de descrições de atributos — sem precisar de amostra.
 
@@ -206,7 +218,7 @@ Crie uma nova voz a partir de descrições de atributos — sem precisar de amos
 6. Depois da geração: clique numa linha da tabela que você quer guardar → clique em **"💾 Salvar"** no painel da *Biblioteca de Vozes* para reutilizar depois.
 7. Clique em **"💾 Exportar áudio"** para salvar o resultado.
 
-### Passo 4 — Diálogo de Várias Vozes 💬 *(novo)*
+### Parte 4 — Diálogo de Várias Vozes 💬 *(novo)*
 
 Gere áudio de diálogo com vários personagens, uma voz por personagem — perfeito para podcasts, audiodramas e vídeos no estilo entrevista.
 
@@ -226,7 +238,7 @@ Gere áudio de diálogo com vários personagens, uma voz por personagem — perf
 8. Clique em **"▶ Iniciar processamento"** — cada fala é lida na voz do seu personagem atribuído.
 9. Clique em **"💾 Exportar áudio"** para salvar o resultado (um `.srt` correspondente é incluído).
 
-### Passo 5 — Voz para Texto 📝
+### Parte 5 — Voz para Texto 📝
 
 Transcreva a fala de um arquivo de áudio/vídeo existente.
 

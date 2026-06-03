@@ -60,7 +60,8 @@
 
 ---
 
-## 🆕 What's new in v1.0.7
+<details open>
+<summary><b>🆕 What's new in v1.0.7</b></summary>
 
 - **🔊 The Voice Clone tab, rebuilt to be simpler** — the library is split into two clear columns (**Built-in voices** / **Your voices**) and the text box is trimmed to a single line. After cloning, the app prompts you to listen, then asks if you'd like to save the voice — saving is one tap. Sample audio longer than 30 seconds is **auto-trimmed** at a silence gap for a cleaner clone.
 - **🎛 A tidier Text → Speech tab** — "Voice library" and "Voice design" are merged into **one frame**; flip between **Use a saved voice** ↔ **Random voice**, no more clutter.
@@ -71,9 +72,12 @@
 - **🎙 Speech-to-Text tab: pick your recognition model** — choose from small to large (Tiny → Turbo) to match your machine: weaker PCs pick a small model for speed, stronger ones a large model for accuracy (each shows the **VRAM it needs**). The default model is ready right after install; others download in one tap and are **saved on your machine**, so next time works offline.
 - **🌍 Choose the spoken language** — telling it which language is being spoken (~100 supported) improves accuracy and stops mid-clip language mix-ups; plus tweaks that reduce errors/repeated words on tricky parts.
 
+</details>
+
 ---
 
-## 🆕 What's new in v1.0.6
+<details>
+<summary><b>🆕 What's new in v1.0.6</b></summary>
 
 - **🔗 Webhook API (new)** — local REST server lets n8n, Zapier, Python/cURL or any HTTP client trigger voice generation programmatically. Built-in voice + language picker panels (double-click to copy), masked `xxxx***xxxx` API key, autostart, realtime request log.
 - **🚀 Much faster exports + real progress bar** — concatenation and time-stretch run in parallel across CPU cores; a 50-minute project exports in tens of seconds instead of minutes. Inline progress bar moves smoothly 0→100% with a real **Stop** button that actually cancels mid-flight.
@@ -81,9 +85,12 @@
 - **💾 Cross-tab settings sync** — *Concurrent sentences* (batch size) is now shared across all three generation tabs + the webhook concurrency limit, change it anywhere and everything else updates. Voice Clone / Text-to-Speech tabs remember the last selected preset across restarts.
 - **🐛 Many bug fixes** — export crash after session timeout (`AttributeError: NoneType`), incorrect "model downloaded" state when network drops mid-download leaving safetensors incomplete, "Save voice" button lighting up before clone actually finishes.
 
+</details>
+
 ---
 
-## 🆕 What's new in v1.0.5
+<details>
+<summary><b>🆕 What's new in v1.0.5</b></summary>
 
 - **🎚 Professional audio mastering (new)** — pick one of 6 processing modes (Broadcast / Cinematic / Podcast / Warm / Bright / Raw) to make your voice tracks sound studio-grade. Available in all 3 generation tabs (Voice Clone / Voice Design / Multi-Voice Dialogue) — change it in one tab and the others stay in sync.
 - **🌐 Better sentence splitting for Chinese / Hindi / Arabic / Urdu** — these languages used to get squashed into one row; now sentences are split correctly based on each script's punctuation.
@@ -92,9 +99,12 @@
 
 > ⚠️ **Small change to exported audio:** The default **📻 Broadcast** preset + **Even out volume between rows** make voice files in v1.0.5 sound **louder and fuller** than v1.0.4. To keep the old behavior, open any generation tab → expand **Audio mastering** → pick **🔇 Raw** and untick **Even out volume between rows**.
 
+</details>
+
 ---
 
-## 🆕 What's new in v1.0.4
+<details>
+<summary><b>🆕 What's new in v1.0.4</b></summary>
 
 - **💬 Multi-Voice Dialogue tab (new)** — write multi-character scripts, one voice per speaker. Click **📋 Sample dialogue** for a working example.
 - **🗂 30 factory voices included** — ready to use out of the box, no need to record a sample first.
@@ -105,6 +115,8 @@
 - **🌐 9 UI languages** — added Português, Türkçe, 简体中文, हिन्दी, বাংলা, اردو, Русский (on top of Vietnamese / English).
 - **⏳ Per-row elapsed time** — see at a glance which line is currently generating and how long it's been running.
 - **🌍 Output language must be selected explicitly** — the "Auto" option was removed to avoid mispronunciations.
+
+</details>
 
 ---
 
@@ -169,7 +181,7 @@ This clears all extended attributes (including the quarantine flag) from the app
 
 ## Getting Started
 
-### Step 1 — First launch (one-time setup)
+### Part 1 — First launch (one-time setup)
 
 1. Open the app — a welcome screen offers 9 UI languages. Pick the one you want.
 2. **Sign in** — click the ⚙️ gear icon in the left sidebar → *License* tab → **"Sign in with Google"**.
@@ -178,7 +190,7 @@ This clears all extended attributes (including the quarantine flag) from the app
 
 > 💡 Change the UI language later: Settings → Language.
 
-### Step 2 — Voice Cloning 🔊
+### Part 2 — Voice Cloning 🔊
 
 Clone a voice from a sample recording.
 
@@ -193,7 +205,7 @@ Clone a voice from a sample recording.
 8. Click **"▶ Start"** → a confirmation dialog appears to verify the sample transcript → confirm to run.
 9. When finished, click **"💾 Export audio"** (single merged file with companion `.srt`), or use **⬇** on a row to download just that line.
 
-### Step 3 — Voice Design (TTS) 🎛️
+### Part 3 — Voice Design (TTS) 🎛️
 
 Create a new voice from attribute descriptions — no sample needed.
 
@@ -206,7 +218,7 @@ Create a new voice from attribute descriptions — no sample needed.
 6. After generation: click a row in the table you want to keep → click **"💾 Save"** in the *Voice Library* panel to reuse it later.
 7. Click **"💾 Export audio"** to save the result.
 
-### Step 4 — Multi-Voice Dialogue 💬 *(new)*
+### Part 4 — Multi-Voice Dialogue 💬 *(new)*
 
 Generate multi-character dialogue audio, one voice per speaker — perfect for podcasts, audio drama, and interview-style videos.
 
@@ -226,7 +238,7 @@ Generate multi-character dialogue audio, one voice per speaker — perfect for p
 8. Click **"▶ Start"** — each line is read in the voice of its assigned speaker.
 9. Click **"💾 Export audio"** to save the result (a matching `.srt` is included).
 
-### Step 5 — Speech-to-Text 📝
+### Part 5 — Speech-to-Text 📝
 
 Transcribe speech from an existing audio/video file.
 

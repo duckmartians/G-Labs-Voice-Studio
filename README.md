@@ -60,7 +60,8 @@
 
 ---
 
-## 🆕 Có gì mới ở v1.0.7
+<details open>
+<summary><b>🆕 Có gì mới ở v1.0.7</b></summary>
 
 - **🔊 Tab Sao chép giọng làm lại cho dễ dùng** — kho giọng chia 2 cột rõ ràng (**Giọng có sẵn** / **Giọng của bạn**), ô nhập gọn lại còn 1 câu. Sao chép xong app tự nhắc nghe thử rồi hỏi có muốn lưu vào kho không — lưu chỉ 1 chạm. Đoạn âm thanh mẫu dài hơn 30 giây sẽ **tự cắt gọn** ở chỗ im lặng cho giọng chuẩn hơn.
 - **🎛 Tab Văn bản → Giọng gọn lại** — gộp "Kho giọng" và "Thiết kế giọng" vào **chung 1 khung**, gạt qua lại giữa **Dùng giọng có sẵn** ↔ **Giọng ngẫu nhiên**, không còn rối.
@@ -71,9 +72,12 @@
 - **🎙 Tab Giọng nói → văn bản: chọn được model nhận dạng** — chọn từ bản nhỏ đến lớn (Tiny → Turbo) tùy sức máy: máy yếu chọn bản nhỏ cho nhẹ & nhanh, máy mạnh chọn bản lớn cho chính xác hơn (mỗi bản ghi rõ **VRAM cần dùng** để dễ chọn). Bản mặc định có sẵn ngay sau khi cài; bản khác tải thêm 1 chạm và **lưu về máy**, lần sau dùng lại không cần mạng.
 - **🌍 Chọn ngôn ngữ khi nhận dạng** — chỉ rõ ngôn ngữ đang nói (~100 thứ tiếng) để nhận dạng đúng hơn, không bị nhầm ngôn ngữ giữa chừng; kèm vài cải tiến giúp ít sai/lặp chữ ở những đoạn khó.
 
+</details>
+
 ---
 
-## 🆕 Có gì mới ở v1.0.6
+<details>
+<summary><b>🆕 Có gì mới ở v1.0.6</b></summary>
 
 - **🔗 Webhook API (mới)** — server REST cục bộ cho phép n8n, Zapier, Python/cURL hoặc bất kỳ HTTP client nào gọi sinh giọng tự động. Tích hợp panel tìm kiếm giọng + ngôn ngữ ngay trong app, nháy đúp để copy. Có khóa API che dạng `xxxx***xxxx`, autostart, log request realtime.
 - **🚀 Xuất file nhanh hơn nhiều + thanh tiến độ thật** — ghép nhạc + chỉnh tốc độ chạy song song nhiều core, dự án 50 phút xuất xong trong vài chục giây thay vì vài phút. Thanh tiến độ inline đi mượt 0→100% với nút **Dừng** cắt được giữa chừng.
@@ -81,9 +85,12 @@
 - **💾 Đồng bộ cài đặt giữa các tab** — *Số câu đồng thời* (batch size) giờ dùng chung cho cả 3 tab + webhook concurrency limit, đổi ở đâu các nơi còn lại tự update. Tab Sao chép giọng / Văn bản → Giọng nhớ giọng đã chọn trong kho qua các lần restart.
 - **🐛 Sửa nhiều lỗi tồn đọng** — crash khi xuất file sau khi hết phiên (`AttributeError: NoneType`), trạng thái "model đã tải" sai khi mạng đứt giữa chừng làm safetensors thiếu, nút "Lưu giọng" sáng sớm trước khi clone xong.
 
+</details>
+
 ---
 
-## 🆕 Có gì mới ở v1.0.5
+<details>
+<summary><b>🆕 Có gì mới ở v1.0.5</b></summary>
 
 - **🎚 Chế độ âm thanh chuyên nghiệp (mới)** — chọn 1 trong 6 chế độ xử lý (Phát thanh / Điện ảnh / Podcast / Ấm / Sáng / Nguyên bản) để file giọng đọc nghe "chuẩn studio" hơn. Có sẵn trong cả 3 tab Sao chép giọng / Văn bản sang giọng / Hội thoại — đổi ở 1 tab thì 2 tab còn lại tự cập nhật theo.
 - **🌐 Tách câu tốt hơn cho tiếng Trung / Hindi / Ả Rập / Urdu** — trước đây các ngôn ngữ này hay bị dồn cả đoạn thành 1 dòng, giờ tách câu chính xác theo dấu câu của từng ngôn ngữ.
@@ -92,9 +99,12 @@
 
 > ⚠️ **Đổi nhẹ ở file giọng đọc:** Mặc định bật chế độ **📻 Phát thanh** và **Cân đều âm lượng các câu**, nên file ở phiên bản này nghe **rõ và đầy hơn** so với phiên bản cũ. Muốn giữ y như cũ: vào 1 trong 3 tab tạo giọng → mở mục **Tinh chỉnh âm thanh** → chọn **🔇 Nguyên bản** và bỏ tích ô **Cân đều âm lượng các câu**.
 
+</details>
+
 ---
 
-## 🆕 Có gì mới ở v1.0.4
+<details>
+<summary><b>🆕 Có gì mới ở v1.0.4</b></summary>
 
 - **💬 Tab Hội thoại nhiều giọng (mới)** — viết kịch bản nhiều nhân vật, mỗi người một giọng. Có nút **📋 Mẫu hội thoại chuẩn** để xem ví dụ.
 - **🗂 30 giọng mẫu sẵn** — đi kèm app, dùng được ngay không cần tự thu mẫu.
@@ -105,6 +115,8 @@
 - **🌐 9 ngôn ngữ giao diện** — thêm Português, Türkçe, 简体中文, हिन्दी, বাংলা, اردو, Русский (ngoài Việt/Anh).
 - **⏳ Hiển thị thời gian từng dòng** — biết ngay câu nào đang tạo và đã chạy bao lâu.
 - **🌍 Bắt buộc chọn ngôn ngữ đầu ra** — không còn "Auto" để tránh đọc sai phát âm.
+
+</details>
 
 ---
 
@@ -169,7 +181,7 @@ Lệnh này gỡ bỏ tất cả thuộc tính mở rộng (bao gồm cờ cách
 
 ## Cách sử dụng
 
-### Bước 1 — Lần đầu mở app (làm một lần)
+### Phần 1 — Lần đầu mở app (làm một lần)
 
 1. Mở app — màn hình chào hiện 9 lựa chọn ngôn ngữ giao diện. Chọn ngôn ngữ bạn muốn dùng.
 2. **Đăng nhập** — bấm biểu tượng bánh răng ⚙️ ở thanh bên trái → tab *Bản quyền* → **"Đăng nhập bằng Google"**.
@@ -178,7 +190,7 @@ Lệnh này gỡ bỏ tất cả thuộc tính mở rộng (bao gồm cờ cách
 
 > 💡 Đổi ngôn ngữ giao diện sau này: vào Cài đặt → Ngôn ngữ.
 
-### Bước 2 — Sao chép giọng nói 🔊
+### Phần 2 — Sao chép giọng nói 🔊
 
 Nhân bản một giọng nói từ mẫu âm thanh.
 
@@ -193,7 +205,7 @@ Nhân bản một giọng nói từ mẫu âm thanh.
 8. Bấm **"▶ Bắt đầu tạo"** → app hỏi xác nhận văn bản mẫu → đồng ý để chạy.
 9. Khi xong, bấm **"💾 Xuất âm thanh"** (gộp 1 file kèm `.srt`) hoặc **⬇** ở từng dòng để tải riêng.
 
-### Bước 3 — Văn bản sang giọng nói 🎛️
+### Phần 3 — Văn bản sang giọng nói 🎛️
 
 Tạo giọng đọc mới theo mô tả, không cần tệp mẫu.
 
@@ -206,7 +218,7 @@ Tạo giọng đọc mới theo mô tả, không cần tệp mẫu.
 6. Sau khi tạo xong: click vào dòng bạn muốn lưu trong bảng → bấm **"💾 Lưu"** trong khung *Kho giọng* để dùng lại sau.
 7. Bấm **"💾 Xuất âm thanh"** để lấy kết quả.
 
-### Bước 4 — Hội thoại nhiều giọng 💬 *(mới)*
+### Phần 4 — Hội thoại nhiều giọng 💬 *(mới)*
 
 Tạo audio hội thoại nhiều nhân vật, mỗi người một giọng riêng — phù hợp làm podcast, audio drama, video kịch bản phỏng vấn.
 
@@ -226,7 +238,7 @@ Tạo audio hội thoại nhiều nhân vật, mỗi người một giọng riê
 8. Bấm **"▶ Bắt đầu tạo"** — mỗi câu được đọc bằng giọng của nhân vật tương ứng.
 9. **"💾 Xuất âm thanh"** để lấy file (có kèm `.srt`).
 
-### Bước 5 — Giọng nói sang văn bản 📝
+### Phần 5 — Giọng nói sang văn bản 📝
 
 Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
 

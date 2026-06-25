@@ -279,6 +279,28 @@ Transcreva a fala de um arquivo de áudio/vídeo existente.
 - Cada token só precisa ser digitado **uma vez** — o app lembra por idioma de saída. Na próxima, é aplicado automaticamente.
 - O mesmo token em idiomas diferentes mantém pronúncias separadas (ex.: vietnamita vs inglês).
 
+### Tags de emoção e sons não-verbais
+- Digite qualquer uma destas tags diretamente no seu texto e a voz produzirá o som não-verbal correspondente. Funcionam em **Clone de Voz**, **Texto para Voz** e **Diálogo de Várias Vozes**.
+- Escreva a tag exatamente como mostrado, com os colchetes, sozinha ou entre frases (ex.: `Que engraçado [laughter] não consigo parar.`).
+
+| Tag | Som |
+|---|---|
+| `[laughter]` | Risada |
+| `[sigh]` | Um suspiro |
+| `[confirmation-en]` | Concordância — "mm-hmm" |
+| `[question-en]` | Tom de pergunta |
+| `[question-ah]` | Tom de pergunta — "ah?" |
+| `[question-oh]` | Tom de pergunta — "oh?" |
+| `[question-ei]` | Tom de pergunta — "ei?" |
+| `[question-yi]` | Tom de pergunta — "yi?" |
+| `[surprise-ah]` | Surpresa — "ah!" |
+| `[surprise-oh]` | Surpresa — "oh!" |
+| `[surprise-wa]` | Surpresa — "wa!" |
+| `[surprise-yo]` | Surpresa — "yo!" |
+| `[dissatisfaction-hnn]` | Insatisfação — "hnn" |
+
+> 💡 As tags são interpretadas como deixas expressivas, não lidas em voz alta. A intensidade varia conforme o idioma e a voz — teste primeiro em uma frase curta.
+
 ### Velocidade de reprodução + exportação
 - Depois que o áudio é gerado, a barra abaixo da forma de onda tem um **menu de velocidade** (0,5x → 2x, em passos).
 - Mude a velocidade → a prévia atualiza imediatamente no player.

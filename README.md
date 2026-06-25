@@ -279,6 +279,28 @@ Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
 - Mỗi từ chỉ cần gõ **một lần** — app nhớ theo ngôn ngữ đầu ra. Lần sau gặp lại, tự áp dụng.
 - Cùng từ ở ngôn ngữ khác (vi vs en) sẽ có phiên âm riêng.
 
+### Thẻ cảm xúc & âm thanh phi ngôn ngữ
+- Gõ thẳng các thẻ này vào văn bản cần đọc, giọng sẽ phát ra âm thanh phi ngôn ngữ tương ứng. Dùng được ở cả **Sao chép giọng**, **Văn bản sang giọng** và **Hội thoại nhiều giọng**.
+- Viết thẻ đúng như bên dưới, **giữ nguyên dấu ngoặc vuông**, đặt riêng hoặc xen giữa câu (vd: `Buồn cười quá [laughter] mình không nhịn được.`).
+
+| Thẻ | Âm thanh |
+|---|---|
+| `[laughter]` | Tiếng cười |
+| `[sigh]` | Tiếng thở dài |
+| `[confirmation-en]` | Đồng tình — "mm-hmm" |
+| `[question-en]` | Ngữ điệu hỏi |
+| `[question-ah]` | Ngữ điệu hỏi — "ah?" |
+| `[question-oh]` | Ngữ điệu hỏi — "oh?" |
+| `[question-ei]` | Ngữ điệu hỏi — "ei?" |
+| `[question-yi]` | Ngữ điệu hỏi — "yi?" |
+| `[surprise-ah]` | Ngạc nhiên — "ah!" |
+| `[surprise-oh]` | Ngạc nhiên — "oh!" |
+| `[surprise-wa]` | Ngạc nhiên — "wa!" |
+| `[surprise-yo]` | Ngạc nhiên — "yo!" |
+| `[dissatisfaction-hnn]` | Khó chịu — "hnn" |
+
+> 💡 Thẻ được hiểu là tín hiệu biểu cảm, không đọc thành chữ. Mức độ thể hiện thay đổi tùy ngôn ngữ và giọng — nên thử trên một câu ngắn trước.
+
 ### Tốc độ phát + xuất
 - Sau khi tạo audio, dưới thanh sóng có **dropdown tốc độ** (0.5x → 2x).
 - Đổi tốc độ → preview ngay trên player.

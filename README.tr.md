@@ -279,6 +279,28 @@ Mevcut bir ses/video dosyasından konuşmayı yazıya dökün.
 - Her simgenin yalnızca **bir kez** yazılması gerekir — uygulama bunu çıkış diline göre hatırlar. Bir sonraki sefere otomatik olarak uygulanır.
 - Aynı simge farklı dillerde ayrı telaffuzlar tutar (örn. Vietnamca ile İngilizce).
 
+### Duygu ve sözsüz etiketler
+- Bu etiketlerden herhangi birini doğrudan metninize yazın; ses, karşılık gelen sözsüz sesi üretir. **Ses Klonlama**, **Metinden Sese** ve **Çok Sesli Diyalog** sekmelerinde çalışır.
+- Etiketi köşeli parantezlerle birlikte gösterildiği gibi yazın; tek başına ya da cümleler arasında (ör. `Çok komik [laughter] duramıyorum.`).
+
+| Etiket | Ses |
+|---|---|
+| `[laughter]` | Kahkaha |
+| `[sigh]` | İç çekiş |
+| `[confirmation-en]` | Onaylama — "mm-hmm" |
+| `[question-en]` | Soru tonu |
+| `[question-ah]` | Soru tonu — "ah?" |
+| `[question-oh]` | Soru tonu — "oh?" |
+| `[question-ei]` | Soru tonu — "ei?" |
+| `[question-yi]` | Soru tonu — "yi?" |
+| `[surprise-ah]` | Şaşkınlık — "ah!" |
+| `[surprise-oh]` | Şaşkınlık — "oh!" |
+| `[surprise-wa]` | Şaşkınlık — "wa!" |
+| `[surprise-yo]` | Şaşkınlık — "yo!" |
+| `[dissatisfaction-hnn]` | Hoşnutsuzluk — "hnn" |
+
+> 💡 Etiketler harfi harfine okunmaz, ifade ipucu olarak yorumlanır. Etkisi dile ve sese göre değişir — önce kısa bir cümlede deneyin.
+
 ### Oynatma hızı + dışa aktarım
 - Ses üretildikten sonra, dalga formunun altındaki çubukta bir **hız açılır listesi** bulunur (0.5x → 2x, kademeli).
 - Hızı değiştirin → önizleme oynatıcıda hemen güncellenir.

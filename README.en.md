@@ -279,6 +279,28 @@ Transcribe speech from an existing audio/video file.
 - Each token only needs to be typed **once** — the app remembers it per output language. Next time it's applied automatically.
 - The same token in different languages keeps separate pronunciations (e.g. Vietnamese vs English).
 
+### Emotion & non-verbal tags
+- Type any of these tags straight into your input text and the voice will produce the matching non-verbal sound. They work in **Voice Cloning**, **Voice Design**, and **Multi-Voice Dialogue**.
+- Write the tag exactly as shown, square brackets included, on its own or between sentences (e.g. `That's so funny [laughter] I can't stop.`).
+
+| Tag | Sound |
+|---|---|
+| `[laughter]` | Laughter |
+| `[sigh]` | A sigh |
+| `[confirmation-en]` | Agreement — "mm-hmm" |
+| `[question-en]` | Questioning tone |
+| `[question-ah]` | Questioning — "ah?" |
+| `[question-oh]` | Questioning — "oh?" |
+| `[question-ei]` | Questioning — "ei?" |
+| `[question-yi]` | Questioning — "yi?" |
+| `[surprise-ah]` | Surprise — "ah!" |
+| `[surprise-oh]` | Surprise — "oh!" |
+| `[surprise-wa]` | Surprise — "wa!" |
+| `[surprise-yo]` | Surprise — "yo!" |
+| `[dissatisfaction-hnn]` | Displeasure — "hnn" |
+
+> 💡 Tags are read as expressive cues, not spoken literally. How strongly each comes through varies by language and voice — try it on a short line first.
+
 ### Playback speed + export
 - After audio is generated, the bar under the waveform has a **speed dropdown** (0.5x → 2x, in steps).
 - Change the speed → preview updates immediately in the player.

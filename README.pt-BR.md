@@ -1,6 +1,6 @@
 <p align="right">
-<a href="./README.md">🇻🇳 Tiếng Việt</a> ·
-<a href="./README.en.md">🇬🇧 English</a> ·
+<a href="./README.vi.md">🇻🇳 Tiếng Việt</a> ·
+<a href="./README.md">🇬🇧 English</a> ·
 🇧🇷 Português ·
 <a href="./README.tr.md">🇹🇷 Türkçe</a> ·
 <a href="./README.zh-CN.md">🇨🇳 简体中文</a> ·

@@ -61,6 +61,18 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 ---
 
 <details open>
+<summary><b>🆕 Novidades na v1.0.8</b></summary>
+
+- **🗒 Fila de geração (novo)** — em vez de gerar um trabalho de cada vez e exportar manualmente, agora você pode **colocar vários trabalhos na fila**: cada um com seu próprio roteiro + voz + configurações, totalmente independentes entre si. Clique em executar uma vez e o app **processa tudo em sequência e salva os arquivos de cada trabalho automaticamente** na pasta correspondente — você fica livre para fazer outra coisa enquanto isso roda. Dê um **nome + pasta próprios** para cada trabalho; **feche e reabra o app que a fila continua lá**. *(Recurso da versão paga.)*
+- **📊 Progresso visual (X/N frases)** — cada trabalho na fila mostra claramente **quantas frases já foram geradas do total** (ex.: `8/10`), então você vê na hora quais trabalhos terminaram completos e quais **ficaram com frases faltando por erro** — sem precisar abrir um por um para conferir.
+- **📂 Reabrir um trabalho já executado para corrigir** — clique em **Reabrir** em um trabalho da fila para carregar de volta o roteiro + voz + configurações na aba Texto → Fala, com as frases com erro **marcadas com ❌**, e gerar de novo só o que faltou.
+- **✨ Interface mais organizada** — as seções de configuração agora se expandem/recolhem em formato acordeão (abrir uma fecha a outra), ficando mais compacto; alguns ícones novos para facilitar a leitura.
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 Novidades na v1.0.7</b></summary>
 
 - **🔊 A aba Clonar Voz, refeita para ser mais simples** — a biblioteca foi dividida em duas colunas claras (**Vozes integradas** / **Suas vozes**) e a caixa de texto foi reduzida a uma linha. Após clonar, o app sugere ouvir e pergunta se você quer salvar a voz — salvar é um toque. Áudio de amostra com mais de 30 segundos é **cortado automaticamente** em uma pausa para uma clonagem mais limpa.
@@ -124,12 +136,12 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 | Plataforma | Arquivo | Tamanho |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.7-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.7-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
 
 ### Windows (portátil, não precisa instalar)
 
-1. Baixe `GLabsVoiceStudio-v1.0.7-win.zip`.
+1. Baixe `GLabsVoiceStudio-v1.0.8-win.zip`.
 2. Extraia para qualquer pasta (o disco precisa ter pelo menos 10 GB livres).
 3. Abra a pasta extraída e dê dois cliques em `GLabsVoiceStudio.exe`.
 
@@ -139,7 +151,7 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 ### 🍎 macOS Apple Silicon
 
-1. Baixe o **`GLabsVoiceStudio-v1.0.7-arm64.dmg`** na distribuição oficial.
+1. Baixe o **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** na distribuição oficial.
 2. Dê dois cliques no arquivo `.dmg` para abrir.
 3. Arraste o ícone do **G-Labs Voice Studio** para a pasta **Aplicativos**.
 4. Abra **Aplicativos**, **clique com o botão direito** em **G-Labs Voice Studio** → escolha **Abrir**.

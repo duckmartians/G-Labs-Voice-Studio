@@ -61,6 +61,18 @@
 ---
 
 <details open>
+<summary><b>🆕 Có gì mới ở v1.0.8</b></summary>
+
+- **🗒 Hàng chờ tạo (mới)** — thay vì ngồi tạo từng cái rồi bấm xuất tay, giờ bạn **xếp nhiều việc vào hàng chờ**: mỗi việc là một kịch bản + giọng + cài đặt riêng, độc lập hoàn toàn. Bấm chạy một lần, app **tự làm lần lượt và tự lưu file** ra thư mục cho từng việc — rảnh tay làm chuyện khác. Đặt **tên + thư mục riêng** cho mỗi việc; **đóng app mở lại vẫn còn nguyên hàng chờ**. *(Tính năng của bản trả phí.)*
+- **📊 Xem tiến độ trực quan (X/N câu)** — mỗi việc trong hàng chờ hiển thị rõ **đã tạo được bao nhiêu trên tổng số câu** (ví dụ `8/10`), nên bạn thấy ngay việc nào chạy đủ, việc nào bị **thiếu câu do lỗi** — khỏi phải mở ra kiểm từng cái.
+- **📂 Mở lại việc đã chạy để sửa** — bấm **Mở lại** một việc trong hàng chờ để nạp nguyên kịch bản + giọng + cài đặt về lại tab Văn bản → Giọng, câu lỗi được **đánh dấu ❌**, rồi tạo lại cho gọn.
+- **✨ Giao diện gọn hơn** — các mục cài đặt gập/mở kiểu accordion (mở mục này thì mục kia tự đóng) cho đỡ dài; thêm vài biểu tượng cho dễ nhìn.
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 Có gì mới ở v1.0.7</b></summary>
 
 - **🔊 Tab Sao chép giọng làm lại cho dễ dùng** — kho giọng chia 2 cột rõ ràng (**Giọng có sẵn** / **Giọng của bạn**), ô nhập gọn lại còn 1 câu. Sao chép xong app tự nhắc nghe thử rồi hỏi có muốn lưu vào kho không — lưu chỉ 1 chạm. Đoạn âm thanh mẫu dài hơn 30 giây sẽ **tự cắt gọn** ở chỗ im lặng cho giọng chuẩn hơn.
@@ -124,12 +136,12 @@
 
 | Hệ điều hành | Tệp tải về | Dung lượng |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.7-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.7-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
 
 ### Windows (chạy trực tiếp, không cần cài đặt)
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.7-win.zip`.
+1. Tải tệp `GLabsVoiceStudio-v1.0.8-win.zip`.
 2. Giải nén ra thư mục bất kỳ (ổ cứng cần còn trống ít nhất 10 GB).
 3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
 
@@ -139,7 +151,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Tải tệp **`GLabsVoiceStudio-v1.0.7-arm64.dmg`** từ nguồn phân phối chính thức.
+1. Tải tệp **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** từ nguồn phân phối chính thức.
 2. Nhấp đúp vào file `.dmg` để mở.
 3. Kéo biểu tượng **G-Labs Voice Studio** vào thư mục **Applications**.
 4. Mở **Applications**, **nhấp chuột phải** vào **G-Labs Voice Studio** → chọn **Open**.

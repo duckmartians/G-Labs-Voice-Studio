@@ -61,6 +61,18 @@
 ---
 
 <details open>
+<summary><b>🆕 v1.0.8'de yenilikler</b></summary>
+
+- **🗒 Oluşturma kuyruğu (yeni)** — tek tek oluşturup elle dışa aktarmak yerine artık **birden fazla işi kuyruğa ekleyebilirsiniz**: her işin kendi senaryosu + sesi + ayarları var, diğerlerinden tamamen bağımsız. Bir kez çalıştır'a basın, uygulama **işleri sırayla yapar ve her işin dosyalarını kendi klasörüne otomatik kaydeder** — siz bu sırada başka işlerle uğraşabilirsiniz. Her işe kendi **adını + klasörünü** verin; **uygulamayı kapatıp tekrar açsanız bile kuyruk aynen durur**. *(Ücretli sürüm özelliği.)*
+- **📊 Görsel ilerleme (X/N cümle)** — kuyruktaki her iş, toplamdan **kaç cümlenin tamamlandığını** açıkça gösterir (örn. `8/10`), böylece hangi işin eksiksiz bittiğini, hangisinde **hata yüzünden cümle eksik kaldığını** tek bakışta görürsünüz — her birini açıp kontrol etmenize gerek kalmaz.
+- **📂 Bitmiş bir işi düzeltmek için yeniden açın** — kuyruktaki bir işte **Yeniden Aç**'a tıklayın, senaryo + ses + ayarlar Metinden Sese sekmesine geri yüklenir, hatalı cümleler **❌ ile işaretlenir**, ardından sadece onları yeniden oluşturun.
+- **✨ Daha derli toplu arayüz** — ayar bölümleri artık akordeon şeklinde açılıp kapanıyor (birini açmak diğerini otomatik kapatır), daha kısa görünür; daha kolay tanımak için birkaç yeni simge eklendi.
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 v1.0.7'de yenilikler</b></summary>
 
 - **🔊 Ses Klonlama sekmesi, daha basit olacak şekilde yenilendi** — kütüphane iki net sütuna ayrıldı (**Hazır sesler** / **Sesleriniz**) ve metin kutusu tek satıra indirildi. Klonlamadan sonra uygulama dinlemenizi önerir, ardından sesi kaydetmek isteyip istemediğinizi sorar — kaydetmek tek dokunuş. 30 saniyeden uzun örnek ses, daha temiz bir klonlama için bir sessizlik noktasında **otomatik kırpılır**.
@@ -124,12 +136,12 @@
 
 | Platform | Dosya | Boyut |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.7-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.7-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
 
 ### Windows (taşınabilir, kuruluma gerek yok)
 
-1. `GLabsVoiceStudio-v1.0.7-win.zip` dosyasını indirin.
+1. `GLabsVoiceStudio-v1.0.8-win.zip` dosyasını indirin.
 2. Herhangi bir klasöre çıkarın (sürücüde en az 10 GB boş alan olmalı).
 3. Çıkarılan klasörü açın ve `GLabsVoiceStudio.exe` dosyasına çift tıklayın.
 
@@ -139,7 +151,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.7-arm64.dmg`** dosyasını indirin.
+1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** dosyasını indirin.
 2. Açmak için `.dmg` dosyasına çift tıklayın.
 3. **G-Labs Voice Studio** simgesini **Applications** klasörüne sürükleyin.
 4. **Applications**'ı açın, **G-Labs Voice Studio** üzerine **sağ tıklayın** → **Aç**'ı seçin.

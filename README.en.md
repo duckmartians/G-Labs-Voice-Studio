@@ -61,6 +61,18 @@
 ---
 
 <details open>
+<summary><b>🆕 What's new in v1.0.8</b></summary>
+
+- **🗒 Render queue (new)** — instead of generating jobs one at a time and exporting by hand, you can now **queue up multiple jobs**: each with its own script + voice + settings, fully independent from the others. Click run once and the app **works through them one by one and auto-saves each job's files** to its own folder — leaving you free to do something else while it works. Give each job its own **name + output folder**; **close and reopen the app and the queue is still there**. *(Paid-tier feature.)*
+- **📊 Visual progress (X/N sentences)** — every job in the queue clearly shows **how many sentences are done out of the total** (e.g. `8/10`), so you can tell at a glance which jobs finished fully and which ones are **missing sentences due to errors** — no need to open each one to check.
+- **📂 Reopen a finished job to fix it** — click **Reopen** on a job in the queue to load its script + voice + settings back into the Text → Speech tab, with failed sentences **marked with ❌**, then regenerate just those.
+- **✨ Tidier interface** — settings sections now collapse/expand accordion-style (opening one closes the other), keeping things shorter; a few new icons for easier scanning.
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 What's new in v1.0.7</b></summary>
 
 - **🔊 The Voice Clone tab, rebuilt to be simpler** — the library is split into two clear columns (**Built-in voices** / **Your voices**) and the text box is trimmed to a single line. After cloning, the app prompts you to listen, then asks if you'd like to save the voice — saving is one tap. Sample audio longer than 30 seconds is **auto-trimmed** at a silence gap for a cleaner clone.
@@ -124,12 +136,12 @@
 
 | Platform | File | Size |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.7-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.7-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
 
 ### Windows (portable, no install needed)
 
-1. Download `GLabsVoiceStudio-v1.0.7-win.zip`.
+1. Download `GLabsVoiceStudio-v1.0.8-win.zip`.
 2. Extract to any folder (the drive needs at least 10 GB free).
 3. Open the extracted folder and double-click `GLabsVoiceStudio.exe`.
 
@@ -139,7 +151,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Download **`GLabsVoiceStudio-v1.0.7-arm64.dmg`** from the official distribution.
+1. Download **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** from the official distribution.
 2. Double-click the `.dmg` file to open it.
 3. Drag the **G-Labs Voice Studio** icon into the **Applications** folder.
 4. Open **Applications**, **right-click** on **G-Labs Voice Studio** → choose **Open**.

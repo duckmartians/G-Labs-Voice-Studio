@@ -1,6 +1,6 @@
 <p align="right">
-<a href="./README.vi.md">🇻🇳 Tiếng Việt</a> ·
-<a href="./README.md">🇬🇧 English</a> ·
+<a href="./README.md">🇻🇳 Tiếng Việt</a> ·
+<a href="./README.en.md">🇬🇧 English</a> ·
 🇧🇷 Português ·
 <a href="./README.tr.md">🇹🇷 Türkçe</a> ·
 <a href="./README.zh-CN.md">🇨🇳 简体中文</a> ·
@@ -61,6 +61,19 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 ---
 
 <details open>
+<summary><b>🆕 Novidades na v1.0.9</b></summary>
+
+- **🔔 Botão do Telegram na barra lateral** — um clique leva você direto ao grupo da comunidade no Telegram para dúvidas e novidades.
+- **📂 Escolha onde salvar o modelo para aliviar o disco C** — o modelo é bem grande; agora você pode escolher outra pasta (por exemplo, disco D ou E) para guardá-lo e evitar lotar o disco C. Depois de mudar, basta copiar a pasta antiga do modelo, ou deixar o app baixar de novo.
+- **↕ Biblioteca de vozes e caixa de texto de exemplo se ajustam à janela** — amplie a janela para ver mais vozes e uma caixa de texto maior; a rolagem da lista de vozes ficou mais suave e não pula mais vozes.
+- **⏯ Botão de pausa ao ouvir na tabela** — antes só havia Reproduzir; agora, enquanto uma linha toca, o botão vira Pausar; clique de novo para parar.
+- **✨ Visual mais limpo e consistente** — substituímos os símbolos antigos por ícones novos e nítidos, usados de forma consistente em todo o app; removemos as dicas ao passar o mouse para reduzir a poluição visual.
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 Novidades na v1.0.8</b></summary>
 
 - **🗒 Fila de geração (novo)** — em vez de gerar um trabalho de cada vez e exportar manualmente, agora você pode **colocar vários trabalhos na fila**: cada um com seu próprio roteiro + voz + configurações, totalmente independentes entre si. Clique em executar uma vez e o app **processa tudo em sequência e salva os arquivos de cada trabalho automaticamente** na pasta correspondente — você fica livre para fazer outra coisa enquanto isso roda. Dê um **nome + pasta próprios** para cada trabalho; **feche e reabra o app que a fila continua lá**. *(Recurso da versão paga.)*

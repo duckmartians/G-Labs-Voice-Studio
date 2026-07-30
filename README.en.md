@@ -61,6 +61,19 @@
 ---
 
 <details open>
+<summary><b>🆕 What's new in v1.0.9</b></summary>
+
+- **🔔 Telegram button in the sidebar** — one click takes you straight to the community group on Telegram for questions and announcements.
+- **📂 Choose where to store the model to free up drive C** — the model is fairly large; now you can pick a different folder (e.g. drive D or E) to store it and keep drive C from filling up. After moving, just copy your old model folder over, or let the app re-download it.
+- **↕ Voice library & sample-text box grow with the window** — enlarge the window to see more voices and a bigger text box; scrolling the voice list is smoother and no longer skips over voices.
+- **⏯ Pause button when previewing in the table** — there used to be only Play; now while a line is playing the button turns into Pause, click again to stop.
+- **✨ Cleaner, more consistent look** — replaced the old symbols with crisp new icons used consistently across the app; removed hover tooltips to reduce clutter.
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 What's new in v1.0.8</b></summary>
 
 - **🗒 Render queue (new)** — instead of generating jobs one at a time and exporting by hand, you can now **queue up multiple jobs**: each with its own script + voice + settings, fully independent from the others. Click run once and the app **works through them one by one and auto-saves each job's files** to its own folder — leaving you free to do something else while it works. Give each job its own **name + output folder**; **close and reopen the app and the queue is still there**. *(Paid-tier feature.)*

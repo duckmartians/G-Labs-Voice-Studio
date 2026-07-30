@@ -1,6 +1,6 @@
 <p align="right">
-<a href="./README.vi.md">🇻🇳 Tiếng Việt</a> ·
-<a href="./README.md">🇬🇧 English</a> ·
+<a href="./README.md">🇻🇳 Tiếng Việt</a> ·
+<a href="./README.en.md">🇬🇧 English</a> ·
 <a href="./README.pt-BR.md">🇧🇷 Português</a> ·
 🇹🇷 Türkçe ·
 <a href="./README.zh-CN.md">🇨🇳 简体中文</a> ·
@@ -61,6 +61,19 @@
 ---
 
 <details open>
+<summary><b>🆕 v1.0.9'de yenilikler</b></summary>
+
+- **🔔 Kenar çubuğunda Telegram düğmesi** — tek tıkla doğrudan Telegram topluluk grubuna giderek soru sorun ve duyuruları alın.
+- **📂 C sürücüsünü rahatlatmak için modelin kaydedileceği yeri seçin** — model oldukça büyük; artık onu saklamak için başka bir klasör (örneğin D veya E sürücüsü) seçebilir, C sürücüsünün dolmasını önleyebilirsiniz. Yeri değiştirdikten sonra eski model klasörünü oraya kopyalamanız yeterli, ya da uygulamanın yeniden indirmesine izin verin.
+- **↕ Ses kitaplığı ve örnek metin kutusu pencereyle birlikte büyür** — pencereyi büyütünce daha çok ses ve daha geniş bir metin kutusu görürsünüz; ses listesinde kaydırma daha akıcı ve artık sesleri atlamıyor.
+- **⏯ Tabloda önizlerken Duraklat düğmesi** — önceden yalnızca Oynat vardı; artık bir satır çalarken düğme Duraklat'a dönüşür, durdurmak için tekrar tıklayın.
+- **✨ Daha temiz ve tutarlı görünüm** — eski simgeler yerine uygulama genelinde tutarlı, net yeni simgeler; dağınıklığı azaltmak için fare üzerine gelince çıkan ipuçları kaldırıldı.
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 v1.0.8'de yenilikler</b></summary>
 
 - **🗒 Oluşturma kuyruğu (yeni)** — tek tek oluşturup elle dışa aktarmak yerine artık **birden fazla işi kuyruğa ekleyebilirsiniz**: her işin kendi senaryosu + sesi + ayarları var, diğerlerinden tamamen bağımsız. Bir kez çalıştır'a basın, uygulama **işleri sırayla yapar ve her işin dosyalarını kendi klasörüne otomatik kaydeder** — siz bu sırada başka işlerle uğraşabilirsiniz. Her işe kendi **adını + klasörünü** verin; **uygulamayı kapatıp tekrar açsanız bile kuyruk aynen durur**. *(Ücretli sürüm özelliği.)*

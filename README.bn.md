@@ -149,12 +149,12 @@
 
 | প্ল্যাটফর্ম | ফাইল | আকার |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.9-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.9-arm64.dmg` | ~2 GB |
 
 ### Windows (পোর্টেবল, ইনস্টলের দরকার নেই)
 
-1. `GLabsVoiceStudio-v1.0.8-win.zip` ডাউনলোড করুন।
+1. `GLabsVoiceStudio-v1.0.9-win.zip` ডাউনলোড করুন।
 2. যেকোনো ফোল্ডারে এক্সট্রাক্ট করুন (ড্রাইভে কমপক্ষে 10 GB ফাঁকা জায়গা দরকার)।
 3. এক্সট্রাক্ট করা ফোল্ডার খুলুন এবং `GLabsVoiceStudio.exe`-তে ডাবল-ক্লিক করুন।
 
@@ -164,7 +164,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. অফিসিয়াল বিতরণ থেকে **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** ডাউনলোড করুন।
+1. অফিসিয়াল বিতরণ থেকে **`GLabsVoiceStudio-v1.0.9-arm64.dmg`** ডাউনলোড করুন।
 2. `.dmg` ফাইলে ডাবল-ক্লিক করে খুলুন।
 3. **G-Labs Voice Studio** আইকনটি **Applications** ফোল্ডারে টেনে নিয়ে যান।
 4. **Applications** খুলুন, **G-Labs Voice Studio**-তে **রাইট-ক্লিক** করুন → **Open** বেছে নিন।

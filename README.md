@@ -149,12 +149,12 @@
 
 | Hệ điều hành | Tệp tải về | Dung lượng |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.9-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.9-arm64.dmg` | ~2 GB |
 
 ### Windows (chạy trực tiếp, không cần cài đặt)
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.8-win.zip`.
+1. Tải tệp `GLabsVoiceStudio-v1.0.9-win.zip`.
 2. Giải nén ra thư mục bất kỳ (ổ cứng cần còn trống ít nhất 10 GB).
 3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
 
@@ -164,7 +164,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Tải tệp **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** từ nguồn phân phối chính thức.
+1. Tải tệp **`GLabsVoiceStudio-v1.0.9-arm64.dmg`** từ nguồn phân phối chính thức.
 2. Nhấp đúp vào file `.dmg` để mở.
 3. Kéo biểu tượng **G-Labs Voice Studio** vào thư mục **Applications**.
 4. Mở **Applications**, **nhấp chuột phải** vào **G-Labs Voice Studio** → chọn **Open**.

@@ -149,12 +149,12 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 | Plataforma | Arquivo | Tamanho |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.9-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.9-arm64.dmg` | ~2 GB |
 
 ### Windows (portátil, não precisa instalar)
 
-1. Baixe `GLabsVoiceStudio-v1.0.8-win.zip`.
+1. Baixe `GLabsVoiceStudio-v1.0.9-win.zip`.
 2. Extraia para qualquer pasta (o disco precisa ter pelo menos 10 GB livres).
 3. Abra a pasta extraída e dê dois cliques em `GLabsVoiceStudio.exe`.
 
@@ -164,7 +164,7 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 ### 🍎 macOS Apple Silicon
 
-1. Baixe o **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** na distribuição oficial.
+1. Baixe o **`GLabsVoiceStudio-v1.0.9-arm64.dmg`** na distribuição oficial.
 2. Dê dois cliques no arquivo `.dmg` para abrir.
 3. Arraste o ícone do **G-Labs Voice Studio** para a pasta **Aplicativos**.
 4. Abra **Aplicativos**, **clique com o botão direito** em **G-Labs Voice Studio** → escolha **Abrir**.

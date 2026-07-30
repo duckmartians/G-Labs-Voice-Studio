@@ -149,12 +149,12 @@
 
 | Platform | Dosya | Boyut |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.9-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.9-arm64.dmg` | ~2 GB |
 
 ### Windows (taşınabilir, kuruluma gerek yok)
 
-1. `GLabsVoiceStudio-v1.0.8-win.zip` dosyasını indirin.
+1. `GLabsVoiceStudio-v1.0.9-win.zip` dosyasını indirin.
 2. Herhangi bir klasöre çıkarın (sürücüde en az 10 GB boş alan olmalı).
 3. Çıkarılan klasörü açın ve `GLabsVoiceStudio.exe` dosyasına çift tıklayın.
 
@@ -164,7 +164,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** dosyasını indirin.
+1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.9-arm64.dmg`** dosyasını indirin.
 2. Açmak için `.dmg` dosyasına çift tıklayın.
 3. **G-Labs Voice Studio** simgesini **Applications** klasörüne sürükleyin.
 4. **Applications**'ı açın, **G-Labs Voice Studio** üzerine **sağ tıklayın** → **Aç**'ı seçin.

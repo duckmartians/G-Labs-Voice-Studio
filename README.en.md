@@ -149,12 +149,12 @@
 
 | Platform | File | Size |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.9-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.9-arm64.dmg` | ~2 GB |
 
 ### Windows (portable, no install needed)
 
-1. Download `GLabsVoiceStudio-v1.0.8-win.zip`.
+1. Download `GLabsVoiceStudio-v1.0.9-win.zip`.
 2. Extract to any folder (the drive needs at least 10 GB free).
 3. Open the extracted folder and double-click `GLabsVoiceStudio.exe`.
 
@@ -164,7 +164,7 @@
 
 ### 🍎 macOS Apple Silicon
 
-1. Download **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** from the official distribution.
+1. Download **`GLabsVoiceStudio-v1.0.9-arm64.dmg`** from the official distribution.
 2. Double-click the `.dmg` file to open it.
 3. Drag the **G-Labs Voice Studio** icon into the **Applications** folder.
 4. Open **Applications**, **right-click** on **G-Labs Voice Studio** → choose **Open**.

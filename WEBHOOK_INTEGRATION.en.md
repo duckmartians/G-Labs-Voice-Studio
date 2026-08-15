@@ -17,13 +17,19 @@ speech audio from text using voices you saved in the app's **Voice Bank**.
 
 ## 1. Overview & key concepts
 
-- **Local-only server.** The API runs on `http://127.0.0.1:<port>` (loopback). It
-  binds to `127.0.0.1` only — it is **not** reachable from other machines unless
-  you add your own tunnel/reverse proxy. Your integration must run on the same
-  machine, or you must expose it yourself.
+- **This machine only, by default.** The API runs on `http://<ip>:<port>` and binds to
+  `127.0.0.1` (loopback) out of the box — **no** other machine can reach it. Your
+  integration should run on the same machine.
+- **To let other machines call in:** change the **IP** box in the Webhook tab to
+  `0.0.0.0` (listen on every interface) or a specific LAN IP. ⚠️ The **API key then
+  travels over plain, unencrypted HTTP** — only do this on a trusted local network; put
+  it behind a TLS reverse proxy before exposing it to the internet.
 - **Default port:** `8766` (configurable in the Webhook tab).
-- **You must start the server.** Open the app → **Webhook** tab → **Start**. The
-  tab shows/copies the **API key** and lets you change the port.
+- **You must start the server.** Open the app → **Webhook** tab → **Start**. The control
+  row has an **IP** box, a **Port** box, a full **URL** box with a **Copy** button, and an
+  **Auto-start server when app launches** checkbox (ticking it starts the server right
+  away). While the server runs, IP and Port are locked — stop it first to change them.
+- **The API key** lives on the same tab (shown masked, with Copy and Generate buttons).
 - **You must save voices first.** Generation always uses a **`preset_id`** that
   points to a voice saved in the app's **Voice Bank**. List them with
   `GET /api/voices`; create them in the Voice Studio UI.
@@ -32,9 +38,14 @@ speech audio from text using voices you saved in the app's **Voice Bank**.
   1. `POST /api/voice/design` → get a `task_id` immediately (HTTP `202`).
   2. `GET /api/status/{task_id}` repeatedly until `status` is `completed` or `failed`.
   3. On `completed`, download the audio from the returned `results` URL.
-- **Generation is serialized.** Requests are queued and run on a single shared TTS
-  model (GPU/CPU). Even when several jobs are submitted at once, inference happens
-  **one at a time** (a shared model mutex). Expect throughput of one generation at a time.
+- **Accepted in parallel, generated one at a time.** As many requests as the
+  **Concurrent lines** setting in the UI (clamped to 1–10) are accepted and report
+  `running` immediately; beyond that they wait. Inference itself still goes through a
+  single shared TTS model guarded by a mutex — **total wall time equals sequential**, so
+  submitting more does not make it faster.
+- **Completion order is NOT guaranteed.** With several jobs in flight, mutex wakeup order
+  is unspecified, so the first job submitted may not finish first. **Always match results
+  by `task_id`** — never rely on ordering.
 - **First request may be slow.** The first job after launch lazily loads (and may
   download) the TTS model. If the model can't be loaded (no model / cancelled
   download), queued tasks `fail` with a clear message.
@@ -278,10 +289,12 @@ HTTP-level validation errors (`400`) are returned synchronously at submit time
 
 ## 9. Constraints & gotchas
 
-- **Localhost only.** Run your integration on the same machine, or tunnel
-  `127.0.0.1:<port>` yourself.
+- **Localhost by default.** Run your integration on the same machine. To let other
+  machines call in, change the **IP** box to `0.0.0.0` / a LAN IP — remember the API key
+  then travels over unencrypted HTTP.
 - **Serialized generation.** One generation at a time (shared TTS model). Submitting
-  many jobs is fine — they queue — but don't expect parallel speedup.
+  many jobs is fine — they queue — but don't expect parallel speedup, and **don't rely on
+  completion order**: match results by `task_id`.
 - **Voice Bank required.** You must have at least one saved voice; `preset_id` is
   mandatory. There is no "design from text attributes" field in this webhook — it
   always clones a saved preset.

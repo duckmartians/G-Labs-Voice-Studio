@@ -44,14 +44,16 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 ## Recursos
 
 - **🔊 Clone de Voz** — forneça um trecho de referência de 5–10 segundos; o app lê qualquer texto naquela voz.
-- **🎛️ Texto para Voz / TTS** — descreva uma voz por atributos (gênero, idade, tom, estilo, sotaque) sem precisar de áudio de referência.
+- **🌐 Tradução e revisão de legendas com IA** — carregue `.srt`, `.vtt`, `.ass`, `.sbv` ou `.txt`, traduza para outro idioma ou corrija ortografia e quebras de linha — **os tempos ficam intactos**. Uma tabela de consistência mantém nomes e formas de tratamento iguais no arquivo inteiro. *(Plano Studio)*
+- **🔗 Webhook API** — servidor REST local para que n8n, Zapier ou Python/cURL gerem voz automaticamente. Escolha o IP e a porta, copie a URL com um clique, inicie junto com o app.
+- **😄 Etiquetas de expressão dentro do app** — tabela com 13 etiquetas (risada, suspiro, surpresa…); clique em **Inserir** e a etiqueta cai no cursor.
 - **💬 Diálogo de Várias Vozes** — escreva um roteiro com vários personagens usando a sintaxe `<Nome>: fala` e atribua uma voz da biblioteca a cada personagem.
 - **📝 Voz para Texto (ASR)** — transcreva arquivos de áudio/vídeo. Suporta MP3, WAV, M4A, FLAC, MP4, MOV…
 - **🗂 Biblioteca de Vozes + 30 vozes de fábrica** — o app já vem com 30 vozes prontas (masculinas/femininas, tons variados). Você também pode salvar as suas. Marque ⭐ uma voz para fixá-la no topo, e faça **backup e restauração** como arquivos `.vcp` portáteis para compartilhar.
 - **🎚 Controle de velocidade + exportação que respeita a velocidade** — mude a velocidade da prévia abaixo da forma de onda; o arquivo exportado toca exatamente naquela velocidade (tom preservado).
 - **📄 Exportação de legendas (SRT)** — ao exportar como um único arquivo mesclado, o `.srt` é gerado automaticamente ao lado, pronto para edição de vídeo.
 - **🔤 Dicionário fonético pessoal** — encontrou `100%`, `25°C`, `m²`? Digite a pronúncia uma vez, o app lembra para a próxima (por idioma de saída).
-- **✨ Sugestão de texto de amostra com IA** — o Whisper transcreve automaticamente o trecho de referência para você não ter que redigitar do zero (ainda revise antes de gerar).
+- **✨ Sugestão de texto de amostra com IA** — o o app transcreve automaticamente o trecho de referência para você não ter que redigitar do zero (ainda revise antes de gerar).
 - **⬇ Download por linha** — cada linha da tabela do roteiro tem seu próprio botão de download — sem esperar o lote inteiro.
 - **Mais de 600 idiomas suportados** — fale em mais de 600 idiomas (vietnamita, inglês, chinês, japonês, coreano, francês, alemão, espanhol e muitos idiomas minoritários).
 - **Processamento em lote** — importe roteiros `.txt` ou `.srt`, rode lotes, exporte áudio preservando os tempos.
@@ -61,6 +63,32 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 ---
 
 <details open>
+<summary><b>🆕 Novidades na v2.0.0</b></summary>
+
+- **🌐 Aba Tradução de Legendas (nova)** — traduza legendas para outro idioma ou corrija ortografia e quebras de linha, **sem nunca alterar os tempos nem a quantidade de linhas**. Lê `.srt`, `.vtt`, `.ass`, `.sbv` e até `.txt` (um arquivo sem tempos recebe marcações provisórias, e o app avisa). Exporta em SRT, VTT ou TXT. *(Plano Studio)*
+- **📐 Organize o texto antes de traduzir** — legendas exportadas de editores de vídeo costumam ser cortadas no meio da frase ("Hoje eu vou" / "contar uma história") e traduzir esses pedaços soltos distorce o sentido. Esta etapa junta os pedaços de uma mesma frase, com **prévia** ao vivo na janela antes de aplicar.
+- **📖 Tabela de consistência** — antes de traduzir, o app lê o arquivo inteiro uma vez para definir nomes, termos e formas de tratamento, e depois envia essa tabela junto com **cada parte**. Dá para editar à mão e, se quiser, a execução pausa para você conferir.
+- **🤖 Quatro provedores de IA** — 9Router, Claude CLI, Antigravity e Codex. A aba **Gerenciar Modelos** traz guias de instalação de cada um, detecta o que já está na máquina e lista os modelos reais que a própria ferramenta informa.
+- **🔗 Página de Webhook mais completa** — ganhou campo de **IP** (apenas esta máquina por padrão), campo de **URL** completo com botão **Copiar**, e trava IP e porta enquanto o servidor roda, para a URL nunca mostrar a porta errada. Marcar *Iniciar automaticamente* agora liga o servidor na hora.
+- **😄 Botão de etiquetas de expressão** — as 13 etiquetas agora estão em uma tabela dentro do app (antes só existiam neste documento); clique em **Inserir** e a etiqueta cai no cursor.
+- **📋 Logs Detalhados na barra lateral** — direto para o log, sem procurar a aba nas Configurações.
+- **✨ Faxina na interface** — a lista de vozes não tem mais linhas de alturas diferentes; o painel **Exportar** foi para baixo de **Fila de renderização**; “Pronúncia” virou **Ajustar pronúncia**; o botão de expandir ficou ao lado do seu rótulo.
+- **✂️ Escolha a amostra de voz direto na forma de onda (aba Clonar Voz)** — chega de corte automático escondido: após escolher o arquivo, arraste o quadro destacado para selecionar exatamente o trecho de 3–30 segundos usado como amostra e pressione ▶ para ouvir; ao soltar, as bordas se encaixam no silêncio mais próximo. Arquivos com mais de 5 minutos/50 MB usam automaticamente os primeiros 30 segundos.
+- **⚡ Reconhecimento de voz várias vezes mais rápido** — a aba **Voz → Texto** e o botão **✨ Sugestão de IA** (aba Clonar Voz) agora rodam em um novo motor (faster-whisper): ~4x mais rápido com **cerca de metade da VRAM** (modelo Turbo: ~6GB → ~2.5GB). Máquinas só com CPU também ficam bem mais rápidas graças ao modo int8.
+- **📦 Primeiro download ~1.6GB mais leve** — o download inicial de modelos cai de ~4.9GB para ~3.3GB; os modelos de reconhecimento são baixados à parte no primeiro uso (um toque, como antes, e ficam salvos na máquina).
+- **🧭 Nova navegação vertical** — as 5 abas de recursos foram para a barra lateral esquerda com nomes mais curtos (Clonar Voz, Ler Texto, Diálogo em Grupo, Extrair Legendas, Gerenciar Modelos) — troca mais rápida, mais espaço de trabalho.
+- **📝 Extrair Legendas agora monta linhas por timestamps de cada palavra** — chega de linhas de um minuto: as linhas quebram em pausas reais / fim de frase / limite de caracteres, com timestamps exatos. 3 parâmetros ajustáveis — mudar atualiza a tabela na hora, **sem re-transcrever**.
+- **✍️ Novo modo de divisão "Mesclagem inteligente (≤N caract.)"** — junta frases curtas em linhas fluentes até o limite de caracteres, sempre quebrando no fim de frase; padrão 500 (medido: o modelo lê com 100% de precisão até ~1.800).
+- **🔊 Corrigido "Equalizar volume"** — normaliza pela sonoridade percebida (RMS) em vez do pico da onda: sem mais linhas altas/baixas com a opção ligada; linhas quase mudas não viram ruído.
+- **📚 Gerenciador de Modelos redesenhado** — uma linha por modelo com tamanho e selo "Recomendado"; baixe exatamente o que quiser.
+- **🍃 Muito mais leve na RAM** — áudio gerado e dados de transcrição vão para uma pasta temporária em vez da RAM (~165MB economizados por hora de áudio), limpa ao iniciar.
+- **🛡 Mais estável em GPUs com pouca VRAM** — corrigido o separador inteligente de frases (VAD) que parava silenciosamente após a primeira troca de VRAM; a Sugestão de IA **não pode mais rodar por cima** da geração de voz (sem risco de estourar a VRAM).
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 Novidades na v1.0.9</b></summary>
 
 - **🔔 Botão do Telegram na barra lateral** — um clique leva você direto ao grupo da comunidade no Telegram para dúvidas e novidades.
@@ -89,7 +117,6 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 <summary><b>🆕 Novidades na v1.0.7</b></summary>
 
 - **🔊 A aba Clonar Voz, refeita para ser mais simples** — a biblioteca foi dividida em duas colunas claras (**Vozes integradas** / **Suas vozes**) e a caixa de texto foi reduzida a uma linha. Após clonar, o app sugere ouvir e pergunta se você quer salvar a voz — salvar é um toque. Áudio de amostra com mais de 30 segundos é **cortado automaticamente** em uma pausa para uma clonagem mais limpa.
-- **🎛 Uma aba Texto → Fala mais organizada** — "Biblioteca de vozes" e "Design de voz" foram unidas em **um único quadro**; alterne entre **Usar uma voz salva** ↔ **Voz aleatória**, sem bagunça.
 - **▶ Ouça as vozes integradas** — clique no ▶ ao lado de qualquer voz integrada na biblioteca para ouvi-la antes de usar.
 - **⭐ Favoritos sincronizados em todo lugar** — marque uma voz com estrela em uma aba e as outras abas também a veem.
 - **🐛 Corrigido: o controle de velocidade causava áudio distorcido / falha na exportação** — removemos o controle de velocidade na barra de pré-visualização (ele causava a distorção e o erro de exportação). Para ler mais rápido/devagar, use o controle **Velocidade de leitura** em *Configurações avançadas* — voz natural, sem erros.
@@ -149,22 +176,21 @@ O **G-Labs Voice Studio** é um aplicativo de desktop para síntese de voz multi
 
 | Plataforma | Arquivo | Tamanho |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.9-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.9-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
 
 ### Windows (portátil, não precisa instalar)
 
-1. Baixe `GLabsVoiceStudio-v1.0.9-win.zip`.
+1. Baixe `GLabsVoiceStudio-v1.0.8-win.zip`.
 2. Extraia para qualquer pasta (o disco precisa ter pelo menos 10 GB livres).
 3. Abra a pasta extraída e dê dois cliques em `GLabsVoiceStudio.exe`.
-
-> Quer um atalho na área de trabalho? Clique com o botão direito em `GLabsVoiceStudio.exe` → *Enviar para* → *Área de trabalho (criar atalho)*.
+4. **Crie um atalho na área de trabalho:** clique com o botão direito em `GLabsVoiceStudio.exe` → **Send to** → **Desktop (create shortcut)**. A partir daí você abre o app por ali, sem entrar na pasta.
 
 > **⏳ A primeira inicialização pode levar de 30 a 60 segundos (a tela de splash vai pausar em torno de ~90%) — aguarde, não feche.** O Windows precisa escanear o app e os arquivos de GPU (uma etapa automática de segurança, lenta só na primeira vez). A partir da segunda inicialização, o app abre rapidinho.
 
 ### 🍎 macOS Apple Silicon
 
-1. Baixe o **`GLabsVoiceStudio-v1.0.9-arm64.dmg`** na distribuição oficial.
+1. Baixe o **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** na distribuição oficial.
 2. Dê dois cliques no arquivo `.dmg` para abrir.
 3. Arraste o ícone do **G-Labs Voice Studio** para a pasta **Aplicativos**.
 4. Abra **Aplicativos**, **clique com o botão direito** em **G-Labs Voice Studio** → escolha **Abrir**.
@@ -206,7 +232,8 @@ Isso limpa todos os atributos estendidos (incluindo a flag de quarentena) do pac
 
 ## Começando
 
-### Parte 1 — Primeira inicialização (configuração única)
+<details>
+<summary><b>Parte 1 — Primeira inicialização (configuração única)</b></summary>
 
 1. Abra o app — uma tela de boas-vindas oferece 9 idiomas de interface. Escolha o que quiser.
 2. **Faça login** — clique no ícone de engrenagem ⚙️ na barra lateral esquerda → aba *Licença* → **"Entrar com Google"**.
@@ -215,7 +242,10 @@ Isso limpa todos os atributos estendidos (incluindo a flag de quarentena) do pac
 
 > 💡 Para mudar o idioma da interface depois: Configurações → Idioma.
 
-### Parte 2 — Clone de Voz 🔊
+</details>
+
+<details>
+<summary><b>Parte 2 — Clone de Voz 🔊</b></summary>
 
 Clone uma voz a partir de uma gravação de amostra.
 
@@ -223,14 +253,17 @@ Clone uma voz a partir de uma gravação de amostra.
 2. Selecione o **idioma de saída** no topo da aba (ex.: vietnamita, inglês…).
 3. No campo *Áudio de amostra*, clique em **"Selecionar…"** e escolha um trecho (5–10 segundos, voz clara, com pouco ruído de fundo).
 4. **Obrigatório:** digite o *Texto da amostra* — a transcrição exata do áudio de amostra (com pontuação e ortografia corretas).
-    > 💡 Clique em **"✨ Sugerir com IA"** e o Whisper transcreve para você — ainda revise antes de gerar.
+    > 💡 Clique em **"✨ Sugerir com IA"** e o o app transcreve para você — ainda revise antes de gerar.
 5. Cole o texto-alvo em *Conteúdo do texto* (ou clique em **"📂 Importar (.txt, .srt)"** para carregar de um `.txt` / `.srt`).
 6. Clique em **"📋 Adicionar à tabela"** — o app divide seu texto em frases individuais.
-7. (Opcional) Clique em **🔤 Pronúncia** para revisar o dicionário fonético — se o texto contiver caracteres especiais (ex.: `100%`), o app vai te perguntar como lê-los.
+7. (Opcional) Clique em **🔤 Ajustar pronúncia** para revisar o dicionário fonético — se o texto contiver caracteres especiais (ex.: `100%`), o app vai te perguntar como lê-los.
 8. Clique em **"▶ Iniciar processamento"** → uma caixa de confirmação aparece para verificar a transcrição da amostra → confirme para rodar.
 9. Quando terminar, clique em **"💾 Exportar áudio"** (arquivo único mesclado com `.srt` companheiro), ou use o **⬇** numa linha para baixar só aquela fala.
 
-### Parte 3 — Texto para Voz (TTS) 🎛️
+</details>
+
+<details>
+<summary><b>Parte 3 — Texto para Voz (TTS) 🎛️</b></summary>
 
 Crie uma nova voz a partir de descrições de atributos — sem precisar de amostra.
 
@@ -243,7 +276,10 @@ Crie uma nova voz a partir de descrições de atributos — sem precisar de amos
 6. Depois da geração: clique numa linha da tabela que você quer guardar → clique em **"💾 Salvar"** no painel da *Biblioteca de Vozes* para reutilizar depois.
 7. Clique em **"💾 Exportar áudio"** para salvar o resultado.
 
-### Parte 4 — Diálogo de Várias Vozes 💬 *(novo)*
+</details>
+
+<details>
+<summary><b>Parte 4 — Diálogo de Várias Vozes 💬 *(novo)*</b></summary>
 
 Gere áudio de diálogo com vários personagens, uma voz por personagem — perfeito para podcasts, audiodramas e vídeos no estilo entrevista.
 
@@ -263,7 +299,10 @@ Gere áudio de diálogo com vários personagens, uma voz por personagem — perf
 8. Clique em **"▶ Iniciar processamento"** — cada fala é lida na voz do seu personagem atribuído.
 9. Clique em **"💾 Exportar áudio"** para salvar o resultado (um `.srt` correspondente é incluído).
 
-### Parte 5 — Voz para Texto 📝
+</details>
+
+<details>
+<summary><b>Parte 5 — Voz para Texto 📝</b></summary>
 
 Transcreva a fala de um arquivo de áudio/vídeo existente.
 
@@ -273,11 +312,54 @@ Transcreva a fala de um arquivo de áudio/vídeo existente.
 4. Os resultados aparecem numa tabela com tempos por frase. Você pode editá-los direto.
 5. Clique em **"💾 Exportar resultado"** para salvar como `.txt` (texto puro) ou `.srt` (com tempos, pronto para legendas).
 
+</details>
+
+<details>
+<summary><b>Parte 6 — Tradução de Legendas 🌐 *(novo — plano Studio)*</b></summary>
+
+Traduza legendas para outro idioma ou corrija ortografia e quebras de linha. **Os tempos e a quantidade de linhas nunca mudam** — só o texto muda, então a legenda continua batendo com o vídeo exatamente como antes.
+
+**Preparo único: escolha uma IA**
+
+1. Abra a aba **Gerenciar Modelos** → painel **LLM**. Quatro opções:
+
+    | Provedor | O que é preciso |
+    |---|---|
+    | **9Router** | Rodar o gateway 9Router na máquina, preencher endereço + API key |
+    | **Claude CLI** | Instalar o Claude Code e entrar |
+    | **Antigravity** | Instalar o `agy` e entrar |
+    | **Codex** | Instalar o Codex CLI e entrar |
+
+2. Cada linha tem um botão **Guia** com os comandos exatos de instalação. Depois de instalar, clique em **Atualizar** — o app detecta sozinho e preenche a lista de modelos acima.
+
+**Traduzindo**
+
+1. Abra a aba **Tradução de Legendas**.
+2. Clique em **Importar arquivo** e escolha um `.srt`, `.vtt`, `.ass`, `.sbv` ou `.txt` — ou clique em **Pegar de Legendas** para trazer o que você acabou de transcrever.
+    > 💡 Um `.txt` não tem marcações de tempo, então o app atribui tempos provisórios a cada linha e avisa, para você ajustar depois de salvar.
+3. **Recomendado:** clique em **Organizar o texto**. Legendas exportadas de editores de vídeo costumam ser cortadas no meio da frase, e traduzir esses pedaços soltos distorce o sentido com facilidade. A janela mostra uma prévia e um resumo do tipo *"120 linhas → 68 linhas"*; clique em **Aplicar** se estiver bom.
+4. Escolha um **modo**:
+    - **Traduzir** — para o idioma de destino.
+    - **Revisar** — mesmo idioma, corrigindo ortografia, pontuação e maiúsculas.
+    - **Ambos** — revisa e traduz numa passada só.
+5. Escolha o **idioma de destino** e o **modelo de IA** (a lista à direita da linha de cima).
+6. (Opcional) Marque **Revisar tabela de consistência antes de traduzir** se quiser conferir a lista de termos primeiro.
+7. Clique em **Executar**. Esse mesmo botão vira **Parar** enquanto roda — clique de novo para interromper.
+8. Confira na tabela: a coluna **Resultado** é editável, e qualquer linha que a IA tenha pulado fica marcada com ⚠ e mantém o texto original.
+9. Escolha o formato (**SRT** / **VTT** / **TXT**) e clique em **Exportar**.
+
+> 💡 A **tabela de consistência** é o que mantém nomes, termos e formas de tratamento iguais do começo ao fim. Antes de traduzir, o app lê o arquivo inteiro uma vez para fechar essas decisões e depois envia a tabela junto com cada parte. Clique em **Tabela de consistência** para ver e editar; ao executar de novo, o app usa exatamente a tabela que você aprovou.
+
+
 ---
+
+</details>
 
 ## 💡 Dicas para usuários avançados
 
-### Masterização de áudio *(novo)*
+<details>
+<summary><b>Masterização de áudio *(novo)*</b></summary>
+
 - As três abas de geração (Clone de Voz / Texto para Voz / Diálogo de Várias Vozes) têm uma seção recolhível **Masterização de áudio** no meio do formulário.
 - 6 predefinições embutidas:
   - 📻 **Radiodifusão** *(padrão)* — padrão de rádio/podcast, quente e comprimido.
@@ -288,25 +370,42 @@ Transcreva a fala de um arquivo de áudio/vídeo existente.
   - ✨ **Brilhante** — agudos cristalinos, sensação arejada.
 - Mude a predefinição em uma aba → as outras duas sincronizam automaticamente. Para obter exatamente a mesma saída da versão anterior (v1.0.4): escolha **🔇 Bruto** e desmarque **Equalizar volume entre as falas**.
 
-### Liberação automática de memória quando ocioso *(novo)*
+</details>
+
+<details>
+<summary><b>Liberação automática de memória quando ocioso *(novo)*</b></summary>
+
 - Padrão: se o app fica sem uso por **5 minutos**, o modelo de IA é descarregado automaticamente da VRAM/RAM para liberar recursos do sistema.
 - Da próxima vez que você gerar, o modelo recarrega (~30-60s).
 - Vá para a aba **Configuração do Ambiente** → **Liberar VRAM automaticamente** para ajustar o tempo (0 = desligado, 1-120 minutos).
 
-### Biblioteca de Vozes e estrela de favorito
+</details>
+
+<details>
+<summary><b>Biblioteca de Vozes e estrela de favorito</b></summary>
+
 - Cada voz da biblioteca tem uma ☆ no começo da linha. Clique nela → vira ★ → essa voz pula para o topo da lista (e fica lá na próxima vez também).
 - Clique na ★ de novo para desfavoritar.
 - Todas as 30 vozes de fábrica (Achernar, Aoede, Kore, Puck…) também podem ser favoritadas.
 
-### Dicionário fonético
-- Quando seu texto contém `%`, `$`, `°C`, `m²`, marcas… clique em **🔤 Pronúncia** antes de gerar.
+</details>
+
+<details>
+<summary><b>Dicionário fonético</b></summary>
+
+- Quando seu texto contém `%`, `$`, `°C`, `m²`, marcas… clique em **🔤 Ajustar pronúncia** antes de gerar.
 - Na primeira vez que o app vê um token, ele te pergunta como ler (ex.: `%` → ` por cento`).
 - Cada token só precisa ser digitado **uma vez** — o app lembra por idioma de saída. Na próxima, é aplicado automaticamente.
 - O mesmo token em idiomas diferentes mantém pronúncias separadas (ex.: vietnamita vs inglês).
 
-### Tags de emoção e sons não-verbais
+</details>
+
+<details>
+<summary><b>Tags de emoção e sons não-verbais</b></summary>
+
 - Digite qualquer uma destas tags diretamente no seu texto e a voz produzirá o som não-verbal correspondente. Funcionam em **Clone de Voz**, **Texto para Voz** e **Diálogo de Várias Vozes**.
 - Escreva a tag exatamente como mostrado, com os colchetes, sozinha ou entre frases (ex.: `Que engraçado [laughter] não consigo parar.`).
+- **Você não precisa decorar esta tabela:** nas abas **Texto para Fala** e **Diálogo com Várias Vozes**, clique em **Etiquetas de expressão** acima da caixa de texto para consultar e **Inserir** direto no cursor.
 
 | Tag | Som |
 |---|---|
@@ -326,17 +425,27 @@ Transcreva a fala de um arquivo de áudio/vídeo existente.
 
 > 💡 As tags são interpretadas como deixas expressivas, não lidas em voz alta. A intensidade varia conforme o idioma e a voz — teste primeiro em uma frase curta.
 
-### Velocidade de reprodução + exportação
+</details>
+
+<details>
+<summary><b>Velocidade de reprodução + exportação</b></summary>
+
 - Depois que o áudio é gerado, a barra abaixo da forma de onda tem um **menu de velocidade** (0,5x → 2x, em passos).
 - Mude a velocidade → a prévia atualiza imediatamente no player.
 - O arquivo exportado mantém exatamente aquela velocidade e o **tom é preservado** (sem efeito esquilo — usa time-stretching).
 
-### Exportação de SRT
+</details>
+
+<details>
+<summary><b>Exportação de SRT</b></summary>
+
 - No painel *Configurações de exportação*, **"Exportar legendas também (.srt)"** vem ligado por padrão.
 - Ao exportar como um único arquivo mesclado, o app cria `nome.srt` ao lado de `nome.wav`.
 - Os tempos no SRT refletem a duração real de cada linha (após o ajuste de velocidade).
 
 ---
+
+</details>
 
 ## Requisitos de Sistema
 

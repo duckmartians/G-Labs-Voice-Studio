@@ -44,14 +44,16 @@
 ## Features
 
 - **🔊 Voice Cloning** — provide a 5–10 second reference clip; the app reads any text in that voice.
-- **🎛️ Voice Design / TTS** — describe a voice by attributes (gender, age, pitch, style, accent) with no reference audio needed.
+- **🌐 AI subtitle translation & editing** — load `.srt`, `.vtt`, `.ass`, `.sbv` or `.txt`, translate to another language or clean up spelling and line breaks, **with timings left untouched**. A consistency table keeps names and forms of address stable across the whole file. *(Studio plan)*
+- **🔗 Webhook API** — a local REST server so n8n, Zapier or Python/cURL can generate speech automatically. Pick the IP and port, copy the URL in one click, start it with the app.
+- **😄 Expression tags, right in the app** — a table of 13 tags (laughter, sigh, surprise…); hit **Insert** and the tag lands at the cursor.
 - **💬 Multi-Voice Dialogue** — write a multi-character script using the `<Name>: line` syntax and assign a library voice to each character.
 - **📝 Speech-to-Text (ASR)** — transcribe audio/video files. Supports MP3, WAV, M4A, FLAC, MP4, MOV…
 - **🗂 Voice Library + 30 factory voices** — the app ships with 30 ready-made voices (male/female, varied tones). You can also save your own. Star ⭐ a voice to pin it to the top, and **back up & restore** as portable `.vcp` files for sharing.
 - **🎚 Speed control + speed-aware export** — change the preview speed under the waveform; the exported file plays back at exactly that speed (pitch preserved).
 - **📄 Subtitle (SRT) export** — when exporting as a single merged file, the `.srt` is auto-generated alongside, ready for video editing.
 - **🔤 Personal phonetic dictionary** — encounter `100%`, `25°C`, `m²`? Type the pronunciation once, the app remembers it for next time (per output language).
-- **✨ AI sample-text suggestion** — Whisper auto-transcribes the reference clip so you don't have to retype it from scratch (still proofread before generating).
+- **✨ AI sample-text suggestion** — the app auto-transcribes the reference clip so you don't have to retype it from scratch (still proofread before generating).
 - **⬇ Per-row download** — every row in the script table has its own download button — no waiting for the full batch.
 - **600+ languages supported** — speak more than 600 languages (Vietnamese, English, Chinese, Japanese, Korean, French, German, Spanish, and many minority languages).
 - **Batch processing** — import `.txt` or `.srt` scripts, run batches, export audio preserving the timestamps.
@@ -61,6 +63,32 @@
 ---
 
 <details open>
+<summary><b>🆕 What's new in v2.0.0</b></summary>
+
+- **🌐 Subtitle Translate tab (new)** — translate subtitles into another language or clean up spelling and line breaks, **without ever changing the timings or the line count**. Loads `.srt`, `.vtt`, `.ass`, `.sbv` and even `.txt` (a file with no timings gets placeholder times, and the app says so). Exports SRT, VTT or TXT. *(Studio plan)*
+- **📐 Clean up the text before translating** — subtitles exported from video editors are often cut mid-sentence ("Today I'm going to" / "tell you a story"), and translating those loose pieces distorts the meaning. This step joins the pieces of one sentence back together, with a live **preview** in the dialog before you apply it.
+- **📖 Consistency table** — before translating, the app reads the whole file once to settle names, terms and forms of address, then sends that table along with EVERY part. You can edit it by hand, and optionally have the run pause so you can review it first.
+- **🤖 Four AI providers** — 9Router, Claude CLI, Antigravity and Codex. The **Model Manager** tab ships install guides for each, detects what is already on the machine, and lists the real models the tool itself reports.
+- **🔗 A fuller Webhook page** — adds an **IP** box (this machine only by default), a full **URL** box with a **Copy** button, and locks IP and port while the server runs so the URL can never show the wrong port. Ticking *Auto-start* now starts the server right away instead of waiting for a restart.
+- **😄 Expression tags button** — the 13 expression tags are now a lookup table inside the app (they used to live only in this document); hit **Insert** and the tag lands at the cursor.
+- **📋 Detailed Logs in the sidebar** — straight to the log, no digging through Settings.
+- **✨ Interface cleanup** — the voice list no longer has rows of uneven height; the **Export** panel moved below **Render queue** to match the actual workflow; *Pronunciation* became **Fix pronunciation**; the expand button now sits next to its label.
+- **✂️ Pick the voice sample right on the waveform (Voice Clone tab)** — no more silent auto-cutting: after choosing a file, drag the highlighted frame to select the exact 3–30 second segment used as the sample and press ▶ to preview; on release the edges snap to the nearest silence. Files over 5 minutes/50 MB automatically use their first 30 seconds.
+- **⚡ Speech recognition is several times faster** — the **Speech → Text** tab and the **✨ AI suggest** button (Voice Clone tab) now run on a new engine (faster-whisper): ~4x faster with **about half the VRAM** (Turbo model: ~6GB → ~2.5GB). CPU-only machines also get a big speedup thanks to int8 mode.
+- **📦 First-time download ~1.6GB lighter** — the initial model download shrinks from ~4.9GB to ~3.3GB; recognition models download separately on first use (one tap as before, saved locally afterwards).
+- **🧭 New vertical navigation** — the 5 feature tabs moved to the left sidebar with shorter names (Voice Clone, Read Text, Group Dialogue, Extract Subtitles, Model Manager) — faster switching, more workspace.
+- **📝 Extract Subtitles now builds lines from per-word timestamps** — no more minute-long subtitle lines: lines break at real pauses / sentence ends / a character cap, with exact timestamps. Three tunable knobs (max chars, max seconds, pause threshold) — changing them updates the table instantly, **no re-transcription needed**.
+- **✍️ New split mode "Smart merge (≤N chars)"** — packs short sentences into fluent rows up to a character cap while always breaking at sentence ends; default 500 chars (measured: the model reads 100% accurately up to ~1,800 chars).
+- **🔊 Fixed "Even out volume"** — normalizes by perceived loudness (RMS) instead of waveform peak: no more loud/quiet rows when it's ON; near-silent rows are no longer amplified into noise.
+- **📚 Redesigned Model Manager** — one row per model with size and a "Recommended" badge; download exactly what you want.
+- **🍃 Much lighter on RAM** — generated row audio and transcription data are spooled to a temp folder instead of RAM (~165MB saved per hour of generated audio), cleaned on app start.
+- **🛡 More stable on low-VRAM GPUs** — fixed the smart sentence splitter (VAD) silently breaking after the first VRAM swap; AI suggest can **no longer run on top of** voice generation (no more VRAM overflow risk).
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 What's new in v1.0.9</b></summary>
 
 - **🔔 Telegram button in the sidebar** — one click takes you straight to the community group on Telegram for questions and announcements.
@@ -89,7 +117,6 @@
 <summary><b>🆕 What's new in v1.0.7</b></summary>
 
 - **🔊 The Voice Clone tab, rebuilt to be simpler** — the library is split into two clear columns (**Built-in voices** / **Your voices**) and the text box is trimmed to a single line. After cloning, the app prompts you to listen, then asks if you'd like to save the voice — saving is one tap. Sample audio longer than 30 seconds is **auto-trimmed** at a silence gap for a cleaner clone.
-- **🎛 A tidier Text → Speech tab** — "Voice library" and "Voice design" are merged into **one frame**; flip between **Use a saved voice** ↔ **Random voice**, no more clutter.
 - **▶ Preview built-in voices** — click the ▶ next to any built-in voice in the library to hear it before using it.
 - **⭐ Favorites synced everywhere** — star a voice in one tab and the other tabs see it too.
 - **🐛 Fixed the speed control causing distorted audio / failed exports** — removed the speed control in the preview bar (it caused the pitch distortion and the export error). To read faster/slower, use the **Reading speed** slider under *Advanced settings* — natural voice, no errors.
@@ -149,22 +176,21 @@
 
 | Platform | File | Size |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.9-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.9-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
 
 ### Windows (portable, no install needed)
 
-1. Download `GLabsVoiceStudio-v1.0.9-win.zip`.
+1. Download `GLabsVoiceStudio-v1.0.8-win.zip`.
 2. Extract to any folder (the drive needs at least 10 GB free).
 3. Open the extracted folder and double-click `GLabsVoiceStudio.exe`.
-
-> Want a desktop shortcut? Right-click `GLabsVoiceStudio.exe` → *Send to* → *Desktop (create shortcut)*.
+4. **Put a shortcut on the desktop:** right-click `GLabsVoiceStudio.exe` → **Send to** → **Desktop (create shortcut)**. From now on you launch the app from there instead of digging into the folder.
 
 > **⏳ The first launch may take 30–60 seconds (the splash screen will pause around ~90%) — please wait, don't close it.** Windows needs to scan the app and GPU files (an automatic security step, only slow the first time). From the second launch onward, the app opens quickly.
 
 ### 🍎 macOS Apple Silicon
 
-1. Download **`GLabsVoiceStudio-v1.0.9-arm64.dmg`** from the official distribution.
+1. Download **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** from the official distribution.
 2. Double-click the `.dmg` file to open it.
 3. Drag the **G-Labs Voice Studio** icon into the **Applications** folder.
 4. Open **Applications**, **right-click** on **G-Labs Voice Studio** → choose **Open**.
@@ -206,7 +232,8 @@ This clears all extended attributes (including the quarantine flag) from the app
 
 ## Getting Started
 
-### Part 1 — First launch (one-time setup)
+<details>
+<summary><b>Part 1 — First launch (one-time setup)</b></summary>
 
 1. Open the app — a welcome screen offers 9 UI languages. Pick the one you want.
 2. **Sign in** — click the ⚙️ gear icon in the left sidebar → *License* tab → **"Sign in with Google"**.
@@ -215,7 +242,10 @@ This clears all extended attributes (including the quarantine flag) from the app
 
 > 💡 Change the UI language later: Settings → Language.
 
-### Part 2 — Voice Cloning 🔊
+</details>
+
+<details>
+<summary><b>Part 2 — Voice Cloning 🔊</b></summary>
 
 Clone a voice from a sample recording.
 
@@ -223,14 +253,17 @@ Clone a voice from a sample recording.
 2. Select the **output language** at the top of the tab (e.g. Vietnamese, English…).
 3. In the *Reference audio* field, click **"Browse…"** and pick a sample clip (5–10 seconds, clear voice, low background noise).
 4. **Required:** enter the *Reference text* — the exact transcript of the sample audio (correct punctuation and spelling).
-    > 💡 Click **"✨ AI suggest"** and Whisper will transcribe it for you — still proofread it before generating.
+    > 💡 Click **"✨ AI suggest"** and the app will transcribe it for you — still proofread it before generating.
 5. Paste the target text into *Input text* (or click **"📂 Import file"** to load from `.txt` / `.srt`).
 6. Click **"📋 Add to table"** — the app splits your text into individual sentences.
-7. (Optional) Click **🔤 Pronunciation** to review the phonetic dictionary — if your text contains special characters (e.g. `100%`), the app will ask how to read them.
+7. (Optional) Click **🔤 Fix pronunciation** to review the phonetic dictionary — if your text contains special characters (e.g. `100%`), the app will ask how to read them.
 8. Click **"▶ Start"** → a confirmation dialog appears to verify the sample transcript → confirm to run.
 9. When finished, click **"💾 Export audio"** (single merged file with companion `.srt`), or use **⬇** on a row to download just that line.
 
-### Part 3 — Voice Design (TTS) 🎛️
+</details>
+
+<details>
+<summary><b>Part 3 — Voice Design (TTS) 🎛️</b></summary>
 
 Create a new voice from attribute descriptions — no sample needed.
 
@@ -243,7 +276,10 @@ Create a new voice from attribute descriptions — no sample needed.
 6. After generation: click a row in the table you want to keep → click **"💾 Save"** in the *Voice Library* panel to reuse it later.
 7. Click **"💾 Export audio"** to save the result.
 
-### Part 4 — Multi-Voice Dialogue 💬 *(new)*
+</details>
+
+<details>
+<summary><b>Part 4 — Multi-Voice Dialogue 💬 *(new)*</b></summary>
 
 Generate multi-character dialogue audio, one voice per speaker — perfect for podcasts, audio drama, and interview-style videos.
 
@@ -263,7 +299,10 @@ Generate multi-character dialogue audio, one voice per speaker — perfect for p
 8. Click **"▶ Start"** — each line is read in the voice of its assigned speaker.
 9. Click **"💾 Export audio"** to save the result (a matching `.srt` is included).
 
-### Part 5 — Speech-to-Text 📝
+</details>
+
+<details>
+<summary><b>Part 5 — Speech-to-Text 📝</b></summary>
 
 Transcribe speech from an existing audio/video file.
 
@@ -273,11 +312,54 @@ Transcribe speech from an existing audio/video file.
 4. Results appear in a table with per-sentence timestamps. You can edit them directly.
 5. Click **"💾 Export"** to save as `.txt` (plain text) or `.srt` (with timestamps, ready for subtitles).
 
+</details>
+
+<details>
+<summary><b>Part 6 — Subtitle Translation 🌐 *(new — Studio plan)*</b></summary>
+
+Translate subtitles into another language, or clean up spelling and line breaks. **Timings and line count never change** — only the text does, so the subtitles still match the video exactly.
+
+**One-time setup: pick an AI**
+
+1. Open the **Model Manager** tab → **LLM** panel. Four options:
+
+    | Provider | What you need |
+    |---|---|
+    | **9Router** | Run the 9Router gateway locally, fill in the address + API key |
+    | **Claude CLI** | Install Claude Code and sign in |
+    | **Antigravity** | Install `agy` and sign in |
+    | **Codex** | Install the Codex CLI and sign in |
+
+2. Every row has a **Guide** button with the exact install commands. Once installed, press **Refresh** — the app detects it and fills the model picker above.
+
+**Translating**
+
+1. Open the **Subtitle Translate** tab.
+2. Press **Import file** to pick a `.srt`, `.vtt`, `.ass`, `.sbv` or `.txt` — or press **Take from Subtitles** to pull in what you just transcribed.
+    > 💡 A `.txt` has no timings, so the app assigns placeholder times per line and tells you, so you can fix them after saving.
+3. **Recommended:** press **Clean up text**. Subtitles exported from video editors are often cut mid-sentence, and translating those loose pieces easily distorts the meaning. The dialog shows a preview and a summary like *"120 lines → 68 lines"*; press **Apply** if it looks right.
+4. Choose a **mode**:
+    - **Translate** — into the target language.
+    - **Edit** — same language, fixing spelling, punctuation and capitalisation.
+    - **Both** — edit then translate in one run.
+5. Pick the **target language** and the **AI model** (the picker at the right of the top row).
+6. (Optional) Tick **Review consistency table before translating** if you want to check the term list first.
+7. Press **Run**. That same button becomes **Stop** while it runs — press again to halt.
+8. Check the table: the **Result** column is editable, and any line the AI skipped is marked ⚠ and keeps the original text.
+9. Choose a format (**SRT** / **VTT** / **TXT**) and press **Export**.
+
+> 💡 The **consistency table** is what keeps names, terms and forms of address identical from start to finish. Before translating, the app reads the whole file once to settle those decisions, then sends the table along with every part. Press **Consistency table** to view and edit it; run again and the app uses exactly the table you approved.
+
+
 ---
+
+</details>
 
 ## 💡 Power-user tips
 
-### Audio mastering *(new)*
+<details>
+<summary><b>Audio mastering *(new)*</b></summary>
+
 - The three generation tabs (Voice Cloning / Voice Design / Multi-Voice Dialogue) all have an **Audio mastering** collapsible in the middle of the form.
 - 6 built-in presets:
   - 📻 **Broadcast** *(default)* — radio/podcast standard, warm and compressed.
@@ -288,25 +370,42 @@ Transcribe speech from an existing audio/video file.
   - ✨ **Bright** — crisp high-end, airy feel.
 - Change the preset in one tab → the other two auto-sync. To get the exact same output as the previous version (v1.0.4): pick **🔇 Raw** and untick **Even out volume between rows**.
 
-### Auto-free memory when idle *(new)*
+</details>
+
+<details>
+<summary><b>Auto-free memory when idle *(new)*</b></summary>
+
 - Default: if the app sits unused for **5 minutes**, the AI model is automatically unloaded from VRAM/RAM to free system resources.
 - Next time you generate, the model reloads (~30-60s).
 - Go to the **Environment** tab → **Auto-unload VRAM** to adjust the timeout (0 = disabled, 1-120 minutes).
 
-### Voice Library & favorite star
+</details>
+
+<details>
+<summary><b>Voice Library & favorite star</b></summary>
+
 - Every voice in the library has a ☆ at the start of its row. Click it → it turns ★ → that voice jumps to the top of the list (and stays there next time).
 - Click ★ again to unfavorite.
 - All 30 factory voices (Achernar, Aoede, Kore, Puck…) can be favorited too.
 
-### Phonetic dictionary
-- When your text contains `%`, `$`, `°C`, `m²`, brand names… click **🔤 Pronunciation** before generating.
+</details>
+
+<details>
+<summary><b>Phonetic dictionary</b></summary>
+
+- When your text contains `%`, `$`, `°C`, `m²`, brand names… click **🔤 Fix pronunciation** before generating.
 - The first time the app sees a token it asks you how to read it (e.g. `%` → ` percent`).
 - Each token only needs to be typed **once** — the app remembers it per output language. Next time it's applied automatically.
 - The same token in different languages keeps separate pronunciations (e.g. Vietnamese vs English).
 
-### Emotion & non-verbal tags
+</details>
+
+<details>
+<summary><b>Emotion & non-verbal tags</b></summary>
+
 - Type any of these tags straight into your input text and the voice will produce the matching non-verbal sound. They work in **Voice Cloning**, **Voice Design**, and **Multi-Voice Dialogue**.
 - Write the tag exactly as shown, square brackets included, on its own or between sentences (e.g. `That's so funny [laughter] I can't stop.`).
+- **You don't have to memorise this table:** in the **Text to Speech** and **Multi-Voice Dialogue** tabs, press **Expression tags** above the text box to look them up and **Insert** one straight at the cursor.
 
 | Tag | Sound |
 |---|---|
@@ -326,17 +425,27 @@ Transcribe speech from an existing audio/video file.
 
 > 💡 Tags are read as expressive cues, not spoken literally. How strongly each comes through varies by language and voice — try it on a short line first.
 
-### Playback speed + export
+</details>
+
+<details>
+<summary><b>Playback speed + export</b></summary>
+
 - After audio is generated, the bar under the waveform has a **speed dropdown** (0.5x → 2x, in steps).
 - Change the speed → preview updates immediately in the player.
 - The exported file keeps that exact speed and **pitch is preserved** (no chipmunk effect — uses time-stretching).
 
-### SRT export
+</details>
+
+<details>
+<summary><b>SRT export</b></summary>
+
 - In the *Export settings* panel, **"Export subtitles (.srt)"** is on by default.
 - When you export as a single merged file, the app creates `name.srt` next to `name.wav`.
 - Timestamps in the SRT reflect the actual per-line duration (after the speed adjustment).
 
 ---
+
+</details>
 
 ## System Requirements
 

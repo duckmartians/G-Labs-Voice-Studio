@@ -17,13 +17,18 @@ giọng nói từ văn bản bằng các giọng bạn đã lưu trong **Voice B
 
 ## 1. Tổng quan & khái niệm chính
 
-- **Máy chủ chạy nội bộ.** API chạy ở `http://127.0.0.1:<port>` (loopback), chỉ bind
-  vào `127.0.0.1` — **không** truy cập được từ máy khác trừ khi bạn tự dựng
-  tunnel/reverse proxy. Tích hợp của bạn phải chạy **trên cùng máy**, hoặc bạn tự
-  expose ra ngoài.
+- **Mặc định chỉ máy này gọi được.** API chạy ở `http://<ip>:<port>`, mặc định bind vào
+  `127.0.0.1` (loopback) — **không** máy nào khác gọi được. Tích hợp của bạn nên chạy
+  **trên cùng máy**.
+- **Muốn máy khác gọi vào:** đổi ô **IP** trong tab Webhook sang `0.0.0.0` (nghe trên
+  mọi card mạng) hoặc một IP LAN cụ thể. ⚠️ Khi đó **API key đi qua HTTP không mã hoá** —
+  chỉ làm trong mạng nội bộ tin cậy, còn ra Internet thì hãy đặt sau reverse proxy có TLS.
 - **Port mặc định:** `8766` (đổi được trong tab Webhook).
-- **Bạn phải bật máy chủ.** Mở app → tab **Webhook** → **Start**. Tab này hiển thị/sao
-  chép **API key** và cho phép đổi port.
+- **Bạn phải bật máy chủ.** Mở app → tab **Webhook** → **Khởi động**. Hàng điều khiển có
+  ô **IP**, ô **Cổng**, ô **URL** đầy đủ kèm nút **Sao chép**, và ô tích **Tự động khởi
+  động server khi mở app** (tick vào là chạy ngay). Trong lúc server chạy, ô IP và Cổng
+  bị khoá — muốn đổi thì dừng server trước.
+- **API key** cũng nằm ở tab này (hiện dạng che, có nút Sao chép và nút Tạo khoá mới).
 - **Phải lưu giọng trước.** Việc tạo luôn dùng một **`preset_id`** trỏ tới giọng đã
   lưu trong **Voice Bank** của app. Liệt kê bằng `GET /api/voices`; tạo giọng trong
   giao diện Voice Studio.
@@ -32,9 +37,13 @@ giọng nói từ văn bản bằng các giọng bạn đã lưu trong **Voice B
   1. `POST /api/voice/design` → nhận `task_id` ngay lập tức (HTTP `202`).
   2. `GET /api/status/{task_id}` lặp lại tới khi `status` là `completed` hoặc `failed`.
   3. Khi `completed`, tải audio từ URL trong `results`.
-- **Tạo tuần tự.** Các request được xếp hàng và chạy trên **một** model TTS dùng chung
-  (GPU/CPU). Dù gửi nhiều job cùng lúc, suy luận vẫn diễn ra **lần lượt từng cái** (một
-  mutex dùng chung cho model). Hãy hình dung thông lượng là một lần tạo tại một thời điểm.
+- **Nhận song song, chạy tuần tự.** Số request được nhận và báo `running` ngay cùng lúc
+  bằng đúng **Số câu đồng thời** đang đặt trên giao diện (kẹp trong khoảng 1–10); quá số
+  đó thì phải chờ. Nhưng phần suy luận vẫn đi qua **một** model TTS dùng chung, khoá bằng
+  mutex — **tổng thời gian bằng chạy tuần tự**, gửi nhiều hơn không nhanh hơn.
+- **Thứ tự hoàn thành KHÔNG đảm bảo.** Khi có nhiều job cùng lúc, thứ tự tỉnh dậy của
+  mutex là không xác định, nên job gửi trước chưa chắc xong trước. **Luôn ghép kết quả
+  theo `task_id`**, đừng dựa vào thứ tự.
 - **Request đầu tiên có thể chậm.** Job đầu sau khi mở app sẽ nạp (và có thể tải) model
   TTS. Nếu không nạp được model (không có model / hủy tải), các task đang chờ sẽ `fail`
   kèm thông điệp rõ ràng.
@@ -275,9 +284,11 @@ bạn không cần poll để phát hiện.
 
 ## 9. Ràng buộc & lưu ý
 
-- **Chỉ localhost.** Chạy tích hợp trên cùng máy, hoặc tự tunnel `127.0.0.1:<port>`.
+- **Mặc định chỉ localhost.** Chạy tích hợp trên cùng máy. Cần máy khác gọi vào thì đổi ô
+  **IP** sang `0.0.0.0` / IP LAN — nhớ là API key sẽ đi qua HTTP không mã hoá.
 - **Tạo tuần tự.** Một lần tạo tại một thời điểm (model TTS dùng chung). Gửi nhiều job
-  thì cứ gửi — chúng xếp hàng — nhưng đừng kỳ vọng nhanh hơn nhờ song song.
+  thì cứ gửi — chúng xếp hàng — nhưng đừng kỳ vọng nhanh hơn nhờ song song, và **đừng dựa
+  vào thứ tự hoàn thành**: hãy ghép kết quả theo `task_id`.
 - **Cần Voice Bank.** Phải có ít nhất một giọng đã lưu; `preset_id` là bắt buộc. Webhook
   này **không** có trường "thiết kế giọng từ thuộc tính văn bản" — nó luôn nhân bản một
   preset đã lưu.

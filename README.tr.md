@@ -44,14 +44,16 @@
 ## Özellikler
 
 - **🔊 Ses Klonlama** — 5–10 saniyelik bir referans klip verin; uygulama o sesle istediğiniz metni okur.
-- **🎛️ Metinden Sese / Ses Tasarımı** — bir sesi öznitelikleriyle tarif edin (cinsiyet, yaş, perde, stil, aksan); referans sese gerek yok.
+- **🌐 Yapay zekâ ile altyazı çevirisi ve düzeltme** — `.srt`, `.vtt`, `.ass`, `.sbv` ya da `.txt` yükleyin; başka bir dile çevirin veya yazım ve satır bölmelerini düzeltin — **zamanlamalara hiç dokunulmaz**. Tutarlılık tablosu, isimleri ve hitap biçimlerini dosyanın tamamında aynı tutar. *(Studio planı)*
+- **🔗 Webhook API** — n8n, Zapier ya da Python/cURL'ün otomatik ses üretebilmesi için yerel REST sunucusu. IP ve portu siz seçin, URL'yi tek tıkla kopyalayın, uygulamayla birlikte başlatın.
+- **😄 Uygulamanın içinde ifade etiketi tablosu** — 13 etiket (kahkaha, iç çekme, şaşkınlık…); **Ekle**'ye basın, etiket imlecin olduğu yere gelsin.
 - **💬 Çok Sesli Diyalog** — `<Ad>: replik` sözdizimiyle çok karakterli bir senaryo yazın ve her karaktere kütüphaneden bir ses atayın.
 - **📝 Sesten Metne (ASR)** — ses/video dosyalarını yazıya dökün. MP3, WAV, M4A, FLAC, MP4, MOV destekler…
 - **🗂 Ses Kütüphanesi + 30 hazır ses** — uygulama 30 kullanıma hazır sesle gelir (erkek/kadın, farklı tonlarda). Kendi seslerinizi de kaydedebilirsiniz. Bir sesi ⭐ ile favoriye alarak en üste sabitleyin ve paylaşmak için taşınabilir `.vcp` dosyaları olarak **yedekleyip geri yükleyin**.
 - **🎚 Hız kontrolü + hızı koruyan dışa aktarım** — dalga formunun altından önizleme hızını değiştirin; dışa aktarılan dosya tam olarak o hızda çalar (perde korunur).
 - **📄 Altyazı (SRT) dışa aktarımı** — tek birleştirilmiş dosya olarak dışa aktarırken `.srt` otomatik olarak yanında oluşturulur, video düzenleme için hazırdır.
 - **🔤 Kişisel telaffuz sözlüğü** — `100%`, `25°C`, `m²` ile karşılaştınız mı? Telaffuzu bir kez yazın, uygulama bir dahaki sefere hatırlasın (çıkış diline göre).
-- **✨ Yapay zekâ örnek metin önerisi** — Whisper, referans klibi otomatik olarak yazıya döker, böylece sıfırdan yeniden yazmak zorunda kalmazsınız (yine de üretmeden önce gözden geçirin).
+- **✨ Yapay zekâ örnek metin önerisi** — uygulama, referans klibi otomatik olarak yazıya döker, böylece sıfırdan yeniden yazmak zorunda kalmazsınız (yine de üretmeden önce gözden geçirin).
 - **⬇ Satır başına indirme** — senaryo tablosundaki her satırın kendi indirme düğmesi vardır — tüm partinin bitmesini beklemenize gerek yok.
 - **600+ dil desteği** — 600'den fazla dilde konuşma (Vietnamca, İngilizce, Çince, Japonca, Korece, Fransızca, Almanca, İspanyolca ve birçok azınlık dili).
 - **Toplu işlem** — `.txt` veya `.srt` senaryoları içe aktarın, partileri çalıştırın, zaman damgalarını koruyarak sesi dışa aktarın.
@@ -61,6 +63,32 @@
 ---
 
 <details open>
+<summary><b>🆕 v2.0.0'da yenilikler</b></summary>
+
+- **🌐 Altyazı Çevirisi sekmesi (yeni)** — altyazıları başka bir dile çevirin ya da yazım ve satır bölmelerini düzeltin; **zamanlamalar ve satır sayısı asla değişmez**. `.srt`, `.vtt`, `.ass`, `.sbv` ve hatta `.txt` okur (zaman bilgisi olmayan dosyaya geçici süre verilir ve uygulama bunu söyler). SRT, VTT veya TXT olarak dışa aktarır. *(Studio planı)*
+- **📐 Çeviriden önce metni düzenleyin** — video düzenleyicilerden çıkan altyazılar çoğu zaman cümlenin ortasında kesiktir ("Bugün size" / "bir hikâye anlatacağım") ve bu parçaları ayrı ayrı çevirmek anlamı bozar. Bu adım aynı cümlenin parçalarını birleştirir, uygulamadan önce pencerede canlı **önizleme** gösterir.
+- **📖 Tutarlılık tablosu** — çeviriden önce uygulama dosyanın tamamını bir kez okuyup isimleri, terimleri ve hitap biçimlerini belirler, sonra bu tabloyu **her parçayla** birlikte gönderir. Elle düzenlenebilir; istenirse gözden geçirmeniz için duraklatılır.
+- **🤖 Dört yapay zekâ sağlayıcısı** — 9Router, Claude CLI, Antigravity ve Codex. **Model Yönetimi** sekmesi her biri için kurulum kılavuzu içerir, makinede ne olduğunu kendisi tespit eder ve aracın kendi bildirdiği gerçek modelleri listeler.
+- **🔗 Daha eksiksiz Webhook sayfası** — **IP** kutusu eklendi (varsayılan olarak yalnızca bu makine), tam **URL** kutusu ve **Kopyala** düğmesi; sunucu çalışırken IP ve port kilitlenir, böylece URL asla yanlış portu göstermez. *Otomatik başlat* işaretlenince sunucu artık hemen çalışır.
+- **😄 İfade etiketleri düğmesi** — 13 etiket artık uygulamanın içinde bir tabloda (eskiden yalnızca bu belgede vardı); **Ekle**'ye basın, etiket imlece gelsin.
+- **📋 Kenar çubuğunda Ayrıntılı Günlük** — doğrudan günlüğe; Ayarlar'da aramaya gerek yok.
+- **✨ Arayüz temizliği** — ses listesinde artık farklı yükseklikte satırlar yok; **Dışa aktar** paneli **Render kuyruğu**'nun altına taşındı; “Telaffuz” artık **Telaffuzu düzelt**; genişletme düğmesi etiketinin yanına geldi.
+- **✂️ Ses örneğini doğrudan dalga formu üzerinde seçin (Ses Klonlama sekmesi)** — artık gizli otomatik kesme yok: dosyayı seçtikten sonra vurgulu çerçeveyi sürükleyerek örnek olarak kullanılacak 3–30 saniyelik bölümü tam olarak seçin, ▶ ile dinleyin; bırakınca kenarlar en yakın sessizliğe yapışır. 5 dakika/50 MB'ı aşan dosyalar otomatik olarak ilk 30 saniyeyi kullanır.
+- **⚡ Konuşma tanıma kat kat daha hızlı** — **Ses → Metin** sekmesi ve Ses Klonlama sekmesindeki **✨ YZ önerisi** düğmesi artık yeni bir motorla (faster-whisper) çalışıyor: ~4 kat daha hızlı, **VRAM kullanımı yaklaşık yarıya** indi (Turbo model: ~6GB → ~2.5GB). Yalnızca CPU'lu makineler de int8 modu sayesinde belirgin şekilde hızlandı.
+- **📦 İlk indirme ~1.6GB daha hafif** — başlangıç model indirmesi ~4.9GB'tan ~3.3GB'a düştü; tanıma modelleri ilk kullanımda ayrıca indirilir (eskisi gibi tek dokunuş, indirilince makinede saklanır).
+- **🧭 Yeni dikey gezinme** — 5 özellik sekmesi kısa adlarla sol kenar çubuğuna taşındı (Ses Klonu, Metin Okuma, Grup Diyaloğu, Altyazı Çıkar, Model Yönetimi) — daha hızlı geçiş, daha geniş çalışma alanı.
+- **📝 Altyazı Çıkar artık kelime kelime zaman damgalarıyla satır kuruyor** — bir dakikalık satırlar tarih oldu: satırlar gerçek duraklamalarda / cümle sonlarında / karakter sınırında bölünür, zaman damgaları tam isabetli. 3 ayarlanabilir parametre — değiştirince tablo anında güncellenir, **yeniden tanıma gerekmez**.
+- **✍️ Yeni bölme modu "Akıllı birleştirme (≤N karakter)"** — kısa cümleleri karakter sınırına kadar akıcı satırlarda birleştirir, her zaman cümle sonunda böler; varsayılan 500 (ölçüldü: model ~1.800 karaktere kadar %100 doğru okuyor).
+- **🔊 "Ses seviyesini eşitle" düzeltildi** — dalga tepe noktası yerine algılanan gürlüğe (RMS) göre normalleştirme: açıkken artık kimi satır yüksek kimi kısık değil; neredeyse sessiz satırlar gürültüye dönüşmüyor.
+- **📚 Yenilenen Model Yönetimi** — her model boyutu ve "Önerilen" rozetiyle ayrı satırda; tam istediğinizi indirin.
+- **🍃 Çok daha az RAM** — üretilen sesler ve tanıma verileri RAM yerine geçici klasöre yazılır (saatlik ses başına ~165MB tasarruf), uygulama açılışında temizlenir.
+- **🛡 Düşük VRAM'li GPU'larda daha kararlı** — akıllı cümle bölücünün (VAD) ilk VRAM takasından sonra sessizce devre dışı kalması düzeltildi; YZ önerisi artık ses üretimiyle **aynı anda çalışamıyor** (VRAM taşma riski yok).
+
+</details>
+
+---
+
+<details>
 <summary><b>🆕 v1.0.9'de yenilikler</b></summary>
 
 - **🔔 Kenar çubuğunda Telegram düğmesi** — tek tıkla doğrudan Telegram topluluk grubuna giderek soru sorun ve duyuruları alın.
@@ -89,7 +117,6 @@
 <summary><b>🆕 v1.0.7'de yenilikler</b></summary>
 
 - **🔊 Ses Klonlama sekmesi, daha basit olacak şekilde yenilendi** — kütüphane iki net sütuna ayrıldı (**Hazır sesler** / **Sesleriniz**) ve metin kutusu tek satıra indirildi. Klonlamadan sonra uygulama dinlemenizi önerir, ardından sesi kaydetmek isteyip istemediğinizi sorar — kaydetmek tek dokunuş. 30 saniyeden uzun örnek ses, daha temiz bir klonlama için bir sessizlik noktasında **otomatik kırpılır**.
-- **🎛 Daha derli toplu bir Metinden Sese sekmesi** — "Ses kütüphanesi" ve "Ses tasarımı" **tek bir çerçevede** birleştirildi; **Kayıtlı ses kullan** ↔ **Rastgele ses** arasında geçiş yapın, karmaşa yok.
 - **▶ Hazır sesleri önizleyin** — kütüphanedeki herhangi bir hazır sesin yanındaki ▶ düğmesine tıklayarak kullanmadan önce dinleyin.
 - **⭐ Favoriler her yerde eşitlenir** — bir sekmede bir sese yıldız verin, diğer sekmeler de görür.
 - **🐛 Hız denetiminin sesi bozması / dışa aktarmanın başarısız olması düzeltildi** — önizleme çubuğundaki hız denetimi kaldırıldı (bozulmaya ve dışa aktarma hatasına neden oluyordu). Daha hızlı/yavaş okumak için *Gelişmiş ayarlar* altındaki **Okuma hızı** kaydırıcısını kullanın — doğal ses, hatasız.
@@ -149,22 +176,21 @@
 
 | Platform | Dosya | Boyut |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.9-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.9-arm64.dmg` | ~2 GB |
+| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
+| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
 
 ### Windows (taşınabilir, kuruluma gerek yok)
 
-1. `GLabsVoiceStudio-v1.0.9-win.zip` dosyasını indirin.
+1. `GLabsVoiceStudio-v1.0.8-win.zip` dosyasını indirin.
 2. Herhangi bir klasöre çıkarın (sürücüde en az 10 GB boş alan olmalı).
 3. Çıkarılan klasörü açın ve `GLabsVoiceStudio.exe` dosyasına çift tıklayın.
-
-> Masaüstü kısayolu mu istiyorsunuz? `GLabsVoiceStudio.exe` üzerine sağ tıklayın → *Gönder* → *Masaüstü (kısayol oluştur)*.
+4. **Masaüstüne kısayol koyun:** `GLabsVoiceStudio.exe` dosyasına sağ tıklayın → **Send to** → **Desktop (create shortcut)**. Bundan sonra uygulamayı klasöre girmeden oradan açarsınız.
 
 > **⏳ İlk açılış 30–60 saniye sürebilir (açılış ekranı ~%90 civarında duraklayabilir) — lütfen bekleyin, kapatmayın.** Windows'un uygulamayı ve GPU dosyalarını taraması gerekir (otomatik bir güvenlik adımıdır, yalnızca ilk seferinde yavaştır). İkinci açılıştan itibaren uygulama hızlıca açılır.
 
 ### 🍎 macOS Apple Silicon
 
-1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.9-arm64.dmg`** dosyasını indirin.
+1. Resmi dağıtımdan **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** dosyasını indirin.
 2. Açmak için `.dmg` dosyasına çift tıklayın.
 3. **G-Labs Voice Studio** simgesini **Applications** klasörüne sürükleyin.
 4. **Applications**'ı açın, **G-Labs Voice Studio** üzerine **sağ tıklayın** → **Aç**'ı seçin.
@@ -206,7 +232,8 @@ Bu komut, uygulama paketinden tüm genişletilmiş öznitelikleri (karantina bay
 
 ## Başlangıç
 
-### Bölüm 1 — İlk açılış (bir defalık kurulum)
+<details>
+<summary><b>Bölüm 1 — İlk açılış (bir defalık kurulum)</b></summary>
 
 1. Uygulamayı açın — hoş geldiniz ekranı 9 arayüz dili sunar. İstediğinizi seçin.
 2. **Oturum açın** — sol kenar çubuğundaki ⚙️ dişli simgesine tıklayın → *Lisans* sekmesi → **"Google ile oturum aç"**.
@@ -215,7 +242,10 @@ Bu komut, uygulama paketinden tüm genişletilmiş öznitelikleri (karantina bay
 
 > 💡 Arayüz dilini daha sonra değiştirmek için: Ortam Ayarları → Arayüz dili.
 
-### Bölüm 2 — Ses Klonlama 🔊
+</details>
+
+<details>
+<summary><b>Bölüm 2 — Ses Klonlama 🔊</b></summary>
 
 Örnek bir kayıttan ses klonlayın.
 
@@ -223,14 +253,17 @@ Bu komut, uygulama paketinden tüm genişletilmiş öznitelikleri (karantina bay
 2. Sekmenin üst kısmından **çıkış dili**ni seçin (örn. Vietnamca, İngilizce…).
 3. *Örnek ses* alanında **"Seç..."** düğmesine tıklayın ve bir örnek klip seçin (5–10 saniye, net ses, az arka plan gürültüsü).
 4. **Zorunlu:** *Örnek metin*'i girin — örnek sesin tam transkripti (doğru noktalama ve yazım).
-    > 💡 **"✨ Yapay zekâ önerisi"** düğmesine tıklayın, Whisper sizin için yazıya döksün — yine de üretmeden önce gözden geçirin.
+    > 💡 **"✨ Yapay zekâ önerisi"** düğmesine tıklayın, uygulama sizin için yazıya döksün — yine de üretmeden önce gözden geçirin.
 5. Hedef metni *Metin içeriği* alanına yapıştırın (veya `.txt` / `.srt` dosyasından yüklemek için **"📂 İçe aktar (.txt, .srt)"** düğmesine tıklayın).
 6. **"📋 Tabloya ekle"** düğmesine tıklayın — uygulama metninizi ayrı cümlelere böler.
-7. (İsteğe bağlı) Telaffuz sözlüğünü gözden geçirmek için **🔤 Telaffuz**'a tıklayın — metniniz özel karakter içeriyorsa (örn. `100%`), uygulama bunları nasıl okuyacağını size soracaktır.
+7. (İsteğe bağlı) Telaffuz sözlüğünü gözden geçirmek için **🔤 Telaffuzu düzelt**'a tıklayın — metniniz özel karakter içeriyorsa (örn. `100%`), uygulama bunları nasıl okuyacağını size soracaktır.
 8. **"▶ İşlemi başlat"** düğmesine tıklayın → örnek transkripti doğrulamak için bir onay iletişim kutusu açılır → çalıştırmak için onaylayın.
 9. Bittiğinde **"💾 Sesi dışa aktar"** düğmesine tıklayın (eşlik eden `.srt` ile tek birleştirilmiş dosya) veya yalnızca o satırı indirmek için bir satırın üzerindeki **⬇** simgesini kullanın.
 
-### Bölüm 3 — Metinden Sese 🎛️
+</details>
+
+<details>
+<summary><b>Bölüm 3 — Metinden Sese 🎛️</b></summary>
 
 Öznitelik açıklamalarından yeni bir ses oluşturun — örneğe gerek yok.
 
@@ -243,7 +276,10 @@ Bu komut, uygulama paketinden tüm genişletilmiş öznitelikleri (karantina bay
 6. Üretimden sonra: tutmak istediğiniz satıra tablo üzerinde tıklayın → daha sonra yeniden kullanmak için *Ses Kütüphanesi* panelinde **"💾 Kaydet"** düğmesine tıklayın.
 7. Sonucu kaydetmek için **"💾 Sesi dışa aktar"** düğmesine tıklayın.
 
-### Bölüm 4 — Çok Sesli Diyalog 💬 *(yeni)*
+</details>
+
+<details>
+<summary><b>Bölüm 4 — Çok Sesli Diyalog 💬 *(yeni)*</b></summary>
 
 Her konuşmacı için bir ses kullanarak çok karakterli diyalog sesi üretin — podcast, sesli drama ve röportaj tarzı videolar için mükemmeldir.
 
@@ -263,7 +299,10 @@ Her konuşmacı için bir ses kullanarak çok karakterli diyalog sesi üretin �
 8. **"▶ İşlemi başlat"** düğmesine tıklayın — her satır, atanan konuşmacının sesiyle okunur.
 9. Sonucu kaydetmek için **"💾 Sesi dışa aktar"** düğmesine tıklayın (eşleşen bir `.srt` dahildir).
 
-### Bölüm 5 — Sesten Metne 📝
+</details>
+
+<details>
+<summary><b>Bölüm 5 — Sesten Metne 📝</b></summary>
 
 Mevcut bir ses/video dosyasından konuşmayı yazıya dökün.
 
@@ -273,11 +312,54 @@ Mevcut bir ses/video dosyasından konuşmayı yazıya dökün.
 4. Sonuçlar, cümle başına zaman damgalarıyla birlikte bir tabloda görünür. Bunları doğrudan düzenleyebilirsiniz.
 5. `.txt` (düz metin) veya `.srt` (zaman damgalarıyla, altyazılar için hazır) olarak kaydetmek için **"💾 Sonucu dışa aktar"** düğmesine tıklayın.
 
+</details>
+
+<details>
+<summary><b>Bölüm 6 — Altyazı Çevirisi 🌐 *(yeni — Studio planı)*</b></summary>
+
+Altyazıları başka bir dile çevirin ya da yazım ve satır bölmelerini düzeltin. **Zamanlamalar ve satır sayısı asla değişmez** — yalnızca metin değişir, dolayısıyla altyazı videoyla tıpatıp uyumlu kalır.
+
+**Tek seferlik hazırlık: bir yapay zekâ seçin**
+
+1. **Model Yönetimi** sekmesini → **LLM** panelini açın. Dört seçenek:
+
+    | Sağlayıcı | Gereken |
+    |---|---|
+    | **9Router** | 9Router ağ geçidini bilgisayarda çalıştırın, adresi + API anahtarını girin |
+    | **Claude CLI** | Claude Code'u kurup oturum açın |
+    | **Antigravity** | `agy` kurup oturum açın |
+    | **Codex** | Codex CLI kurup oturum açın |
+
+2. Her satırda kurulum komutlarını birebir veren bir **Kılavuz** düğmesi var. Kurulumdan sonra **Yenile**'ye basın — uygulama kendisi algılayıp yukarıdaki model listesini doldurur.
+
+**Çeviri**
+
+1. **Altyazı Çevirisi** sekmesini açın.
+2. **Dosya içe aktar**'a basıp `.srt`, `.vtt`, `.ass`, `.sbv` ya da `.txt` seçin — ya da **Altyazıdan al**'a basıp az önce çıkardığınız metni getirin.
+    > 💡 `.txt` dosyasında zaman bilgisi yoktur; uygulama her satıra geçici süre verir ve bunu size söyler, kaydettikten sonra düzeltebilirsiniz.
+3. **Önerilir:** **Metni düzenle**'ye basın. Video düzenleyicilerden çıkan altyazılar çoğu zaman cümlenin ortasında kesiktir ve bu parçaları ayrı ayrı çevirmek anlamı kolayca bozar. Pencere bir önizleme ve *"120 satır → 68 satır"* gibi bir özet gösterir; uygun görürseniz **Uygula**'ya basın.
+4. Bir **kip** seçin:
+    - **Çeviri** — hedef dile.
+    - **Düzeltme** — aynı dil; yazım, noktalama ve büyük harfler düzeltilir.
+    - **İkisi** — önce düzeltme, sonra çeviri, tek geçişte.
+5. **Hedef dili** ve **yapay zekâ modelini** seçin (üst satırın sağındaki liste).
+6. (İsteğe bağlı) Terim listesini önce görmek isterseniz **Çeviriden önce tutarlılık tablosunu gözden geçir**'i işaretleyin.
+7. **Çalıştır**'a basın. Çalışırken aynı düğme **Durdur**'a dönüşür — tekrar basınca durur.
+8. Tabloyu kontrol edin: **Sonuç** sütunu düzenlenebilir; yapay zekânın atladığı satır ⚠ ile işaretlenir ve özgün metnini korur.
+9. Bir biçim (**SRT** / **VTT** / **TXT**) seçip **Dışa aktar**'a basın.
+
+> 💡 **Tutarlılık tablosu**, isimleri, terimleri ve hitap biçimlerini baştan sona aynı tutan şeydir. Çeviriden önce uygulama dosyanın tamamını bir kez okuyup bu kararları belirler, sonra tabloyu her parçayla birlikte gönderir. Görüp düzenlemek için **Tutarlılık tablosu**'na basın; yeniden çalıştırdığınızda uygulama tam olarak onayladığınız tabloyu kullanır.
+
+
 ---
+
+</details>
 
 ## 💡 İleri kullanıcı ipuçları
 
-### Ses ustalama *(yeni)*
+<details>
+<summary><b>Ses ustalama *(yeni)*</b></summary>
+
 - Üç üretim sekmesinin (Ses Klonlama / Metinden Sese / Çok Sesli Diyalog) hepsinde formun ortasında bir **Ses ustalama** açılır bölümü bulunur.
 - 6 yerleşik ön ayar:
   - 📻 **Yayın** *(varsayılan)* — radyo/podcast standardı, sıcak ve sıkıştırılmış.
@@ -288,25 +370,42 @@ Mevcut bir ses/video dosyasından konuşmayı yazıya dökün.
   - ✨ **Parlak** — net tiz, ferah his.
 - Bir sekmede ön ayarı değiştirin → diğer ikisi otomatik olarak senkronize olur. Önceki sürümle (v1.0.4) tam olarak aynı çıktıyı elde etmek için: **🔇 Ham** seçin ve **Cümleler arası ses seviyesini eşitle** kutusunu kaldırın.
 
-### Boştayken belleği otomatik serbest bırakma *(yeni)*
+</details>
+
+<details>
+<summary><b>Boştayken belleği otomatik serbest bırakma *(yeni)*</b></summary>
+
 - Varsayılan: uygulama **5 dakika** kullanılmazsa, sistem kaynaklarını serbest bırakmak için yapay zekâ modeli VRAM/RAM'den otomatik olarak kaldırılır.
 - Bir sonraki üretimde model yeniden yüklenir (~30-60 sn).
 - Zaman aşımını ayarlamak için **Ortam Ayarları** sekmesi → **VRAM'i otomatik serbest bırak** bölümüne gidin (0 = devre dışı, 1-120 dakika).
 
-### Ses Kütüphanesi ve favori yıldızı
+</details>
+
+<details>
+<summary><b>Ses Kütüphanesi ve favori yıldızı</b></summary>
+
 - Kütüphanedeki her sesin satır başında bir ☆ bulunur. Üzerine tıkladığınızda → ★'a dönüşür → o ses listenin en üstüne çıkar (ve bir sonraki sefere de orada kalır).
 - Favoriden çıkarmak için tekrar ★'a tıklayın.
 - 30 hazır sesin (Achernar, Aoede, Kore, Puck…) tümü de favoriye eklenebilir.
 
-### Telaffuz sözlüğü
-- Metniniz `%`, `$`, `°C`, `m²`, marka adları… içerdiğinde üretmeden önce **🔤 Telaffuz** düğmesine tıklayın.
+</details>
+
+<details>
+<summary><b>Telaffuz sözlüğü</b></summary>
+
+- Metniniz `%`, `$`, `°C`, `m²`, marka adları… içerdiğinde üretmeden önce **🔤 Telaffuzu düzelt** düğmesine tıklayın.
 - Uygulama bir simgeyi ilk gördüğünde nasıl okunacağını sorar (örn. `%` → ` yüzde`).
 - Her simgenin yalnızca **bir kez** yazılması gerekir — uygulama bunu çıkış diline göre hatırlar. Bir sonraki sefere otomatik olarak uygulanır.
 - Aynı simge farklı dillerde ayrı telaffuzlar tutar (örn. Vietnamca ile İngilizce).
 
-### Duygu ve sözsüz etiketler
+</details>
+
+<details>
+<summary><b>Duygu ve sözsüz etiketler</b></summary>
+
 - Bu etiketlerden herhangi birini doğrudan metninize yazın; ses, karşılık gelen sözsüz sesi üretir. **Ses Klonlama**, **Metinden Sese** ve **Çok Sesli Diyalog** sekmelerinde çalışır.
 - Etiketi köşeli parantezlerle birlikte gösterildiği gibi yazın; tek başına ya da cümleler arasında (ör. `Çok komik [laughter] duramıyorum.`).
+- **Bu tabloyu ezberlemenize gerek yok:** **Metinden Sese** ve **Çok Sesli Diyalog** sekmelerinde, metin kutusunun üstündeki **İfade etiketleri**'ne basıp bakın ve **Ekle** ile doğrudan imlece yerleştirin.
 
 | Etiket | Ses |
 |---|---|
@@ -326,17 +425,27 @@ Mevcut bir ses/video dosyasından konuşmayı yazıya dökün.
 
 > 💡 Etiketler harfi harfine okunmaz, ifade ipucu olarak yorumlanır. Etkisi dile ve sese göre değişir — önce kısa bir cümlede deneyin.
 
-### Oynatma hızı + dışa aktarım
+</details>
+
+<details>
+<summary><b>Oynatma hızı + dışa aktarım</b></summary>
+
 - Ses üretildikten sonra, dalga formunun altındaki çubukta bir **hız açılır listesi** bulunur (0.5x → 2x, kademeli).
 - Hızı değiştirin → önizleme oynatıcıda hemen güncellenir.
 - Dışa aktarılan dosya tam olarak o hızı korur ve **perde de korunur** (sincap efekti yok — zaman germe kullanır).
 
-### SRT dışa aktarımı
+</details>
+
+<details>
+<summary><b>SRT dışa aktarımı</b></summary>
+
 - *Dışa aktarma ayarları* panelinde **"Altyazıyı da dışa aktar (.srt)"** varsayılan olarak açıktır.
 - Tek birleştirilmiş bir dosya olarak dışa aktardığınızda, uygulama `name.wav`'ın yanına `name.srt` oluşturur.
 - SRT'deki zaman damgaları, hız ayarından sonra gerçek satır başına süreyi yansıtır.
 
 ---
+
+</details>
 
 ## Sistem Gereksinimleri
 

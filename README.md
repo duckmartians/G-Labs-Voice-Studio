@@ -1,475 +1,286 @@
-<p align="right">
-🇻🇳 Tiếng Việt ·
-<a href="./README.en.md">🇬🇧 English</a> ·
-<a href="./README.pt-BR.md">🇧🇷 Português</a> ·
-<a href="./README.tr.md">🇹🇷 Türkçe</a> ·
-<a href="./README.zh-CN.md">🇨🇳 简体中文</a> ·
-<a href="./README.hi.md">🇮🇳 हिन्दी</a> ·
-<a href="./README.bn.md">🇧🇩 বাংলা</a> ·
-<a href="./README.ur.md">🇵🇰 اردو</a> ·
-<a href="./README.ru.md">🇷🇺 Русский</a>
-</p>
-
 <h1 align="center">G-Labs Voice Studio</h1>
-<p align="center">Ứng dụng giọng nói AI cho người sáng tạo nội dung</p>
+
+<p align="center"><b>Ứng dụng desktop giọng nói AI chạy ngay trên máy bạn — sao chép giọng từ mẫu vài giây, đọc văn bản hơn 600 ngôn ngữ, hội thoại nhiều giọng, tách phụ đề từ audio/video và dịch phụ đề bằng AI.</b></p>
 
 <p align="center">
-  <a href="https://drive.google.com/drive/u/0/folders/1BOH-3lF_rGu8QU4b07pt203a-WdOAb-G">
-    <img alt="Tải bản Windows" src="https://img.shields.io/badge/T%E1%BA%A3i%20Windows-%F0%9F%92%BB-0078D6?style=for-the-badge&logo=windows&logoColor=white">
-  </a>
-  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta">
-    <img alt="Tải bản macOS" src="https://img.shields.io/badge/T%E1%BA%A3i%20macOS-%F0%9F%8D%8E-000000?style=for-the-badge&logo=apple&logoColor=white">
-  </a>
+  <b>Tiếng Việt</b> ·
+  <a href="README.en.md">English</a> ·
+  <a href="README.pt-BR.md">Português</a> ·
+  <a href="README.tr.md">Türkçe</a> ·
+  <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="README.hi.md">हिन्दी</a> ·
+  <a href="README.bn.md">বাংলা</a> ·
+  <a href="README.ur.md">اردو</a> ·
+  <a href="README.ru.md">Русский</a>
 </p>
 
 <p align="center">
-  <a href="https://duckmartians.info/voice">
-    <img alt="Trang chủ" src="https://img.shields.io/badge/Trang%20ch%E1%BB%A7-Truy%20c%E1%BA%ADp-0A66C2?style=flat-square&logo=google-chrome&logoColor=white">
-  </a>
-  <a href="https://discord.gg/munMZEBMw5">
-    <img alt="Discord" src="https://img.shields.io/badge/dynamic/json?url=https://discord.com/api/guilds/1369302820037201981/widget.json&query=$.presence_count&label=Discord&color=5865F2&logo=discord&style=flat-square">
-  </a>
+  <a href="https://drive.google.com/drive/u/0/folders/1BOH-3lF_rGu8QU4b07pt203a-WdOAb-G"><img alt="Tải về cho Windows" src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"></a>&nbsp;
+  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="Tải về cho macOS (Apple Silicon)" src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>
 </p>
-
-**G-Labs Voice Studio** là ứng dụng máy tính tổng hợp giọng nói đa ngôn ngữ: sao chép giọng từ mẫu âm thanh, thiết kế giọng mới theo thuộc tính, tạo hội thoại nhiều nhân vật, và nhận dạng giọng nói thành văn bản. Giao diện nền tối, mô hình chạy trực tiếp trên máy của bạn — sau khi tải mô hình về, không có dữ liệu âm thanh hay văn bản nào được gửi lên máy chủ.
-
-<p align="center">
-  <a href="https://duckmartians.info/voice">
-    <img alt="Giao diện G-Labs Voice Studio" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
-  </a>
-</p>
-
----
-
-## Tính năng
-
-- **🔊 Sao chép giọng nói** — cung cấp một đoạn âm thanh mẫu 5–10 giây, ứng dụng sẽ đọc bất kỳ văn bản nào bằng đúng giọng đó.
-- **🌐 Dịch & biên tập phụ đề bằng AI** — nạp `.srt`, `.vtt`, `.ass`, `.sbv` hoặc `.txt`, dịch sang ngôn ngữ khác hoặc sửa lỗi chính tả/ngắt câu, **mốc thời gian giữ nguyên tuyệt đối**. Có bảng nhất quán để tên riêng và cách xưng hô không nhảy loạn giữa các đoạn. *(Gói Studio)*
-- **🔗 Webhook API** — server REST cục bộ cho n8n, Zapier, Python/cURL gọi sinh giọng tự động. Chọn được IP và cổng, sao chép URL một chạm, tự khởi động cùng app.
-- **😄 Thẻ biểu cảm tra ngay trong app** — bảng 13 thẻ (cười, thở dài, ngạc nhiên…), bấm **Chèn** là thẻ vào đúng vị trí con trỏ.
-- **💬 Hội thoại nhiều giọng** — viết kịch bản nhiều nhân vật theo cú pháp `<Tên>: lời thoại`, gán mỗi nhân vật một giọng riêng từ kho.
-- **📝 Giọng nói sang văn bản** — nhận dạng lời nói từ tệp âm thanh/video. Hỗ trợ MP3, WAV, M4A, FLAC, MP4, MOV…
-- **🗂 Kho giọng + 30 giọng mẫu sẵn** — ứng dụng đi kèm 30 giọng mẫu sẵn (nam/nữ, nhiều chất giọng), bạn cũng có thể lưu giọng tự tạo. Đánh dấu ⭐ yêu thích để pin lên đầu danh sách, **sao lưu & phục hồi** ra file `.vcp` để chia sẻ.
-- **🎚 Thanh tốc độ + xuất theo tốc độ** — chỉnh tốc độ phát thử trên thanh sóng, file xuất ra sẽ đúng tốc độ đó (không bị méo cao độ).
-- **📄 Xuất kèm phụ đề SRT** — chế độ xuất gộp 1 file mặc định kèm `.srt` để tiện làm video, không phải transcribe lại.
-- **🔤 Từ điển phát âm cá nhân** — gặp ký tự đặc biệt như `100%`, `25°C`, `m²`? Gõ phiên âm một lần, ứng dụng tự nhớ và dùng lại cho lần sau.
-- **✨ AI gợi ý văn bản mẫu** — tự động nhận dạng nội dung đoạn âm thanh mẫu, giúp bạn không phải gõ từ đầu (vẫn cần dò lại chính tả).
-- **⬇ Tải riêng từng dòng** — mỗi câu trong bảng có nút tải riêng, không phải chờ xuất cả batch.
-- **Hỗ trợ hơn 600 ngôn ngữ đầu ra** — đọc được hơn 600 ngôn ngữ khác nhau (Việt, Anh, Hoa, Nhật, Hàn, Pháp, Đức, Tây Ban Nha và nhiều ngôn ngữ thiểu số).
-- **Xử lý hàng loạt** — nhập kịch bản dạng `.txt` hoặc `.srt`, chạy hàng loạt và xuất âm thanh giữ nguyên dấu thời gian.
-- **Tự động nhận diện GPU tương thích** — nếu card đồ hoạ không chạy được, ứng dụng **tự chuyển sang CPU đa nhân** và báo rõ cho bạn biết, thay vì crash với lỗi kỹ thuật.
-- **Giao diện 9 ngôn ngữ** — Tiếng Việt, English, Português, Türkçe, 简体中文, हिन्दी, বাংলা, اردو, Русский.
-
----
-
-<details open>
-<summary><b>🆕 Có gì mới ở v2.0.0</b></summary>
-
-- **🌐 Tab Dịch phụ đề (mới)** — dịch phụ đề sang ngôn ngữ khác hoặc biên tập lại chính tả/ngắt câu, **mốc thời gian và số dòng không bao giờ bị đổi**. Nạp được `.srt`, `.vtt`, `.ass`, `.sbv` và cả `.txt` (tệp không có mốc thời gian thì app tính giờ tạm và nói rõ). Xuất ra SRT, VTT hoặc TXT. *(Gói Studio)*
-- **📐 Tối ưu dữ liệu trước khi dịch** — phụ đề xuất từ app dựng phim hay bị ngắt giữa chừng câu ("Hôm nay tôi sẽ" / "kể một chuyện"), dịch từng mảnh rời là sai nghĩa. Bước này nối các mảnh của cùng một câu lại, có bảng **xem trước** ngay trong hộp thoại trước khi áp dụng.
-- **📖 Bảng nhất quán** — trước khi dịch, app đọc toàn bộ phụ đề một lượt để chốt tên riêng, thuật ngữ và cách xưng hô, rồi gửi kèm bảng đó cho MỌI đoạn. Bảng sửa được bằng tay, và có tuỳ chọn dừng lại cho bạn duyệt trước khi dịch.
-- **🤖 Bốn nhà cung cấp AI** — 9Router, Claude CLI, Antigravity và Codex. Tab **Quản lý Model** có sẵn hướng dẫn cài từng loại, tự dò xem máy đã cài chưa, và liệt kê model thật do chính công cụ đó khai báo.
-- **🔗 Webhook đầy đủ hơn** — thêm ô **IP** (mặc định chỉ máy này gọi được), ô **URL** đầy đủ kèm nút **Sao chép**, IP và cổng bị khoá khi server đang chạy để URL không bao giờ lệch cổng thật. Tick *Tự động khởi động* giờ chạy server ngay chứ không phải đợi mở lại app.
-- **😄 Nút Mẫu thẻ biểu cảm** — bảng tra 13 thẻ cảm xúc ngay trong app (trước chỉ có trong tài liệu này), bấm **Chèn** là thẻ vào đúng vị trí con trỏ.
-- **📋 Nút Log Chi Tiết ở thanh bên** — vào thẳng nhật ký, không phải mở Cài đặt rồi tự tìm tab.
-- **✨ Dọn giao diện** — danh sách giọng hết cảnh hàng cao hàng thấp; khung **Xuất file** chuyển xuống dưới **Hàng chờ tạo** cho đúng trình tự làm việc; nút *Phát âm* đổi thành **Chỉnh phát âm** cho rõ nghĩa; nút mở rộng ô văn bản dời về sát nhãn.
-- **✂️ Chọn đoạn mẫu trực tiếp trên sóng âm (tab Sao chép giọng)** — hết cảnh app tự cắt: chọn tệp xong, kéo khung sáng để chọn đúng đoạn 3–30 giây làm giọng mẫu, bấm ▶ nghe thử; thả tay mép khung tự hít vào khoảng lặng gần nhất. Tệp dài quá 5 phút/50 MB sẽ tự lấy 30 giây đầu.
-- **⚡ Nhận dạng giọng nói nhanh gấp nhiều lần** — tab **Giọng nói → văn bản** và nút **✨ AI gợi ý** (tab Sao chép giọng) chạy trên nền công nghệ mới (faster-whisper): nhanh hơn ~4 lần, **VRAM chỉ tốn khoảng một nửa** (bản Turbo: ~6GB → ~2.5GB). Máy chỉ có CPU cũng nhanh lên rõ rệt nhờ chế độ nén int8.
-- **📦 Gói tải lần đầu nhẹ bớt ~1.6GB** — từ ~4.9GB còn ~3.3GB; model nhận dạng tải riêng khi bạn dùng lần đầu (1 chạm như cũ, tải xong lưu về máy).
-- **🧭 Thanh điều hướng dọc mới** — 5 tab chức năng chuyển ra sidebar bên trái với tên gọn hơn (Sao chép giọng, Đọc văn bản, Hội thoại nhóm, Tách phụ đề, Quản lý Model) — chuyển qua lại nhanh, vùng làm việc rộng hơn.
-- **📝 Tab Tách phụ đề dựng dòng theo mốc thời gian từng từ** — hết cảnh dòng phụ đề dài cả phút: dòng ngắt tại chỗ nghỉ hơi thật / hết câu / trần ký tự, timestamp chính xác tuyệt đối. Kèm 3 ô tự chỉnh (ký tự tối đa, giây tối đa, ngưỡng nghỉ) — đổi số là bảng cập nhật ngay, **không cần nhận dạng lại**.
-- **✍️ Kiểu tách câu mới "Gộp thông minh (≤N ký tự)"** — gộp các câu ngắn thành dòng liền mạch tới trần ký tự nhưng luôn ngắt đúng điểm kết câu; mặc định 500 ký tự (đo thực nghiệm: model đọc chính xác 100% tới ~1.800 ký tự).
-- **🔊 Sửa "Cân đều âm lượng"** — cân theo độ to tai người nghe (RMS) thay vì đỉnh sóng: hết cảnh bật cân đều lại bị câu to câu nhỏ; câu hụt tiếng không còn bị khuếch thành tiếng ồn.
-- **📚 Quản lý Model kiểu mới** — mỗi model một hàng kèm dung lượng và nhãn "Khuyến nghị", thích tải cái nào tự chọn cái đó.
-- **🍃 Nhẹ RAM hơn hẳn** — âm thanh các câu đã tạo và dữ liệu nhận dạng được lưu ra đĩa tạm thay vì giữ trong RAM (tiết kiệm ~165MB mỗi giờ audio), tự dọn khi mở app.
-- **🛡 Ổn định hơn trên máy ít VRAM** — sửa lỗi bộ tách câu thông minh (VAD) âm thầm ngừng hoạt động sau lần hoán đổi VRAM đầu tiên; nút AI gợi ý giờ **không thể chạy đè** lên lúc đang tạo giọng (hết nguy cơ tràn VRAM).
-
-</details>
-
----
-
-<details>
-<summary><b>🆕 Có gì mới ở v1.0.9</b></summary>
-
-- **🔔 Nút Telegram ở thanh bên** — bấm một cái là vào thẳng nhóm cộng đồng trên Telegram để hỏi đáp và nhận thông báo mới.
-- **📂 Chọn nơi lưu model cho nhẹ ổ C** — model khá nặng, giờ bạn được **chọn thư mục khác** (ví dụ ổ D, ổ E) để lưu, đỡ đầy ổ C. Đổi chỗ xong chỉ cần copy thư mục model cũ sang, hoặc để app tự tải lại.
-- **↕ Kho giọng & ô văn bản mẫu tự giãn theo cửa sổ** — phóng to cửa sổ là **thấy được nhiều giọng hơn**, ô nhập văn bản cũng rộng ra; lăn chuột trong danh sách giọng **mượt hơn, không còn nhảy qua giọng**.
-- **⏯ Nghe thử trong bảng có nút Tạm dừng** — trước chỉ có nút Phát, giờ đang phát một câu thì nút đổi thành **Tạm dừng**; bấm lần nữa là dừng.
-- **✨ Giao diện gọn và đồng bộ hơn** — thay bộ biểu tượng cũ bằng biểu tượng mới nhìn sắc nét, thống nhất khắp ứng dụng; bỏ các chú thích rê chuột cho đỡ rối.
-
-</details>
-
----
-
-<details>
-<summary><b>🆕 Có gì mới ở v1.0.8</b></summary>
-
-- **🗒 Hàng chờ tạo (mới)** — thay vì ngồi tạo từng cái rồi bấm xuất tay, giờ bạn **xếp nhiều việc vào hàng chờ**: mỗi việc là một kịch bản + giọng + cài đặt riêng, độc lập hoàn toàn. Bấm chạy một lần, app **tự làm lần lượt và tự lưu file** ra thư mục cho từng việc — rảnh tay làm chuyện khác. Đặt **tên + thư mục riêng** cho mỗi việc; **đóng app mở lại vẫn còn nguyên hàng chờ**. *(Tính năng của bản trả phí.)*
-- **📊 Xem tiến độ trực quan (X/N câu)** — mỗi việc trong hàng chờ hiển thị rõ **đã tạo được bao nhiêu trên tổng số câu** (ví dụ `8/10`), nên bạn thấy ngay việc nào chạy đủ, việc nào bị **thiếu câu do lỗi** — khỏi phải mở ra kiểm từng cái.
-- **📂 Mở lại việc đã chạy để sửa** — bấm **Mở lại** một việc trong hàng chờ để nạp nguyên kịch bản + giọng + cài đặt về lại tab Văn bản → Giọng, câu lỗi được **đánh dấu ❌**, rồi tạo lại cho gọn.
-- **✨ Giao diện gọn hơn** — các mục cài đặt gập/mở kiểu accordion (mở mục này thì mục kia tự đóng) cho đỡ dài; thêm vài biểu tượng cho dễ nhìn.
-
-</details>
-
----
-
-<details>
-<summary><b>🆕 Có gì mới ở v1.0.7</b></summary>
-
-- **🔊 Tab Sao chép giọng làm lại cho dễ dùng** — kho giọng chia 2 cột rõ ràng (**Giọng có sẵn** / **Giọng của bạn**), ô nhập gọn lại còn 1 câu. Sao chép xong app tự nhắc nghe thử rồi hỏi có muốn lưu vào kho không — lưu chỉ 1 chạm. Đoạn âm thanh mẫu dài hơn 30 giây sẽ **tự cắt gọn** ở chỗ im lặng cho giọng chuẩn hơn.
-- **▶ Nghe thử giọng có sẵn** — bấm nút ▶ cạnh mỗi giọng mẫu trong kho để nghe ngay trước khi dùng.
-- **⭐ Yêu thích đồng bộ mọi nơi** — đánh dấu ⭐ một giọng ở tab nào thì các tab khác cũng thấy.
-- **🐛 Sửa lỗi đổi tốc độ làm méo tiếng / không xuất được file** — đã bỏ ô chỉnh tốc độ ở khung nghe thử (chính nó gây méo tiếng và lỗi khi xuất). Muốn đọc nhanh/chậm thì dùng thanh **Tốc độ đọc** trong *Cài đặt nâng cao* — giữ giọng tự nhiên, không lỗi.
-- **✨ Vài tinh chỉnh nhỏ** — khoảng nghỉ giữa câu mặc định ngắn lại (100ms) cho liền mạch hơn; nút xóa hiển thị đồng nhất; giao diện gọn gàng hơn ở nhiều chỗ.
-- **🎙 Tab Giọng nói → văn bản: chọn được model nhận dạng** — chọn từ bản nhỏ đến lớn (Tiny → Turbo) tùy sức máy: máy yếu chọn bản nhỏ cho nhẹ & nhanh, máy mạnh chọn bản lớn cho chính xác hơn (mỗi bản ghi rõ **VRAM cần dùng** để dễ chọn). Bản mặc định có sẵn ngay sau khi cài; bản khác tải thêm 1 chạm và **lưu về máy**, lần sau dùng lại không cần mạng.
-- **🌍 Chọn ngôn ngữ khi nhận dạng** — chỉ rõ ngôn ngữ đang nói (~100 thứ tiếng) để nhận dạng đúng hơn, không bị nhầm ngôn ngữ giữa chừng; kèm vài cải tiến giúp ít sai/lặp chữ ở những đoạn khó.
-
-</details>
-
----
-
-<details>
-<summary><b>🆕 Có gì mới ở v1.0.6</b></summary>
-
-- **🔗 Webhook API (mới)** — server REST cục bộ cho phép n8n, Zapier, Python/cURL hoặc bất kỳ HTTP client nào gọi sinh giọng tự động. Tích hợp panel tìm kiếm giọng + ngôn ngữ ngay trong app, nháy đúp để copy. Có khóa API che dạng `xxxx***xxxx`, autostart, log request realtime.
-- **🚀 Xuất file nhanh hơn nhiều + thanh tiến độ thật** — ghép nhạc + chỉnh tốc độ chạy song song nhiều core, dự án 50 phút xuất xong trong vài chục giây thay vì vài phút. Thanh tiến độ inline đi mượt 0→100% với nút **Dừng** cắt được giữa chừng.
-- **🧹 Tab Sao chép giọng + Giọng nói sang văn bản (ASR) gọn hơn** — Clone bỏ các nút trùng với tab Văn bản → Giọng. ASR tự ghép fragment ngắn thành câu hoàn chỉnh, giữ nguyên timeline gốc.
-- **💾 Đồng bộ cài đặt giữa các tab** — *Số câu đồng thời* (batch size) giờ dùng chung cho cả 3 tab + webhook concurrency limit, đổi ở đâu các nơi còn lại tự update. Tab Sao chép giọng / Văn bản → Giọng nhớ giọng đã chọn trong kho qua các lần restart.
-- **🐛 Sửa nhiều lỗi tồn đọng** — crash khi xuất file sau khi hết phiên (`AttributeError: NoneType`), trạng thái "model đã tải" sai khi mạng đứt giữa chừng làm safetensors thiếu, nút "Lưu giọng" sáng sớm trước khi clone xong.
-
-</details>
-
----
-
-<details>
-<summary><b>🆕 Có gì mới ở v1.0.5</b></summary>
-
-- **🎚 Chế độ âm thanh chuyên nghiệp (mới)** — chọn 1 trong 6 chế độ xử lý (Phát thanh / Điện ảnh / Podcast / Ấm / Sáng / Nguyên bản) để file giọng đọc nghe "chuẩn studio" hơn. Có sẵn trong cả 3 tab Sao chép giọng / Văn bản sang giọng / Hội thoại — đổi ở 1 tab thì 2 tab còn lại tự cập nhật theo.
-- **🌐 Tách câu tốt hơn cho tiếng Trung / Hindi / Ả Rập / Urdu** — trước đây các ngôn ngữ này hay bị dồn cả đoạn thành 1 dòng, giờ tách câu chính xác theo dấu câu của từng ngôn ngữ.
-- **🧠 Tự động giải phóng bộ nhớ khi nhàn rỗi** — nếu để máy không dùng 5 phút (mặc định), app tự thả mô hình AI ra cho máy nhẹ bớt. Vào tab Cài đặt có thể đổi thời gian hoặc tắt hẳn.
-- **⚙ Ổn định hơn khi vừa tạo giọng vừa nhận dạng** — máy yếu trước đây có thể bị lỗi giữa chừng, giờ app tự sắp xếp để không xung đột.
-
-> ⚠️ **Đổi nhẹ ở file giọng đọc:** Mặc định bật chế độ **📻 Phát thanh** và **Cân đều âm lượng các câu**, nên file ở phiên bản này nghe **rõ và đầy hơn** so với phiên bản cũ. Muốn giữ y như cũ: vào 1 trong 3 tab tạo giọng → mở mục **Tinh chỉnh âm thanh** → chọn **🔇 Nguyên bản** và bỏ tích ô **Cân đều âm lượng các câu**.
-
-</details>
-
----
-
-<details>
-<summary><b>🆕 Có gì mới ở v1.0.4</b></summary>
-
-- **💬 Tab Hội thoại nhiều giọng (mới)** — viết kịch bản nhiều nhân vật, mỗi người một giọng. Có nút **📋 Mẫu hội thoại chuẩn** để xem ví dụ.
-- **🗂 30 giọng mẫu sẵn** — đi kèm app, dùng được ngay không cần tự thu mẫu.
-- **⭐ Ngôi sao yêu thích** — bấm vào ⭐ cạnh tên giọng trong kho để pin lên đầu danh sách.
-- **🎚 Thanh tốc độ trong player** — chỉnh tốc độ phát thử (0.5x → 2x), xuất file giữ đúng tốc độ đó.
-- **📄 Tự xuất phụ đề SRT** — khi xuất gộp 1 file, app kèm luôn file `.srt` cùng tên (có thể tắt nếu không cần).
-- **🔤 Từ điển phát âm ký tự đặc biệt** — không bao giờ phải sửa "100%" thành "100 phần trăm" thủ công nữa: gõ phiên âm một lần, app nhớ mãi.
-- **🌐 9 ngôn ngữ giao diện** — thêm Português, Türkçe, 简体中文, हिन्दी, বাংলা, اردو, Русский (ngoài Việt/Anh).
-- **⏳ Hiển thị thời gian từng dòng** — biết ngay câu nào đang tạo và đã chạy bao lâu.
-- **🌍 Bắt buộc chọn ngôn ngữ đầu ra** — không còn "Auto" để tránh đọc sai phát âm.
-
-</details>
 
 ---
 
 ## Cài đặt
 
-| Hệ điều hành | Tệp tải về | Dung lượng |
+### Bước 1 — Chọn đúng bản cho máy của bạn
+
+Bản cài được phát hành qua thư mục Google Drive chính thức:
+
+| Máy của bạn | Google Drive | Ghi chú |
 |---|---|---|
-| Windows x64 | `GLabsVoiceStudio-v1.0.8-win.zip` | ~3 GB |
-| macOS Apple Silicon | `GLabsVoiceStudio-v1.0.8-arm64.dmg` | ~2 GB |
+| 🪟 **Windows 10/11 (64-bit)** | [Windows](https://drive.google.com/drive/u/0/folders/1BOH-3lF_rGu8QU4b07pt203a-WdOAb-G) | Tệp `.zip`, giải nén là chạy, không cần cài đặt |
+| 🍎 **Mac chip Apple (M1/M2/M3/M4…)** | [macOS Apple Silicon](https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta) | Tệp `.dmg`, cần macOS 12 trở lên |
 
-### Windows (chạy trực tiếp, không cần cài đặt)
+> **Mac chip Intel không được hỗ trợ** — chỉ có bản cho Apple Silicon. Không chắc Mac của bạn chip gì? Bấm biểu tượng  → **About This Mac**: dòng **Chip** ghi "Apple M…" là dùng được; dòng **Processor** ghi "Intel…" là không.
 
-1. Tải tệp `GLabsVoiceStudio-v1.0.8-win.zip`.
-2. Giải nén ra thư mục bất kỳ (ổ cứng cần còn trống ít nhất 10 GB).
-3. Mở thư mục vừa giải nén, chạy trực tiếp `GLabsVoiceStudio.exe`.
-4. **Tạo lối tắt ra màn hình:** chuột phải vào `GLabsVoiceStudio.exe` → **Send to** → **Desktop (create shortcut)**. Từ nay mở app bằng lối tắt đó, khỏi phải vào lại thư mục.
+### Bước 2 — Cài đặt
 
-> **⏳ Lần đầu mở ứng dụng có thể mất 30–60 giây (màn hình chờ dừng lâu ở khoảng 90%) — bạn cứ chờ, đừng tắt đi.** Windows cần quét ứng dụng và các tệp card đồ hoạ (đây là bước bảo mật tự động, lần đầu rất chậm). Từ lần thứ 2 trở đi, ứng dụng sẽ mở nhanh như bình thường.
+<details open>
+<summary><b>🪟 Trên Windows</b></summary>
 
-### 🍎 macOS Apple Silicon
+1. Tải tệp `.zip` bản Windows (ví dụ `G-Labs-Voice-Studio-v2.0.2-win.zip`) và **giải nén** ra một thư mục bất kỳ — ổ đĩa cần còn trống ít nhất 10 GB (mô hình AI tải sau sẽ chiếm vài GB).
+2. Mở thư mục vừa giải nén và chạy **`G-Labs-Voice-Studio.exe`** (các tệp còn lại nằm trong thư mục con `data`, đừng di chuyển chúng).
+3. Nếu hiện bảng **"Windows protected your PC"** (SmartScreen): bấm **More info** → **Run anyway**. *(App chưa ký chứng chỉ của Microsoft nên bị cảnh báo — không phải virus.)*
+4. **Tạo lối tắt:** chuột phải vào `G-Labs-Voice-Studio.exe` → **Send to** → **Desktop (create shortcut)** để lần sau mở nhanh.
 
-1. Tải tệp **`GLabsVoiceStudio-v1.0.8-arm64.dmg`** từ nguồn phân phối chính thức.
-2. Nhấp đúp vào file `.dmg` để mở.
-3. Kéo biểu tượng **G-Labs Voice Studio** vào thư mục **Applications**.
-4. Mở **Applications**, **nhấp chuột phải** vào **G-Labs Voice Studio** → chọn **Open**.
+> ⏳ **Lần đầu mở có thể mất 30–60 giây** (màn hình chờ dừng lâu) vì Windows quét bảo mật ứng dụng và thư viện card đồ hoạ. Cứ chờ, đừng tắt — các lần sau mở nhanh hơn.
 
-> ⚠️ **Lần mở đầu tiên:** macOS có thể hiện cảnh báo *"Ứng dụng từ nhà phát triển không xác định"*. Nhấp chuột phải vào ứng dụng → **Open** → nhấn **Open** trong hộp thoại. Chỉ cần làm một lần duy nhất.
+</details>
 
-> 📁 **File đầu ra** (âm thanh, kịch bản) được lưu tại `~/Documents/G-Labs Voice Studio/output/` theo mặc định.
+<details open>
+<summary><b>🍎 Trên macOS</b></summary>
 
-> **⏳ Lần đầu mở ứng dụng có thể mất 30–60 giây (màn hình chờ dừng lâu ở khoảng 90%) — bạn cứ chờ, đừng tắt đi.** macOS cần kiểm tra bảo mật toàn bộ ứng dụng lần đầu. Từ lần thứ 2 trở đi, ứng dụng mở nhanh bình thường.
+1. Mở tệp **`.dmg`** vừa tải, rồi **kéo biểu tượng G-Labs Voice Studio thả vào thư mục Applications**.
+2. Vào **Applications**, **bấm chuột phải** (hoặc giữ Control rồi bấm) lên **G-Labs Voice Studio** → chọn **Open** → bấm **Open** lần nữa ở hộp xác nhận. *(App chưa được Apple chứng thực nên phải mở kiểu này ở **lần đầu**; những lần sau mở bình thường.)*
+3. Nếu macOS báo **"bị hỏng / không thể mở"** hoặc không thấy nút Open, mở **Terminal**, dán lệnh sau rồi Enter:
+   ```bash
+   xattr -dr com.apple.quarantine "/Applications/G-Labs Voice Studio.app"
+   ```
+   Sau đó mở lại app. Cách khác: **System Settings → Privacy & Security**, kéo xuống cuối và bấm **Open Anyway** cạnh dòng báo G-Labs Voice Studio bị chặn.
 
-#### 🍎 Xử lý lỗi *"Ứng dụng bị hỏng"* trên macOS
+> ⏳ **Lần đầu mở có thể mất 30–60 giây** vì macOS kiểm tra bảo mật toàn bộ ứng dụng. Các lần sau mở nhanh hơn.
 
-Khi tải file `.dmg` từ internet, macOS tự động gắn **cờ cách ly (quarantine)** vào file. Nếu ứng dụng chưa được chứng thực bởi Apple, macOS Gatekeeper sẽ chặn không cho chạy và có thể báo *"Ứng dụng bị hỏng, không thể mở"*.
+</details>
 
-**Cách 1: Nhấp chuột phải → Open** *(khuyến nghị)*
+### Bước 3 — Đăng nhập & chọn gói
 
-1. Mở **Applications**.
-2. **Nhấp chuột phải** vào *G-Labs Voice Studio* → **Open**.
-3. Nhấn **Open** lần nữa trong hộp thoại cảnh báo.
+**Bạn cần đăng nhập bằng Google** (Cài đặt ⚙️ → tab **Tài khoản Bản Quyền** → **Đăng nhập bằng Google**) để app kiểm tra bản quyền. Một tài khoản chạy trên **một máy tại một thời điểm** — đăng nhập ở máy khác thì phiên trên máy cũ kết thúc.
 
-**Cách 2: Dùng Terminal** (nếu cách 1 vẫn báo lỗi)
+| Gói | Giá | Gồm |
+|---|---|---|
+| **Dùng thử** | Miễn phí | Giới hạn số dòng mỗi lượt tạo (mặc định 1 dòng) — đủ để kiểm tra máy bạn chạy ổn trước khi mua |
+| **Gói Studio** | 1 tháng 100.000đ ($5) · 6 tháng 500.000đ ($25) · 1 năm 1.000.000đ ($50) | Tạo không giới hạn dòng, **Hàng chờ tạo**, tab **Dịch phụ đề**, **Webhook API** |
 
-Mở **Terminal** (Launchpad → Other → Terminal) rồi dán lệnh sau và nhấn Enter:
+- Mua ngay trong app (Cài đặt → **Tài khoản Bản Quyền**) bằng **chuyển khoản VietQR**, **PayPal** (thẻ quốc tế) hoặc **USDT**. Gói theo thời hạn, không tự gia hạn, kích hoạt trên tài khoản Google bạn đăng nhập.
+- Gói Studio là gói **riêng** của Voice Studio, tách khỏi Plus/Max của G-Labs Studio.
+- Hoàn tiền trong **24 giờ** đầu sau khi thanh toán — xem [Chính sách hoàn tiền](https://duckspace.net/refunds.html#vi). Hãy chạy thử bản miễn phí trước để chắc máy bạn chạy mượt.
 
-```bash
-xattr -cr "/Applications/G-Labs Voice Studio.app"
+---
+
+## Lần chạy đầu tiên
+
+1. **Mở app và chọn ngôn ngữ giao diện** ở màn hình chào (đổi lại sau trong Cài đặt).
+2. **Đăng nhập bằng Google** — Cài đặt ⚙️ → **Tài khoản Bản Quyền** → **Đăng nhập bằng Google**.
+3. **Tải mô hình giọng đọc** — mở tab **Quản lý Model** (hoặc làm theo lời nhắc của app) và tải mô hình giọng đọc AI (vài GB, chỉ tải một lần). Mô hình nhận dạng giọng nói tải riêng khi bạn dùng lần đầu.
+4. **Mở tab Đọc văn bản**, chọn **ngôn ngữ đầu ra**, chọn một giọng trong kho (có sẵn 30 giọng mẫu).
+5. Dán văn bản → **Nhập vào bảng** → **Bắt đầu chạy**. Nghe thử từng dòng, rồi bấm **Xuất âm thanh** để lưu file (mặc định kèm phụ đề `.srt`).
+
+---
+
+## Tính năng
+
+<p align="center">
+  <img alt="Giao diện G-Labs Voice Studio" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+</p>
+
+- **Chạy trên máy bạn** — sau khi tải mô hình, tạo giọng và nhận dạng đều chạy cục bộ (GPU NVIDIA, Apple Metal hoặc CPU); âm thanh và văn bản không gửi lên máy chủ. Riêng tab Dịch phụ đề gửi nội dung phụ đề tới nhà cung cấp AI bạn chọn.
+- **Sao chép giọng** — từ một mẫu âm thanh 5–10 giây, đọc bất kỳ văn bản nào bằng đúng giọng đó.
+- **Thiết kế giọng** — tạo giọng mới theo giới tính, độ tuổi, cao độ, phong cách, khẩu âm; không cần tệp mẫu.
+- **Hơn 600 ngôn ngữ đầu ra** — Việt, Anh, Trung, Nhật, Hàn, Pháp, Đức, Tây Ban Nha và nhiều ngôn ngữ khác.
+- **Hội thoại nhiều giọng** — kịch bản `<Tên>: lời thoại`, mỗi nhân vật một giọng và tốc độ riêng.
+- **Tách phụ đề** — nhận dạng lời nói từ MP3, WAV, M4A, FLAC, MP4, MOV…; xuất TXT hoặc SRT với mốc thời gian theo từng từ.
+- **Dịch phụ đề bằng AI** *(gói Studio)* — dịch hoặc biên tập `.srt`, `.vtt`, `.ass`, `.sbv`, `.txt`; mốc thời gian và số dòng giữ nguyên tuyệt đối.
+- **Kho giọng** — 30 giọng mẫu sẵn, lưu giọng tự tạo, ghim ⭐ yêu thích, sao lưu/phục hồi ra tệp `.vcp`.
+- **Tinh chỉnh âm thanh** — 6 chế độ xử lý, cân đều âm lượng, 13 thẻ biểu cảm, từ điển phát âm nhớ cách đọc `100%`, `25°C`, `m²`.
+- **Xuất linh hoạt** — WAV hoặc MP3, gộp 1 file hoặc mỗi câu 1 file, kèm `.srt`; tải riêng từng dòng bằng nút ⬇.
+- **Hàng chờ tạo** *(gói Studio)* — xếp nhiều kịch bản, app tự chạy lần lượt và tự lưu file.
+- **Webhook API** *(gói Studio)* — máy chủ REST cục bộ cho n8n, Make, Zapier, Python/cURL hay AI agent.
+- **Tự xử lý phần cứng** — card đồ hoạ không tương thích thì tự chuyển sang CPU và báo rõ; tự giải phóng bộ nhớ GPU khi nhàn rỗi.
+- **Giao diện 9 ngôn ngữ** — Tiếng Việt, English, Português, Türkçe, 简体中文, हिन्दी, বাংলা, اردو, Русский.
+
+---
+
+## Các trang
+
+Các trang nằm ở thanh bên trái. Ba trang tạo giọng (Sao chép giọng, Đọc văn bản, Hội thoại nhóm) có chung một nhịp: chọn **ngôn ngữ đầu ra** → dán văn bản hoặc **Nhập tệp** (`.txt`, `.srt`) → **Nhập vào bảng** (app tách câu theo **Kiểu tách câu** bạn chọn, có xem trước số dòng) → **Bắt đầu chạy** → nghe thử → **Xuất âm thanh**.
+
+### 🔊 Sao chép giọng
+
+Bấm **Chọn...** để nạp tệp âm thanh mẫu (giọng rõ, ít tạp âm), rồi **kéo khung sáng trên sóng âm** để chọn đúng đoạn 3–30 giây làm mẫu — thả tay là mép khung tự khớp vào khoảng lặng gần nhất; tệp dài quá 5 phút/50 MB thì app lấy 30 giây đầu. **Bắt buộc** nhập *Văn bản mẫu* khớp chính xác lời trong đoạn mẫu (đủ dấu câu, đúng chính tả); nút **✨ AI gợi ý** nhận dạng giúp bạn, nhưng vẫn cần dò lại. Tạo xong, app mời nghe thử và lưu giọng vào kho bằng một chạm.
+
+### 🎛️ Đọc văn bản
+
+Chọn một giọng đã có trong kho, hoặc mở **Thiết kế giọng** để tạo giọng mới theo *Giới tính, Độ tuổi, Cao độ, Phong cách, Khẩu âm*. Giọng thiết kế ưng ý thì chọn dòng trong bảng → **Lưu** vào kho để dùng lại. Kiểu tách câu **Gộp thông minh** gộp các câu ngắn thành dòng liền mạch tới trần ký tự nhưng luôn ngắt đúng điểm kết câu. Nút **Mẫu thẻ biểu cảm** cho tra và **Chèn** thẻ vào đúng vị trí con trỏ.
+
+### 💬 Hội thoại nhóm
+
+Viết kịch bản nhiều nhân vật — hợp với podcast, audio drama, phỏng vấn:
+
+```
+<MC>: Xin chào quý vị và các bạn.
+<Mai>: Em chào anh chị, em rất vui khi được tham gia chương trình.
+<Minh>: Hôm nay chúng ta sẽ nói về gì ạ?
 ```
 
-Lệnh này gỡ bỏ tất cả thuộc tính mở rộng (bao gồm cờ cách ly) khỏi bundle ứng dụng. Sau khi chạy xong, mở lại ứng dụng bình thường. Chỉ cần làm **một lần duy nhất** cho mỗi phiên bản tải về.
+Tên nhân vật đặt trong `< >` ở đầu dòng (dấu `:` có thể bỏ, tên không phân biệt hoa thường). Bấm **Mẫu hội thoại chuẩn** để xem ví dụ, rồi **Phân tích hội thoại** — khung **Phân vai giọng đọc** mở ra để gán mỗi nhân vật một giọng trong kho và một thanh **Tốc độ** riêng (0.5× → 2×).
 
-**Cách 3: System Settings → Privacy & Security**
+### 📝 Tách phụ đề
 
-1. Thử mở ứng dụng bình thường (sẽ bị chặn).
-2. Mở **System Settings** → **Privacy & Security**.
-3. Kéo xuống cuối, tìm dòng *"G-Labs Voice Studio bị chặn…"* → bấm **Open Anyway**.
-4. Xác nhận bằng Touch ID hoặc mật khẩu admin.
+Chọn tệp âm thanh/video (MP3, WAV, M4A, FLAC, MP4, MOV…), chọn ngôn ngữ đang nói và model nhận dạng (Tiny → Large v3, mỗi bản ghi rõ VRAM cần dùng), rồi bấm chạy. Dòng phụ đề được dựng theo mốc thời gian từng từ, ngắt ở chỗ nghỉ hơi thật / hết câu / trần ký tự; ba ô *ký tự tối đa, giây tối đa, ngưỡng nghỉ* đổi số là bảng cập nhật ngay, không cần nhận dạng lại. Sửa trực tiếp trong bảng, xuất `.txt` hoặc `.srt`.
 
----
+### 🌐 Dịch phụ đề *(gói Studio)*
 
-## Cách sử dụng
+Dịch phụ đề sang ngôn ngữ khác hoặc biên tập lại chính tả, ngắt câu — **chỉ phần chữ thay đổi, mốc thời gian và số dòng giữ nguyên**.
 
-<details>
-<summary><b>Phần 1 — Lần đầu mở app (làm một lần)</b></summary>
+1. Chuẩn bị một lần ở **Quản lý Model → LLM**: chọn **9Router** (gateway chạy trên máy, điền địa chỉ + API key), **Claude CLI**, **Antigravity** (`agy`) hoặc **Codex CLI** (cài và đăng nhập). Mỗi hàng có nút **Hướng dẫn** ghi lệnh cài; cài xong bấm **Làm mới danh sách** để app dò và liệt kê model.
+2. **Nhập tệp** `.srt`, `.vtt`, `.ass`, `.sbv`, `.txt` — hoặc **Lấy từ Tách phụ đề**. Tệp `.txt` không có mốc thời gian thì app tính giờ tạm và báo rõ.
+3. Nên bấm **Tối ưu dữ liệu**: nối các mảnh bị ngắt giữa câu (hay gặp ở phụ đề xuất từ app dựng phim), có bảng xem trước kiểu *"120 dòng → 68 dòng"* trước khi **Áp dụng**.
+4. Chọn chế độ **Dịch**, **Biên tập** hoặc **Dịch + Biên tập**, chọn ngôn ngữ đích và model, bấm **Bắt đầu chạy**.
+5. **Bảng nhất quán** chốt tên riêng, thuật ngữ và cách xưng hô cho cả file rồi gửi kèm mọi đoạn; sửa tay được, và có tuỳ chọn dừng cho bạn duyệt trước khi dịch.
+6. Kiểm lại cột **Kết quả** (dòng AI trả thiếu có dấu ⚠ và giữ chữ gốc), chọn **SRT / VTT / TXT** rồi **Xuất kết quả**.
 
-1. Mở app — màn hình chào hiện 9 lựa chọn ngôn ngữ giao diện. Chọn ngôn ngữ bạn muốn dùng.
-2. **Đăng nhập** — bấm biểu tượng bánh răng ⚙️ ở thanh bên trái → tab *Bản quyền* → **"Đăng nhập bằng Google"**.
-3. **Tải mô hình AI** — chuyển sang tab *Cài đặt môi trường* (hoặc app tự nhắc) → bấm **"Tải mô hình"**. Khoảng vài GB, chờ hoàn tất là xong phần chuẩn bị.
-4. Đóng Cài đặt.
+### 📚 Quản lý Model
 
-> 💡 Đổi ngôn ngữ giao diện sau này: vào Cài đặt → Ngôn ngữ.
+Mỗi model một hàng kèm dung lượng và trạng thái: mô hình giọng đọc AI và các bản nhận dạng (Tiny, Base, Small, Turbo, Large v3). Tải riêng bản nào cần, đổi được **thư mục lưu model** (ví dụ sang ổ D cho nhẹ ổ C — chép thư mục model cũ sang, hoặc để app tải lại). Ở đây cũng cài đặt nhà cung cấp **LLM** cho tab Dịch phụ đề và thời gian **Tự động giải phóng VRAM**.
 
-</details>
+### 🗒 Hàng chờ tạo *(gói Studio)*
 
-<details>
-<summary><b>Phần 2 — Sao chép giọng nói 🔊</b></summary>
+Thay vì tạo từng kịch bản rồi xuất tay, bấm **Thêm hàng chờ** để lưu kịch bản + giọng + cài đặt hiện tại thành một việc có **tên và thư mục lưu riêng**. **Chạy hàng chờ** — app tự làm lần lượt và tự lưu file. Mỗi việc hiện tiến độ `X/N câu` để biết việc nào thiếu câu do lỗi; **Mở lại** nạp việc về tab để sửa (câu lỗi được đánh dấu ❌). Đóng app mở lại vẫn còn nguyên hàng chờ.
 
-Nhân bản một giọng nói từ mẫu âm thanh.
+### 🔗 Webhook API *(gói Studio)*
 
-1. Mở tab **Sao chép giọng nói**.
-2. Chọn **ngôn ngữ đầu ra** ở đầu tab (vd: Vietnamese, English...).
-3. Ở ô *Tệp âm thanh mẫu*, bấm **"Chọn..."** → chọn tệp âm thanh mẫu (khuyến nghị 5–10 giây, giọng rõ ràng, ít tạp âm).
-4. **Bắt buộc:** nhập *Văn bản mẫu* — gõ chính xác lời nói trong đoạn âm thanh mẫu (đủ dấu câu, đúng chính tả).
-    > 💡 Bấm **"✨ AI gợi ý"** để AI tự nhận dạng giúp bạn — vẫn cần dò lại trước khi tạo.
-5. Dán văn bản cần đọc vào ô *Nội dung văn bản* (hoặc **"📂 Nhập tệp"** từ `.txt` / `.srt`).
-6. Bấm **"📋 Nhập vào bảng"** — app tự tách thành từng câu.
-7. (Tuỳ chọn) Mở **🔤 Chỉnh phát âm** để xem từ điển phát âm — nếu trong văn bản có ký tự đặc biệt (vd `100%`), app sẽ hỏi cách đọc.
-8. Bấm **"▶ Bắt đầu tạo"** → app hỏi xác nhận văn bản mẫu → đồng ý để chạy.
-9. Khi xong, bấm **"💾 Xuất âm thanh"** (gộp 1 file kèm `.srt`) hoặc **⬇** ở từng dòng để tải riêng.
-
-</details>
-
-<details>
-<summary><b>Phần 3 — Văn bản sang giọng nói 🎛️</b></summary>
-
-Tạo giọng đọc mới theo mô tả, không cần tệp mẫu.
-
-1. Mở tab **Văn bản sang giọng nói**.
-2. Chọn **ngôn ngữ đầu ra**.
-3. Mở khung **Thiết kế giọng** và chọn các thuộc tính: *Giới tính*, *Độ tuổi*, *Cao độ*, *Phong cách*, *Khẩu âm*.
-    > 💡 Muốn dùng lại một giọng đã lưu trong **Kho giọng**? Chọn thẳng trong dropdown — app bỏ qua bước sinh giọng mẫu, chạy ngay từ câu 1.
-4. Dán văn bản, bấm **"📋 Nhập vào bảng"**.
-5. Bấm **"▶ Bắt đầu tạo"**.
-6. Sau khi tạo xong: click vào dòng bạn muốn lưu trong bảng → bấm **"💾 Lưu"** trong khung *Kho giọng* để dùng lại sau.
-7. Bấm **"💾 Xuất âm thanh"** để lấy kết quả.
-
-</details>
-
-<details>
-<summary><b>Phần 4 — Hội thoại nhiều giọng 💬 *(mới)*</b></summary>
-
-Tạo audio hội thoại nhiều nhân vật, mỗi người một giọng riêng — phù hợp làm podcast, audio drama, video kịch bản phỏng vấn.
-
-1. Mở tab **Hội thoại nhiều giọng**.
-2. Chọn **ngôn ngữ đầu ra**.
-3. Bấm nút **📋 Mẫu hội thoại chuẩn** (góc phải khung văn bản) để xem ví dụ — app sẽ paste mẫu và mở khung chỉnh sửa chi tiết.
-4. Viết kịch bản theo cú pháp:
-    ```
-    <MC>: Xin chào quý vị và các bạn.
-    <Mai>: Em chào anh chị, em rất vui khi được tham gia chương trình.
-    <Minh>: Em cũng vậy, hôm nay chúng ta sẽ nói về gì ạ?
-    ```
-    > 💡 Tên nhân vật đặt trong dấu `< >`, theo sau là `:` rồi đến lời thoại. Có thể bỏ `:` cũng được. Tên không phân biệt hoa thường.
-5. Bấm **"🎭 Phân tích hội thoại"** — app tách thành từng dòng, hiện cột "Nhân vật".
-6. Khung **Phân vai giọng đọc** tự mở ra — chọn một giọng từ kho cho mỗi nhân vật.
-7. (Tuỳ chọn — *mới*) Với mỗi nhân vật trong khung **Phân vai giọng đọc**, có thanh **Tốc độ** riêng (0.5x → 2x). Mỗi nhân vật nói với tốc độ độc lập trong cùng 1 lần tạo — phù hợp để MC nói chậm, khách mời nói nhanh hơn.
-8. Bấm **"▶ Bắt đầu tạo"** — mỗi câu được đọc bằng giọng của nhân vật tương ứng.
-9. **"💾 Xuất âm thanh"** để lấy file (có kèm `.srt`).
-
-</details>
-
-<details>
-<summary><b>Phần 5 — Giọng nói sang văn bản 📝</b></summary>
-
-Nhận dạng lời nói từ tệp âm thanh/video sẵn có.
-
-1. Mở tab **Giọng nói sang văn bản**.
-2. Bấm **"Chọn tệp..."** → chọn tệp âm thanh/video (MP3, WAV, M4A, FLAC, MP4, MOV…).
-3. Bấm **"▶ Bắt đầu tạo"** — app phân tích, tự tách đoạn theo giọng nói, rồi nhận dạng từng đoạn.
-4. Kết quả hiển thị dạng bảng (có dấu thời gian từng câu). Có thể chỉnh sửa trực tiếp.
-5. Bấm **"💾 Xuất"** để lưu ra `.txt` (văn bản thuần) hoặc `.srt` (có dấu thời gian, dùng làm phụ đề).
-
-</details>
-
-<details>
-<summary><b>Phần 6 — Dịch phụ đề 🌐 *(mới — gói Studio)*</b></summary>
-
-Dịch phụ đề sang ngôn ngữ khác, hoặc biên tập lại chính tả và ngắt câu. **Mốc thời gian và số dòng không bao giờ bị đổi** — chỉ phần chữ thay đổi, nên phụ đề vẫn khớp video y như cũ.
-
-**Chuẩn bị một lần: chọn AI**
-
-1. Mở tab **Quản lý Model** → khung **LLM**. Có bốn lựa chọn:
-
-    | Nhà cung cấp | Cần gì |
-    |---|---|
-    | **9Router** | Chạy gateway 9Router trên máy, điền địa chỉ + API key |
-    | **Claude CLI** | Cài Claude Code và đăng nhập |
-    | **Antigravity** | Cài `agy` và đăng nhập |
-    | **Codex** | Cài Codex CLI và đăng nhập |
-
-2. Mỗi hàng có nút **Hướng dẫn** ghi rõ lệnh cài đặt. Cài xong bấm **Làm mới** — app tự dò và đổ danh sách model vào ô chọn phía trên.
-
-**Dịch phụ đề**
-
-1. Mở tab **Dịch phụ đề**.
-2. Bấm **Nhập tệp** để chọn `.srt`, `.vtt`, `.ass`, `.sbv` hoặc `.txt` — hoặc bấm **Lấy từ Tách phụ đề** để lấy thẳng kết quả vừa nhận dạng.
-    > 💡 Tệp `.txt` không có mốc thời gian, app sẽ tính giờ tạm cho mỗi dòng và báo rõ để bạn chỉnh lại sau khi lưu.
-3. **Nên làm:** bấm **Tối ưu dữ liệu**. Phụ đề xuất từ app dựng phim hay bị ngắt giữa chừng câu, dịch từng mảnh rời rất dễ sai nghĩa. Hộp thoại hiện bảng xem trước và dòng tóm tắt kiểu *"120 dòng → 68 dòng"*, ưng thì bấm **Áp dụng**.
-4. Chọn **chế độ**:
-    - **Dịch** — dịch sang ngôn ngữ đích.
-    - **Biên tập** — giữ nguyên ngôn ngữ, chỉ sửa chính tả, dấu câu, viết hoa.
-    - **Cả hai** — biên tập rồi dịch trong một lượt.
-5. Chọn **ngôn ngữ đích** và **model AI** (ô chọn ở góc phải hàng trên).
-6. (Tuỳ chọn) Tick **Xem bảng nhất quán trước khi dịch** nếu muốn duyệt bảng thuật ngữ trước.
-7. Bấm **Chạy**. Nút đó biến thành **Dừng** khi đang chạy — bấm lần nữa là ngừng.
-8. Kiểm lại trong bảng: cột **Kết quả** sửa tay được, dòng nào AI trả thiếu sẽ có dấu ⚠ và giữ nguyên chữ gốc.
-9. Chọn định dạng (**SRT** / **VTT** / **TXT**) rồi bấm **Xuất kết quả**.
-
-> 💡 **Bảng nhất quán** là cách giữ tên riêng, thuật ngữ và cách xưng hô giống nhau từ đầu tới cuối. Trước khi dịch, app đọc toàn bộ phụ đề một lượt để chốt các quyết định đó, rồi gửi kèm bảng cho mọi đoạn. Bấm **Bảng nhất quán** để xem và sửa; sửa xong chạy lại thì app dùng đúng bảng bạn đã duyệt.
-
+Máy chủ REST cục bộ để n8n, Make, Zapier, Python/cURL hoặc AI agent gọi tạo giọng tự động. Mặc định `127.0.0.1:8766` (chỉ máy này gọi được), có khoá API, ô **URL** đầy đủ kèm nút **Sao chép**, tuỳ chọn tự khởi động cùng app và log request trực tiếp. Đổi IP sang `0.0.0.0` / IP LAN để máy khác gọi vào — khi đó khoá API đi qua HTTP không mã hoá. Lược đồ đầy đủ: [`docs/WEBHOOK_INTEGRATION.vi.md`](docs/WEBHOOK_INTEGRATION.vi.md).
 
 ---
 
-</details>
-
-## 💡 Mẹo dùng nâng cao
+## Mẹo dùng
 
 <details>
-<summary><b>Tinh chỉnh âm thanh chuyên nghiệp *(mới)*</b></summary>
+<summary><b>Tinh chỉnh âm thanh — 6 chế độ xử lý</b></summary>
 
-- Trong 3 tab tạo giọng (Sao chép giọng / Văn bản sang giọng / Hội thoại) có mục **Tinh chỉnh âm thanh** thu gọn ở giữa khung.
-- 6 chế độ sẵn:
-  - 📻 **Phát thanh** *(mặc định)* — chuẩn radio/podcast, ấm và nén gọn.
-  - 🎬 **Điện ảnh** — vang rộng, nén nhẹ, chất lượng phim.
-  - 🎙️ **Podcast** — mic gần, nén mạnh, không vang.
-  - 🔇 **Nguyên bản** — giữ nguyên đầu ra của mô hình, không xử lý.
-  - ☀️ **Ấm** — trầm dày, cảm giác ấm áp.
-  - ✨ **Sáng** — cao sắc nét, thoáng đãng.
-- Đổi chế độ ở 1 tab → 2 tab còn lại tự đồng bộ. Nếu muốn file giống hệt phiên bản cũ (v1.0.4): chọn **🔇 Nguyên bản** + bỏ tích **Cân đều âm lượng các câu**.
+Trong mục **Tinh chỉnh âm thanh** của ba tab tạo giọng (đổi ở một tab, hai tab kia tự đồng bộ):
 
-</details>
+- 📻 **Phát thanh** *(mặc định)* — chuẩn radio/podcast, ấm, nén gọn.
+- 🎬 **Điện ảnh** — vang rộng, nén nhẹ.
+- 🎙️ **Podcast** — mic gần, nén mạnh, không vang.
+- ☀️ **Ấm** — trầm dày, cảm giác ấm áp.
+- ✨ **Sáng** — cao sắc nét, thoáng đãng.
+- 🔇 **Nguyên bản** — giữ nguyên đầu ra của mô hình.
 
-<details>
-<summary><b>Tự động giải phóng bộ nhớ *(mới)*</b></summary>
-
-- Mặc định: nếu để app không dùng **5 phút**, mô hình AI sẽ tự được dỡ ra khỏi VRAM/RAM để máy nhẹ bớt.
-- Lần thao tác kế tiếp app sẽ nạp lại mô hình (~30-60s).
-- Vào tab **Cài đặt môi trường** → mục **Tự động giải phóng VRAM** để chỉnh thời gian (0 = tắt hẳn, 1-120 phút).
+**Cân đều âm lượng các câu** cân theo độ to tai người nghe (RMS) nên hết câu to câu nhỏ. Muốn âm thanh thô của mô hình: chọn **Nguyên bản** và bỏ tích ô này.
 
 </details>
 
 <details>
-<summary><b>Kho giọng & ngôi sao yêu thích</b></summary>
+<summary><b>Thẻ biểu cảm</b></summary>
 
-- Mỗi giọng trong kho có ngôi sao ☆ ở đầu. Bấm vào → biến thành ★ → giọng đó nhảy lên đầu danh sách (cho lần mở sau).
-- Bấm ★ lần nữa để bỏ yêu thích.
-- 30 giọng mẫu sẵn (Achernar, Aoede, Mai, MC…) đều có thể đánh dấu yêu thích.
-
-</details>
-
-<details>
-<summary><b>Từ điển phát âm</b></summary>
-
-- Khi trong văn bản có `%`, `$`, `°C`, `m²`, tên thương hiệu... bấm **🔤 Chỉnh phát âm** trước khi tạo.
-- Lần đầu gặp, app hỏi cách đọc cho từng ký tự/từ → bạn gõ phiên âm (vd `%` → ` phần trăm`).
-- Mỗi từ chỉ cần gõ **một lần** — app nhớ theo ngôn ngữ đầu ra. Lần sau gặp lại, tự áp dụng.
-- Cùng từ ở ngôn ngữ khác (vi vs en) sẽ có phiên âm riêng.
-
-</details>
-
-<details>
-<summary><b>Thẻ cảm xúc & âm thanh phi ngôn ngữ</b></summary>
-
-- Gõ thẳng các thẻ này vào văn bản cần đọc, giọng sẽ phát ra âm thanh phi ngôn ngữ tương ứng. Dùng được ở cả **Sao chép giọng**, **Văn bản sang giọng** và **Hội thoại nhiều giọng**.
-- Viết thẻ đúng như bên dưới, **giữ nguyên dấu ngoặc vuông**, đặt riêng hoặc xen giữa câu (vd: `Buồn cười quá [laughter] mình không nhịn được.`).
-- **Không cần nhớ bảng này:** trong tab **Văn bản sang giọng** và **Hội thoại nhiều giọng**, bấm nút **Mẫu thẻ biểu cảm** ngay trên ô soạn để tra và **Chèn** thẳng thẻ vào vị trí con trỏ.
+Gõ thẻ vào văn bản (giữ nguyên ngoặc vuông, đặt riêng hoặc xen giữa câu, ví dụ `Buồn cười quá [laughter] mình không nhịn được.`) — giọng phát ra âm thanh tương ứng thay vì đọc thành chữ. Không cần nhớ: nút **Mẫu thẻ biểu cảm** cho tra và chèn thẳng.
 
 | Thẻ | Âm thanh |
 |---|---|
 | `[laughter]` | Tiếng cười |
 | `[sigh]` | Tiếng thở dài |
 | `[confirmation-en]` | Đồng tình — "mm-hmm" |
-| `[question-en]` | Ngữ điệu hỏi |
-| `[question-ah]` | Ngữ điệu hỏi — "ah?" |
-| `[question-oh]` | Ngữ điệu hỏi — "oh?" |
-| `[question-ei]` | Ngữ điệu hỏi — "ei?" |
-| `[question-yi]` | Ngữ điệu hỏi — "yi?" |
-| `[surprise-ah]` | Ngạc nhiên — "ah!" |
-| `[surprise-oh]` | Ngạc nhiên — "oh!" |
-| `[surprise-wa]` | Ngạc nhiên — "wa!" |
-| `[surprise-yo]` | Ngạc nhiên — "yo!" |
+| `[question-en]` · `[question-ah]` · `[question-oh]` · `[question-ei]` · `[question-yi]` | Ngữ điệu hỏi |
+| `[surprise-ah]` · `[surprise-oh]` · `[surprise-wa]` · `[surprise-yo]` | Ngạc nhiên |
 | `[dissatisfaction-hnn]` | Khó chịu — "hnn" |
 
-> 💡 Thẻ được hiểu là tín hiệu biểu cảm, không đọc thành chữ. Mức độ thể hiện thay đổi tùy ngôn ngữ và giọng — nên thử trên một câu ngắn trước.
+Mức độ thể hiện thay đổi theo ngôn ngữ và giọng — nên thử trên một câu ngắn trước.
 
 </details>
 
 <details>
-<summary><b>Tốc độ phát + xuất</b></summary>
+<summary><b>Từ điển phát âm</b></summary>
 
-- Sau khi tạo audio, dưới thanh sóng có **dropdown tốc độ** (0.5x → 2x).
-- Đổi tốc độ → preview ngay trên player.
-- File xuất ra sẽ giữ đúng tốc độ đó, **không bị méo cao độ** (dùng kỹ thuật time-stretch giữ pitch).
+Văn bản có `%`, `$`, `°C`, `m²`, tên thương hiệu…? Bấm **Chỉnh phát âm** trước khi tạo: app hỏi cách đọc từng ký tự/từ, bạn gõ phiên âm một lần (ví dụ `%` → `phần trăm`) và app nhớ theo từng ngôn ngữ đầu ra.
 
 </details>
 
 <details>
-<summary><b>Xuất file kèm SRT</b></summary>
+<summary><b>Tốc độ & phụ đề khi xuất</b></summary>
 
-- Trong khung *Cài đặt xuất file*, mặc định tích **"Xuất kèm phụ đề (.srt)"**.
-- Khi xuất gộp 1 file, app tự tạo `tên.srt` cùng thư mục với `tên.wav`.
-- Mốc thời gian trong SRT phản ánh độ dài thực tế của từng câu (đã bao gồm hiệu chỉnh tốc độ).
+- **Tốc độ đọc** nằm trong *Cài đặt nâng cao*; thanh **Tốc độ** trên trình phát cho nghe thử nhanh/chậm và file xuất giữ đúng tốc độ đó, không méo cao độ.
+- **Xuất kèm phụ đề (.srt)** tạo file `.srt` cùng tên cạnh file âm thanh, mốc thời gian lấy từ độ dài thực của từng câu sau khi chỉnh tốc độ.
+- **Khớp thời lượng phụ đề**: khi kịch bản nhập từ `.srt`, mỗi câu được đọc nhanh lại (tối đa 1.8×) để vừa ô phụ đề — không bao giờ kéo chậm.
+
+</details>
+
+<details>
+<summary><b>Tự động giải phóng bộ nhớ</b></summary>
+
+Để app không dùng một lúc (mặc định 5 phút), mô hình AI tự được dỡ khỏi VRAM/RAM cho máy nhẹ; lần thao tác kế tiếp app nạp lại. Chỉnh thời gian hoặc tắt hẳn trong **Quản lý Model → Tự động giải phóng VRAM**.
+
+</details>
 
 ---
-
-</details>
 
 ## Yêu cầu hệ thống
 
 |   | Tối thiểu | Khuyến nghị |
 |---|---|---|
-| **Hệ điều hành** | Windows 10 (64-bit), macOS 12 Monterey | Windows 11, macOS 13 trở lên |
+| **Hệ điều hành** | Windows 10 (64-bit), macOS 12 trên Apple Silicon | Windows 11, macOS 13 trở lên |
 | **RAM** | 8 GB | 16 GB trở lên |
-| **VRAM (GPU)** | 4 GB (tự chuyển TTS sang CPU khi thiếu) | 8 GB trở lên (NVIDIA RTX 3060+) |
 | **Ổ cứng** | 10 GB trống (mô hình + cache) | 20 GB trở lên, SSD |
-| **GPU** | Không bắt buộc — CPU vẫn chạy được | NVIDIA CUDA · Apple Silicon (Metal) |
+| **GPU** | Không bắt buộc — CPU vẫn chạy được | NVIDIA RTX 20-series trở lên, 8 GB VRAM · Mac dùng Metal |
+| **Mạng** | Cần Internet để đăng nhập/kiểm tra bản quyền và tải mô hình | |
 
-> 💡 **Mẹo:** Với card đồ hoạ ≤ 8 GB VRAM, ứng dụng tự động chuyển phần tổng hợp giọng nói (TTS) sang CPU trong lúc nhận dạng — không cần chỉnh cấu hình. Máy không có GPU rời vẫn chạy được toàn bộ pipeline trên CPU (chỉ chậm hơn).
-
-### Lưu ý theo nền tảng
-
-**Windows x64**
-- **Card đồ hoạ NVIDIA** đời **RTX 20-series trở lên** (compute capability ≥ 7.0 — RTX 20/30/40/50, Titan V, Tesla V100…). Các card cũ hơn như GTX 10-series (GTX 1060/1070/1080) **không chạy được phần tăng tốc**; ứng dụng sẽ tự phát hiện và chuyển sang CPU.
-- Driver NVIDIA mới hỗ trợ CUDA 12.8.
-
-**macOS**
-- Chỉ hỗ trợ **Apple Silicon** (M1/M2/M3/M4…) — dùng công nghệ tăng tốc Metal của Apple. Bản Intel Mac không được hỗ trợ.
-
-> Máy không có GPU tương thích sẽ **tự động chạy bằng CPU** đa nhân (ứng dụng đã tối ưu số luồng theo số nhân thật). Chậm hơn GPU khoảng 5–10 lần nhưng vẫn dùng được cho voice-over ngắn.
+- **Windows:** tăng tốc GPU cần card NVIDIA đời **RTX 20-series trở lên** (compute capability ≥ 7.0) và driver hỗ trợ CUDA 12.8. Card cũ hơn như GTX 10-series được tự phát hiện và chạy bằng CPU.
+- **macOS:** chỉ hỗ trợ **Apple Silicon** (M1/M2/M3/M4…), tăng tốc bằng Metal.
+- Chạy bằng CPU chậm hơn GPU khoảng 5–10 lần nhưng vẫn dùng được cho voice-over ngắn.
 
 ---
+
+## Nơi lưu dữ liệu
+
+| Gì | Windows | macOS |
+|---|---|---|
+| Âm thanh xuất ra (mặc định) | `output\` trong thư mục bạn giải nén app | `~/Documents/G-Labs Voice Studio/output` |
+| Cài đặt, phiên đăng nhập | `%APPDATA%\G-Labs Voice Studio` | `~/Library/Application Support/G-Labs Voice Studio` |
+| Kho giọng của bạn | `%APPDATA%\G-Labs Voice Studio\voice_studio\voices` | `~/Library/Application Support/G-Labs Voice Studio/voice_studio/voices` |
+| Mô hình AI | `%APPDATA%\G-Labs Voice Studio\voice_studio\model` (hoặc thư mục bạn chọn) | `~/Library/Application Support/G-Labs Voice Studio/voice_studio/model` (hoặc thư mục bạn chọn) |
+| Hàng chờ tạo | `%APPDATA%\G-Labs Voice Studio\voice_studio\queue` | `~/Library/Application Support/G-Labs Voice Studio/voice_studio/queue` |
+
+Muốn chuyển kho giọng sang máy khác, dùng **sao lưu/phục hồi `.vcp`** trong khung Kho giọng.
+
+---
+
+## Khắc phục sự cố
+
+**Mở lần đầu rất lâu, màn hình chờ đứng yên** — Windows/macOS đang quét bảo mật lần đầu; chờ 30–60 giây, đừng tắt. Các lần sau nhanh hơn.
+
+**Windows chặn ở "Windows protected your PC"** — bấm **More info → Run anyway**. App chưa ký chứng chỉ của Microsoft, không phải virus.
+
+**macOS báo ứng dụng bị hỏng / không mở được** — app chưa được Apple chứng thực. Chuột phải → **Open** ở lần đầu, hoặc chạy `xattr -dr com.apple.quarantine "/Applications/G-Labs Voice Studio.app"`.
+
+**Thông báo "Đã chuyển sang chạy bằng CPU"** — card đồ hoạ không tương thích (ví dụ GTX 10-series). Mọi tính năng vẫn chạy, chỉ chậm hơn; muốn nhanh cần NVIDIA RTX 20-series trở lên hoặc Mac Apple Silicon.
+
+**Mỗi lần chỉ tạo được 1 dòng** — bạn đang ở bản dùng thử. Mua gói Studio để tạo không giới hạn dòng.
+
+**Bị đăng xuất, báo tài khoản đăng nhập ở thiết bị khác** — một tài khoản chỉ chạy một máy tại một thời điểm; đăng nhập lại trên máy bạn muốn dùng.
+
+**Giọng sao chép đọc sai lời / lạc giọng** — *Văn bản mẫu* phải khớp chính xác lời trong đoạn mẫu; chọn đoạn mẫu rõ, ít tạp âm.
+
+**Ký tự đặc biệt bị đọc sai (`100%`, `25°C`…)** — thêm cách đọc trong **Chỉnh phát âm**.
+
+**Ổ C bị đầy vì mô hình** — đổi thư mục lưu model trong **Quản lý Model**, rồi chép thư mục model cũ sang hoặc để app tải lại.
+
+**Tab Dịch phụ đề không có model để chọn** — cài và đăng nhập một nhà cung cấp LLM (9Router, Claude CLI, Antigravity, Codex) theo nút **Hướng dẫn**, rồi bấm **Làm mới danh sách**.
+
+**Cần xem lỗi chi tiết** — bấm nút **Log Chi Tiết** ở thanh bên.
+
+---
+
+📖 [Trang giới thiệu](https://duckspace.net/voice-studio/) · [Hướng dẫn](https://duckmartians.info/voice/guide/) · [Nhật ký thay đổi](CHANGELOG.md) · [Discord](https://discord.gg/munMZEBMw5)
 
 © 2026 Duck Martians AI Labs. Tất cả các quyền được bảo lưu.

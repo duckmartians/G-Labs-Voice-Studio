@@ -1,8 +1,8 @@
-# G-Labs Voice Studio — Hướng dẫn tích hợp Webhook API
+# G-Labs Voice Studio - Hướng dẫn tích hợp Webhook API
 
 > Đối tượng đọc: lập trình viên, người tích hợp kỹ thuật, và AI agent.
 > Mục tiêu: cung cấp đầy đủ mọi thứ cần để tích hợp đúng Webhook REST API của Voice
-> Studio — endpoint, xác thực, schema request/response, voice preset, tham số, xử lý
+> Studio - endpoint, xác thực, schema request/response, voice preset, tham số, xử lý
 > lỗi, và quy trình bất đồng bộ (gửi → hỏi trạng thái → tải về).
 
 Tài liệu này mô tả API do tab **Webhook** của ứng dụng desktop **G-Labs Voice Studio**
@@ -11,23 +11,23 @@ phép các công cụ bên ngoài (n8n, Make.com, Zapier, script tự viết, AI
 giọng nói từ văn bản bằng các giọng bạn đã lưu trong **Voice Bank** của app.
 
 > ⚠️ Đây là API **giọng nói/TTS**. Nó **khác** với webhook của G-Labs *Automation*
-> (ảnh/video) — endpoint, trường body, và port mặc định đều khác.
+> (ảnh/video) - endpoint, trường body, và port mặc định đều khác.
 
 ---
 
 ## 1. Tổng quan & khái niệm chính
 
 - **Mặc định chỉ máy này gọi được.** API chạy ở `http://<ip>:<port>`, mặc định bind vào
-  `127.0.0.1` (loopback) — **không** máy nào khác gọi được. Tích hợp của bạn nên chạy
+  `127.0.0.1` (loopback) - **không** máy nào khác gọi được. Tích hợp của bạn nên chạy
   **trên cùng máy**.
 - **Muốn máy khác gọi vào:** đổi ô **IP** trong tab Webhook sang `0.0.0.0` (nghe trên
-  mọi card mạng) hoặc một IP LAN cụ thể. ⚠️ Khi đó **API key đi qua HTTP không mã hoá** —
+  mọi card mạng) hoặc một IP LAN cụ thể. ⚠️ Khi đó **API key đi qua HTTP không mã hoá** -
   chỉ làm trong mạng nội bộ tin cậy, còn ra Internet thì hãy đặt sau reverse proxy có TLS.
 - **Port mặc định:** `8766` (đổi được trong tab Webhook).
 - **Bạn phải bật máy chủ.** Mở app → tab **Webhook** → **Khởi động**. Hàng điều khiển có
   ô **IP**, ô **Cổng**, ô **URL** đầy đủ kèm nút **Sao chép**, và ô tích **Tự động khởi
   động server khi mở app** (tick vào là chạy ngay). Trong lúc server chạy, ô IP và Cổng
-  bị khoá — muốn đổi thì dừng server trước.
+  bị khoá - muốn đổi thì dừng server trước.
 - **API key** cũng nằm ở tab này (hiện dạng che, có nút Sao chép và nút Tạo khoá mới).
 - **Phải lưu giọng trước.** Việc tạo luôn dùng một **`preset_id`** trỏ tới giọng đã
   lưu trong **Voice Bank** của app. Liệt kê bằng `GET /api/voices`; tạo giọng trong
@@ -38,9 +38,9 @@ giọng nói từ văn bản bằng các giọng bạn đã lưu trong **Voice B
   2. `GET /api/status/{task_id}` lặp lại tới khi `status` là `completed` hoặc `failed`.
   3. Khi `completed`, tải audio từ URL trong `results`.
 - **Nhận song song, chạy tuần tự.** Số request được nhận và báo `running` ngay cùng lúc
-  bằng đúng **Số câu đồng thời** đang đặt trên giao diện (kẹp trong khoảng 1–10); quá số
+  bằng đúng **Số câu đồng thời** đang đặt trên giao diện (kẹp trong khoảng 1-10); quá số
   đó thì phải chờ. Nhưng phần suy luận vẫn đi qua **một** model TTS dùng chung, khoá bằng
-  mutex — **tổng thời gian bằng chạy tuần tự**, gửi nhiều hơn không nhanh hơn.
+  mutex - **tổng thời gian bằng chạy tuần tự**, gửi nhiều hơn không nhanh hơn.
 - **Thứ tự hoàn thành KHÔNG đảm bảo.** Khi có nhiều job cùng lúc, thứ tự tỉnh dậy của
   mutex là không xác định, nên job gửi trước chưa chắc xong trước. **Luôn ghép kết quả
   theo `task_id`**, đừng dựa vào thứ tự.
@@ -64,7 +64,7 @@ Authorization: Bearer <api-key-của-bạn>
 ```
 
 - Key được **tự sinh khi mở app lần đầu** và hiển thị trong tab **Webhook**.
-- **Nếu người vận hành chưa đặt key nào, máy chủ ở chế độ mở** (không xác thực) — nhưng
+- **Nếu người vận hành chưa đặt key nào, máy chủ ở chế độ mở** (không xác thực) - nhưng
   mặc định là đã có key. Hãy coi key là bắt buộc.
 - Key sai/thiếu (khi đã cấu hình) → `401 {"error": "Invalid or missing API key"}`.
 
@@ -90,7 +90,7 @@ Dấu `/` ở cuối được chấp nhận (vd `/api/health/`).
 
 ## 4. Quy trình bất đồng bộ (từng bước)
 
-### Bước 1 — Tìm giọng
+### Bước 1 - Tìm giọng
 
 `GET /api/voices` trả về các preset bạn có thể dùng làm `preset_id`:
 
@@ -103,10 +103,10 @@ Dấu `/` ở cuối được chấp nhận (vd `/api/health/`).
 }
 ```
 
-> Nếu `count` là `0`, chưa có giọng nào — hãy tạo một giọng trong app (Voice Bank)
+> Nếu `count` là `0`, chưa có giọng nào - hãy tạo một giọng trong app (Voice Bank)
 > trước khi gọi `/api/voice/design`.
 
-### Bước 2 — Gửi yêu cầu
+### Bước 2 - Gửi yêu cầu
 
 `POST /api/voice/design` kèm JSON body (xem §5). Phản hồi là **HTTP 202**:
 
@@ -122,7 +122,7 @@ Dấu `/` ở cuối được chấp nhận (vd `/api/health/`).
 > `task_id` là chuỗi hex 12 ký tự. Máy chủ kiểm tra JSON ngay lập tức, nên body sai
 > định dạng sẽ trả `400` ngay thay vì thành task `failed` sau đó.
 
-### Bước 3 — Hỏi trạng thái
+### Bước 3 - Hỏi trạng thái
 
 `GET /api/status/{task_id}`. Các giá trị `status`: `pending` → `running` →
 `completed` | `failed`.
@@ -155,11 +155,11 @@ Dấu `/` ở cuối được chấp nhận (vd `/api/health/`).
 }
 ```
 
-> Khoảng thời gian hỏi đề xuất: mỗi 2–4 giây. Thời gian tạo tỉ lệ với độ dài `script`
+> Khoảng thời gian hỏi đề xuất: mỗi 2-4 giây. Thời gian tạo tỉ lệ với độ dài `script`
 > và `num_step`. Vì model dùng chung và xử lý tuần tự, job đang chờ còn phải đợi các
 > job trước hoàn tất.
 
-### Bước 4 — Tải audio
+### Bước 4 - Tải audio
 
 `results` là mảng có **một** URL: `http://127.0.0.1:<port>/api/files/<tên-đã-url-encode>`.
 `GET` URL đó (không cần API key) để tải dữ liệu audio thô. `Content-Type` đặt theo phần
@@ -168,14 +168,14 @@ mở rộng (`audio/wav` hoặc `audio/mpeg`). File lưu nội bộ trên máy c
 
 ---
 
-## 5. Body của request — `POST /api/voice/design`
+## 5. Body của request - `POST /api/voice/design`
 
 JSON body. **`script` và `preset_id` đều bắt buộc.**
 
 | Trường | Kiểu | Bắt buộc | Mặc định | Ghi chú |
 |--------|------|:--------:|----------|---------|
-| `script` | string | ✅ | — | Văn bản cần đọc. Văn bản dài được tự tách câu; đầu ra là một file audio liền mạch (các câu nối nhau, chèn khoảng lặng ~0.3 giây). |
-| `preset_id` | string | ✅ | — | Một id giọng từ `GET /api/voices` (đã lưu trong Voice Bank). id không tồn tại → task thất bại. |
+| `script` | string | ✅ | - | Văn bản cần đọc. Văn bản dài được tự tách câu; đầu ra là một file audio liền mạch (các câu nối nhau, chèn khoảng lặng ~0.3 giây). |
+| `preset_id` | string | ✅ | - | Một id giọng từ `GET /api/voices` (đã lưu trong Voice Bank). id không tồn tại → task thất bại. |
 | `language` | string | ❌ | `Auto` | `Auto` = tự nhận diện, hoặc tên ngôn ngữ (vd `"english"`, `"vietnamese"`). Model hỗ trợ 600+ ngôn ngữ. |
 | `speed` | number | ❌ | `1.0` | Hệ số tốc độ đọc. `>1.0` nhanh hơn, `<1.0` chậm hơn. |
 | `output_format` | string | ❌ | `wav` | `"wav"` (PCM 16-bit) hoặc `"mp3"` (192 kbps). Giá trị khác → `wav`. |
@@ -193,9 +193,9 @@ JSON body. **`script` và `preset_id` đều bắt buộc.**
 ```
 
 Ghi chú:
-- `script` bắt buộc và được trim — `script` rỗng/chỉ-khoảng-trắng làm task thất bại với
+- `script` bắt buộc và được trim - `script` rỗng/chỉ-khoảng-trắng làm task thất bại với
   `` `script` is required ``.
-- `preset_id` bắt buộc — thiếu/rỗng sẽ thất bại kèm thông điệp chỉ tới `GET /api/voices`.
+- `preset_id` bắt buộc - thiếu/rỗng sẽ thất bại kèm thông điệp chỉ tới `GET /api/voices`.
 - `num_step` và `guidance_scale` là điều khiển chất lượng nâng cao; cứ để mặc định trừ
   khi bạn thực sự cần tinh chỉnh.
 - Đầu ra **luôn là một file audio** mỗi request.
@@ -285,12 +285,12 @@ bạn không cần poll để phát hiện.
 ## 9. Ràng buộc & lưu ý
 
 - **Mặc định chỉ localhost.** Chạy tích hợp trên cùng máy. Cần máy khác gọi vào thì đổi ô
-  **IP** sang `0.0.0.0` / IP LAN — nhớ là API key sẽ đi qua HTTP không mã hoá.
+  **IP** sang `0.0.0.0` / IP LAN - nhớ là API key sẽ đi qua HTTP không mã hoá.
 - **Tạo tuần tự.** Một lần tạo tại một thời điểm (model TTS dùng chung). Gửi nhiều job
-  thì cứ gửi — chúng xếp hàng — nhưng đừng kỳ vọng nhanh hơn nhờ song song, và **đừng dựa
+  thì cứ gửi - chúng xếp hàng - nhưng đừng kỳ vọng nhanh hơn nhờ song song, và **đừng dựa
   vào thứ tự hoàn thành**: hãy ghép kết quả theo `task_id`.
 - **Cần Voice Bank.** Phải có ít nhất một giọng đã lưu; `preset_id` là bắt buộc. Webhook
-  này **không** có trường "thiết kế giọng từ thuộc tính văn bản" — nó luôn nhân bản một
+  này **không** có trường "thiết kế giọng từ thuộc tính văn bản" - nó luôn nhân bản một
   preset đã lưu.
 - **Nạp model ở lần gọi đầu.** Request đầu sau khi mở app có thể lâu hơn (nạp/tải model)
   và có thể thất bại nếu không có model.
@@ -341,7 +341,7 @@ H    = {"X-API-Key": KEY, "Content-Type": "application/json"}
 # 1) Chọn giọng
 voices = requests.get(f"{BASE}/api/voices", headers=H, timeout=30).json()["voices"]
 if not voices:
-    raise SystemExit("Chưa có giọng nào — hãy tạo giọng trong Voice Bank của Voice Studio trước.")
+    raise SystemExit("Chưa có giọng nào - hãy tạo giọng trong Voice Bank của Voice Studio trước.")
 preset_id = next((v["id"] for v in voices if v.get("is_favorite")), voices[0]["id"])
 
 # 2) Gửi
@@ -408,7 +408,7 @@ console.log(url);
 3. `GET /api/voices` → chọn một `preset_id`.
 4. `POST /api/voice/design` với `{ preset_id, script, ... }` (cả `script` và `preset_id` bắt buộc).
 5. Đọc `task_id` từ response `202`.
-6. Hỏi `GET /api/status/{task_id}` mỗi 2–4 giây tới khi `completed` hoặc `failed`.
+6. Hỏi `GET /api/status/{task_id}` mỗi 2-4 giây tới khi `completed` hoặc `failed`.
 7. Khi `completed`: `GET` `results[0]` để tải file audio.
 8. Khi `failed`: đọc chuỗi `error` (vd preset không tồn tại, model chưa nạp).
 9. Nhớ: việc tạo là **tuần tự** (lần lượt từng cái), và task chỉ tồn tại trong phiên

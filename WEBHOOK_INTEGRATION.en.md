@@ -1,8 +1,8 @@
-# G-Labs Voice Studio — Webhook API Integration Guide
+# G-Labs Voice Studio - Webhook API Integration Guide
 
 > Audience: developers, technical integrators, and AI agents.
 > Goal: everything needed to integrate the local Voice Studio Webhook REST API
-> correctly — endpoints, auth, request/response schemas, voice presets,
+> correctly - endpoints, auth, request/response schemas, voice presets,
 > parameters, error handling, and the async (submit → poll → download) workflow.
 
 This document describes the API exposed by the **Webhook** tab of the **G-Labs
@@ -11,24 +11,24 @@ It lets external tools (n8n, Make.com, Zapier, custom scripts, AI agents) genera
 speech audio from text using voices you saved in the app's **Voice Bank**.
 
 > ⚠️ This is a **voice/TTS** API. It is different from the G-Labs *Automation*
-> (image/video) webhook — endpoints, body fields, and default port differ.
+> (image/video) webhook - endpoints, body fields, and default port differ.
 
 ---
 
 ## 1. Overview & key concepts
 
 - **This machine only, by default.** The API runs on `http://<ip>:<port>` and binds to
-  `127.0.0.1` (loopback) out of the box — **no** other machine can reach it. Your
+  `127.0.0.1` (loopback) out of the box - **no** other machine can reach it. Your
   integration should run on the same machine.
 - **To let other machines call in:** change the **IP** box in the Webhook tab to
   `0.0.0.0` (listen on every interface) or a specific LAN IP. ⚠️ The **API key then
-  travels over plain, unencrypted HTTP** — only do this on a trusted local network; put
+  travels over plain, unencrypted HTTP** - only do this on a trusted local network; put
   it behind a TLS reverse proxy before exposing it to the internet.
 - **Default port:** `8766` (configurable in the Webhook tab).
 - **You must start the server.** Open the app → **Webhook** tab → **Start**. The control
   row has an **IP** box, a **Port** box, a full **URL** box with a **Copy** button, and an
   **Auto-start server when app launches** checkbox (ticking it starts the server right
-  away). While the server runs, IP and Port are locked — stop it first to change them.
+  away). While the server runs, IP and Port are locked - stop it first to change them.
 - **The API key** lives on the same tab (shown masked, with Copy and Generate buttons).
 - **You must save voices first.** Generation always uses a **`preset_id`** that
   points to a voice saved in the app's **Voice Bank**. List them with
@@ -39,13 +39,13 @@ speech audio from text using voices you saved in the app's **Voice Bank**.
   2. `GET /api/status/{task_id}` repeatedly until `status` is `completed` or `failed`.
   3. On `completed`, download the audio from the returned `results` URL.
 - **Accepted in parallel, generated one at a time.** As many requests as the
-  **Concurrent lines** setting in the UI (clamped to 1–10) are accepted and report
+  **Concurrent lines** setting in the UI (clamped to 1-10) are accepted and report
   `running` immediately; beyond that they wait. Inference itself still goes through a
-  single shared TTS model guarded by a mutex — **total wall time equals sequential**, so
+  single shared TTS model guarded by a mutex - **total wall time equals sequential**, so
   submitting more does not make it faster.
 - **Completion order is NOT guaranteed.** With several jobs in flight, mutex wakeup order
   is unspecified, so the first job submitted may not finish first. **Always match results
-  by `task_id`** — never rely on ordering.
+  by `task_id`** - never rely on ordering.
 - **First request may be slow.** The first job after launch lazily loads (and may
   download) the TTS model. If the model can't be loaded (no model / cancelled
   download), queued tasks `fail` with a clear message.
@@ -66,7 +66,7 @@ Authorization: Bearer <your-api-key>
 ```
 
 - A key is **auto-generated on first launch** and shown in the **Webhook** tab.
-- **If the operator has not set any key, the server is open** (no auth) — but the
+- **If the operator has not set any key, the server is open** (no auth) - but the
   default is that a key exists. Treat the key as required.
 - Wrong/missing key (when one is configured) → `401 {"error": "Invalid or missing API key"}`.
 
@@ -92,7 +92,7 @@ Trailing slashes are tolerated (e.g. `/api/health/`).
 
 ## 4. The async workflow (step by step)
 
-### Step 1 — Discover voices
+### Step 1 - Discover voices
 
 `GET /api/voices` returns the presets you can use as `preset_id`:
 
@@ -105,10 +105,10 @@ Trailing slashes are tolerated (e.g. `/api/health/`).
 }
 ```
 
-> If `count` is `0`, no voices are saved yet — create one in the Voice Studio app
+> If `count` is `0`, no voices are saved yet - create one in the Voice Studio app
 > (Voice Bank) before calling `/api/voice/design`.
 
-### Step 2 — Submit
+### Step 2 - Submit
 
 `POST /api/voice/design` with a JSON body (see §5). Response is **HTTP 202**:
 
@@ -124,7 +124,7 @@ Trailing slashes are tolerated (e.g. `/api/health/`).
 > `task_id` is a 12-char hex string. The server validates JSON synchronously, so a
 > malformed body returns `400` immediately instead of a `failed` task later.
 
-### Step 3 — Poll status
+### Step 3 - Poll status
 
 `GET /api/status/{task_id}`. Possible `status`: `pending` → `running` →
 `completed` | `failed`.
@@ -157,11 +157,11 @@ Trailing slashes are tolerated (e.g. `/api/health/`).
 }
 ```
 
-> Suggested poll interval: every 2–4 seconds. Generation time scales with script
+> Suggested poll interval: every 2-4 seconds. Generation time scales with script
 > length and `num_step`. Because the model is shared and serialized, a queued job
 > also waits for earlier jobs to finish.
 
-### Step 4 — Download the audio
+### Step 4 - Download the audio
 
 `results` is an array with **one** URL:
 `http://127.0.0.1:<port>/api/files/<urlencoded-name>`. `GET` it (no API key needed)
@@ -171,14 +171,14 @@ the app (`output/webhook/`).
 
 ---
 
-## 5. Request body — `POST /api/voice/design`
+## 5. Request body - `POST /api/voice/design`
 
 JSON body. **`script` and `preset_id` are both required.**
 
 | Field | Type | Required | Default | Notes |
 |-------|------|:--------:|---------|-------|
-| `script` | string | ✅ | — | The text to speak. Long text is auto-split into sentences; the output is one continuous audio file (sentences joined with ~0.3 s gaps). |
-| `preset_id` | string | ✅ | — | A voice id from `GET /api/voices` (saved in the Voice Bank). Unknown id → task fails. |
+| `script` | string | ✅ | - | The text to speak. Long text is auto-split into sentences; the output is one continuous audio file (sentences joined with ~0.3 s gaps). |
+| `preset_id` | string | ✅ | - | A voice id from `GET /api/voices` (saved in the Voice Bank). Unknown id → task fails. |
 | `language` | string | ❌ | `Auto` | `Auto` = auto-detect, or a language name (e.g. `"english"`, `"vietnamese"`). The model supports 600+ languages. |
 | `speed` | number | ❌ | `1.0` | Speech speed factor. `>1.0` faster, `<1.0` slower. |
 | `output_format` | string | ❌ | `wav` | `"wav"` (PCM 16-bit) or `"mp3"` (192 kbps). Any other value → `wav`. |
@@ -196,9 +196,9 @@ JSON body. **`script` and `preset_id` are both required.**
 ```
 
 Notes:
-- `script` is required and trimmed — an empty/whitespace-only `script` fails the
+- `script` is required and trimmed - an empty/whitespace-only `script` fails the
   task with `` `script` is required ``.
-- `preset_id` is required — a missing/empty value fails with a message pointing you
+- `preset_id` is required - a missing/empty value fails with a message pointing you
   to `GET /api/voices`.
 - `num_step` and `guidance_scale` are advanced quality controls; leave them at the
   defaults unless you know you need to tune them.
@@ -290,13 +290,13 @@ HTTP-level validation errors (`400`) are returned synchronously at submit time
 ## 9. Constraints & gotchas
 
 - **Localhost by default.** Run your integration on the same machine. To let other
-  machines call in, change the **IP** box to `0.0.0.0` / a LAN IP — remember the API key
+  machines call in, change the **IP** box to `0.0.0.0` / a LAN IP - remember the API key
   then travels over unencrypted HTTP.
 - **Serialized generation.** One generation at a time (shared TTS model). Submitting
-  many jobs is fine — they queue — but don't expect parallel speedup, and **don't rely on
+  many jobs is fine - they queue - but don't expect parallel speedup, and **don't rely on
   completion order**: match results by `task_id`.
 - **Voice Bank required.** You must have at least one saved voice; `preset_id` is
-  mandatory. There is no "design from text attributes" field in this webhook — it
+  mandatory. There is no "design from text attributes" field in this webhook - it
   always clones a saved preset.
 - **First-call model load.** The first request after launch may take longer (model
   load / download) and can fail if no model is available.
@@ -348,7 +348,7 @@ H    = {"X-API-Key": KEY, "Content-Type": "application/json"}
 # 1) Pick a voice
 voices = requests.get(f"{BASE}/api/voices", headers=H, timeout=30).json()["voices"]
 if not voices:
-    raise SystemExit("No voices saved — create one in the Voice Studio Voice Bank first.")
+    raise SystemExit("No voices saved - create one in the Voice Studio Voice Bank first.")
 preset_id = next((v["id"] for v in voices if v.get("is_favorite")), voices[0]["id"])
 
 # 2) Submit
@@ -415,7 +415,7 @@ console.log(url);
 3. `GET /api/voices` → choose a `preset_id`.
 4. `POST /api/voice/design` with `{ preset_id, script, ... }` (both `script` and `preset_id` required).
 5. Read `task_id` from the `202` response.
-6. Poll `GET /api/status/{task_id}` every 2–4 s until `completed` or `failed`.
+6. Poll `GET /api/status/{task_id}` every 2-4 s until `completed` or `failed`.
 7. On `completed`: `GET` `results[0]` to download the audio file.
 8. On `failed`: read the `error` string (e.g. preset not found, model not loaded).
 9. Remember: generation is **serialized** (one at a time), and tasks live only in

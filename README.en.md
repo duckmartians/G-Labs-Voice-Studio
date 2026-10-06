@@ -117,13 +117,19 @@ Pages live in the left sidebar. The three voice pages (Voice Clone, Read Text, G
 
 ### 🔊 Voice Clone
 
+![Voice Clone](docs/screenshots/en/clone.webp)
+
 Click **Select...** to load a sample audio file (clear voice, little background noise), then **drag the highlighted box on the waveform** to select the exact 3–30 second region to use — on release the edges snap to the nearest silence; files longer than 5 minutes / 50 MB use their first 30 seconds. The *Sample text* is **required** and must match the words in the sample exactly (punctuation and spelling included); **✨ AI suggest** transcribes it for you, but check it before generating. When cloning finishes, the app invites you to preview and save the voice to the library in one click.
 
 ### 🎛️ Read Text
 
+![Read Text](docs/screenshots/en/tts.webp)
+
 Pick a voice from the library, or open **Voice Design** to create a new one by *Gender, Age, Pitch, Style, Accent*. Like a designed voice? Select its row in the table → **Save** it to the library for reuse. The **Smart merge** split mode joins short sentences into flowing lines up to a character cap while always breaking at a sentence end. The **Expression tags** button lets you look up tags and **Insert** them at the cursor.
 
 ### 💬 Group Dialogue
+
+![Group Dialogue](docs/screenshots/en/dialogue.webp)
 
 Write a multi-character script — great for podcasts, audio drama and interviews:
 
@@ -137,9 +143,13 @@ Put the character name in `< >` at the start of the line (the `:` is optional, n
 
 ### 📝 Extract Subtitles
 
+![Extract Subtitles](docs/screenshots/en/asr.webp)
+
 Choose an audio/video file (MP3, WAV, M4A, FLAC, MP4, MOV…), the spoken language and a recognition model (Tiny → Large v3, each showing the VRAM it needs), then run it. Subtitle lines are built from word timestamps and break at real pauses / sentence ends / a character cap; change the *max characters, max seconds, pause threshold* boxes and the table updates instantly, no re-transcription needed. Edit right in the table and export `.txt` or `.srt`.
 
 ### 🌐 Translate *(Studio plan)*
+
+![Translate](docs/screenshots/en/srt.webp)
 
 Translate subtitles into another language or proofread spelling and line breaks — **only the text changes; timings and line count stay the same**.
 
@@ -152,6 +162,8 @@ Translate subtitles into another language or proofread spelling and line breaks 
 
 ### 📚 Model Manager
 
+![Model Manager](docs/screenshots/en/model.webp)
+
 One row per model with its size and status: the AI voice model and the recognition sizes (Tiny, Base, Small, Turbo, Large v3). Download only what you need and change the **model folder** (for example to drive D to spare drive C — copy the old model folder across, or let the app download again). This is also where you set up the **LLM** provider for Translate and the **Auto-unload VRAM** timer.
 
 ### 🗒 Render queue *(Studio plan)*
@@ -159,6 +171,8 @@ One row per model with its size and status: the AI voice model and the recogniti
 Instead of generating one script and exporting by hand, click **Add to queue** to save the current script + voice + settings as a job with **its own name and output folder**. **Run queue** and the app works through them one by one, saving the files. Each job shows `X/N sentences` so you can see which one is missing lines due to errors; **Reload** brings a job back into its tab for fixing (failed lines are marked ❌). The queue survives closing and reopening the app.
 
 ### 🔗 Webhook API *(Studio plan)*
+
+![Webhook API](docs/screenshots/en/webhook.webp)
 
 A local REST server so n8n, Make, Zapier, Python/cURL or AI agents can generate voice automatically. Defaults to `127.0.0.1:8766` (this computer only), with an API key, a full **URL** box with a **Copy** button, an auto-start option and a live request log. Change the IP to `0.0.0.0` / a LAN IP to let other devices call it — the API key then travels over unencrypted HTTP. Full schema: [`docs/WEBHOOK_INTEGRATION.en.md`](docs/WEBHOOK_INTEGRATION.en.md).
 

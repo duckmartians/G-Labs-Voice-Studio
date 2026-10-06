@@ -117,13 +117,19 @@ As páginas ficam na barra lateral esquerda. As três páginas de voz (Clonar Vo
 
 ### 🔊 Clonar Voz
 
+![Clonar Voz](docs/screenshots/en/clone.webp)
+
 Clique em **Selecionar...** para carregar o áudio de amostra (voz clara, pouco ruído) e **arraste a caixa destacada na forma de onda** para escolher exatamente o trecho de 3–30 segundos — ao soltar, as bordas se ajustam ao silêncio mais próximo; arquivos com mais de 5 minutos / 50 MB usam os primeiros 30 segundos. O campo *Texto da amostra* é **obrigatório** e deve corresponder exatamente às palavras da amostra (pontuação e grafia incluídas); **✨ Sugerir com IA** transcreve para você, mas confira antes de gerar. Ao terminar a clonagem, o app convida você a ouvir e salvar a voz na biblioteca com um clique.
 
 ### 🎛️ Ler Texto
 
+![Ler Texto](docs/screenshots/en/tts.webp)
+
 Escolha uma voz da biblioteca ou abra **Design de Voz** para criar uma nova por *gênero, idade, tom, estilo, sotaque*. Gostou da voz criada? Selecione a linha na tabela → **Salvar** na biblioteca para reutilizar. O modo **Mesclagem inteligente** junta frases curtas em linhas fluidas até um limite de caracteres, sempre quebrando no fim de uma frase. O botão **Etiquetas de expressão** permite consultar tags e **inseri-las** no cursor.
 
 ### 💬 Diálogo em Grupo
+
+![Diálogo em Grupo](docs/screenshots/en/dialogue.webp)
 
 Escreva um roteiro com vários personagens — ótimo para podcasts, audiodramas e entrevistas:
 
@@ -137,9 +143,13 @@ Coloque o nome do personagem entre `< >` no início da linha (o `:` é opcional,
 
 ### 📝 Extrair Legendas
 
+![Extrair Legendas](docs/screenshots/en/asr.webp)
+
 Escolha um arquivo de áudio/vídeo (MP3, WAV, M4A, FLAC, MP4, MOV…), o idioma falado e um modelo de reconhecimento (Tiny → Large v3, cada um mostrando a VRAM necessária) e execute. As linhas de legenda são montadas a partir do tempo de cada palavra e quebram em pausas reais / fim de frase / limite de caracteres; altere os campos *máx. de caracteres, máx. de segundos, limiar de pausa* e a tabela se atualiza na hora, sem transcrever de novo. Edite direto na tabela e exporte `.txt` ou `.srt`.
 
 ### 🌐 Tradução *(Plano Studio)*
+
+![Tradução](docs/screenshots/en/srt.webp)
 
 Traduza legendas para outro idioma ou revise ortografia e quebras de linha — **só o texto muda; tempos e número de linhas ficam iguais**.
 
@@ -152,6 +162,8 @@ Traduza legendas para outro idioma ou revise ortografia e quebras de linha — *
 
 ### 📚 Gerenciar Modelos
 
+![Gerenciar Modelos](docs/screenshots/en/model.webp)
+
 Uma linha por modelo com tamanho e status: o modelo de voz de IA e os tamanhos de reconhecimento (Tiny, Base, Small, Turbo, Large v3). Baixe só o que precisar e mude a **pasta dos modelos** (por exemplo para o disco D, poupando o C — copie a pasta antiga de modelos ou deixe o app baixar de novo). Aqui também ficam o provedor **LLM** da tradução e o temporizador **Liberar VRAM automaticamente**.
 
 ### 🗒 Fila de renderização *(Plano Studio)*
@@ -159,6 +171,8 @@ Uma linha por modelo com tamanho e status: o modelo de voz de IA e os tamanhos d
 Em vez de gerar um roteiro e exportar à mão, clique em **Adicionar à fila** para salvar o roteiro + voz + configurações atuais como uma tarefa com **nome e pasta de saída próprios**. Clique em **Executar fila** e o app processa uma por uma, salvando os arquivos. Cada tarefa mostra `X/N frases` para você ver qual ficou faltando linhas por erro; **Recarregar** traz a tarefa de volta à aba para corrigir (linhas com falha marcadas com ❌). A fila sobrevive a fechar e reabrir o app.
 
 ### 🔗 Webhook API *(Plano Studio)*
+
+![Webhook API](docs/screenshots/en/webhook.webp)
 
 Um servidor REST local para que n8n, Make, Zapier, Python/cURL ou agentes de IA gerem voz automaticamente. Padrão `127.0.0.1:8766` (só este computador), com chave de API, campo **URL** completo com botão de copiar, opção de iniciar junto com o app e log de requisições ao vivo. Troque o IP para `0.0.0.0` / IP da rede local para outros dispositivos chamarem — a chave de API então trafega por HTTP sem criptografia. Esquema completo: [`docs/WEBHOOK_INTEGRATION.en.md`](docs/WEBHOOK_INTEGRATION.en.md).
 

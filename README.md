@@ -117,13 +117,19 @@ Các trang nằm ở thanh bên trái. Ba trang tạo giọng (Sao chép giọng
 
 ### 🔊 Sao chép giọng
 
+![Sao chép giọng](docs/screenshots/vi/clone.webp)
+
 Bấm **Chọn...** để nạp tệp âm thanh mẫu (giọng rõ, ít tạp âm), rồi **kéo khung sáng trên sóng âm** để chọn đúng đoạn 3–30 giây làm mẫu — thả tay là mép khung tự khớp vào khoảng lặng gần nhất; tệp dài quá 5 phút/50 MB thì app lấy 30 giây đầu. **Bắt buộc** nhập *Văn bản mẫu* khớp chính xác lời trong đoạn mẫu (đủ dấu câu, đúng chính tả); nút **✨ AI gợi ý** nhận dạng giúp bạn, nhưng vẫn cần dò lại. Tạo xong, app mời nghe thử và lưu giọng vào kho bằng một chạm.
 
 ### 🎛️ Đọc văn bản
 
+![Đọc văn bản](docs/screenshots/vi/tts.webp)
+
 Chọn một giọng đã có trong kho, hoặc mở **Thiết kế giọng** để tạo giọng mới theo *Giới tính, Độ tuổi, Cao độ, Phong cách, Khẩu âm*. Giọng thiết kế ưng ý thì chọn dòng trong bảng → **Lưu** vào kho để dùng lại. Kiểu tách câu **Gộp thông minh** gộp các câu ngắn thành dòng liền mạch tới trần ký tự nhưng luôn ngắt đúng điểm kết câu. Nút **Mẫu thẻ biểu cảm** cho tra và **Chèn** thẻ vào đúng vị trí con trỏ.
 
 ### 💬 Hội thoại nhóm
+
+![Hội thoại nhóm](docs/screenshots/vi/dialogue.webp)
 
 Viết kịch bản nhiều nhân vật — hợp với podcast, audio drama, phỏng vấn:
 
@@ -137,9 +143,13 @@ Tên nhân vật đặt trong `< >` ở đầu dòng (dấu `:` có thể bỏ, 
 
 ### 📝 Tách phụ đề
 
+![Tách phụ đề](docs/screenshots/vi/asr.webp)
+
 Chọn tệp âm thanh/video (MP3, WAV, M4A, FLAC, MP4, MOV…), chọn ngôn ngữ đang nói và model nhận dạng (Tiny → Large v3, mỗi bản ghi rõ VRAM cần dùng), rồi bấm chạy. Dòng phụ đề được dựng theo mốc thời gian từng từ, ngắt ở chỗ nghỉ hơi thật / hết câu / trần ký tự; ba ô *ký tự tối đa, giây tối đa, ngưỡng nghỉ* đổi số là bảng cập nhật ngay, không cần nhận dạng lại. Sửa trực tiếp trong bảng, xuất `.txt` hoặc `.srt`.
 
 ### 🌐 Dịch phụ đề *(gói Studio)*
+
+![Dịch phụ đề](docs/screenshots/vi/srt.webp)
 
 Dịch phụ đề sang ngôn ngữ khác hoặc biên tập lại chính tả, ngắt câu — **chỉ phần chữ thay đổi, mốc thời gian và số dòng giữ nguyên**.
 
@@ -152,6 +162,8 @@ Dịch phụ đề sang ngôn ngữ khác hoặc biên tập lại chính tả, 
 
 ### 📚 Quản lý Model
 
+![Quản lý Model](docs/screenshots/vi/model.webp)
+
 Mỗi model một hàng kèm dung lượng và trạng thái: mô hình giọng đọc AI và các bản nhận dạng (Tiny, Base, Small, Turbo, Large v3). Tải riêng bản nào cần, đổi được **thư mục lưu model** (ví dụ sang ổ D cho nhẹ ổ C — chép thư mục model cũ sang, hoặc để app tải lại). Ở đây cũng cài đặt nhà cung cấp **LLM** cho tab Dịch phụ đề và thời gian **Tự động giải phóng VRAM**.
 
 ### 🗒 Hàng chờ tạo *(gói Studio)*
@@ -159,6 +171,8 @@ Mỗi model một hàng kèm dung lượng và trạng thái: mô hình giọng 
 Thay vì tạo từng kịch bản rồi xuất tay, bấm **Thêm hàng chờ** để lưu kịch bản + giọng + cài đặt hiện tại thành một việc có **tên và thư mục lưu riêng**. **Chạy hàng chờ** — app tự làm lần lượt và tự lưu file. Mỗi việc hiện tiến độ `X/N câu` để biết việc nào thiếu câu do lỗi; **Mở lại** nạp việc về tab để sửa (câu lỗi được đánh dấu ❌). Đóng app mở lại vẫn còn nguyên hàng chờ.
 
 ### 🔗 Webhook API *(gói Studio)*
+
+![Webhook API](docs/screenshots/vi/webhook.webp)
 
 Máy chủ REST cục bộ để n8n, Make, Zapier, Python/cURL hoặc AI agent gọi tạo giọng tự động. Mặc định `127.0.0.1:8766` (chỉ máy này gọi được), có khoá API, ô **URL** đầy đủ kèm nút **Sao chép**, tuỳ chọn tự khởi động cùng app và log request trực tiếp. Đổi IP sang `0.0.0.0` / IP LAN để máy khác gọi vào — khi đó khoá API đi qua HTTP không mã hoá. Lược đồ đầy đủ: [`docs/WEBHOOK_INTEGRATION.vi.md`](docs/WEBHOOK_INTEGRATION.vi.md).
 

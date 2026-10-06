@@ -117,13 +117,19 @@ Sayfalar sol kenar çubuğundadır. Üç ses sayfası (Ses Klonu, Metin Okuma, G
 
 ### 🔊 Ses Klonu
 
+![Ses Klonu](docs/screenshots/en/clone.webp)
+
 Örnek ses dosyasını yüklemek için **Seç...**'a tıklayın (net ses, az gürültü), ardından kullanılacak 3–30 saniyelik bölümü tam olarak seçmek için **dalga formu üzerindeki vurgulu kutuyu sürükleyin** — bıraktığınızda kenarlar en yakın sessizliğe oturur; 5 dakika / 50 MB'tan uzun dosyalarda ilk 30 saniye kullanılır. *Örnek metin* **zorunludur** ve örnekteki sözcüklerle birebir eşleşmelidir (noktalama ve yazım dahil); **✨ Yapay zekâ önerisi** sizin için yazıya döker, ama üretmeden önce kontrol edin. Klonlama bitince uygulama sesi dinlemenizi ve tek tıkla kitaplığa kaydetmenizi önerir.
 
 ### 🎛️ Metin Okuma
 
+![Metin Okuma](docs/screenshots/en/tts.webp)
+
 Kitaplıktan bir ses seçin veya *cinsiyet, yaş, perde, stil, aksan*a göre yeni bir ses oluşturmak için **Ses Tasarımı** bölümünü açın. Tasarladığınız sesi beğendiniz mi? Tablodaki satırını seçin → yeniden kullanmak için kitaplığa **Kaydet**. **Akıllı birleştirme** modu kısa cümleleri bir karakter sınırına kadar akıcı satırlarda birleştirir, ama her zaman cümle sonunda böler. **İfade etiketleri** düğmesi etiketlere bakmanızı ve imlecin olduğu yere eklemenizi sağlar.
 
 ### 💬 Grup Diyaloğu
+
+![Grup Diyaloğu](docs/screenshots/en/dialogue.webp)
 
 Çok karakterli bir senaryo yazın — podcast, sesli drama ve röportajlar için ideal:
 
@@ -137,9 +143,13 @@ Karakter adını satır başında `< >` içine yazın (`:` isteğe bağlıdır, 
 
 ### 📝 Altyazı Çıkar
 
+![Altyazı Çıkar](docs/screenshots/en/asr.webp)
+
 Bir ses/video dosyası (MP3, WAV, M4A, FLAC, MP4, MOV…), konuşulan dili ve bir tanıma modeli seçin (Tiny → Large v3; her biri gereken VRAM'i gösterir) ve çalıştırın. Altyazı satırları kelime zaman damgalarından oluşturulur ve gerçek duraklamalarda / cümle sonlarında / karakter sınırında bölünür; *en fazla karakter, en fazla saniye, duraklama eşiği* kutularını değiştirdiğinizde tablo anında güncellenir, yeniden yazıya dökmek gerekmez. Doğrudan tabloda düzenleyin ve `.txt` veya `.srt` olarak dışa aktarın.
 
 ### 🌐 Çeviri *(Studio planı)*
+
+![Çeviri](docs/screenshots/en/srt.webp)
 
 Altyazıları başka bir dile çevirin veya yazım ve satır sonlarını düzeltin — **yalnızca metin değişir; zamanlamalar ve satır sayısı aynı kalır**.
 
@@ -152,6 +162,8 @@ Altyazıları başka bir dile çevirin veya yazım ve satır sonlarını düzelt
 
 ### 📚 Model Yönetimi
 
+![Model Yönetimi](docs/screenshots/en/model.webp)
+
 Her model için boyut ve durumuyla bir satır: yapay zekâ ses modeli ve tanıma boyutları (Tiny, Base, Small, Turbo, Large v3). Yalnızca ihtiyacınız olanı indirin ve **model klasörünü** değiştirin (ör. C sürücüsünü rahatlatmak için D'ye — eski model klasörünü kopyalayın veya uygulamanın yeniden indirmesine izin verin). Çeviri için **LLM** sağlayıcısı ve **VRAM'i otomatik serbest bırak** zamanlayıcısı da burada ayarlanır.
 
 ### 🗒 Oluşturma kuyruğu *(Studio planı)*
@@ -159,6 +171,8 @@ Her model için boyut ve durumuyla bir satır: yapay zekâ ses modeli ve tanıma
 Bir senaryoyu üretip elle dışa aktarmak yerine, mevcut senaryo + ses + ayarları **kendi adı ve çıkış klasörü** olan bir iş olarak kaydetmek için **Kuyruğa ekle**'a tıklayın. **Kuyruğu çalıştır** ile uygulama işleri tek tek yapar ve dosyaları kaydeder. Her iş `X/N cümle` gösterir; böylece hangisinde hata nedeniyle satır eksik kaldığını görürsünüz; **Yeniden yükle** işi düzeltmek için sekmesine geri getirir (başarısız satırlar ❌ ile işaretlenir). Kuyruk, uygulamayı kapatıp yeniden açtığınızda da korunur.
 
 ### 🔗 Webhook API *(Studio planı)*
+
+![Webhook API](docs/screenshots/en/webhook.webp)
 
 n8n, Make, Zapier, Python/cURL veya yapay zekâ ajanlarının otomatik olarak ses üretebilmesi için yerel bir REST sunucusu. Varsayılan `127.0.0.1:8766` (yalnızca bu bilgisayar); API anahtarı, kopyalama düğmeli tam **URL** kutusu, uygulamayla birlikte otomatik başlatma seçeneği ve canlı istek günlüğü vardır. Diğer cihazların çağırabilmesi için IP'yi `0.0.0.0` / yerel ağ IP'si yapın — bu durumda API anahtarı şifrelenmemiş HTTP üzerinden gider. Tam şema: [`docs/WEBHOOK_INTEGRATION.en.md`](docs/WEBHOOK_INTEGRATION.en.md).
 

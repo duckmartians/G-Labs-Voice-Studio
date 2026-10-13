@@ -16,7 +16,8 @@
 
 <p align="center">
   <a href="https://drive.google.com/drive/u/0/folders/1BOH-3lF_rGu8QU4b07pt203a-WdOAb-G"><img alt="Tải về cho Windows" src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"></a>&nbsp;
-  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="Tải về cho macOS (Apple Silicon)" src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="Tải về cho macOS (Apple Silicon)" src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>&nbsp;
+  <a href="https://www.youtube.com/watch?v=3J8GdUEfFlI"><img alt="Video hướng dẫn trên YouTube" src="https://img.shields.io/badge/YouTube-Video%20h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
 </p>
 
 ---
@@ -39,8 +40,8 @@ Bản cài được phát hành qua thư mục Google Drive chính thức:
 <details open>
 <summary><b>🪟 Trên Windows</b></summary>
 
-1. Tải tệp `.zip` bản Windows (ví dụ `G-Labs-Voice-Studio-v2.0.2-win.zip`) và **giải nén** ra một thư mục bất kỳ - ổ đĩa cần còn trống ít nhất 10 GB (mô hình AI tải sau sẽ chiếm vài GB).
-2. Mở thư mục vừa giải nén và chạy **`G-Labs-Voice-Studio.exe`** (các tệp còn lại nằm trong thư mục con `data`, đừng di chuyển chúng).
+1. Tải tệp `.zip` bản Windows (ví dụ `G-Labs-Voice-Studio-v2.0.3-win.zip`) và **giải nén** ra một thư mục bất kỳ - ổ đĩa cần còn trống ít nhất 10 GB (mô hình AI tải sau sẽ chiếm vài GB).
+2. Mở thư mục vừa giải nén và chạy **`G-Labs-Voice-Studio.exe`** (exe nằm cùng các tệp đi kèm trong thư mục này, đừng tách riêng hay xoá chúng).
 3. Nếu hiện bảng **"Windows protected your PC"** (SmartScreen): bấm **More info** → **Run anyway**. *(App chưa ký chứng chỉ của Microsoft nên bị cảnh báo - không phải virus.)*
 4. **Tạo lối tắt:** chuột phải vào `G-Labs-Voice-Studio.exe` → **Send to** → **Desktop (create shortcut)** để lần sau mở nhanh.
 
@@ -96,12 +97,13 @@ Bản cài được phát hành qua thư mục Google Drive chính thức:
 
 - **Chạy trên máy bạn** - sau khi tải mô hình, tạo giọng và nhận dạng đều chạy cục bộ (GPU NVIDIA, Apple Metal hoặc CPU); âm thanh và văn bản không gửi lên máy chủ. Riêng tab Dịch phụ đề gửi nội dung phụ đề tới nhà cung cấp AI bạn chọn.
 - **Sao chép giọng** - từ một mẫu âm thanh 5-10 giây, đọc bất kỳ văn bản nào bằng đúng giọng đó.
-- **Thiết kế giọng** - tạo giọng mới theo giới tính, độ tuổi, cao độ, phong cách, khẩu âm; không cần tệp mẫu.
+- **Giọng ngẫu nhiên** - mô tả giọng mới theo giới tính, độ tuổi, cao độ (thêm khẩu âm khi đọc tiếng Anh); không cần tệp mẫu, ưng thì lưu vào kho.
 - **Hơn 600 ngôn ngữ đầu ra** - Việt, Anh, Trung, Nhật, Hàn, Pháp, Đức, Tây Ban Nha và nhiều ngôn ngữ khác.
 - **Hội thoại nhiều giọng** - kịch bản `<Tên>: lời thoại`, mỗi nhân vật một giọng và tốc độ riêng.
+- **Đổi giọng & lồng tiếng** - nạp video, nhận dạng lời hoặc lấy phụ đề đã dịch, đọc lại bằng giọng mới gọn trong khung thời gian gốc; xuất âm thanh hoặc video đã thay giọng, giữ nguyên nhạc nền gốc.
 - **Tách phụ đề** - nhận dạng lời nói từ MP3, WAV, M4A, FLAC, MP4, MOV…; xuất TXT hoặc SRT với mốc thời gian theo từng từ.
 - **Dịch phụ đề bằng AI** *(gói Studio)* - dịch hoặc biên tập `.srt`, `.vtt`, `.ass`, `.sbv`, `.txt`; mốc thời gian và số dòng giữ nguyên tuyệt đối.
-- **Kho giọng** - 30 giọng mẫu sẵn, lưu giọng tự tạo, ghim ⭐ yêu thích, sao lưu/phục hồi ra tệp `.vcp`.
+- **Kho giọng** - trang riêng: 30 giọng mẫu sẵn, lưu giọng tự tạo, nghe thử bằng câu tự gõ, ghim ⭐ yêu thích, sao lưu/phục hồi ra tệp `.vcp`.
 - **Tinh chỉnh âm thanh** - 6 chế độ xử lý, cân đều âm lượng, 13 thẻ biểu cảm, từ điển phát âm nhớ cách đọc `100%`, `25°C`, `m²`.
 - **Xuất linh hoạt** - WAV hoặc MP3, gộp 1 file hoặc mỗi câu 1 file, kèm `.srt`; tải riêng từng dòng bằng nút ⬇.
 - **Hàng chờ tạo** *(gói Studio)* - xếp nhiều kịch bản, app tự chạy lần lượt và tự lưu file.
@@ -113,19 +115,26 @@ Bản cài được phát hành qua thư mục Google Drive chính thức:
 
 ## Các trang
 
-Các trang nằm ở thanh bên trái. Ba trang tạo giọng (Sao chép giọng, Đọc văn bản, Hội thoại nhóm) có chung một nhịp: chọn **ngôn ngữ đầu ra** → dán văn bản hoặc **Nhập tệp** (`.txt`, `.srt`) → **Nhập vào bảng** (app tách câu theo **Kiểu tách câu** bạn chọn, có xem trước số dòng) → **Bắt đầu chạy** → nghe thử → **Xuất âm thanh**.
+Các trang nằm ở thanh bên trái, chia nhóm **Tạo giọng** (Đọc văn bản, Hội thoại nhóm, Đổi giọng) · **Phụ đề** (Tách, Dịch) · **Giọng** (Sao chép giọng, Kho giọng) · **Hệ thống** (Quản lý Model, Webhook API, Hàng chờ). Các trang tạo giọng có chung một nhịp: chọn **Ngôn ngữ đọc** trên thanh công cụ → dán văn bản vào **Văn bản gốc** hoặc **Nhập tệp** (`.txt`, `.srt`) → **Nhập vào bảng** (app tách câu theo kiểu bạn chọn, mặc định **Gộp thông minh**) → **Bắt đầu chạy** → nghe thử, sửa từng câu → **Xuất kết quả**.
 
 ### 🔊 Sao chép giọng
 
 ![Sao chép giọng](docs/screenshots/vi/clone.webp)
 
-Bấm **Chọn...** để nạp tệp âm thanh mẫu (giọng rõ, ít tạp âm), rồi **kéo khung sáng trên sóng âm** để chọn đúng đoạn 3-30 giây làm mẫu - thả tay là mép khung tự khớp vào khoảng lặng gần nhất; tệp dài quá 5 phút/50 MB thì app lấy 30 giây đầu. **Bắt buộc** nhập *Văn bản mẫu* khớp chính xác lời trong đoạn mẫu (đủ dấu câu, đúng chính tả); nút **✨ AI gợi ý** nhận dạng giúp bạn, nhưng vẫn cần dò lại. Tạo xong, app mời nghe thử và lưu giọng vào kho bằng một chạm.
+Bấm **Chọn...** để nạp tệp âm thanh mẫu, rồi kéo khung sáng trên sóng âm để chọn đoạn 3-30 giây (thả tay là mép tự khớp vào khoảng lặng) hoặc bấm **Tự chọn đoạn tốt nhất**.
+
+- **Mẫu âm thanh quyết định chất lượng:** bản sao học cả giọng lẫn tiếng ồn, tiếng vang và nhạc có trong mẫu. Chọn đoạn sạch nhất 5-15 giây; có nhạc nền thì bấm **Tách lời khỏi nhạc** trước.
+- **Văn bản mẫu phải khớp lời trong đoạn mẫu từng chữ** (đủ dấu câu, đúng chính tả). Nút **AI gợi ý** nhận dạng giúp bạn, nhưng hãy vừa nghe vừa đọc lại và sửa chỗ sai: lời mẫu sai thì giọng sao chép cũng sai.
+
+Gõ một câu thử, **Bắt đầu chạy**, nghe thử rồi đặt tên và **Lưu vào kho giọng** ở khung bên phải.
 
 ### 🎛️ Đọc văn bản
 
 ![Đọc văn bản](docs/screenshots/vi/tts.webp)
 
-Chọn một giọng đã có trong kho, hoặc mở **Thiết kế giọng** để tạo giọng mới theo *Giới tính, Độ tuổi, Cao độ, Phong cách, Khẩu âm*. Giọng thiết kế ưng ý thì chọn dòng trong bảng → **Lưu** vào kho để dùng lại. Kiểu tách câu **Gộp thông minh** gộp các câu ngắn thành dòng liền mạch tới trần ký tự nhưng luôn ngắt đúng điểm kết câu. Nút **Mẫu thẻ biểu cảm** cho tra và **Chèn** thẻ vào đúng vị trí con trỏ.
+Ở tab **Giọng** bên phải, chọn **Giọng có sẵn** trong kho, hoặc **Giọng ngẫu nhiên** để tạo giọng mới theo *Giới tính, Độ tuổi, Cao độ* (khẩu âm cho tiếng Anh nằm ở **Cài đặt → Chung**). Tạo lại một câu vẫn giữ đúng giọng vừa tạo; ưng thì **Lưu** vào kho để dùng lại.
+
+Bấm một câu để sửa chữ, thêm **khoảng nghỉ** trước câu hoặc **tạo lại** riêng câu đó; timeline bên dưới phát cả bài, kéo vạch phát để tua. **Từ điển** dạy app cách đọc ký tự như `25°C`, `100%` (lưu cho mọi lần sau); **Thẻ biểu cảm** chèn `[laughter]`, `[sigh]`… vào văn bản. Tốc độ đọc và 6 kiểu âm thanh nằm trong tab **Cài đặt**.
 
 ### 💬 Hội thoại nhóm
 
@@ -139,7 +148,17 @@ Viết kịch bản nhiều nhân vật - hợp với podcast, audio drama, ph�
 <Minh>: Hôm nay chúng ta sẽ nói về gì ạ?
 ```
 
-Tên nhân vật đặt trong `< >` ở đầu dòng (dấu `:` có thể bỏ, tên không phân biệt hoa thường). Bấm **Mẫu hội thoại chuẩn** để xem ví dụ, rồi **Phân tích hội thoại** - khung **Phân vai giọng đọc** mở ra để gán mỗi nhân vật một giọng trong kho và một thanh **Tốc độ** riêng (0.5× → 2×).
+Tên nhân vật đặt trong `< >` ở đầu dòng (dấu `:` có thể bỏ, tên không phân biệt hoa thường). Bấm **Mẫu hội thoại** để xem ví dụ, rồi **Phân tích hội thoại** - tab **Giọng** bên phải có một thẻ cho mỗi nhân vật để gán giọng trong kho và **Tốc độ** riêng (0.5× → 2×). Timeline hiện mỗi giọng một hàng; kéo câu sang hàng khác để đổi người đọc.
+
+### 🔁 Đổi giọng
+
+![Đổi giọng](docs/screenshots/vi/voicechange.webp)
+
+Nạp video hoặc âm thanh rồi bấm **Nhận dạng lời** - hoặc nhận phụ đề từ Tách phụ đề / Dịch phụ đề bằng nút **Sang Đổi giọng** (mang theo cả video gốc). Mỗi câu phụ đề thành một dòng gắn đúng mốc thời gian gốc; chọn giọng mới và ngôn ngữ đọc rồi **Bắt đầu chạy** - **Khớp thời lượng phụ đề** giữ mỗi câu gọn trong khung của nó.
+
+Màn xem cho nghe so sánh **Gốc / Giọng mới / Giọng mới + nền** (nhạc nền được tách khỏi giọng cũ bằng Demucs, tự tải khoảng 80 MB lần đầu). Xuất 6 kiểu: chỉ giọng mới, giọng mới + nhạc nền gốc, giọng mới + tiếng gốc nhỏ - dạng âm thanh hoặc ghép thẳng vào video.
+
+> **Lồng tiếng video sang ngôn ngữ khác:** Tách phụ đề → **Sang Dịch phụ đề** → dịch → **Sang Đổi giọng** → chọn giọng + ngôn ngữ đọc → Bắt đầu chạy → Xuất video.
 
 ### 📝 Tách phụ đề
 
@@ -160,11 +179,17 @@ Dịch phụ đề sang ngôn ngữ khác hoặc biên tập lại chính tả, 
 5. **Bảng nhất quán** chốt tên riêng, thuật ngữ và cách xưng hô cho cả file rồi gửi kèm mọi đoạn; sửa tay được, và có tuỳ chọn dừng cho bạn duyệt trước khi dịch.
 6. Kiểm lại cột **Kết quả** (dòng AI trả thiếu có dấu ⚠ và giữ chữ gốc), chọn **SRT / VTT / TXT** rồi **Xuất kết quả**.
 
+### 🗂️ Kho giọng
+
+![Kho giọng](docs/screenshots/vi/library.webp)
+
+Mọi giọng ở một chỗ: tìm theo tên / mô tả / thẻ, lọc **Tất cả / Của tôi / Có sẵn / Yêu thích**, bấm ⭐ để ghim. Chọn một giọng để xem chi tiết, nghe mẫu gốc (giọng có sẵn) hoặc gõ một câu để **nghe thử**; **Dùng ở Đọc văn bản** chuyển sang tab đó với giọng đã chọn sẵn. Xuất / nhập tệp `.vcp` để sao lưu hoặc chuyển giọng sang máy khác.
+
 ### 📚 Quản lý Model
 
 ![Quản lý Model](docs/screenshots/vi/model.webp)
 
-Mỗi model một hàng kèm dung lượng và trạng thái: mô hình giọng đọc AI và các bản nhận dạng (Tiny, Base, Small, Turbo, Large v3). Tải riêng bản nào cần, đổi được **thư mục lưu model** (ví dụ sang ổ D cho nhẹ ổ C - chép thư mục model cũ sang, hoặc để app tải lại). Ở đây cũng cài đặt nhà cung cấp **LLM** cho tab Dịch phụ đề và thời gian **Tự động giải phóng VRAM**.
+Chia 3 mục: **Model AI**, **LLM dịch phụ đề** và **Phần cứng** (chọn GPU / CPU, tự giải phóng VRAM). Ở mục Model AI, mỗi model một hàng kèm dung lượng và trạng thái: mô hình giọng đọc AI và các bản nhận dạng (Tiny, Base, Small, Turbo, Large v3). Tải riêng bản nào cần, đổi được **thư mục lưu model** (ví dụ sang ổ D cho nhẹ ổ C - chép thư mục model cũ sang, hoặc để app tải lại). Ở đây cũng cài đặt nhà cung cấp **LLM** cho tab Dịch phụ đề và thời gian **Tự động giải phóng VRAM**.
 
 ### 🗒 Hàng chờ tạo *(gói Studio)*
 
@@ -244,14 +269,13 @@ Văn bản có `%`, `$`, `°C`, `m²`, tên thương hiệu…? Bấm **Chỉnh 
 |   | Tối thiểu | Khuyến nghị |
 |---|---|---|
 | **Hệ điều hành** | Windows 10 (64-bit), macOS 12 trên Apple Silicon | Windows 11, macOS 13 trở lên |
-| **RAM** | 8 GB | 16 GB trở lên |
+| **Windows** | GPU NVIDIA có CUDA, từ **RTX 2060**; RAM 8 GB | **RTX 3060 12 GB VRAM** trở lên; RAM 16 GB |
+| **Mac** | Apple Silicon **M1** trở lên, **16 GB RAM** | M2 / M3 / M4, RAM nhiều hơn |
 | **Ổ cứng** | 10 GB trống (mô hình + cache) | 20 GB trở lên, SSD |
-| **GPU** | Không bắt buộc - CPU vẫn chạy được | NVIDIA RTX 20-series trở lên, 8 GB VRAM · Mac dùng Metal |
 | **Mạng** | Cần Internet để đăng nhập/kiểm tra bản quyền và tải mô hình | |
 
-- **Windows:** tăng tốc GPU cần card NVIDIA đời **RTX 20-series trở lên** (compute capability ≥ 7.0) và driver hỗ trợ CUDA 12.8. Card cũ hơn như GTX 10-series được tự phát hiện và chạy bằng CPU.
-- **macOS:** chỉ hỗ trợ **Apple Silicon** (M1/M2/M3/M4…), tăng tốc bằng Metal.
-- Chạy bằng CPU chậm hơn GPU khoảng 5-10 lần nhưng vẫn dùng được cho voice-over ngắn.
+- **Windows:** cần card NVIDIA có CUDA từ **RTX 2060** trở lên (compute capability ≥ 7.0) và driver hỗ trợ CUDA 12.8; để chạy ổn định nên dùng **RTX 3060 12 GB VRAM** trở lên. Card cũ hơn như GTX 10-series được tự phát hiện và chuyển sang CPU - chậm hơn khoảng 5-10 lần, chỉ nên dùng để thử.
+- **macOS:** chỉ hỗ trợ **Apple Silicon M1 trở lên với 16 GB RAM trở lên**, tăng tốc bằng Metal.
 
 ---
 

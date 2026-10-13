@@ -16,7 +16,8 @@
 
 <p align="center">
   <a href="https://drive.google.com/drive/u/0/folders/1BOH-3lF_rGu8QU4b07pt203a-WdOAb-G"><img alt="Windows için indir" src="https://img.shields.io/badge/%C4%B0ndir-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"></a>&nbsp;
-  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="macOS (Apple Silicon) için indir" src="https://img.shields.io/badge/%C4%B0ndir-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="macOS (Apple Silicon) için indir" src="https://img.shields.io/badge/%C4%B0ndir-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>&nbsp;
+  <a href="https://www.youtube.com/watch?v=3J8GdUEfFlI"><img alt="YouTube'da eğitim videosu" src="https://img.shields.io/badge/YouTube-E%C4%9Fitim%20videosu-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
 </p>
 
 ---
@@ -39,8 +40,8 @@ Sürümler resmi Google Drive klasörlerinden dağıtılır:
 <details open>
 <summary><b>🪟 Windows'ta</b></summary>
 
-1. Windows `.zip` dosyasını indirin (ör. `G-Labs-Voice-Studio-v2.0.2-win.zip`) ve herhangi bir klasöre **çıkarın** - sürücüde en az 10 GB boş alan olmalı (sonradan indirilen yapay zekâ modelleri birkaç GB yer kaplar).
-2. Çıkarılan klasörü açın ve **`G-Labs-Voice-Studio.exe`** dosyasını çalıştırın (diğer her şey `data` alt klasöründedir - taşımayın).
+1. Windows `.zip` dosyasını indirin (ör. `G-Labs-Voice-Studio-v2.0.3-win.zip`) ve herhangi bir klasöre **çıkarın** - sürücüde en az 10 GB boş alan olmalı (sonradan indirilen yapay zekâ modelleri birkaç GB yer kaplar).
+2. Çıkarılan klasörü açın ve **`G-Labs-Voice-Studio.exe`** dosyasını çalıştırın (exe, bu klasörde ihtiyaç duyduğu dosyaların yanında durur - bunları taşımayın veya silmeyin).
 3. **"Windows bilgisayarınızı korudu"** (SmartScreen) çıkarsa: **Ek bilgi** → **Yine de çalıştır**'a tıklayın. *(Uygulama Microsoft sertifikasıyla imzalı olmadığı için Windows uyarır - virüs değildir.)*
 4. **Kısayol oluşturun:** `G-Labs-Voice-Studio.exe` üzerine sağ tıklayın → **Gönder** → **Masaüstü (kısayol oluştur)**; sonraki seferlerde hızlıca açarsınız.
 
@@ -96,12 +97,13 @@ Uygulamanın lisansınızı doğrulayabilmesi için **Google ile giriş yapmanı
 
 - **Bilgisayarınızda çalışır** - modeller indirildikten sonra ses üretimi ve yazıya dökme yerel olarak çalışır (NVIDIA GPU, Apple Metal veya CPU); sesiniz ve metniniz sunucuya gönderilmez. Yalnızca çeviri sekmesi altyazı metnini seçtiğiniz yapay zekâ sağlayıcısına gönderir.
 - **Ses klonlama** - 5-10 saniyelik bir örnekten, herhangi bir metni tam o sesle okutun.
-- **Ses tasarımı** - cinsiyet, yaş, perde, stil ve aksana göre yeni bir ses oluşturun; örnek dosya gerekmez.
+- **Rastgele ses** - cinsiyet, yaş ve perdeye göre (İngilizce için ayrıca aksan) yeni bir ses tarif edin; örnek dosya gerekmez, beğendiklerinizi kitaplığa kaydedin.
 - **600'den fazla çıkış dili** - Vietnamca, İngilizce, Çince, Japonca, Korece, Fransızca, Almanca, İspanyolca ve daha fazlası.
 - **Çok sesli diyalog** - `<Ad>: replik` biçiminde senaryolar, her karakterin kendi sesi ve hızı.
+- **Ses değiştirme ve dublaj** - bir video yükleyin, konuşmayı tanıyın veya çevrilmiş altyazıları getirin ve her satırı özgün zaman aralığı içinde yeniden seslendirin; sesi ya da sesi değiştirilmiş bir videoyu, özgün müziği koruyarak dışa aktarın.
 - **Altyazı çıkarma** - MP3, WAV, M4A, FLAC, MP4, MOV… dosyalarını yazıya döker; kelime düzeyinde zamanlamayla TXT veya SRT dışa aktarır.
 - **Yapay zekâ ile altyazı çevirisi** *(Studio planı)* - `.srt`, `.vtt`, `.ass`, `.sbv`, `.txt` dosyalarını çevirin veya düzeltin; zamanlamalar ve satır sayısı aynen korunur.
-- **Ses kitaplığı** - 30 hazır ses, kendi seslerinizi kaydedin, ⭐ favorileri sabitleyin, `.vcp` dosyasına yedekleyin/geri yükleyin.
+- **Ses kitaplığı** - kendi sayfası var: 30 hazır ses, kendi seslerinizi kaydedin, yazdığınız bir cümleyle her sesi önceden dinleyin, ⭐ favorileri sabitleyin, `.vcp` dosyalarıyla yedekleyin/geri yükleyin.
 - **Ses ince ayarı** - 6 işleme modu, ses seviyesi dengeleme, 13 ifade etiketi ve `100%`, `25°C`, `m²` gibi şeylerin nasıl okunacağını hatırlayan bir telaffuz sözlüğü.
 - **Esnek dışa aktarma** - WAV veya MP3, tek birleşik dosya veya cümle başına bir dosya, `.srt` ile; tek bir satırı ⬇ düğmesiyle indirin.
 - **Oluşturma kuyruğu** *(Studio planı)* - birden çok senaryoyu sıraya koyun; uygulama bunları tek tek çalıştırır ve dosyaları kaydeder.
@@ -113,19 +115,26 @@ Uygulamanın lisansınızı doğrulayabilmesi için **Google ile giriş yapmanı
 
 ## Sayfalar
 
-Sayfalar sol kenar çubuğundadır. Üç ses sayfası (Ses Klonu, Metin Okuma, Grup Diyaloğu) aynı akışı izler: **çıkış dilini** seçin → metni yapıştırın veya **İçe aktar** (`.txt`, `.srt`) → **Tabloya ekle** (uygulama cümleleri seçtiğiniz **Bölme modu** ayarına göre böler, satır sayısı önizlemesiyle) → **Başlat** → dinleyin → **Sesi dışa aktar**.
+Sayfalar sol kenar çubuğundadır ve gruplara ayrılmıştır: **Ses üret** (Metin Okuma, Grup Diyaloğu, Ses değiştir) · **Altyazı** (Altyazı Çıkar, Çeviri) · **Sesler** (Ses Klonu, Ses kitaplığı) · **Sistem** (Model Yönetimi, Webhook API, Kuyruk). Ses sayfaları aynı akışı izler: araç çubuğundan **Okuma dili**ni seçin → metni **Kaynak metin** alanına yapıştırın veya bir `.txt` / `.srt` dosyasını **İçe aktar** ile alın → **Tabloya ekle** (uygulama cümleleri seçtiğiniz biçimde böler, varsayılan **Akıllı birleştirme**) → **Üret** → dinleyin ve tek tek satırları düzeltin → **Dışa aktar**.
 
 ### 🔊 Ses Klonu
 
 ![Ses Klonu](docs/screenshots/en/clone.webp)
 
-Örnek ses dosyasını yüklemek için **Seç...**'a tıklayın (net ses, az gürültü), ardından kullanılacak 3-30 saniyelik bölümü tam olarak seçmek için **dalga formu üzerindeki vurgulu kutuyu sürükleyin** - bıraktığınızda kenarlar en yakın sessizliğe oturur; 5 dakika / 50 MB'tan uzun dosyalarda ilk 30 saniye kullanılır. *Örnek metin* **zorunludur** ve örnekteki sözcüklerle birebir eşleşmelidir (noktalama ve yazım dahil); **✨ Yapay zekâ önerisi** sizin için yazıya döker, ama üretmeden önce kontrol edin. Klonlama bitince uygulama sesi dinlemenizi ve tek tıkla kitaplığa kaydetmenizi önerir.
+Örnek ses dosyasını yüklemek için **Seç...**'e tıklayın, ardından dalga formu üzerindeki vurgulu kutuyu sürükleyerek 3-30 saniyelik bir bölüm seçin (bıraktığınızda kenarlar sessizliğe oturur) veya **En iyi bölümü seç**'e basın.
+
+- **Kaliteyi örnek belirler:** klon yalnızca sesi değil, örnekteki gürültüyü, yankıyı ve müziği de kopyalar. En temiz 5-15 saniyeyi kullanın; sesin arkasında müzik varsa önce **Müziği kaldır**'a basın.
+- **Metin, örnekle kelimesi kelimesine eşleşmelidir** (noktalama ve yazım dahil). **Yapay zekâ önerisi** sizin için yazıya döker, ama dinleyip metni okuyarak izleyin ve hataları düzeltin: yanlış metin yanlış ses üretir.
+
+Bir deneme cümlesi yazın, **Başlat**'a basın, dinleyin; ardından sağ panelde sese bir ad verip **Kitaplığa kaydet**'e tıklayın.
 
 ### 🎛️ Metin Okuma
 
 ![Metin Okuma](docs/screenshots/en/tts.webp)
 
-Kitaplıktan bir ses seçin veya *cinsiyet, yaş, perde, stil, aksan*a göre yeni bir ses oluşturmak için **Ses Tasarımı** bölümünü açın. Tasarladığınız sesi beğendiniz mi? Tablodaki satırını seçin → yeniden kullanmak için kitaplığa **Kaydet**. **Akıllı birleştirme** modu kısa cümleleri bir karakter sınırına kadar akıcı satırlarda birleştirir, ama her zaman cümle sonunda böler. **İfade etiketleri** düğmesi etiketlere bakmanızı ve imlecin olduğu yere eklemenizi sağlar.
+Sağdaki **Ses** sekmesinde kitaplıktan bir **Kayıtlı ses** seçin ya da *cinsiyet, yaş ve perde*ye göre yeni bir ses tasarlamak için **Rastgele ses**'i seçin (İngilizce aksanı **Ayarlar → Genel ayarlar** içindedir). Tek bir satırı yeniden üretmek aynı sesi korur; beğendiklerinizi **Kaydet** ile kitaplığa ekleyin.
+
+Metnini düzenlemek, öncesine bir duraklama eklemek (**Önce ara**) veya yalnızca o satırı yeniden üretmek (**Yeniden üret**) için bir satıra tıklayın; aşağıdaki zaman çizelgesi parçanın tamamını çalar, oynatma imlecini sürükleyerek istediğiniz yere atlayın. **Telaffuz**, uygulamaya `25°C` veya `100%` gibi ifadelerin nasıl okunacağını öğretir (sonraki tüm senaryolar için saklanır); **İfade etiketleri** metne `[laughter]`, `[sigh]`… ekler. Okuma hızı ve 6 ses stili **Ayarlar** sekmesindedir.
 
 ### 💬 Grup Diyaloğu
 
@@ -139,7 +148,17 @@ Kitaplıktan bir ses seçin veya *cinsiyet, yaş, perde, stil, aksan*a göre yen
 <Minh>: Ben de - bugün ne konuşacağız?
 ```
 
-Karakter adını satır başında `< >` içine yazın (`:` isteğe bağlıdır, adlar büyük/küçük harf duyarsızdır). Örnek için **Örnek diyalog**'a, ardından **Diyaloğu ayrıştır**'a tıklayın - **Ses atamaları** paneli açılır; her karaktere kitaplıktan bir ses ve kendi **hız** kaydırıcısını (0.5× → 2×) verin.
+Karakter adını satır başında `< >` içine yazın (`:` isteğe bağlıdır, adlar büyük/küçük harf duyarsızdır). Örnek için **Örnek diyalog**'a, ardından **Diyaloğu ayrıştır**'a tıklayın - sağdaki **Ses** sekmesi her karakter için bir kart gösterir; kitaplıktan bir ses ve karaktere özel **Hız** (0.5× → 2×) seçin. Zaman çizelgesi her ses için bir satır gösterir; bir repliği başka satıra sürükleyerek onu kimin okuyacağını değiştirin.
+
+### 🔁 Ses değiştir
+
+![Ses değiştir](docs/screenshots/en/voicechange.webp)
+
+Bir video veya ses dosyası yükleyip **Konuşmayı tanı**'ya basın - ya da Altyazı Çıkar / Çeviri sayfalarından **Ses değiştir'e gönder** düğmesiyle altyazıları alın (kaynak video da birlikte gelir). Her altyazı, özgün zamanlamasına sabitlenmiş bir satır olur; yeni sesi ve okuma dilini seçip **Üret**'e basın - **Altyazıya uydur** her satırı kendi zaman aralığında tutar.
+
+Monitör, **Orijinal / Yeni ses / Yeni ses + fon** seçeneklerini karşılaştırmanızı sağlar (müzik, eski sesten Demucs ile ayrılır; ilk seferde yaklaşık 80 MB indirilir). 6 yolla dışa aktarın: yalnızca yeni ses, yeni ses + özgün müzik, yeni ses + kısık özgün ses - ses olarak ya da doğrudan videoya yazılmış halde.
+
+> **Bir videoyu başka bir dile dublajlayın:** Altyazı Çıkar → **Çeviriye gönder** → çevirin → **Ses değiştir'e gönder** → bir ses + okuma dili seçin → Üret → videoyu dışa aktarın.
 
 ### 📝 Altyazı Çıkar
 
@@ -160,11 +179,17 @@ Altyazıları başka bir dile çevirin veya yazım ve satır sonlarını düzelt
 5. **Tutarlılık tablosu**, tüm dosya için adları, terimleri ve hitap biçimlerini sabitler ve her parçayla birlikte gönderilir; düzenleyebilir ve isterseniz çeviriden önce gözden geçirmek için durdurabilirsiniz.
 6. **Sonuç** sütununu kontrol edin (yapay zekânın atladığı satırlar ⚠ ile işaretlenir ve orijinal metni korur), **SRT / VTT / TXT** seçin ve **Dışa aktar**.
 
+### 🗂️ Ses kitaplığı
+
+![Ses kitaplığı](docs/screenshots/en/library.webp)
+
+Tüm sesleriniz tek yerde: ad / açıklama / etiketlere göre arayın, **Tümü / Benim / Hazır / Favoriler** ile filtreleyin, sabitlemek için ⭐'a tıklayın. Ayrıntıları görmek için bir ses seçin, özgün örneği çalın (hazır sesler) ya da bir cümle yazıp **Üret ve dinle**'ye basın; **Metin okumada kullan** o sesi seçili hâlde Metin Okuma'ya götürür. Sesleri yedeklemek veya başka bir bilgisayara taşımak için `.vcp` dosyalarını dışa/içe aktarın.
+
 ### 📚 Model Yönetimi
 
 ![Model Yönetimi](docs/screenshots/en/model.webp)
 
-Her model için boyut ve durumuyla bir satır: yapay zekâ ses modeli ve tanıma boyutları (Tiny, Base, Small, Turbo, Large v3). Yalnızca ihtiyacınız olanı indirin ve **model klasörünü** değiştirin (ör. C sürücüsünü rahatlatmak için D'ye - eski model klasörünü kopyalayın veya uygulamanın yeniden indirmesine izin verin). Çeviri için **LLM** sağlayıcısı ve **VRAM'i otomatik serbest bırak** zamanlayıcısı da burada ayarlanır.
+Üç bölüm: **Yapay zeka modelleri**, **Altyazı LLM** ve **Donanım** (GPU / CPU seçimi, boştayken VRAM'i serbest bırakma). Yapay zeka modelleri altında her model için boyut ve durumuyla bir satır: yapay zekâ ses modeli ve tanıma boyutları (Tiny, Base, Small, Turbo, Large v3). Yalnızca ihtiyacınız olanı indirin ve **model klasörünü** değiştirin (ör. C sürücüsünü rahatlatmak için D'ye - eski model klasörünü kopyalayın veya uygulamanın yeniden indirmesine izin verin). Çeviri için **LLM** sağlayıcısı ve **VRAM'i otomatik serbest bırak** zamanlayıcısı da burada ayarlanır.
 
 ### 🗒 Oluşturma kuyruğu *(Studio planı)*
 
@@ -244,14 +269,13 @@ Uygulamayı bir süre boşta bırakın (varsayılan 5 dakika); yapay zekâ model
 |   | En düşük | Önerilen |
 |---|---|---|
 | **İşletim sistemi** | Windows 10 (64-bit), Apple Silicon üzerinde macOS 12 | Windows 11, macOS 13 veya üzeri |
-| **RAM** | 8 GB | 16 GB veya daha fazla |
+| **Windows** | CUDA destekli NVIDIA ekran kartı, **RTX 2060** veya üzeri; 8 GB RAM | **12 GB VRAM'li RTX 3060** veya üzeri; 16 GB RAM |
+| **Mac** | Apple Silicon **M1** veya daha yeni, **16 GB RAM** | M2 / M3 / M4, daha fazla RAM |
 | **Disk** | 10 GB boş (modeller + önbellek) | 20 GB veya daha fazla, SSD |
-| **GPU** | İsteğe bağlı - CPU'da çalışır | NVIDIA RTX 20 serisi veya daha yeni, 8 GB VRAM · Mac'ler Metal kullanır |
 | **Ağ** | Giriş/lisans denetimi ve model indirme için internet | |
 
-- **Windows:** GPU hızlandırma için NVIDIA **RTX 20 serisi veya daha yeni** bir kart (compute capability ≥ 7.0) ve CUDA 12.8 destekli sürücü gerekir. GTX 10 serisi gibi eski kartlar otomatik algılanır ve CPU'da çalışır.
-- **macOS:** yalnızca **Apple Silicon** (M1/M2/M3/M4…), Metal ile hızlandırılır.
-- CPU modu GPU'dan yaklaşık 5-10 kat yavaştır, ama kısa seslendirmeler için yeterlidir.
+- **Windows:** CUDA destekli bir NVIDIA kart gerekir: **RTX 2060** veya daha yeni (compute capability ≥ 7.0) ve CUDA 12.8 destekli sürücü; akıcı ve kararlı çalışma için **12 GB VRAM'li RTX 3060** veya üzerini kullanın. GTX 10 serisi gibi eski kartlar algılanır ve CPU'ya düşer - yaklaşık 5-10 kat yavaş, yalnızca uygulamayı denemek için uygundur.
+- **macOS:** **16 GB veya daha fazla RAM'li Apple Silicon M1 ya da daha yenisi**, Metal ile hızlandırılır.
 
 ---
 

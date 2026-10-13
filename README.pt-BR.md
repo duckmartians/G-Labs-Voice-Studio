@@ -16,7 +16,8 @@
 
 <p align="center">
   <a href="https://drive.google.com/drive/u/0/folders/1BOH-3lF_rGu8QU4b07pt203a-WdOAb-G"><img alt="Baixar para Windows" src="https://img.shields.io/badge/Baixar-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"></a>&nbsp;
-  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="Baixar para macOS (Apple Silicon)" src="https://img.shields.io/badge/Baixar-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="Baixar para macOS (Apple Silicon)" src="https://img.shields.io/badge/Baixar-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>&nbsp;
+  <a href="https://www.youtube.com/watch?v=3J8GdUEfFlI"><img alt="Vídeo tutorial no YouTube" src="https://img.shields.io/badge/YouTube-V%C3%ADdeo%20tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
 </p>
 
 ---
@@ -39,8 +40,8 @@ As versões são distribuídas pelas pastas oficiais do Google Drive:
 <details open>
 <summary><b>🪟 No Windows</b></summary>
 
-1. Baixe o `.zip` do Windows (por exemplo `G-Labs-Voice-Studio-v2.0.2-win.zip`) e **extraia** para qualquer pasta - o disco precisa de pelo menos 10 GB livres (os modelos de IA baixados depois ocupam vários GB).
-2. Abra a pasta extraída e execute **`G-Labs-Voice-Studio.exe`** (todo o resto fica na subpasta `data` - não a mova).
+1. Baixe o `.zip` do Windows (por exemplo `G-Labs-Voice-Studio-v2.0.3-win.zip`) e **extraia** para qualquer pasta - o disco precisa de pelo menos 10 GB livres (os modelos de IA baixados depois ocupam vários GB).
+2. Abra a pasta extraída e execute **`G-Labs-Voice-Studio.exe`** (o exe fica ao lado dos arquivos de que precisa nesta pasta - não os mova nem apague).
 3. Se aparecer **"O Windows protegeu o computador"** (SmartScreen): clique em **Mais informações** → **Executar assim mesmo**. *(O app não é assinado com certificado da Microsoft, por isso o Windows avisa - não é vírus.)*
 4. **Crie um atalho:** clique com o botão direito em `G-Labs-Voice-Studio.exe` → **Enviar para** → **Área de trabalho (criar atalho)** para abrir rápido da próxima vez.
 
@@ -96,12 +97,13 @@ As versões são distribuídas pelas pastas oficiais do Google Drive:
 
 - **Roda no seu computador** - depois de baixar os modelos, a geração de voz e a transcrição rodam localmente (GPU NVIDIA, Apple Metal ou CPU); seu áudio e texto não vão para um servidor. Só a aba de tradução envia o texto das legendas ao provedor de IA que você escolher.
 - **Clonagem de voz** - a partir de uma amostra de 5-10 segundos, leia qualquer texto exatamente com aquela voz.
-- **Design de voz** - crie uma voz nova por gênero, idade, tom, estilo e sotaque; sem arquivo de amostra.
+- **Voz aleatória** - descreva uma voz nova por gênero, idade e tom (mais o sotaque, no caso do inglês); sem arquivo de amostra, e as que você gostar vão para a biblioteca.
 - **Mais de 600 idiomas de saída** - vietnamita, inglês, chinês, japonês, coreano, francês, alemão, espanhol e muitos outros.
 - **Diálogo com várias vozes** - roteiros `<Nome>: fala`, cada personagem com sua voz e velocidade.
+- **Trocar voz e dublagem** - carregue um vídeo, reconheça a fala ou traga legendas já traduzidas e regrave cada linha dentro do seu intervalo de tempo original; exporte o áudio ou um vídeo com a voz trocada, mantendo a música original.
 - **Extração de legendas** - transcreve MP3, WAV, M4A, FLAC, MP4, MOV…; exporta TXT ou SRT com tempo por palavra.
 - **Tradução de legendas com IA** *(Plano Studio)* - traduza ou revise `.srt`, `.vtt`, `.ass`, `.sbv`, `.txt`; tempos e número de linhas ficam exatamente iguais.
-- **Biblioteca de vozes** - 30 vozes prontas, salve as suas, fixe ⭐ favoritas, faça backup/restauração em arquivo `.vcp`.
+- **Biblioteca de vozes** - página própria: 30 vozes prontas, salve as suas, ouça qualquer voz com uma frase que você digitar, fixe ⭐ favoritas, faça backup/restauração em arquivos `.vcp`.
 - **Ajuste fino de áudio** - 6 modos de processamento, nivelamento de volume, 13 tags de expressão e um dicionário de pronúncia que lembra como ler `100%`, `25°C`, `m²`.
 - **Exportação flexível** - WAV ou MP3, um arquivo único ou um por frase, com `.srt`; baixe uma linha só pelo botão ⬇.
 - **Fila de renderização** *(Plano Studio)* - enfileire vários roteiros; o app executa um após o outro e salva os arquivos.
@@ -113,19 +115,26 @@ As versões são distribuídas pelas pastas oficiais do Google Drive:
 
 ## Páginas
 
-As páginas ficam na barra lateral esquerda. As três páginas de voz (Clonar Voz, Ler Texto, Diálogo em Grupo) seguem o mesmo ritmo: escolha o **idioma de saída** → cole o texto ou **Importar** (`.txt`, `.srt`) → **Adicionar à tabela** (o app divide as frases pelo **Modo de divisão** escolhido, com prévia do número de linhas) → **Iniciar** → ouça → **Exportar áudio**.
+As páginas ficam na barra lateral esquerda, agrupadas em **Criar áudio** (Ler Texto, Diálogo em Grupo, Trocar voz) · **Legendas** (Extrair Legendas, Tradução) · **Vozes** (Clonar Voz, Biblioteca de vozes) · **Sistema** (Gerenciar Modelos, Webhook API, Fila). As páginas de voz seguem o mesmo ritmo: escolha o **Idioma da leitura** na barra de ferramentas → cole o texto em **Texto original** ou use **Importar** para um `.txt` / `.srt` → **Adicionar à tabela** (o app divide as frases do jeito que você escolher, **Mesclagem inteligente** por padrão) → **Gerar** → ouça e corrija linhas individuais → **Exportar**.
 
 ### 🔊 Clonar Voz
 
 ![Clonar Voz](docs/screenshots/en/clone.webp)
 
-Clique em **Selecionar...** para carregar o áudio de amostra (voz clara, pouco ruído) e **arraste a caixa destacada na forma de onda** para escolher exatamente o trecho de 3-30 segundos - ao soltar, as bordas se ajustam ao silêncio mais próximo; arquivos com mais de 5 minutos / 50 MB usam os primeiros 30 segundos. O campo *Texto da amostra* é **obrigatório** e deve corresponder exatamente às palavras da amostra (pontuação e grafia incluídas); **✨ Sugerir com IA** transcreve para você, mas confira antes de gerar. Ao terminar a clonagem, o app convida você a ouvir e salvar a voz na biblioteca com um clique.
+Clique em **Selecionar...** para carregar um arquivo de áudio de amostra e arraste a caixa destacada na forma de onda para escolher um trecho de 3-30 segundos (ao soltar, as bordas se ajustam ao silêncio) ou clique em **Escolher o melhor trecho**.
+
+- **A amostra define a qualidade:** o clone copia a voz e também qualquer ruído, eco e música da amostra. Use os 5-15 segundos mais limpos; se houver música atrás da voz, clique primeiro em **Remover música**.
+- **A transcrição deve corresponder à amostra palavra por palavra** (pontuação e grafia incluídas). **Sugerir com IA** transcreve para você, mas ouça e acompanhe a leitura e corrija qualquer erro: uma transcrição errada gera uma voz errada.
+
+Digite uma frase de teste, clique em **Iniciar**, ouça e então dê um nome à voz e clique em **Salvar na biblioteca** no painel da direita.
 
 ### 🎛️ Ler Texto
 
 ![Ler Texto](docs/screenshots/en/tts.webp)
 
-Escolha uma voz da biblioteca ou abra **Design de Voz** para criar uma nova por *gênero, idade, tom, estilo, sotaque*. Gostou da voz criada? Selecione a linha na tabela → **Salvar** na biblioteca para reutilizar. O modo **Mesclagem inteligente** junta frases curtas em linhas fluidas até um limite de caracteres, sempre quebrando no fim de uma frase. O botão **Etiquetas de expressão** permite consultar tags e **inseri-las** no cursor.
+Na aba **Voz**, à direita, escolha uma **Voz salva** da biblioteca ou **Voz aleatória** para criar uma nova por *gênero, idade e tom* (o sotaque do inglês fica em **Configurações → Geral**). Gerar de novo uma única linha mantém a mesma voz; use **Salvar** para guardar na biblioteca as que você gostar.
+
+Clique em uma linha para editar o texto, adicionar uma pausa antes dela (**Pausa antes**) ou gerar de novo só essa linha (**Gerar de novo**); a linha do tempo abaixo reproduz a peça inteira, e você arrasta o cursor de reprodução para saltar pelo áudio. **Pronúncia** ensina o app a ler coisas como `25°C` ou `100%` (fica salvo para todos os roteiros futuros); **Etiquetas de expressão** inserem `[laughter]`, `[sigh]`… no texto. A velocidade de leitura e os 6 estilos de som ficam na aba **Ajustes**.
 
 ### 💬 Diálogo em Grupo
 
@@ -139,7 +148,17 @@ Escreva um roteiro com vários personagens - ótimo para podcasts, audiodramas e
 <Minh>: Eu também - sobre o que vamos falar hoje?
 ```
 
-Coloque o nome do personagem entre `< >` no início da linha (o `:` é opcional, nomes não diferenciam maiúsculas). Clique em **Diálogo de exemplo** para ver um exemplo e depois em **Analisar diálogo** - o painel **Atribuição de vozes** se abre para dar a cada personagem uma voz da biblioteca e seu próprio controle de **velocidade** (0.5× → 2×).
+Coloque o nome do personagem entre `< >` no início da linha (o `:` é opcional, nomes não diferenciam maiúsculas). Clique em **Diálogo de exemplo** para ver um exemplo e depois em **Analisar diálogo** - a aba **Voz**, à direita, mostra um cartão por personagem para escolher uma voz da biblioteca e a **Velocidade** própria (0.5× → 2×). A linha do tempo mostra uma faixa por voz; arraste uma fala para outra faixa para mudar quem a lê.
+
+### 🔁 Trocar voz
+
+![Trocar voz](docs/screenshots/en/voicechange.webp)
+
+Carregue um vídeo ou arquivo de áudio e clique em **Reconhecer fala** - ou receba legendas de Extrair Legendas / Tradução com o botão **Para Trocar voz** (o vídeo de origem vai junto). Cada legenda vira uma linha presa ao tempo original; escolha a nova voz e o idioma da leitura e clique em **Gerar** - **Ajustar à legenda** mantém cada fala dentro do seu intervalo.
+
+O monitor permite comparar **Original / Nova voz / Nova voz + fundo** (a música é separada da voz antiga com o Demucs, um download de cerca de 80 MB na primeira vez). Exporte de 6 formas: só a nova voz, nova voz + música original, nova voz + original baixinho - como áudio ou gravado direto no vídeo.
+
+> **Dublar um vídeo em outro idioma:** Extrair Legendas → **Para Tradução** → traduza → **Para Trocar voz** → escolha uma voz + idioma da leitura → Gerar → exporte o vídeo.
 
 ### 📝 Extrair Legendas
 
@@ -160,11 +179,17 @@ Traduza legendas para outro idioma ou revise ortografia e quebras de linha - **s
 5. A **Tabela de consistência** fixa nomes, termos e formas de tratamento para o arquivo inteiro e é enviada com cada trecho; você pode editá-la e, opcionalmente, parar para revisá-la antes de traduzir.
 6. Confira a coluna **Resultado** (linhas que a IA deixou de fora ficam marcadas com ⚠ e mantêm o texto original), escolha **SRT / VTT / TXT** e clique em **Exportar**.
 
+### 🗂️ Biblioteca de vozes
+
+![Biblioteca de vozes](docs/screenshots/en/library.webp)
+
+Todas as suas vozes num só lugar: busque por nome / descrição / tags, filtre por **Todas / Minhas / Incluídas / Favoritas** e clique em ⭐ para fixar. Selecione uma voz para ver os detalhes, ouvir a amostra original (vozes prontas) ou digitar uma frase e clicar em **Gerar e ouvir**; **Usar em Texto para fala** leva ao Ler Texto com essa voz selecionada. Exporte / importe arquivos `.vcp` para fazer backup das vozes ou levá-las a outro computador.
+
 ### 📚 Gerenciar Modelos
 
 ![Gerenciar Modelos](docs/screenshots/en/model.webp)
 
-Uma linha por modelo com tamanho e status: o modelo de voz de IA e os tamanhos de reconhecimento (Tiny, Base, Small, Turbo, Large v3). Baixe só o que precisar e mude a **pasta dos modelos** (por exemplo para o disco D, poupando o C - copie a pasta antiga de modelos ou deixe o app baixar de novo). Aqui também ficam o provedor **LLM** da tradução e o temporizador **Liberar VRAM automaticamente**.
+Três seções: **Modelos de IA**, **LLM de legendas** e **Hardware** (escolha de GPU / CPU, liberar VRAM quando ocioso). Em Modelos de IA, uma linha por modelo com tamanho e status: o modelo de voz de IA e os tamanhos de reconhecimento (Tiny, Base, Small, Turbo, Large v3). Baixe só o que precisar e mude a **pasta dos modelos** (por exemplo para o disco D, poupando o C - copie a pasta antiga de modelos ou deixe o app baixar de novo). Aqui também ficam o provedor **LLM** da tradução e o temporizador **Liberar VRAM automaticamente**.
 
 ### 🗒 Fila de renderização *(Plano Studio)*
 
@@ -244,14 +269,13 @@ Deixe o app ocioso por um tempo (5 minutos por padrão) e o modelo de IA é desc
 |   | Mínimo | Recomendado |
 |---|---|---|
 | **Sistema operacional** | Windows 10 (64 bits), macOS 12 em Apple Silicon | Windows 11, macOS 13 ou mais recente |
-| **RAM** | 8 GB | 16 GB ou mais |
+| **Windows** | Placa NVIDIA com CUDA, **RTX 2060** ou melhor; 8 GB de RAM | **RTX 3060 com 12 GB de VRAM** ou superior; 16 GB de RAM |
+| **Mac** | Apple Silicon **M1** ou mais novo com **16 GB de RAM** | M2 / M3 / M4, mais RAM |
 | **Disco** | 10 GB livres (modelos + cache) | 20 GB ou mais, SSD |
-| **GPU** | Opcional - roda na CPU | NVIDIA RTX série 20 ou mais nova, 8 GB de VRAM · Macs usam Metal |
 | **Rede** | Internet para login/verificação de licença e download dos modelos | |
 
-- **Windows:** a aceleração por GPU exige uma placa NVIDIA **RTX série 20 ou mais nova** (compute capability ≥ 7.0) e driver com suporte a CUDA 12.8. Placas mais antigas, como a série GTX 10, são detectadas automaticamente e rodam na CPU.
-- **macOS:** só **Apple Silicon** (M1/M2/M3/M4…), acelerado com Metal.
-- O modo CPU é cerca de 5-10× mais lento que a GPU, mas serve bem para narrações curtas.
+- **Windows:** exige uma placa NVIDIA com CUDA, **RTX 2060** ou mais nova (compute capability ≥ 7.0), com driver compatível com CUDA 12.8; para um uso fluido e estável, use uma **RTX 3060 com 12 GB de VRAM** ou superior. Placas mais antigas, como a série GTX 10, são detectadas e passam para a CPU - cerca de 5-10× mais lenta, só serve para experimentar o app.
+- **macOS:** **Apple Silicon M1 ou mais novo com 16 GB de RAM ou mais**, acelerado com Metal.
 
 ---
 

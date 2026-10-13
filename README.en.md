@@ -16,7 +16,8 @@
 
 <p align="center">
   <a href="https://drive.google.com/drive/u/0/folders/1BOH-3lF_rGu8QU4b07pt203a-WdOAb-G"><img alt="Download for Windows" src="https://img.shields.io/badge/Download-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"></a>&nbsp;
-  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="Download for macOS (Apple Silicon)" src="https://img.shields.io/badge/Download-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <a href="https://drive.google.com/drive/u/0/folders/1iEAUo5XOcr_3VmDoqIaiuq-zG8BLnxta"><img alt="Download for macOS (Apple Silicon)" src="https://img.shields.io/badge/Download-macOS%20Apple%20Silicon-000000?style=for-the-badge&logo=apple&logoColor=white"></a>&nbsp;
+  <a href="https://www.youtube.com/watch?v=3J8GdUEfFlI"><img alt="Tutorial video on YouTube" src="https://img.shields.io/badge/YouTube-Tutorial%20video-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
 </p>
 
 ---
@@ -39,8 +40,8 @@ Builds are distributed through the official Google Drive folders:
 <details open>
 <summary><b>🪟 On Windows</b></summary>
 
-1. Download the Windows `.zip` (for example `G-Labs-Voice-Studio-v2.0.2-win.zip`) and **extract** it to any folder - the drive needs at least 10 GB free (the AI models downloaded later take several GB).
-2. Open the extracted folder and run **`G-Labs-Voice-Studio.exe`** (everything else lives in the `data` subfolder - don't move it).
+1. Download the Windows `.zip` (for example `G-Labs-Voice-Studio-v2.0.3-win.zip`) and **extract** it to any folder - the drive needs at least 10 GB free (the AI models downloaded later take several GB).
+2. Open the extracted folder and run **`G-Labs-Voice-Studio.exe`** (the exe sits next to the files it needs in this folder - don't move or delete them).
 3. If **"Windows protected your PC"** (SmartScreen) appears: click **More info** → **Run anyway**. *(The app isn't signed with a Microsoft certificate, so Windows warns about it - it is not a virus.)*
 4. **Create a shortcut:** right-click `G-Labs-Voice-Studio.exe` → **Send to** → **Desktop (create shortcut)** so you can open it quickly next time.
 
@@ -96,12 +97,13 @@ Builds are distributed through the official Google Drive folders:
 
 - **Runs on your computer** - once the models are downloaded, voice generation and transcription run locally (NVIDIA GPU, Apple Metal or CPU); your audio and text are not sent to a server. Only the Translate tab sends subtitle text to the AI provider you choose.
 - **Voice cloning** - from a 5-10 second sample, read any text in exactly that voice.
-- **Voice design** - create a new voice by gender, age, pitch, style and accent; no sample file needed.
+- **Random voice** - describe a new voice by gender, age and pitch (plus an accent for English); no sample file needed, save the ones you like to the library.
 - **600+ output languages** - Vietnamese, English, Chinese, Japanese, Korean, French, German, Spanish and many more.
 - **Multi-voice dialogue** - `<Name>: line` scripts, each character with its own voice and speed.
+- **Voice changer & dubbing** - load a video, recognise the speech or bring translated subtitles, and re-voice every line inside its original time slot; export audio or a video with the voice replaced, keeping the original music.
 - **Subtitle extraction** - transcribe MP3, WAV, M4A, FLAC, MP4, MOV…; export TXT or SRT with word-level timing.
 - **AI subtitle translation** *(Studio plan)* - translate or proofread `.srt`, `.vtt`, `.ass`, `.sbv`, `.txt`; timings and line count stay exactly the same.
-- **Voice library** - 30 built-in voices, save your own, pin ⭐ favourites, back up/restore to a `.vcp` file.
+- **Voice library** - its own page: 30 built-in voices, save your own, preview any voice with a line you type, pin ⭐ favourites, back up / restore as `.vcp` files.
 - **Audio fine-tuning** - 6 processing modes, volume levelling, 13 expression tags, a pronunciation dictionary that remembers how to read `100%`, `25°C`, `m²`.
 - **Flexible export** - WAV or MP3, one merged file or one file per sentence, with `.srt`; download a single line with its ⬇ button.
 - **Render queue** *(Studio plan)* - queue several scripts; the app runs them one by one and saves the files.
@@ -113,19 +115,26 @@ Builds are distributed through the official Google Drive folders:
 
 ## Pages
 
-Pages live in the left sidebar. The three voice pages (Voice Clone, Read Text, Group Dialogue) share one rhythm: choose the **output language** → paste text or **Import** (`.txt`, `.srt`) → **Add to Table** (the app splits sentences by the **Split mode** you choose, with a row-count preview) → **Start** → preview → **Export Audio**.
+Pages sit in the left sidebar, grouped as **Create audio** (Read Text, Group Dialogue, Voice changer) · **Subtitles** (Extract, Translate) · **Voices** (Voice Clone, Voice library) · **System** (Model Manager, Webhook API, Queue). The voice pages share one rhythm: pick the **Reading language** in the toolbar → paste text into **Source text** or **Import** a `.txt` / `.srt` → **Add to Table** (the app splits sentences the way you choose, **Smart merge** by default) → **Generate** → preview and fix single lines → **Export**.
 
 ### 🔊 Voice Clone
 
 ![Voice Clone](docs/screenshots/en/clone.webp)
 
-Click **Select...** to load a sample audio file (clear voice, little background noise), then **drag the highlighted box on the waveform** to select the exact 3-30 second region to use - on release the edges snap to the nearest silence; files longer than 5 minutes / 50 MB use their first 30 seconds. The *Sample text* is **required** and must match the words in the sample exactly (punctuation and spelling included); **✨ AI suggest** transcribes it for you, but check it before generating. When cloning finishes, the app invites you to preview and save the voice to the library in one click.
+Click **Select...** to load a sample audio file, then drag the highlighted box on the waveform to pick a 3-30 second region (on release the edges snap to silence) or press **Pick best part**.
+
+- **The sample decides the quality:** the clone copies the voice and also any noise, echo and music in the sample. Use the cleanest 5-15 seconds; if there is music behind the voice, press **Remove music** first.
+- **The transcript must match the sample word for word** (punctuation and spelling included). **AI suggest** transcribes it for you, but listen and read along and fix any mistakes: a wrong transcript gives you a wrong voice.
+
+Type a test sentence, press **Start**, listen, then name the voice and **Save to library** in the right panel.
 
 ### 🎛️ Read Text
 
 ![Read Text](docs/screenshots/en/tts.webp)
 
-Pick a voice from the library, or open **Voice Design** to create a new one by *Gender, Age, Pitch, Style, Accent*. Like a designed voice? Select its row in the table → **Save** it to the library for reuse. The **Smart merge** split mode joins short sentences into flowing lines up to a character cap while always breaking at a sentence end. The **Expression tags** button lets you look up tags and **Insert** them at the cursor.
+In the **Voice** tab on the right, pick a **Saved voice** from the library, or **Random voice** to design a new one by *Gender, Age and Pitch* (the English accent sits in **Settings → General**). Regenerating a single line keeps the same voice; **Save** the ones you like to the library.
+
+Click a line to edit its text, add a **pause** before it, or **regenerate** just that line; the timeline below plays the whole piece, drag the playhead to jump around. **Pronunciation** teaches the app how to read things like `25°C` or `100%` (saved for every future script); **Expression tags** insert `[laughter]`, `[sigh]`… into the text. Reading speed and the 6 sound styles live in the **Settings** tab.
 
 ### 💬 Group Dialogue
 
@@ -139,7 +148,17 @@ Write a multi-character script - great for podcasts, audio drama and interviews:
 <Minh>: Same here - what are we talking about today?
 ```
 
-Put the character name in `< >` at the start of the line (the `:` is optional, names are case-insensitive). Click **Sample dialogue** for an example, then **Parse dialogue** - the **Voice assignment** panel opens so you can give each character a voice from the library and its own **Speed** slider (0.5× → 2×).
+Put the character name in `< >` at the start of the line (the `:` is optional, names are case-insensitive). Click **Sample dialogue** for an example, then **Parse dialogue** - the **Voice** tab on the right shows one card per character to pick a library voice and its own **Speed** (0.5× → 2×). The timeline shows one row per voice; drag a line to another row to change who reads it.
+
+### 🔁 Voice changer
+
+![Voice changer](docs/screenshots/en/voicechange.webp)
+
+Load a video or audio file and press **Recognize speech** - or receive subtitles from Extract Subtitles / Translate with the **To Voice changer** button (the source video comes along). Every subtitle becomes a row pinned to its original timing; pick the new voice and reading language, then **Generate** - **Fit subtitles** keeps each line inside its time slot.
+
+The monitor lets you compare **Original / New voice / New voice + bed** (the music is separated from the old voice with Demucs, an ~80 MB download the first time). Export in 6 ways: new voice only, new voice + original music, new voice + quiet original - as audio or written straight into the video.
+
+> **Dub a video into another language:** Extract Subtitles → **To Translate** → translate → **To Voice changer** → pick a voice + reading language → Generate → export the video.
 
 ### 📝 Extract Subtitles
 
@@ -160,11 +179,17 @@ Translate subtitles into another language or proofread spelling and line breaks 
 5. A **consistency table** locks names, terms and forms of address for the whole file and is sent with every chunk; you can edit it, and optionally stop to review it before translating.
 6. Check the **Result** column (lines the AI missed are marked ⚠ and keep the original text), choose **SRT / VTT / TXT** and **Export**.
 
+### 🗂️ Voice library
+
+![Voice library](docs/screenshots/en/library.webp)
+
+All your voices in one place: search by name / description / tags, filter **All / Mine / Built-in / Favorites**, click ⭐ to pin. Select a voice to see its details, play the original sample (built-in voices) or type a line to **hear it**; **Use in Text to speech** jumps to Read Text with that voice selected. Export / import `.vcp` files to back up voices or move them to another computer.
+
 ### 📚 Model Manager
 
 ![Model Manager](docs/screenshots/en/model.webp)
 
-One row per model with its size and status: the AI voice model and the recognition sizes (Tiny, Base, Small, Turbo, Large v3). Download only what you need and change the **model folder** (for example to drive D to spare drive C - copy the old model folder across, or let the app download again). This is also where you set up the **LLM** provider for Translate and the **Auto-unload VRAM** timer.
+Three sections: **AI models**, **Subtitle LLM** and **Hardware** (GPU / CPU choice, free VRAM when idle). Under AI models, one row per model with its size and status: the AI voice model and the recognition sizes (Tiny, Base, Small, Turbo, Large v3). Download only what you need and change the **model folder** (for example to drive D to spare drive C - copy the old model folder across, or let the app download again). This is also where you set up the **LLM** provider for Translate and the **Auto-unload VRAM** timer.
 
 ### 🗒 Render queue *(Studio plan)*
 
@@ -244,14 +269,13 @@ Leave the app idle for a while (5 minutes by default) and the AI model is unload
 |   | Minimum | Recommended |
 |---|---|---|
 | **Operating system** | Windows 10 (64-bit), macOS 12 on Apple Silicon | Windows 11, macOS 13 or later |
-| **RAM** | 8 GB | 16 GB or more |
+| **Windows** | NVIDIA GPU with CUDA, **RTX 2060** or better; 8 GB RAM | **RTX 3060 with 12 GB VRAM** or higher; 16 GB RAM |
+| **Mac** | Apple Silicon **M1** or newer with **16 GB RAM** | M2 / M3 / M4, more RAM |
 | **Disk** | 10 GB free (models + cache) | 20 GB or more, SSD |
-| **GPU** | Optional - runs on CPU | NVIDIA RTX 20-series or newer, 8 GB VRAM · Macs use Metal |
 | **Network** | Internet for sign-in/license checks and model downloads | |
 
-- **Windows:** GPU acceleration needs an NVIDIA **RTX 20-series or newer** card (compute capability ≥ 7.0) and a driver supporting CUDA 12.8. Older cards such as the GTX 10-series are detected automatically and run on CPU.
-- **macOS:** **Apple Silicon** only (M1/M2/M3/M4…), accelerated with Metal.
-- CPU mode is roughly 5-10× slower than GPU but still fine for short voice-overs.
+- **Windows:** needs an NVIDIA card with CUDA, **RTX 2060** or newer (compute capability ≥ 7.0), with a driver supporting CUDA 12.8; for smooth, stable runs use an **RTX 3060 with 12 GB VRAM** or higher. Older cards such as the GTX 10-series are detected and fall back to CPU - roughly 5-10× slower, fine only for trying the app.
+- **macOS:** **Apple Silicon M1 or newer with 16 GB RAM or more**, accelerated with Metal.
 
 ---
 

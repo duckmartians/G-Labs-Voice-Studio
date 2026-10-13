@@ -1,5 +1,31 @@
 # Changelog
 
+## v2.0.3 - duckmartians
+
+Video hướng dẫn đầy đủ: https://www.youtube.com/watch?v=3J8GdUEfFlI
+
+### Mới
+
+- **Đổi giọng (tab mới)**: nạp video, nhận dạng lời hoặc nhận phụ đề đã dịch, đọc lại từng câu bằng giọng mới gọn trong khung thời gian gốc. Nghe so sánh Gốc / Giọng mới / Giọng mới + nền; xuất 6 kiểu (âm thanh hoặc ghép thẳng vào video), giữ nguyên nhạc nền gốc (tách bằng Demucs). Lồng tiếng sang ngôn ngữ khác: Tách phụ đề → Dịch phụ đề → Sang Đổi giọng.
+- **Kho giọng (trang mới)**: tìm, lọc Của tôi / Có sẵn / Yêu thích, nghe thử bằng câu tự gõ, dùng ngay ở Đọc văn bản, xuất / nhập `.vcp`.
+- **Sao chép giọng thành "Phòng thu giọng"**: 4 bước Mẫu · Lời mẫu · Nghe thử · Lưu, nút Tự chọn đoạn tốt nhất và Tách lời khỏi nhạc.
+- **Giao diện mới** cho Đọc văn bản, Hội thoại nhóm, Tách và Dịch phụ đề: thanh bên chia nhóm, khung bên phải (Câu / Giọng / Cài đặt / Hàng chờ), timeline nhiều track kéo được vạch phát, ô Ngôn ngữ đọc trên thanh công cụ.
+- **Giọng ngẫu nhiên** tạo lại một câu vẫn giữ đúng giọng vừa tạo; khẩu âm (chỉ tiếng Anh) nằm ở Cài đặt → Chung.
+- Mặc định tách câu **Gộp thông minh**; mở app vào Đọc văn bản, danh sách trống thì mở sẵn Văn bản gốc.
+
+### Chất lượng giọng
+
+- Câu ngắn (1-3 từ) không còn bị cụt chữ hay thừa tiếng: tự đọc lại câu hỏng, chọn bản rõ nhất.
+- Cắt khoảng lặng đầu / cuối câu chính xác hơn, không ăn mất phụ âm đầu nhẹ.
+- Phụ đề tách ra khớp tiếng hơn (trước hay sớm hơn lời khoảng 0,4 giây); tệp im lặng / chỉ có nhạc không còn ra câu bịa.
+
+### Sửa lỗi
+
+- Sửa ở Văn bản gốc rồi quay lại bảng không còn xoá giọng đã tạo không hỏi; Hội thoại có dòng thiếu nhãn nhân vật thì báo lỗi, không chạy trên bảng cũ.
+- App đứng yên không còn tốn CPU; nút Có / Không của hộp thoại theo ngôn ngữ app.
+- 9Router: model của tài khoản đăng nhập qua 9Router không còn bị ẩn.
+- Bản Windows: một thư mục duy nhất, chạy thẳng `G-Labs-Voice-Studio.exe` (bỏ thư mục con `data`).
+
 ## v2.0.2 - duckmartians
 
 ### Sửa lỗi

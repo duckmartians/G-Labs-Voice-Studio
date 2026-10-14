@@ -92,7 +92,7 @@ As versões são distribuídas pelas pastas oficiais do Google Drive:
 ## Recursos
 
 <p align="center">
-  <img alt="Interface do G-Labs Voice Studio" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+  <img alt="Interface do G-Labs Voice Studio" width="900" src="docs/screenshots/en/voicechange.webp" />
 </p>
 
 - **Roda no seu computador** - depois de baixar os modelos, a geração de voz e a transcrição rodam localmente (GPU NVIDIA, Apple Metal ou CPU); seu áudio e texto não vão para um servidor. Só a aba de tradução envia o texto das legendas ao provedor de IA que você escolher.

@@ -92,7 +92,7 @@
 ## Возможности
 
 <p align="center">
-  <img alt="Интерфейс G-Labs Voice Studio" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+  <img alt="Интерфейс G-Labs Voice Studio" width="900" src="docs/screenshots/en/voicechange.webp" />
 </p>
 
 - **Работает на вашем компьютере** - после загрузки моделей генерация голоса и расшифровка выполняются локально (NVIDIA GPU, Apple Metal или CPU); ваше аудио и текст не отправляются на сервер. Только вкладка перевода отправляет текст субтитров выбранному вами ИИ-провайдеру.

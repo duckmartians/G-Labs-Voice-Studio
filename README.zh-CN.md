@@ -92,7 +92,7 @@
 ## 功能
 
 <p align="center">
-  <img alt="G-Labs Voice Studio 界面" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+  <img alt="G-Labs Voice Studio 界面" width="900" src="docs/screenshots/en/voicechange.webp" />
 </p>
 
 - **在你的电脑上运行**--模型下载后，语音生成和转写都在本地运行（NVIDIA GPU、Apple Metal 或 CPU）；你的音频和文本不会发送到服务器。只有翻译选项卡会把字幕文本发送给你选择的 AI 服务商。

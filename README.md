@@ -92,7 +92,7 @@ Bản cài được phát hành qua thư mục Google Drive chính thức:
 ## Tính năng
 
 <p align="center">
-  <img alt="Giao diện G-Labs Voice Studio" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+  <img alt="Giao diện G-Labs Voice Studio" width="900" src="docs/screenshots/vi/voicechange.webp" />
 </p>
 
 - **Chạy trên máy bạn** - sau khi tải mô hình, tạo giọng và nhận dạng đều chạy cục bộ (GPU NVIDIA, Apple Metal hoặc CPU); âm thanh và văn bản không gửi lên máy chủ. Riêng tab Dịch phụ đề gửi nội dung phụ đề tới nhà cung cấp AI bạn chọn.

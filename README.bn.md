@@ -92,7 +92,7 @@
 ## বৈশিষ্ট্য
 
 <p align="center">
-  <img alt="G-Labs Voice Studio ইন্টারফেস" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+  <img alt="G-Labs Voice Studio ইন্টারফেস" width="900" src="docs/screenshots/en/voicechange.webp" />
 </p>
 
 - **আপনার কম্পিউটারে চলে** - মডেল ডাউনলোডের পর কণ্ঠ তৈরি ও ট্রান্সক্রিপশন লোকালি চলে (NVIDIA GPU, Apple Metal বা CPU); আপনার অডিও ও টেক্সট কোনো সার্ভারে পাঠানো হয় না। শুধু অনুবাদ ট্যাব সাবটাইটেলের টেক্সট আপনার বেছে নেওয়া AI প্রদানকারীকে পাঠায়।

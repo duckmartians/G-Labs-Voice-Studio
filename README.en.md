@@ -92,7 +92,7 @@ Builds are distributed through the official Google Drive folders:
 ## Features
 
 <p align="center">
-  <img alt="G-Labs Voice Studio interface" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+  <img alt="G-Labs Voice Studio interface" width="900" src="docs/screenshots/en/voicechange.webp" />
 </p>
 
 - **Runs on your computer** - once the models are downloaded, voice generation and transcription run locally (NVIDIA GPU, Apple Metal or CPU); your audio and text are not sent to a server. Only the Translate tab sends subtitle text to the AI provider you choose.

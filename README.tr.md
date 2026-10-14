@@ -92,7 +92,7 @@ Uygulamanın lisansınızı doğrulayabilmesi için **Google ile giriş yapmanı
 ## Özellikler
 
 <p align="center">
-  <img alt="G-Labs Voice Studio arayüzü" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+  <img alt="G-Labs Voice Studio arayüzü" width="900" src="docs/screenshots/en/voicechange.webp" />
 </p>
 
 - **Bilgisayarınızda çalışır** - modeller indirildikten sonra ses üretimi ve yazıya dökme yerel olarak çalışır (NVIDIA GPU, Apple Metal veya CPU); sesiniz ve metniniz sunucuya gönderilmez. Yalnızca çeviri sekmesi altyazı metnini seçtiğiniz yapay zekâ sağlayıcısına gönderir.

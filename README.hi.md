@@ -92,7 +92,7 @@
 ## सुविधाएँ
 
 <p align="center">
-  <img alt="G-Labs Voice Studio इंटरफ़ेस" width="900" src="https://github.com/user-attachments/assets/d7a08f20-3aee-43ed-bbba-b80997720fdb" />
+  <img alt="G-Labs Voice Studio इंटरफ़ेस" width="900" src="docs/screenshots/en/voicechange.webp" />
 </p>
 
 - **आपके कंप्यूटर पर चलता है** - मॉडल डाउनलोड होने के बाद आवाज़ बनाना और ट्रांसक्रिप्शन लोकल चलते हैं (NVIDIA GPU, Apple Metal या CPU); आपका ऑडियो और टेक्स्ट सर्वर पर नहीं भेजा जाता। केवल अनुवाद टैब सबटाइटल टेक्स्ट को आपके चुने AI प्रदाता को भेजता है।

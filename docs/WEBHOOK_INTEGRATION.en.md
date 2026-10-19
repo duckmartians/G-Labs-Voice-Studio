@@ -167,7 +167,8 @@ Trailing slashes are tolerated (e.g. `/api/health/`).
 `http://127.0.0.1:<port>/api/files/<urlencoded-name>`. `GET` it (no API key needed)
 to download the raw audio bytes. `Content-Type` is set by extension
 (`audio/wav` or `audio/mpeg`). The file is stored locally on the machine running
-the app (`output/webhook/`).
+the app, in the **audio** subfolder of the save folder chosen in the Webhook tab's
+**Result storage** block (default `output/webhook/audio/`).
 
 ---
 
@@ -303,8 +304,10 @@ HTTP-level validation errors (`400`) are returned synchronously at submit time
 - **Tasks are in-memory.** Task state and the `task_id` → result mapping live in the
   running app; they are lost if the app restarts. Submit, poll, and download within
   the same app session.
-- **Files are local** (`output/webhook/`) and may be cleaned up over time; download
-  promptly after `completed`.
+- **Files are local** (`<save folder>/audio/`, default `output/webhook/audio/`). The user
+  can delete them with **Clean up** or let the app auto-delete files older than N days
+  (Result storage block); links of deleted files return 404. Download promptly after
+  `completed`.
 - **Determinism:** the same `script` is not guaranteed to produce byte-identical
   audio across runs.
 

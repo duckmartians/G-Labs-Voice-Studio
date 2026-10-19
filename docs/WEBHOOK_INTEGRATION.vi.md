@@ -163,8 +163,9 @@ Dấu `/` ở cuối được chấp nhận (vd `/api/health/`).
 
 `results` là mảng có **một** URL: `http://127.0.0.1:<port>/api/files/<tên-đã-url-encode>`.
 `GET` URL đó (không cần API key) để tải dữ liệu audio thô. `Content-Type` đặt theo phần
-mở rộng (`audio/wav` hoặc `audio/mpeg`). File lưu nội bộ trên máy chạy app
-(`output/webhook/`).
+mở rộng (`audio/wav` hoặc `audio/mpeg`). File lưu nội bộ trên máy chạy app, trong thư mục
+con **audio** của thư mục lưu chọn ở khối **Lưu trữ kết quả** của tab Webhook (mặc định
+`output/webhook/audio/`).
 
 ---
 
@@ -297,8 +298,9 @@ bạn không cần poll để phát hiện.
 - **Task lưu trong bộ nhớ.** Trạng thái task và ánh xạ `task_id` → kết quả nằm trong app
   đang chạy; sẽ mất nếu app khởi động lại. Hãy gửi, hỏi trạng thái và tải về trong cùng
   một phiên chạy app.
-- **File lưu nội bộ** (`output/webhook/`) và có thể bị dọn theo thời gian; tải ngay sau
-  khi `completed`.
+- **File lưu nội bộ** (`<thư mục lưu>/audio/`, mặc định `output/webhook/audio/`). Người
+  dùng có thể xoá bằng nút **Dọn dẹp** hoặc để app tự xoá file cũ hơn N ngày (khối Lưu trữ
+  kết quả); link của file đã xoá trả 404. Tải ngay sau khi `completed`.
 - **Tính tái lập:** cùng một `script` không đảm bảo cho ra audio giống hệt từng byte.
 
 ---

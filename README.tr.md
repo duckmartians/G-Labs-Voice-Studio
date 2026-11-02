@@ -42,7 +42,7 @@ Sürümler resmi Google Drive klasörlerinden dağıtılır:
 
 1. Windows `.zip` dosyasını indirin (ör. `G-Labs-Voice-Studio-v2.0.3-win.zip`) ve herhangi bir klasöre **çıkarın** - sürücüde en az 10 GB boş alan olmalı (sonradan indirilen yapay zekâ modelleri birkaç GB yer kaplar).
 2. Çıkarılan klasörü açın ve **`G-Labs-Voice-Studio.exe`** dosyasını çalıştırın (exe, bu klasörde ihtiyaç duyduğu dosyaların yanında durur - bunları taşımayın veya silmeyin).
-3. **"Windows bilgisayarınızı korudu"** (SmartScreen) çıkarsa: **Ek bilgi** → **Yine de çalıştır**'a tıklayın. *(Uygulama Microsoft sertifikasıyla imzalı olmadığı için Windows uyarır - virüs değildir.)*
+3. `G-Labs-Voice-Studio.exe`, **DUCKMARTIANS** tarafından dijital olarak imzalandı. Yeni çıkmış bir sürümde yine de **"Windows bilgisayarınızı korudu"** (SmartScreen) çıkarsa yayıncının DUCKMARTIANS olduğunu kontrol edin, sonra **Ek bilgi** → **Yine de çalıştır**'a tıklayın.
 4. **Kısayol oluşturun:** `G-Labs-Voice-Studio.exe` üzerine sağ tıklayın → **Gönder** → **Masaüstü (kısayol oluştur)**; sonraki seferlerde hızlıca açarsınız.
 
 > ⏳ **İlk açılış 30-60 saniye sürebilir** (açılış ekranı bir süre durur), çünkü Windows uygulamayı ve grafik kitaplıklarını güvenlik taramasından geçirir. Bekleyin, kapatmayın - sonraki açılışlar daha hızlıdır.
@@ -297,7 +297,7 @@ Ses kitaplığınızı başka bir bilgisayara taşımak için ses kitaplığı p
 
 **İlk açılış çok yavaş, açılış ekranı kıpırdamıyor** - Windows/macOS ilk güvenlik taramasını yapıyor; 30-60 saniye bekleyin, kapatmayın. Sonraki açılışlar daha hızlıdır.
 
-**Windows "Windows bilgisayarınızı korudu" ekranında duruyor** - **Ek bilgi → Yine de çalıştır**'a tıklayın. Uygulama Microsoft sertifikasıyla imzalı değildir; virüs değildir.
+**Windows "Windows bilgisayarınızı korudu" uyarısı gösteriyor** - uygulama DUCKMARTIANS tarafından dijital olarak imzalı, ancak SmartScreen yeni çıkmış bir sürüm için yine de uyarabilir. Yayıncının DUCKMARTIANS olduğunu kontrol edin, sonra **Ek bilgi → Yine de çalıştır**'a tıklayın.
 
 **macOS uygulamanın hasarlı olduğunu / açılamadığını söylüyor** - uygulama Apple tarafından onaylanmamıştır. İlk seferde sağ tık → **Aç**, ya da `xattr -dr com.apple.quarantine "/Applications/G-Labs Voice Studio.app"` komutunu çalıştırın.
 

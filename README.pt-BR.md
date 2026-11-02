@@ -42,7 +42,7 @@ As versões são distribuídas pelas pastas oficiais do Google Drive:
 
 1. Baixe o `.zip` do Windows (por exemplo `G-Labs-Voice-Studio-v2.0.3-win.zip`) e **extraia** para qualquer pasta - o disco precisa de pelo menos 10 GB livres (os modelos de IA baixados depois ocupam vários GB).
 2. Abra a pasta extraída e execute **`G-Labs-Voice-Studio.exe`** (o exe fica ao lado dos arquivos de que precisa nesta pasta - não os mova nem apague).
-3. Se aparecer **"O Windows protegeu o computador"** (SmartScreen): clique em **Mais informações** → **Executar assim mesmo**. *(O app não é assinado com certificado da Microsoft, por isso o Windows avisa - não é vírus.)*
+3. O `G-Labs-Voice-Studio.exe` é assinado digitalmente por **DUCKMARTIANS**. Se uma versão recém-lançada ainda mostrar **"O Windows protegeu o computador"** (SmartScreen), confira se o editor é DUCKMARTIANS e clique em **Mais informações** → **Executar assim mesmo**.
 4. **Crie um atalho:** clique com o botão direito em `G-Labs-Voice-Studio.exe` → **Enviar para** → **Área de trabalho (criar atalho)** para abrir rápido da próxima vez.
 
 > ⏳ **A primeira abertura pode levar 30-60 segundos** (a tela de abertura fica parada) enquanto o Windows faz a verificação de segurança do app e das bibliotecas gráficas. Aguarde, não feche - as próximas aberturas são mais rápidas.
@@ -297,7 +297,7 @@ Para levar sua biblioteca de vozes a outro computador, use **backup/restauraçã
 
 **A primeira abertura é muito lenta, a tela de abertura não se mexe** - o Windows/macOS está fazendo a primeira verificação de segurança; aguarde 30-60 segundos, não feche. As próximas são mais rápidas.
 
-**O Windows para em "O Windows protegeu o computador"** - clique em **Mais informações → Executar assim mesmo**. O app não é assinado com certificado da Microsoft; não é vírus.
+**O Windows mostra "O Windows protegeu o computador"** - o app é assinado digitalmente por DUCKMARTIANS, mas o SmartScreen ainda pode alertar sobre uma versão recém-lançada. Confira se o editor é DUCKMARTIANS e clique em **Mais informações → Executar assim mesmo**.
 
 **O macOS diz que o app está danificado / não pode ser aberto** - ele não é notarizado pela Apple. Botão direito → **Abrir** na primeira vez, ou rode `xattr -dr com.apple.quarantine "/Applications/G-Labs Voice Studio.app"`.
 

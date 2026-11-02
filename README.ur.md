@@ -42,7 +42,7 @@
 
 1. Windows کی `.zip` ڈاؤن لوڈ کریں (مثلاً `G-Labs-Voice-Studio-v2.0.3-win.zip`) اور کسی بھی فولڈر میں **ایکسٹریکٹ** کریں - ڈرائیو پر کم از کم 10 GB خالی جگہ ہونی چاہیے (بعد میں ڈاؤن لوڈ ہونے والے AI ماڈل کئی GB لیتے ہیں)۔
 2. ایکسٹریکٹ شدہ فولڈر کھولیں اور **`G-Labs-Voice-Studio.exe`** چلائیں (exe اس فولڈر میں اپنی ضروری فائلوں کے ساتھ رہتی ہے - انہیں منتقل یا حذف نہ کریں)۔
-3. اگر **"Windows protected your PC"** (SmartScreen) ظاہر ہو: **More info** → **Run anyway** پر کلک کریں۔ *(ایپ Microsoft سرٹیفکیٹ سے سائن نہیں ہے، اس لیے Windows خبردار کرتا ہے - یہ وائرس نہیں ہے۔)*
+3. `G-Labs-Voice-Studio.exe` پر **DUCKMARTIANS** کے ڈیجیٹل دستخط ہیں۔ اگر بالکل نئے ورژن پر پھر بھی **"Windows protected your PC"** (SmartScreen) آئے تو دیکھیں کہ پبلشر DUCKMARTIANS ہے، پھر **More info** → **Run anyway** پر کلک کریں۔
 4. **شارٹ کٹ بنائیں:** `G-Labs-Voice-Studio.exe` پر رائٹ کلک → **Send to** → **Desktop (create shortcut)**، تاکہ اگلی بار جلدی کھول سکیں۔
 
 > ⏳ **پہلی بار کھلنے میں 30-60 سیکنڈ لگ سکتے ہیں** (اسپلیش اسکرین دیر تک رکی رہتی ہے)، کیونکہ Windows ایپ اور گرافکس لائبریریوں کی سیکیورٹی اسکیننگ کرتا ہے۔ انتظار کریں، بند نہ کریں - اگلی بار یہ جلدی کھلے گی۔
@@ -297,7 +297,7 @@
 
 **پہلی بار کھلنا بہت سست، اسپلیش اسکرین رکی ہوئی** - Windows/macOS پہلی سیکیورٹی اسکیننگ کر رہا ہے؛ 30-60 سیکنڈ انتظار کریں، بند نہ کریں۔ اگلی بار جلدی کھلے گی۔
 
-**Windows "Windows protected your PC" پر رک جاتا ہے** - **More info → Run anyway** پر کلک کریں۔ ایپ Microsoft سرٹیفکیٹ سے سائن نہیں ہے؛ یہ وائرس نہیں ہے۔
+**Windows "Windows protected your PC" دکھاتا ہے** - ایپ پر DUCKMARTIANS کے ڈیجیٹل دستخط ہیں، لیکن ابھی جاری ہونے والے ورژن پر SmartScreen پھر بھی خبردار کر سکتا ہے۔ دیکھیں کہ پبلشر DUCKMARTIANS ہے، پھر **More info → Run anyway** پر کلک کریں۔
 
 **macOS کہتا ہے ایپ damaged ہے / نہیں کھل رہی** - ایپ Apple سے notarized نہیں ہے۔ پہلی بار رائٹ کلک → **Open**، یا `xattr -dr com.apple.quarantine "/Applications/G-Labs Voice Studio.app"` چلائیں۔
 

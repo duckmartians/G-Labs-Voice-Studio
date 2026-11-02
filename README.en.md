@@ -42,7 +42,7 @@ Builds are distributed through the official Google Drive folders:
 
 1. Download the Windows `.zip` (for example `G-Labs-Voice-Studio-v2.0.3-win.zip`) and **extract** it to any folder - the drive needs at least 10 GB free (the AI models downloaded later take several GB).
 2. Open the extracted folder and run **`G-Labs-Voice-Studio.exe`** (the exe sits next to the files it needs in this folder - don't move or delete them).
-3. If **"Windows protected your PC"** (SmartScreen) appears: click **More info** → **Run anyway**. *(The app isn't signed with a Microsoft certificate, so Windows warns about it - it is not a virus.)*
+3. `G-Labs-Voice-Studio.exe` is digitally signed by **DUCKMARTIANS**. If **"Windows protected your PC"** (SmartScreen) still appears for a brand-new version, check that the publisher shows DUCKMARTIANS, then click **More info** → **Run anyway**.
 4. **Create a shortcut:** right-click `G-Labs-Voice-Studio.exe` → **Send to** → **Desktop (create shortcut)** so you can open it quickly next time.
 
 > ⏳ **The first launch can take 30-60 seconds** (the splash screen sits still) while Windows security-scans the app and the graphics libraries. Wait, don't close it - later launches are faster.
@@ -297,7 +297,7 @@ To move your voice library to another computer, use **backup/restore `.vcp`** in
 
 **The first launch is very slow, the splash screen doesn't move** - Windows/macOS is running its first security scan; wait 30-60 seconds, don't close it. Later launches are faster.
 
-**Windows stops at "Windows protected your PC"** - click **More info → Run anyway**. The app isn't signed with a Microsoft certificate; it is not a virus.
+**Windows shows "Windows protected your PC"** - the app is digitally signed by DUCKMARTIANS, but SmartScreen can still warn about a version that was just released. Check that the publisher is DUCKMARTIANS, then click **More info → Run anyway**.
 
 **macOS says the app is damaged / can't be opened** - it isn't notarized by Apple. Right-click → **Open** the first time, or run `xattr -dr com.apple.quarantine "/Applications/G-Labs Voice Studio.app"`.
 

@@ -42,7 +42,7 @@ Bản cài được phát hành qua thư mục Google Drive chính thức:
 
 1. Tải tệp `.zip` bản Windows (ví dụ `G-Labs-Voice-Studio-v2.0.3-win.zip`) và **giải nén** ra một thư mục bất kỳ - ổ đĩa cần còn trống ít nhất 10 GB (mô hình AI tải sau sẽ chiếm vài GB).
 2. Mở thư mục vừa giải nén và chạy **`G-Labs-Voice-Studio.exe`** (exe nằm cùng các tệp đi kèm trong thư mục này, đừng tách riêng hay xoá chúng).
-3. Nếu hiện bảng **"Windows protected your PC"** (SmartScreen): bấm **More info** → **Run anyway**. *(App chưa ký chứng chỉ của Microsoft nên bị cảnh báo - không phải virus.)*
+3. `G-Labs-Voice-Studio.exe` đã ký số, nhà phát hành **DUCKMARTIANS**. Nếu bản mới vẫn hiện bảng **"Windows protected your PC"** (SmartScreen), kiểm tra nhà phát hành là DUCKMARTIANS rồi bấm **More info** → **Run anyway**.
 4. **Tạo lối tắt:** chuột phải vào `G-Labs-Voice-Studio.exe` → **Send to** → **Desktop (create shortcut)** để lần sau mở nhanh.
 
 > ⏳ **Lần đầu mở có thể mất 30-60 giây** (màn hình chờ dừng lâu) vì Windows quét bảo mật ứng dụng và thư viện card đồ hoạ. Cứ chờ, đừng tắt - các lần sau mở nhanh hơn.
@@ -297,7 +297,7 @@ Muốn chuyển kho giọng sang máy khác, dùng **sao lưu/phục hồi `.vcp
 
 **Mở lần đầu rất lâu, màn hình chờ đứng yên** - Windows/macOS đang quét bảo mật lần đầu; chờ 30-60 giây, đừng tắt. Các lần sau nhanh hơn.
 
-**Windows chặn ở "Windows protected your PC"** - bấm **More info → Run anyway**. App chưa ký chứng chỉ của Microsoft, không phải virus.
+**Windows hiện bảng "Windows protected your PC"** - app đã ký số DUCKMARTIANS, nhưng SmartScreen vẫn có thể cảnh báo với bản vừa phát hành. Kiểm tra nhà phát hành là DUCKMARTIANS rồi bấm **More info → Run anyway**.
 
 **macOS báo ứng dụng bị hỏng / không mở được** - app chưa được Apple chứng thực. Chuột phải → **Open** ở lần đầu, hoặc chạy `xattr -dr com.apple.quarantine "/Applications/G-Labs Voice Studio.app"`.
 

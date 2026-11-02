@@ -42,7 +42,7 @@
 
 1. 下载 Windows 版 `.zip`（例如 `G-Labs-Voice-Studio-v2.0.3-win.zip`），**解压**到任意文件夹--磁盘至少需要 10 GB 可用空间（之后下载的 AI 模型会占用数 GB）。
 2. 打开解压后的文件夹，运行 **`G-Labs-Voice-Studio.exe`**（exe 与它需要的文件放在这个文件夹里--请不要移动或删除它们）。
-3. 如果出现 **"Windows 已保护你的电脑"**（SmartScreen）：点击 **更多信息** → **仍要运行**。*（应用没有 Microsoft 证书签名，所以 Windows 会提示--这不是病毒。）*
+3. `G-Labs-Voice-Studio.exe` 已由 **DUCKMARTIANS** 进行数字签名。如果刚发布的版本仍出现 **"Windows 已保护你的电脑"**（SmartScreen），请确认发布者为 DUCKMARTIANS，然后点击 **更多信息** → **仍要运行**。
 4. **创建快捷方式：**右键 `G-Labs-Voice-Studio.exe` → **发送到** → **桌面快捷方式**，以后可快速打开。
 
 > ⏳ **首次启动可能需要 30-60 秒**（启动画面会停住一段时间），因为 Windows 正在对应用和显卡库进行安全扫描。请耐心等待，不要关闭--之后的启动会更快。
@@ -297,7 +297,7 @@
 
 **首次启动非常慢，启动画面不动**--Windows/macOS 正在进行首次安全扫描；请等待 30-60 秒，不要关闭。之后的启动会更快。
 
-**Windows 停在"Windows 已保护你的电脑"**--点击 **更多信息 → 仍要运行**。应用没有 Microsoft 证书签名，不是病毒。
+**Windows 显示"Windows 已保护你的电脑"** - 应用已由 DUCKMARTIANS 数字签名，但刚发布的版本仍可能被 SmartScreen 提示。请确认发布者为 DUCKMARTIANS，然后点击 **更多信息 → 仍要运行**。
 
 **macOS 提示应用已损坏 / 无法打开**--应用未经 Apple 公证。第一次请右键 → **打开**，或运行 `xattr -dr com.apple.quarantine "/Applications/G-Labs Voice Studio.app"`。
 

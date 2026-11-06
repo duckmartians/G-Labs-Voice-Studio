@@ -1,6 +1,6 @@
 <h1 align="center">G-Labs Voice Studio</h1>
 
-<p align="center"><b>Ứng dụng desktop giọng nói AI chạy ngay trên máy bạn - sao chép giọng từ mẫu vài giây, đọc văn bản hơn 600 ngôn ngữ, hội thoại nhiều giọng, tách phụ đề từ audio/video và dịch phụ đề bằng AI.</b></p>
+<p align="center"><b>Ứng dụng desktop giọng nói AI chạy ngay trên máy bạn - sao chép giọng từ mẫu vài giây, đọc văn bản đa ngôn ngữ, hội thoại nhiều giọng, tách phụ đề từ audio/video và dịch phụ đề bằng AI.</b></p>
 
 <p align="center">
   <b>Tiếng Việt</b> ·
@@ -98,7 +98,7 @@ Bản cài được phát hành qua thư mục Google Drive chính thức:
 - **Chạy trên máy bạn** - sau khi tải mô hình, tạo giọng và nhận dạng đều chạy cục bộ (GPU NVIDIA, Apple Metal hoặc CPU); âm thanh và văn bản không gửi lên máy chủ. Riêng tab Dịch phụ đề gửi nội dung phụ đề tới nhà cung cấp AI bạn chọn.
 - **Sao chép giọng** - từ một mẫu âm thanh 5-10 giây, đọc bất kỳ văn bản nào bằng đúng giọng đó.
 - **Giọng ngẫu nhiên** - mô tả giọng mới theo giới tính, độ tuổi, cao độ (thêm khẩu âm khi đọc tiếng Anh); không cần tệp mẫu, ưng thì lưu vào kho.
-- **Hơn 600 ngôn ngữ đầu ra** - Việt, Anh, Trung, Nhật, Hàn, Pháp, Đức, Tây Ban Nha và nhiều ngôn ngữ khác.
+- **Đầu ra đa ngôn ngữ** - Việt, Anh, Trung, Nhật, Hàn, Pháp, Đức, Tây Ban Nha và nhiều ngôn ngữ khác.
 - **Hội thoại nhiều giọng** - kịch bản `<Tên>: lời thoại`, mỗi nhân vật một giọng và tốc độ riêng.
 - **Đổi giọng & lồng tiếng** - nạp video, nhận dạng lời hoặc lấy phụ đề đã dịch, đọc lại bằng giọng mới gọn trong khung thời gian gốc; xuất âm thanh hoặc video đã thay giọng, giữ nguyên nhạc nền gốc.
 - **Tách phụ đề** - nhận dạng lời nói từ MP3, WAV, M4A, FLAC, MP4, MOV…; xuất TXT hoặc SRT với mốc thời gian theo từng từ.

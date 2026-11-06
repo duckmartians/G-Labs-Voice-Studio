@@ -177,7 +177,7 @@ JSON body. **`script` và `preset_id` đều bắt buộc.**
 |--------|------|:--------:|----------|---------|
 | `script` | string | ✅ | - | Văn bản cần đọc. Văn bản dài được tự tách câu; đầu ra là một file audio liền mạch (các câu nối nhau, chèn khoảng lặng ~0.3 giây). |
 | `preset_id` | string | ✅ | - | Một id giọng từ `GET /api/voices` (đã lưu trong Voice Bank). id không tồn tại → task thất bại. |
-| `language` | string | ❌ | `Auto` | `Auto` = tự nhận diện, hoặc tên ngôn ngữ (vd `"english"`, `"vietnamese"`). Model hỗ trợ 600+ ngôn ngữ. |
+| `language` | string | ❌ | `Auto` | `Auto` = tự nhận diện, hoặc tên ngôn ngữ (vd `"english"`, `"vietnamese"`). Model hỗ trợ đa ngôn ngữ. |
 | `speed` | number | ❌ | `1.0` | Hệ số tốc độ đọc. `>1.0` nhanh hơn, `<1.0` chậm hơn. |
 | `output_format` | string | ❌ | `wav` | `"wav"` (PCM 16-bit) hoặc `"mp3"` (192 kbps). Giá trị khác → `wav`. |
 | `num_step` | int | ❌ | `50` | Số bước diffusion. Cao hơn = có thể chất lượng tốt hơn nhưng chậm; thấp hơn = nhanh. |

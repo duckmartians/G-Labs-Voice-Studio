@@ -180,7 +180,7 @@ JSON body. **`script` and `preset_id` are both required.**
 |-------|------|:--------:|---------|-------|
 | `script` | string | ✅ | - | The text to speak. Long text is auto-split into sentences; the output is one continuous audio file (sentences joined with ~0.3 s gaps). |
 | `preset_id` | string | ✅ | - | A voice id from `GET /api/voices` (saved in the Voice Bank). Unknown id → task fails. |
-| `language` | string | ❌ | `Auto` | `Auto` = auto-detect, or a language name (e.g. `"english"`, `"vietnamese"`). The model supports 600+ languages. |
+| `language` | string | ❌ | `Auto` | `Auto` = auto-detect, or a language name (e.g. `"english"`, `"vietnamese"`). The model is multilingual. |
 | `speed` | number | ❌ | `1.0` | Speech speed factor. `>1.0` faster, `<1.0` slower. |
 | `output_format` | string | ❌ | `wav` | `"wav"` (PCM 16-bit) or `"mp3"` (192 kbps). Any other value → `wav`. |
 | `num_step` | int | ❌ | `50` | Diffusion steps. Higher = potentially better quality but slower; lower = faster. |

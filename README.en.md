@@ -1,6 +1,6 @@
 <h1 align="center">G-Labs Voice Studio</h1>
 
-<p align="center"><b>A desktop AI voice app that runs on your own computer - clone a voice from a few seconds of audio, read text in 600+ languages, create multi-voice dialogue, transcribe audio/video to subtitles and translate subtitles with AI.</b></p>
+<p align="center"><b>A desktop AI voice app that runs on your own computer - clone a voice from a few seconds of audio, read text aloud in multiple languages, create multi-voice dialogue, transcribe audio/video to subtitles and translate subtitles with AI.</b></p>
 
 <p align="center">
   <a href="README.md">Tiếng Việt</a> ·
@@ -98,7 +98,7 @@ Builds are distributed through the official Google Drive folders:
 - **Runs on your computer** - once the models are downloaded, voice generation and transcription run locally (NVIDIA GPU, Apple Metal or CPU); your audio and text are not sent to a server. Only the Translate tab sends subtitle text to the AI provider you choose.
 - **Voice cloning** - from a 5-10 second sample, read any text in exactly that voice.
 - **Random voice** - describe a new voice by gender, age and pitch (plus an accent for English); no sample file needed, save the ones you like to the library.
-- **600+ output languages** - Vietnamese, English, Chinese, Japanese, Korean, French, German, Spanish and many more.
+- **Multilingual output** - Vietnamese, English, Chinese, Japanese, Korean, French, German, Spanish and many more.
 - **Multi-voice dialogue** - `<Name>: line` scripts, each character with its own voice and speed.
 - **Voice changer & dubbing** - load a video, recognise the speech or bring translated subtitles, and re-voice every line inside its original time slot; export audio or a video with the voice replaced, keeping the original music.
 - **Subtitle extraction** - transcribe MP3, WAV, M4A, FLAC, MP4, MOV…; export TXT or SRT with word-level timing.

@@ -1,6 +1,6 @@
 <h1 align="center">G-Labs Voice Studio</h1>
 
-<p align="center"><b>Um app desktop de voz com IA que roda no seu próprio computador - clone uma voz a partir de poucos segundos de áudio, leia textos em mais de 600 idiomas, crie diálogos com várias vozes, transcreva áudio/vídeo em legendas e traduza legendas com IA.</b></p>
+<p align="center"><b>Um app desktop de voz com IA que roda no seu próprio computador - clone uma voz a partir de poucos segundos de áudio, leia textos em vários idiomas, crie diálogos com várias vozes, transcreva áudio/vídeo em legendas e traduza legendas com IA.</b></p>
 
 <p align="center">
   <a href="README.md">Tiếng Việt</a> ·
@@ -98,7 +98,7 @@ As versões são distribuídas pelas pastas oficiais do Google Drive:
 - **Roda no seu computador** - depois de baixar os modelos, a geração de voz e a transcrição rodam localmente (GPU NVIDIA, Apple Metal ou CPU); seu áudio e texto não vão para um servidor. Só a aba de tradução envia o texto das legendas ao provedor de IA que você escolher.
 - **Clonagem de voz** - a partir de uma amostra de 5-10 segundos, leia qualquer texto exatamente com aquela voz.
 - **Voz aleatória** - descreva uma voz nova por gênero, idade e tom (mais o sotaque, no caso do inglês); sem arquivo de amostra, e as que você gostar vão para a biblioteca.
-- **Mais de 600 idiomas de saída** - vietnamita, inglês, chinês, japonês, coreano, francês, alemão, espanhol e muitos outros.
+- **Saída multilíngue** - vietnamita, inglês, chinês, japonês, coreano, francês, alemão, espanhol e muitos outros.
 - **Diálogo com várias vozes** - roteiros `<Nome>: fala`, cada personagem com sua voz e velocidade.
 - **Trocar voz e dublagem** - carregue um vídeo, reconheça a fala ou traga legendas já traduzidas e regrave cada linha dentro do seu intervalo de tempo original; exporte o áudio ou um vídeo com a voz trocada, mantendo a música original.
 - **Extração de legendas** - transcreve MP3, WAV, M4A, FLAC, MP4, MOV…; exporta TXT ou SRT com tempo por palavra.

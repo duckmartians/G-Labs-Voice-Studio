@@ -1,6 +1,6 @@
 <h1 align="center">G-Labs Voice Studio</h1>
 
-<p align="center"><b>Kendi bilgisayarınızda çalışan masaüstü yapay zekâ ses uygulaması - birkaç saniyelik sesten ses klonlayın, 600'den fazla dilde metin okutun, çok sesli diyalog oluşturun, ses/videoyu altyazıya dönüştürün ve altyazıları yapay zekâyla çevirin.</b></p>
+<p align="center"><b>Kendi bilgisayarınızda çalışan masaüstü yapay zekâ ses uygulaması - birkaç saniyelik sesten ses klonlayın, çok dilli metin okutun, çok sesli diyalog oluşturun, ses/videoyu altyazıya dönüştürün ve altyazıları yapay zekâyla çevirin.</b></p>
 
 <p align="center">
   <a href="README.md">Tiếng Việt</a> ·
@@ -98,7 +98,7 @@ Uygulamanın lisansınızı doğrulayabilmesi için **Google ile giriş yapmanı
 - **Bilgisayarınızda çalışır** - modeller indirildikten sonra ses üretimi ve yazıya dökme yerel olarak çalışır (NVIDIA GPU, Apple Metal veya CPU); sesiniz ve metniniz sunucuya gönderilmez. Yalnızca çeviri sekmesi altyazı metnini seçtiğiniz yapay zekâ sağlayıcısına gönderir.
 - **Ses klonlama** - 5-10 saniyelik bir örnekten, herhangi bir metni tam o sesle okutun.
 - **Rastgele ses** - cinsiyet, yaş ve perdeye göre (İngilizce için ayrıca aksan) yeni bir ses tarif edin; örnek dosya gerekmez, beğendiklerinizi kitaplığa kaydedin.
-- **600'den fazla çıkış dili** - Vietnamca, İngilizce, Çince, Japonca, Korece, Fransızca, Almanca, İspanyolca ve daha fazlası.
+- **Çok dilli çıkış** - Vietnamca, İngilizce, Çince, Japonca, Korece, Fransızca, Almanca, İspanyolca ve daha fazlası.
 - **Çok sesli diyalog** - `<Ad>: replik` biçiminde senaryolar, her karakterin kendi sesi ve hızı.
 - **Ses değiştirme ve dublaj** - bir video yükleyin, konuşmayı tanıyın veya çevrilmiş altyazıları getirin ve her satırı özgün zaman aralığı içinde yeniden seslendirin; sesi ya da sesi değiştirilmiş bir videoyu, özgün müziği koruyarak dışa aktarın.
 - **Altyazı çıkarma** - MP3, WAV, M4A, FLAC, MP4, MOV… dosyalarını yazıya döker; kelime düzeyinde zamanlamayla TXT veya SRT dışa aktarır.
